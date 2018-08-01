@@ -1,0 +1,875 @@
+@prefix ADI_RRB_TOTAL_C: <https://github.com/dbkeator/nidm-local-terms/issues/9> .
+@prefix ADI_R_ONSET_TOTAL_D: <https://github.com/dbkeator/nidm-local-terms/issues/10> .
+@prefix ADI_R_RSRCH_RELIABLE: <https://github.com/dbkeator/nidm-local-terms/issues/11> .
+@prefix ADI_R_SOCIAL_TOTAL_A: <https://github.com/dbkeator/nidm-local-terms/issues/7> .
+@prefix ADI_R_VERBAL_TOTAL_BV: <https://github.com/dbkeator/nidm-local-terms/issues/8> .
+@prefix ADOS_COMM: <http://uri.interlex.org/NDA/uris/datadictionary/elements/2006860> .
+@prefix ADOS_GOTHAM_RRB: <http://uri.interlex.org/NDA/uris/datadictionary/elements/2103093> .
+@prefix ADOS_GOTHAM_SEVERITY: <https://github.com/dbkeator/nidm-local-terms/issues/15> .
+@prefix ADOS_GOTHAM_SOCAFFECT: <http://uri.interlex.org/NDA/uris/datadictionary/elements/2028699> .
+@prefix ADOS_GOTHAM_TOTAL: <https://github.com/dbkeator/nidm-local-terms/issues/14> .
+@prefix ADOS_MODULE: <http://uri.interlex.org/base/ilx_0352279> .
+@prefix ADOS_RSRCH_RELIABLE: <https://github.com/dbkeator/nidm-local-terms/issues/13> .
+@prefix ADOS_SOCIAL: <http://uri.interlex.org/NDA/uris/datadictionary/elements/2006790> .
+@prefix ADOS_STEREO_BEHAV: <http://uri.interlex.org/NDA/uris/datadictionary/elements/1974884> .
+@prefix ADOS_TOTAL: <https://github.com/dbkeator/nidm-local-terms/issues/12> .
+@prefix AGE_AT_MPRAGE: <https://github.com/dbkeator/nidm-local-terms/issues/55> .
+@prefix AGE_AT_SCAN: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Age> .
+@prefix AQ_TOTAL: <http://uri.interlex.org/base/ilx_0353139> .
+@prefix BMI: <http://uri.interlex.org/NDA/uris/datadictionary/elements/2069392> .
+@prefix COMORBIDITY: <https://github.com/dbkeator/nidm-local-terms/issues/23> .
+@prefix CURRENT_MED_STATUS: <https://github.com/dbkeator/nidm-local-terms/issues/24> .
+@prefix DSM_IV_TR: <https://github.com/dbkeator/nidm-local-terms/issues/1> .
+@prefix DX_GROUP: <http://ncitt.ncit.nih.gov/Diagnosis> .
+@prefix EYE_STATUS_AT_SCAN: <http://uri.interlex.org/NDA/uris/datadictionary/elements/1958514> .
+@prefix FILE_ID: <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#filename> .
+@prefix FIQ: <https://github.com/dbkeator/nidm-local-terms/issues/2> .
+@prefix FIQ_TEST_TYPE: <http://uri.interlex.org/NDA/uris/datadictionary/elements/2068345> .
+@prefix HANDEDNESS_CATEGORY: <http://purl.obolibrary.org/obo/handedness> .
+@prefix HANDEDNESS_SCORES: <http://uri.interlex.org/base/ilx_0161044> .
+@prefix MEDICATION_NAME: <http://uri.interlex.org/NDA/uris/datadictionary/elements/2138403> .
+@prefix OFF_STIMULANTS_AT_SCAN: <https://github.com/dbkeator/nidm-local-terms/issues/25> .
+@prefix PIQ: <https://github.com/dbkeator/nidm-local-terms/issues/4> .
+@prefix PIQ_TEST_TYPE: <https://github.com/dbkeator/nidm-local-terms/issues/6> .
+@prefix SCQ_TOTAL: <https://github.com/dbkeator/nidm-local-terms/issues/22> .
+@prefix SEX: <https://ndar.nih.gov/api/datadictionary/v2/dataelement/gender> .
+@prefix SITE_ID: <http://uri.interlex.org/NDA/uris/datadictionary/elements/2031448> .
+@prefix SRS_AWARENESS: <https://github.com/dbkeator/nidm-local-terms/issues/17> .
+@prefix SRS_COGNITION: <https://github.com/dbkeator/nidm-local-terms/issues/18> .
+@prefix SRS_COMMUNICATION: <https://github.com/dbkeator/nidm-local-terms/issues/19> .
+@prefix SRS_MANNERISMS: <https://github.com/dbkeator/nidm-local-terms/issues/21> .
+@prefix SRS_MOTIVATION: <https://github.com/dbkeator/nidm-local-terms/issues/20> .
+@prefix SRS_RAW_TOTAL: <https://github.com/dbkeator/nidm-local-terms/issues/16> .
+@prefix SRS_VERSION: <http://uri.interlex.org/NDA/uris/datadictionary/elements/1981727> .
+@prefix VINELAND_ABC_STANDARD: <https://github.com/dbkeator/nidm-local-terms/issues/39> .
+@prefix VINELAND_COMMUNICATION_STANDARD: <https://github.com/dbkeator/nidm-local-terms/issues/29> .
+@prefix VINELAND_COMMUNITY_V_SCALED: <https://github.com/dbkeator/nidm-local-terms/issues/32> .
+@prefix VINELAND_COPING_V_SCALED: <https://github.com/dbkeator/nidm-local-terms/issues/36> .
+@prefix VINELAND_DAILYLVNG_STANDARD: <https://github.com/dbkeator/nidm-local-terms/issues/33> .
+@prefix VINELAND_DOMESTIC_V_SCALED: <https://github.com/dbkeator/nidm-local-terms/issues/31> .
+@prefix VINELAND_EXPRESSIVE_V_SCALED: <https://github.com/dbkeator/nidm-local-terms/issues/27> .
+@prefix VINELAND_INFORMANT: <https://github.com/dbkeator/nidm-local-terms/issues/40> .
+@prefix VINELAND_INTERPERSONAL_V_SCALED: <https://github.com/dbkeator/nidm-local-terms/issues/34> .
+@prefix VINELAND_PERSONAL_V_SCALED: <https://github.com/dbkeator/nidm-local-terms/issues/30> .
+@prefix VINELAND_PLAY_V_SCALED: <https://github.com/dbkeator/nidm-local-terms/issues/35> .
+@prefix VINELAND_RECEPTIVE_V_SCALED: <https://github.com/dbkeator/nidm-local-terms/issues/26> .
+@prefix VINELAND_SOCIAL_STANDARD: <https://github.com/dbkeator/nidm-local-terms/issues/37> .
+@prefix VINELAND_SUM_SCORES: <https://github.com/dbkeator/nidm-local-terms/issues/38> .
+@prefix VINELAND_WRITTEN_V_SCALED: <https://github.com/dbkeator/nidm-local-terms/issues/28> .
+@prefix VIQ: <https://github.com/dbkeator/nidm-local-terms/issues/3> .
+@prefix VIQ_TEST_TYPE: <https://github.com/dbkeator/nidm-local-terms/issues/5> .
+@prefix WISC_IV_BLK_DSN_SCALED: <https://github.com/dbkeator/nidm-local-terms/issues/48> .
+@prefix WISC_IV_CODING_SCALED: <https://github.com/dbkeator/nidm-local-terms/issues/53> .
+@prefix WISC_IV_DIGIT_SPAN_SCALED: <https://github.com/dbkeator/nidm-local-terms/issues/51> .
+@prefix WISC_IV_INFO_SCALED: <https://github.com/dbkeator/nidm-local-terms/issues/47> .
+@prefix WISC_IV_LET_NUM_SCALED: <https://github.com/dbkeator/nidm-local-terms/issues/52> .
+@prefix WISC_IV_MATRIX_SCALED: <https://github.com/dbkeator/nidm-local-terms/issues/50> .
+@prefix WISC_IV_PIC_CON_SCALED: <https://github.com/dbkeator/nidm-local-terms/issues/49> .
+@prefix WISC_IV_PRI: <https://github.com/dbkeator/nidm-local-terms/issues/42> .
+@prefix WISC_IV_PSI: <https://github.com/dbkeator/nidm-local-terms/issues/44> .
+@prefix WISC_IV_SIM_SCALED: <https://github.com/dbkeator/nidm-local-terms/issues/45> .
+@prefix WISC_IV_SYM_SCALED: <https://github.com/dbkeator/nidm-local-terms/issues/54> .
+@prefix WISC_IV_VCI: <https://github.com/dbkeator/nidm-local-terms/issues/41> .
+@prefix WISC_IV_VOCAB_SCALED: <https://github.com/dbkeator/nidm-local-terms/issues/46> .
+@prefix WISC_IV_WMI: <https://github.com/dbkeator/nidm-local-terms/issues/43> .
+@prefix afni: <http://purl.org/nidash/afni#> .
+@prefix bids: <http://bids.neuroimaging.io/> .
+@prefix birnlex: <http://bioontology.org/projects/ontologies/birnlex/> .
+@prefix crypto: <http://id.loc.gov/vocabulary/preservation/cryptographicHashFunctions#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dctypes: <http://purl.org/dc/dcmitype/> .
+@prefix dicom: <http://neurolex.org/wiki/Category:DICOM_term/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix fsl: <http://purl.org/nidash/fsl#> .
+@prefix ncicb: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#> .
+@prefix ncit: <http://ncitt.ncit.nih.gov/> .
+@prefix ndar: <https://ndar.nih.gov/api/datadictionary/v2/dataelement/> .
+@prefix nfo: <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#> .
+@prefix nidm: <http://purl.org/nidash/nidm#> .
+@prefix niiri: <http://iri.nidash.org/> .
+@prefix nlx: <http://uri.neuinfo.org/nif/nifstd/> .
+@prefix ns1: <http://uri.interlex.org/base/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix onli: <http://neurolog.unice.fr/ontoneurolog/v3.0/instrument.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pato: <http://purl.obolibrary.org/obo/pato#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix scr: <http://scicrunch.org/resolver/> .
+@prefix sio: <http://semanticscience.org/ontology/sio.owl#> .
+@prefix spm: <http://purl.org/nidash/spm#> .
+@prefix vc: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+nidm:_eed7f4fa-89da-11e8-b205-8c8590aa91df a nidm:AcquisitionObject,
+        prov:Entity ;
+    nidm:AcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hasImageUsageType nidm:Anatomical ;
+    nfo:filename "/sub-0051322/anat/sub-0051322_T1w.nii.gz"^^xsd:string ;
+    prov:wasGeneratedBy nidm:_eed7e578-89da-11e8-aa05-8c8590aa91df .
+
+nidm:_eed87880-89da-11e8-a498-8c8590aa91df a nidm:AcquisitionObject,
+        prov:Entity ;
+    nidm:AcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:AcquisitionObject "1"^^xsd:string ;
+    nidm:hasImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0051322/func/sub-0051322_task-rest_run-1_bold.nii.gz"^^xsd:string ;
+    prov:wasGeneratedBy nidm:_eed86e50-89da-11e8-bff5-8c8590aa91df .
+
+nidm:_eedb49c0-89da-11e8-ac5d-8c8590aa91df a nidm:AcquisitionObject,
+        prov:Entity ;
+    nidm:AcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hasImageUsageType nidm:Anatomical ;
+    nfo:filename "/sub-0051323/anat/sub-0051323_T1w.nii.gz"^^xsd:string ;
+    prov:wasGeneratedBy nidm:_eedb3ea8-89da-11e8-9ec8-8c8590aa91df .
+
+nidm:_eedbb55c-89da-11e8-9fd3-8c8590aa91df a nidm:AcquisitionObject,
+        prov:Entity ;
+    nidm:AcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:AcquisitionObject "1"^^xsd:string ;
+    nidm:hasImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0051323/func/sub-0051323_task-rest_run-1_bold.nii.gz"^^xsd:string ;
+    prov:wasGeneratedBy nidm:_eedbac58-89da-11e8-bbfc-8c8590aa91df .
+
+nidm:_eedc5f48-89da-11e8-aaf1-8c8590aa91df a nidm:AcquisitionObject,
+        prov:Entity ;
+    nidm:AcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hasImageUsageType nidm:Anatomical ;
+    nfo:filename "/sub-0051324/anat/sub-0051324_T1w.nii.gz"^^xsd:string ;
+    prov:wasGeneratedBy nidm:_eedc54b4-89da-11e8-b6b2-8c8590aa91df .
+
+nidm:_eedcc62e-89da-11e8-b197-8c8590aa91df a nidm:AcquisitionObject,
+        prov:Entity ;
+    nidm:AcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:AcquisitionObject "1"^^xsd:string ;
+    nidm:hasImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0051324/func/sub-0051324_task-rest_run-1_bold.nii.gz"^^xsd:string ;
+    prov:wasGeneratedBy nidm:_eedcbb5c-89da-11e8-86ea-8c8590aa91df .
+
+nidm:_eedd779a-89da-11e8-a147-8c8590aa91df a nidm:AcquisitionObject,
+        prov:Entity ;
+    nidm:AcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hasImageUsageType nidm:Anatomical ;
+    nfo:filename "/sub-0051325/anat/sub-0051325_T1w.nii.gz"^^xsd:string ;
+    prov:wasGeneratedBy nidm:_eedd6cdc-89da-11e8-9a9b-8c8590aa91df .
+
+nidm:_eeddd3a4-89da-11e8-9648-8c8590aa91df a nidm:AcquisitionObject,
+        prov:Entity ;
+    nidm:AcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:AcquisitionObject "1"^^xsd:string ;
+    nidm:hasImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0051325/func/sub-0051325_task-rest_run-1_bold.nii.gz"^^xsd:string ;
+    prov:wasGeneratedBy nidm:_eeddcc86-89da-11e8-8144-8c8590aa91df .
+
+nidm:_eede745e-89da-11e8-8eb0-8c8590aa91df a nidm:AcquisitionObject,
+        prov:Entity ;
+    nidm:AcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hasImageUsageType nidm:Anatomical ;
+    nfo:filename "/sub-0051326/anat/sub-0051326_T1w.nii.gz"^^xsd:string ;
+    prov:wasGeneratedBy nidm:_eede6a54-89da-11e8-b7af-8c8590aa91df .
+
+nidm:_eedee03a-89da-11e8-be5e-8c8590aa91df a nidm:AcquisitionObject,
+        prov:Entity ;
+    nidm:AcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:AcquisitionObject "1"^^xsd:string ;
+    nidm:hasImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0051326/func/sub-0051326_task-rest_run-1_bold.nii.gz"^^xsd:string ;
+    prov:wasGeneratedBy nidm:_eeded4dc-89da-11e8-8e90-8c8590aa91df .
+
+nidm:_eedf9200-89da-11e8-a5d9-8c8590aa91df a nidm:AcquisitionObject,
+        prov:Entity ;
+    nidm:AcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hasImageUsageType nidm:Anatomical ;
+    nfo:filename "/sub-0051327/anat/sub-0051327_T1w.nii.gz"^^xsd:string ;
+    prov:wasGeneratedBy nidm:_eedf874c-89da-11e8-b684-8c8590aa91df .
+
+nidm:_eedfefa4-89da-11e8-a8c7-8c8590aa91df a nidm:AcquisitionObject,
+        prov:Entity ;
+    nidm:AcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:AcquisitionObject "1"^^xsd:string ;
+    nidm:hasImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0051327/func/sub-0051327_task-rest_run-1_bold.nii.gz"^^xsd:string ;
+    prov:wasGeneratedBy nidm:_eedfe87a-89da-11e8-acf4-8c8590aa91df .
+
+nidm:_f12ca994-89da-11e8-a404-8c8590aa91df a onli:assessment-instrument,
+        nidm:AcquisitionObject,
+        prov:Entity ;
+    ncicb:Age 3e+01 ;
+    ncit:Diagnosis "1" ;
+    obo:handedness "R"^^xsd:string ;
+    EYE_STATUS_AT_SCAN: "2" ;
+    ADOS_STEREO_BEHAV: "NaN"^^xsd:double ;
+    SRS_VERSION: "NaN"^^xsd:double ;
+    ADOS_SOCIAL: "NaN"^^xsd:double ;
+    ADOS_COMM: "NaN"^^xsd:double ;
+    ADOS_GOTHAM_SOCAFFECT: "NaN"^^xsd:double ;
+    SITE_ID: "MAX_MUN"^^xsd:string ;
+    FIQ_TEST_TYPE: "WST"^^xsd:string ;
+    BMI: "NaN"^^xsd:double ;
+    ADOS_GOTHAM_RRB: "NaN"^^xsd:double ;
+    MEDICATION_NAME: "NaN"^^xsd:double ;
+    ns1:ilx_0161044 "NaN"^^xsd:double ;
+    ns1:ilx_0352279 "NaN"^^xsd:double ;
+    ns1:ilx_0353139 "NaN"^^xsd:double ;
+    nfo:filename "MaxMun_b_0051323"^^xsd:string ;
+    prov:wasGeneratedBy nidm:_f12aa54a-89da-11e8-829f-8c8590aa91df ;
+    DSM_IV_TR: "2" ;
+    ADI_R_ONSET_TOTAL_D: "NaN"^^xsd:double ;
+    ADI_R_RSRCH_RELIABLE: "NaN"^^xsd:double ;
+    ADOS_TOTAL: "NaN"^^xsd:double ;
+    ADOS_RSRCH_RELIABLE: "NaN"^^xsd:double ;
+    ADOS_GOTHAM_TOTAL: "NaN"^^xsd:double ;
+    ADOS_GOTHAM_SEVERITY: "NaN"^^xsd:double ;
+    SRS_RAW_TOTAL: "NaN"^^xsd:double ;
+    SRS_AWARENESS: "NaN"^^xsd:double ;
+    SRS_COGNITION: "NaN"^^xsd:double ;
+    SRS_COMMUNICATION: "NaN"^^xsd:double ;
+    FIQ: 1.18e+02 ;
+    SRS_MOTIVATION: "NaN"^^xsd:double ;
+    SRS_MANNERISMS: "NaN"^^xsd:double ;
+    SCQ_TOTAL: "NaN"^^xsd:double ;
+    COMORBIDITY: "NaN"^^xsd:double ;
+    CURRENT_MED_STATUS: "0"^^xsd:string ;
+    OFF_STIMULANTS_AT_SCAN: "NaN"^^xsd:double ;
+    VINELAND_RECEPTIVE_V_SCALED: "NaN"^^xsd:double ;
+    VINELAND_EXPRESSIVE_V_SCALED: "NaN"^^xsd:double ;
+    VINELAND_WRITTEN_V_SCALED: "NaN"^^xsd:double ;
+    VINELAND_COMMUNICATION_STANDARD: "NaN"^^xsd:double ;
+    VIQ: "NaN"^^xsd:double ;
+    VINELAND_PERSONAL_V_SCALED: "NaN"^^xsd:double ;
+    VINELAND_DOMESTIC_V_SCALED: "NaN"^^xsd:double ;
+    VINELAND_COMMUNITY_V_SCALED: "NaN"^^xsd:double ;
+    VINELAND_DAILYLVNG_STANDARD: "NaN"^^xsd:double ;
+    VINELAND_INTERPERSONAL_V_SCALED: "NaN"^^xsd:double ;
+    VINELAND_PLAY_V_SCALED: "NaN"^^xsd:double ;
+    VINELAND_COPING_V_SCALED: "NaN"^^xsd:double ;
+    VINELAND_SOCIAL_STANDARD: "NaN"^^xsd:double ;
+    VINELAND_SUM_SCORES: "NaN"^^xsd:double ;
+    VINELAND_ABC_STANDARD: "NaN"^^xsd:double ;
+    PIQ: "NaN"^^xsd:double ;
+    VINELAND_INFORMANT: "NaN"^^xsd:double ;
+    WISC_IV_VCI: "NaN"^^xsd:double ;
+    WISC_IV_PRI: "NaN"^^xsd:double ;
+    WISC_IV_WMI: "NaN"^^xsd:double ;
+    WISC_IV_PSI: "NaN"^^xsd:double ;
+    WISC_IV_SIM_SCALED: "NaN"^^xsd:double ;
+    WISC_IV_VOCAB_SCALED: "NaN"^^xsd:double ;
+    WISC_IV_INFO_SCALED: "NaN"^^xsd:double ;
+    WISC_IV_BLK_DSN_SCALED: "NaN"^^xsd:double ;
+    WISC_IV_PIC_CON_SCALED: "NaN"^^xsd:double ;
+    VIQ_TEST_TYPE: "NaN"^^xsd:double ;
+    WISC_IV_MATRIX_SCALED: "NaN"^^xsd:double ;
+    WISC_IV_DIGIT_SPAN_SCALED: "NaN"^^xsd:double ;
+    WISC_IV_LET_NUM_SCALED: "NaN"^^xsd:double ;
+    WISC_IV_CODING_SCALED: "NaN"^^xsd:double ;
+    WISC_IV_SYM_SCALED: "NaN"^^xsd:double ;
+    AGE_AT_MPRAGE: "NaN"^^xsd:double ;
+    PIQ_TEST_TYPE: "NaN"^^xsd:double ;
+    ADI_R_SOCIAL_TOTAL_A: "NaN"^^xsd:double ;
+    ADI_R_VERBAL_TOTAL_BV: "NaN"^^xsd:double ;
+    ADI_RRB_TOTAL_C: "NaN"^^xsd:double ;
+    ndar:gender "1" .
+
+nidm:_f12f4906-89da-11e8-a368-8c8590aa91df a onli:assessment-instrument,
+        nidm:AcquisitionObject,
+        prov:Entity ;
+    ncicb:Age 2.9e+01 ;
+    ncit:Diagnosis "1" ;
+    obo:handedness "L"^^xsd:string ;
+    EYE_STATUS_AT_SCAN: "2" ;
+    ADOS_STEREO_BEHAV: "NaN"^^xsd:double ;
+    SRS_VERSION: "NaN"^^xsd:double ;
+    ADOS_SOCIAL: "NaN"^^xsd:double ;
+    ADOS_COMM: "NaN"^^xsd:double ;
+    ADOS_GOTHAM_SOCAFFECT: "NaN"^^xsd:double ;
+    SITE_ID: "MAX_MUN"^^xsd:string ;
+    FIQ_TEST_TYPE: "WST"^^xsd:string ;
+    BMI: "NaN"^^xsd:double ;
+    ADOS_GOTHAM_RRB: "NaN"^^xsd:double ;
+    MEDICATION_NAME: "NaN"^^xsd:double ;
+    ns1:ilx_0161044 "NaN"^^xsd:double ;
+    ns1:ilx_0352279 "NaN"^^xsd:double ;
+    ns1:ilx_0353139 "NaN"^^xsd:double ;
+    nfo:filename "MaxMun_b_0051322"^^xsd:string ;
+    prov:wasGeneratedBy nidm:_f12f3b26-89da-11e8-8693-8c8590aa91df ;
+    DSM_IV_TR: "2" ;
+    ADI_R_ONSET_TOTAL_D: "NaN"^^xsd:double ;
+    ADI_R_RSRCH_RELIABLE: "NaN"^^xsd:double ;
+    ADOS_TOTAL: "NaN"^^xsd:double ;
+    ADOS_RSRCH_RELIABLE: "NaN"^^xsd:double ;
+    ADOS_GOTHAM_TOTAL: "NaN"^^xsd:double ;
+    ADOS_GOTHAM_SEVERITY: "NaN"^^xsd:double ;
+    SRS_RAW_TOTAL: "NaN"^^xsd:double ;
+    SRS_AWARENESS: "NaN"^^xsd:double ;
+    SRS_COGNITION: "NaN"^^xsd:double ;
+    SRS_COMMUNICATION: "NaN"^^xsd:double ;
+    FIQ: 1.22e+02 ;
+    SRS_MOTIVATION: "NaN"^^xsd:double ;
+    SRS_MANNERISMS: "NaN"^^xsd:double ;
+    SCQ_TOTAL: "NaN"^^xsd:double ;
+    COMORBIDITY: "NaN"^^xsd:double ;
+    CURRENT_MED_STATUS: "0"^^xsd:string ;
+    OFF_STIMULANTS_AT_SCAN: "NaN"^^xsd:double ;
+    VINELAND_RECEPTIVE_V_SCALED: "NaN"^^xsd:double ;
+    VINELAND_EXPRESSIVE_V_SCALED: "NaN"^^xsd:double ;
+    VINELAND_WRITTEN_V_SCALED: "NaN"^^xsd:double ;
+    VINELAND_COMMUNICATION_STANDARD: "NaN"^^xsd:double ;
+    VIQ: "NaN"^^xsd:double ;
+    VINELAND_PERSONAL_V_SCALED: "NaN"^^xsd:double ;
+    VINELAND_DOMESTIC_V_SCALED: "NaN"^^xsd:double ;
+    VINELAND_COMMUNITY_V_SCALED: "NaN"^^xsd:double ;
+    VINELAND_DAILYLVNG_STANDARD: "NaN"^^xsd:double ;
+    VINELAND_INTERPERSONAL_V_SCALED: "NaN"^^xsd:double ;
+    VINELAND_PLAY_V_SCALED: "NaN"^^xsd:double ;
+    VINELAND_COPING_V_SCALED: "NaN"^^xsd:double ;
+    VINELAND_SOCIAL_STANDARD: "NaN"^^xsd:double ;
+    VINELAND_SUM_SCORES: "NaN"^^xsd:double ;
+    VINELAND_ABC_STANDARD: "NaN"^^xsd:double ;
+    PIQ: "NaN"^^xsd:double ;
+    VINELAND_INFORMANT: "NaN"^^xsd:double ;
+    WISC_IV_VCI: "NaN"^^xsd:double ;
+    WISC_IV_PRI: "NaN"^^xsd:double ;
+    WISC_IV_WMI: "NaN"^^xsd:double ;
+    WISC_IV_PSI: "NaN"^^xsd:double ;
+    WISC_IV_SIM_SCALED: "NaN"^^xsd:double ;
+    WISC_IV_VOCAB_SCALED: "NaN"^^xsd:double ;
+    WISC_IV_INFO_SCALED: "NaN"^^xsd:double ;
+    WISC_IV_BLK_DSN_SCALED: "NaN"^^xsd:double ;
+    WISC_IV_PIC_CON_SCALED: "NaN"^^xsd:double ;
+    VIQ_TEST_TYPE: "NaN"^^xsd:double ;
+    WISC_IV_MATRIX_SCALED: "NaN"^^xsd:double ;
+    WISC_IV_DIGIT_SPAN_SCALED: "NaN"^^xsd:double ;
+    WISC_IV_LET_NUM_SCALED: "NaN"^^xsd:double ;
+    WISC_IV_CODING_SCALED: "NaN"^^xsd:double ;
+    WISC_IV_SYM_SCALED: "NaN"^^xsd:double ;
+    AGE_AT_MPRAGE: "NaN"^^xsd:double ;
+    PIQ_TEST_TYPE: "NaN"^^xsd:double ;
+    ADI_R_SOCIAL_TOTAL_A: "NaN"^^xsd:double ;
+    ADI_R_VERBAL_TOTAL_BV: "NaN"^^xsd:double ;
+    ADI_RRB_TOTAL_C: "NaN"^^xsd:double ;
+    ndar:gender "1" .
+
+nidm:_f130b7a8-89da-11e8-835c-8c8590aa91df a onli:assessment-instrument,
+        nidm:AcquisitionObject,
+        prov:Entity ;
+    ncicb:Age 4.2e+01 ;
+    ncit:Diagnosis "1" ;
+    obo:handedness "R"^^xsd:string ;
+    EYE_STATUS_AT_SCAN: "2" ;
+    ADOS_STEREO_BEHAV: "NaN"^^xsd:double ;
+    SRS_VERSION: "NaN"^^xsd:double ;
+    ADOS_SOCIAL: "NaN"^^xsd:double ;
+    ADOS_COMM: "NaN"^^xsd:double ;
+    ADOS_GOTHAM_SOCAFFECT: "NaN"^^xsd:double ;
+    SITE_ID: "MAX_MUN"^^xsd:string ;
+    FIQ_TEST_TYPE: "WST"^^xsd:string ;
+    BMI: "NaN"^^xsd:double ;
+    ADOS_GOTHAM_RRB: "NaN"^^xsd:double ;
+    MEDICATION_NAME: "NaN"^^xsd:double ;
+    ns1:ilx_0161044 "NaN"^^xsd:double ;
+    ns1:ilx_0352279 "NaN"^^xsd:double ;
+    ns1:ilx_0353139 "NaN"^^xsd:double ;
+    nfo:filename "MaxMun_b_0051326"^^xsd:string ;
+    prov:wasGeneratedBy nidm:_f130aeae-89da-11e8-acda-8c8590aa91df ;
+    DSM_IV_TR: "2" ;
+    ADI_R_ONSET_TOTAL_D: "NaN"^^xsd:double ;
+    ADI_R_RSRCH_RELIABLE: "NaN"^^xsd:double ;
+    ADOS_TOTAL: "NaN"^^xsd:double ;
+    ADOS_RSRCH_RELIABLE: "NaN"^^xsd:double ;
+    ADOS_GOTHAM_TOTAL: "NaN"^^xsd:double ;
+    ADOS_GOTHAM_SEVERITY: "NaN"^^xsd:double ;
+    SRS_RAW_TOTAL: "NaN"^^xsd:double ;
+    SRS_AWARENESS: "NaN"^^xsd:double ;
+    SRS_COGNITION: "NaN"^^xsd:double ;
+    SRS_COMMUNICATION: "NaN"^^xsd:double ;
+    FIQ: 1.14e+02 ;
+    SRS_MOTIVATION: "NaN"^^xsd:double ;
+    SRS_MANNERISMS: "NaN"^^xsd:double ;
+    SCQ_TOTAL: "NaN"^^xsd:double ;
+    COMORBIDITY: "NaN"^^xsd:double ;
+    CURRENT_MED_STATUS: "0"^^xsd:string ;
+    OFF_STIMULANTS_AT_SCAN: "NaN"^^xsd:double ;
+    VINELAND_RECEPTIVE_V_SCALED: "NaN"^^xsd:double ;
+    VINELAND_EXPRESSIVE_V_SCALED: "NaN"^^xsd:double ;
+    VINELAND_WRITTEN_V_SCALED: "NaN"^^xsd:double ;
+    VINELAND_COMMUNICATION_STANDARD: "NaN"^^xsd:double ;
+    VIQ: "NaN"^^xsd:double ;
+    VINELAND_PERSONAL_V_SCALED: "NaN"^^xsd:double ;
+    VINELAND_DOMESTIC_V_SCALED: "NaN"^^xsd:double ;
+    VINELAND_COMMUNITY_V_SCALED: "NaN"^^xsd:double ;
+    VINELAND_DAILYLVNG_STANDARD: "NaN"^^xsd:double ;
+    VINELAND_INTERPERSONAL_V_SCALED: "NaN"^^xsd:double ;
+    VINELAND_PLAY_V_SCALED: "NaN"^^xsd:double ;
+    VINELAND_COPING_V_SCALED: "NaN"^^xsd:double ;
+    VINELAND_SOCIAL_STANDARD: "NaN"^^xsd:double ;
+    VINELAND_SUM_SCORES: "NaN"^^xsd:double ;
+    VINELAND_ABC_STANDARD: "NaN"^^xsd:double ;
+    PIQ: "NaN"^^xsd:double ;
+    VINELAND_INFORMANT: "NaN"^^xsd:double ;
+    WISC_IV_VCI: "NaN"^^xsd:double ;
+    WISC_IV_PRI: "NaN"^^xsd:double ;
+    WISC_IV_WMI: "NaN"^^xsd:double ;
+    WISC_IV_PSI: "NaN"^^xsd:double ;
+    WISC_IV_SIM_SCALED: "NaN"^^xsd:double ;
+    WISC_IV_VOCAB_SCALED: "NaN"^^xsd:double ;
+    WISC_IV_INFO_SCALED: "NaN"^^xsd:double ;
+    WISC_IV_BLK_DSN_SCALED: "NaN"^^xsd:double ;
+    WISC_IV_PIC_CON_SCALED: "NaN"^^xsd:double ;
+    VIQ_TEST_TYPE: "NaN"^^xsd:double ;
+    WISC_IV_MATRIX_SCALED: "NaN"^^xsd:double ;
+    WISC_IV_DIGIT_SPAN_SCALED: "NaN"^^xsd:double ;
+    WISC_IV_LET_NUM_SCALED: "NaN"^^xsd:double ;
+    WISC_IV_CODING_SCALED: "NaN"^^xsd:double ;
+    WISC_IV_SYM_SCALED: "NaN"^^xsd:double ;
+    AGE_AT_MPRAGE: "NaN"^^xsd:double ;
+    PIQ_TEST_TYPE: "NaN"^^xsd:double ;
+    ADI_R_SOCIAL_TOTAL_A: "NaN"^^xsd:double ;
+    ADI_R_VERBAL_TOTAL_BV: "NaN"^^xsd:double ;
+    ADI_RRB_TOTAL_C: "NaN"^^xsd:double ;
+    ndar:gender "1" .
+
+nidm:_f132a2f6-89da-11e8-8caa-8c8590aa91df a onli:assessment-instrument,
+        nidm:AcquisitionObject,
+        prov:Entity ;
+    ncicb:Age 5.8e+01 ;
+    ncit:Diagnosis "1" ;
+    obo:handedness "R"^^xsd:string ;
+    EYE_STATUS_AT_SCAN: "2" ;
+    ADOS_STEREO_BEHAV: "NaN"^^xsd:double ;
+    SRS_VERSION: "NaN"^^xsd:double ;
+    ADOS_SOCIAL: "NaN"^^xsd:double ;
+    ADOS_COMM: "NaN"^^xsd:double ;
+    ADOS_GOTHAM_SOCAFFECT: "NaN"^^xsd:double ;
+    SITE_ID: "MAX_MUN"^^xsd:string ;
+    FIQ_TEST_TYPE: "WST"^^xsd:string ;
+    BMI: "NaN"^^xsd:double ;
+    ADOS_GOTHAM_RRB: "NaN"^^xsd:double ;
+    MEDICATION_NAME: "NaN"^^xsd:double ;
+    ns1:ilx_0161044 "NaN"^^xsd:double ;
+    ns1:ilx_0352279 "NaN"^^xsd:double ;
+    ns1:ilx_0353139 "NaN"^^xsd:double ;
+    nfo:filename "MaxMun_b_0051327"^^xsd:string ;
+    prov:wasGeneratedBy nidm:_f13297dc-89da-11e8-a4da-8c8590aa91df ;
+    DSM_IV_TR: "2" ;
+    ADI_R_ONSET_TOTAL_D: "NaN"^^xsd:double ;
+    ADI_R_RSRCH_RELIABLE: "NaN"^^xsd:double ;
+    ADOS_TOTAL: "NaN"^^xsd:double ;
+    ADOS_RSRCH_RELIABLE: "NaN"^^xsd:double ;
+    ADOS_GOTHAM_TOTAL: "NaN"^^xsd:double ;
+    ADOS_GOTHAM_SEVERITY: "NaN"^^xsd:double ;
+    SRS_RAW_TOTAL: "NaN"^^xsd:double ;
+    SRS_AWARENESS: "NaN"^^xsd:double ;
+    SRS_COGNITION: "NaN"^^xsd:double ;
+    SRS_COMMUNICATION: "NaN"^^xsd:double ;
+    FIQ: 1.29e+02 ;
+    SRS_MOTIVATION: "NaN"^^xsd:double ;
+    SRS_MANNERISMS: "NaN"^^xsd:double ;
+    SCQ_TOTAL: "NaN"^^xsd:double ;
+    COMORBIDITY: "NaN"^^xsd:double ;
+    CURRENT_MED_STATUS: "0"^^xsd:string ;
+    OFF_STIMULANTS_AT_SCAN: "NaN"^^xsd:double ;
+    VINELAND_RECEPTIVE_V_SCALED: "NaN"^^xsd:double ;
+    VINELAND_EXPRESSIVE_V_SCALED: "NaN"^^xsd:double ;
+    VINELAND_WRITTEN_V_SCALED: "NaN"^^xsd:double ;
+    VINELAND_COMMUNICATION_STANDARD: "NaN"^^xsd:double ;
+    VIQ: "NaN"^^xsd:double ;
+    VINELAND_PERSONAL_V_SCALED: "NaN"^^xsd:double ;
+    VINELAND_DOMESTIC_V_SCALED: "NaN"^^xsd:double ;
+    VINELAND_COMMUNITY_V_SCALED: "NaN"^^xsd:double ;
+    VINELAND_DAILYLVNG_STANDARD: "NaN"^^xsd:double ;
+    VINELAND_INTERPERSONAL_V_SCALED: "NaN"^^xsd:double ;
+    VINELAND_PLAY_V_SCALED: "NaN"^^xsd:double ;
+    VINELAND_COPING_V_SCALED: "NaN"^^xsd:double ;
+    VINELAND_SOCIAL_STANDARD: "NaN"^^xsd:double ;
+    VINELAND_SUM_SCORES: "NaN"^^xsd:double ;
+    VINELAND_ABC_STANDARD: "NaN"^^xsd:double ;
+    PIQ: "NaN"^^xsd:double ;
+    VINELAND_INFORMANT: "NaN"^^xsd:double ;
+    WISC_IV_VCI: "NaN"^^xsd:double ;
+    WISC_IV_PRI: "NaN"^^xsd:double ;
+    WISC_IV_WMI: "NaN"^^xsd:double ;
+    WISC_IV_PSI: "NaN"^^xsd:double ;
+    WISC_IV_SIM_SCALED: "NaN"^^xsd:double ;
+    WISC_IV_VOCAB_SCALED: "NaN"^^xsd:double ;
+    WISC_IV_INFO_SCALED: "NaN"^^xsd:double ;
+    WISC_IV_BLK_DSN_SCALED: "NaN"^^xsd:double ;
+    WISC_IV_PIC_CON_SCALED: "NaN"^^xsd:double ;
+    VIQ_TEST_TYPE: "NaN"^^xsd:double ;
+    WISC_IV_MATRIX_SCALED: "NaN"^^xsd:double ;
+    WISC_IV_DIGIT_SPAN_SCALED: "NaN"^^xsd:double ;
+    WISC_IV_LET_NUM_SCALED: "NaN"^^xsd:double ;
+    WISC_IV_CODING_SCALED: "NaN"^^xsd:double ;
+    WISC_IV_SYM_SCALED: "NaN"^^xsd:double ;
+    AGE_AT_MPRAGE: "NaN"^^xsd:double ;
+    PIQ_TEST_TYPE: "NaN"^^xsd:double ;
+    ADI_R_SOCIAL_TOTAL_A: "NaN"^^xsd:double ;
+    ADI_R_VERBAL_TOTAL_BV: "NaN"^^xsd:double ;
+    ADI_RRB_TOTAL_C: "NaN"^^xsd:double ;
+    ndar:gender "1" .
+
+nidm:_f1344190-89da-11e8-a23d-8c8590aa91df a onli:assessment-instrument,
+        nidm:AcquisitionObject,
+        prov:Entity ;
+    ncicb:Age 3.2e+01 ;
+    ncit:Diagnosis "1" ;
+    obo:handedness "L"^^xsd:string ;
+    EYE_STATUS_AT_SCAN: "2" ;
+    ADOS_STEREO_BEHAV: "NaN"^^xsd:double ;
+    SRS_VERSION: "NaN"^^xsd:double ;
+    ADOS_SOCIAL: "NaN"^^xsd:double ;
+    ADOS_COMM: "NaN"^^xsd:double ;
+    ADOS_GOTHAM_SOCAFFECT: "NaN"^^xsd:double ;
+    SITE_ID: "MAX_MUN"^^xsd:string ;
+    FIQ_TEST_TYPE: "WST"^^xsd:string ;
+    BMI: "NaN"^^xsd:double ;
+    ADOS_GOTHAM_RRB: "NaN"^^xsd:double ;
+    MEDICATION_NAME: "NaN"^^xsd:double ;
+    ns1:ilx_0161044 "NaN"^^xsd:double ;
+    ns1:ilx_0352279 "NaN"^^xsd:double ;
+    ns1:ilx_0353139 "NaN"^^xsd:double ;
+    nfo:filename "MaxMun_b_0051325"^^xsd:string ;
+    prov:wasGeneratedBy nidm:_f1343470-89da-11e8-87d2-8c8590aa91df ;
+    DSM_IV_TR: "2" ;
+    ADI_R_ONSET_TOTAL_D: "NaN"^^xsd:double ;
+    ADI_R_RSRCH_RELIABLE: "NaN"^^xsd:double ;
+    ADOS_TOTAL: "NaN"^^xsd:double ;
+    ADOS_RSRCH_RELIABLE: "NaN"^^xsd:double ;
+    ADOS_GOTHAM_TOTAL: "NaN"^^xsd:double ;
+    ADOS_GOTHAM_SEVERITY: "NaN"^^xsd:double ;
+    SRS_RAW_TOTAL: "NaN"^^xsd:double ;
+    SRS_AWARENESS: "NaN"^^xsd:double ;
+    SRS_COGNITION: "NaN"^^xsd:double ;
+    SRS_COMMUNICATION: "NaN"^^xsd:double ;
+    FIQ: 1.1e+02 ;
+    SRS_MOTIVATION: "NaN"^^xsd:double ;
+    SRS_MANNERISMS: "NaN"^^xsd:double ;
+    SCQ_TOTAL: "NaN"^^xsd:double ;
+    COMORBIDITY: "NaN"^^xsd:double ;
+    CURRENT_MED_STATUS: "0"^^xsd:string ;
+    OFF_STIMULANTS_AT_SCAN: "NaN"^^xsd:double ;
+    VINELAND_RECEPTIVE_V_SCALED: "NaN"^^xsd:double ;
+    VINELAND_EXPRESSIVE_V_SCALED: "NaN"^^xsd:double ;
+    VINELAND_WRITTEN_V_SCALED: "NaN"^^xsd:double ;
+    VINELAND_COMMUNICATION_STANDARD: "NaN"^^xsd:double ;
+    VIQ: "NaN"^^xsd:double ;
+    VINELAND_PERSONAL_V_SCALED: "NaN"^^xsd:double ;
+    VINELAND_DOMESTIC_V_SCALED: "NaN"^^xsd:double ;
+    VINELAND_COMMUNITY_V_SCALED: "NaN"^^xsd:double ;
+    VINELAND_DAILYLVNG_STANDARD: "NaN"^^xsd:double ;
+    VINELAND_INTERPERSONAL_V_SCALED: "NaN"^^xsd:double ;
+    VINELAND_PLAY_V_SCALED: "NaN"^^xsd:double ;
+    VINELAND_COPING_V_SCALED: "NaN"^^xsd:double ;
+    VINELAND_SOCIAL_STANDARD: "NaN"^^xsd:double ;
+    VINELAND_SUM_SCORES: "NaN"^^xsd:double ;
+    VINELAND_ABC_STANDARD: "NaN"^^xsd:double ;
+    PIQ: "NaN"^^xsd:double ;
+    VINELAND_INFORMANT: "NaN"^^xsd:double ;
+    WISC_IV_VCI: "NaN"^^xsd:double ;
+    WISC_IV_PRI: "NaN"^^xsd:double ;
+    WISC_IV_WMI: "NaN"^^xsd:double ;
+    WISC_IV_PSI: "NaN"^^xsd:double ;
+    WISC_IV_SIM_SCALED: "NaN"^^xsd:double ;
+    WISC_IV_VOCAB_SCALED: "NaN"^^xsd:double ;
+    WISC_IV_INFO_SCALED: "NaN"^^xsd:double ;
+    WISC_IV_BLK_DSN_SCALED: "NaN"^^xsd:double ;
+    WISC_IV_PIC_CON_SCALED: "NaN"^^xsd:double ;
+    VIQ_TEST_TYPE: "NaN"^^xsd:double ;
+    WISC_IV_MATRIX_SCALED: "NaN"^^xsd:double ;
+    WISC_IV_DIGIT_SPAN_SCALED: "NaN"^^xsd:double ;
+    WISC_IV_LET_NUM_SCALED: "NaN"^^xsd:double ;
+    WISC_IV_CODING_SCALED: "NaN"^^xsd:double ;
+    WISC_IV_SYM_SCALED: "NaN"^^xsd:double ;
+    AGE_AT_MPRAGE: "NaN"^^xsd:double ;
+    PIQ_TEST_TYPE: "NaN"^^xsd:double ;
+    ADI_R_SOCIAL_TOTAL_A: "NaN"^^xsd:double ;
+    ADI_R_VERBAL_TOTAL_BV: "NaN"^^xsd:double ;
+    ADI_RRB_TOTAL_C: "NaN"^^xsd:double ;
+    ndar:gender "2" .
+
+nidm:_f1358a8a-89da-11e8-afa7-8c8590aa91df a onli:assessment-instrument,
+        nidm:AcquisitionObject,
+        prov:Entity ;
+    ncicb:Age 5.2e+01 ;
+    ncit:Diagnosis "1" ;
+    obo:handedness "R"^^xsd:string ;
+    EYE_STATUS_AT_SCAN: "2" ;
+    ADOS_STEREO_BEHAV: "NaN"^^xsd:double ;
+    SRS_VERSION: "NaN"^^xsd:double ;
+    ADOS_SOCIAL: "NaN"^^xsd:double ;
+    ADOS_COMM: "NaN"^^xsd:double ;
+    ADOS_GOTHAM_SOCAFFECT: "NaN"^^xsd:double ;
+    SITE_ID: "MAX_MUN"^^xsd:string ;
+    FIQ_TEST_TYPE: "WST"^^xsd:string ;
+    BMI: "NaN"^^xsd:double ;
+    ADOS_GOTHAM_RRB: "NaN"^^xsd:double ;
+    MEDICATION_NAME: "NaN"^^xsd:double ;
+    ns1:ilx_0161044 "NaN"^^xsd:double ;
+    ns1:ilx_0352279 "NaN"^^xsd:double ;
+    ns1:ilx_0353139 "NaN"^^xsd:double ;
+    nfo:filename "MaxMun_b_0051324"^^xsd:string ;
+    prov:wasGeneratedBy nidm:_f1357df8-89da-11e8-a29e-8c8590aa91df ;
+    DSM_IV_TR: "2" ;
+    ADI_R_ONSET_TOTAL_D: "NaN"^^xsd:double ;
+    ADI_R_RSRCH_RELIABLE: "NaN"^^xsd:double ;
+    ADOS_TOTAL: "NaN"^^xsd:double ;
+    ADOS_RSRCH_RELIABLE: "NaN"^^xsd:double ;
+    ADOS_GOTHAM_TOTAL: "NaN"^^xsd:double ;
+    ADOS_GOTHAM_SEVERITY: "NaN"^^xsd:double ;
+    SRS_RAW_TOTAL: "NaN"^^xsd:double ;
+    SRS_AWARENESS: "NaN"^^xsd:double ;
+    SRS_COGNITION: "NaN"^^xsd:double ;
+    SRS_COMMUNICATION: "NaN"^^xsd:double ;
+    FIQ: 1.33e+02 ;
+    SRS_MOTIVATION: "NaN"^^xsd:double ;
+    SRS_MANNERISMS: "NaN"^^xsd:double ;
+    SCQ_TOTAL: "NaN"^^xsd:double ;
+    COMORBIDITY: "NaN"^^xsd:double ;
+    CURRENT_MED_STATUS: "0"^^xsd:string ;
+    OFF_STIMULANTS_AT_SCAN: "NaN"^^xsd:double ;
+    VINELAND_RECEPTIVE_V_SCALED: "NaN"^^xsd:double ;
+    VINELAND_EXPRESSIVE_V_SCALED: "NaN"^^xsd:double ;
+    VINELAND_WRITTEN_V_SCALED: "NaN"^^xsd:double ;
+    VINELAND_COMMUNICATION_STANDARD: "NaN"^^xsd:double ;
+    VIQ: "NaN"^^xsd:double ;
+    VINELAND_PERSONAL_V_SCALED: "NaN"^^xsd:double ;
+    VINELAND_DOMESTIC_V_SCALED: "NaN"^^xsd:double ;
+    VINELAND_COMMUNITY_V_SCALED: "NaN"^^xsd:double ;
+    VINELAND_DAILYLVNG_STANDARD: "NaN"^^xsd:double ;
+    VINELAND_INTERPERSONAL_V_SCALED: "NaN"^^xsd:double ;
+    VINELAND_PLAY_V_SCALED: "NaN"^^xsd:double ;
+    VINELAND_COPING_V_SCALED: "NaN"^^xsd:double ;
+    VINELAND_SOCIAL_STANDARD: "NaN"^^xsd:double ;
+    VINELAND_SUM_SCORES: "NaN"^^xsd:double ;
+    VINELAND_ABC_STANDARD: "NaN"^^xsd:double ;
+    PIQ: "NaN"^^xsd:double ;
+    VINELAND_INFORMANT: "NaN"^^xsd:double ;
+    WISC_IV_VCI: "NaN"^^xsd:double ;
+    WISC_IV_PRI: "NaN"^^xsd:double ;
+    WISC_IV_WMI: "NaN"^^xsd:double ;
+    WISC_IV_PSI: "NaN"^^xsd:double ;
+    WISC_IV_SIM_SCALED: "NaN"^^xsd:double ;
+    WISC_IV_VOCAB_SCALED: "NaN"^^xsd:double ;
+    WISC_IV_INFO_SCALED: "NaN"^^xsd:double ;
+    WISC_IV_BLK_DSN_SCALED: "NaN"^^xsd:double ;
+    WISC_IV_PIC_CON_SCALED: "NaN"^^xsd:double ;
+    VIQ_TEST_TYPE: "NaN"^^xsd:double ;
+    WISC_IV_MATRIX_SCALED: "NaN"^^xsd:double ;
+    WISC_IV_DIGIT_SPAN_SCALED: "NaN"^^xsd:double ;
+    WISC_IV_LET_NUM_SCALED: "NaN"^^xsd:double ;
+    WISC_IV_CODING_SCALED: "NaN"^^xsd:double ;
+    WISC_IV_SYM_SCALED: "NaN"^^xsd:double ;
+    AGE_AT_MPRAGE: "NaN"^^xsd:double ;
+    PIQ_TEST_TYPE: "NaN"^^xsd:double ;
+    ADI_R_SOCIAL_TOTAL_A: "NaN"^^xsd:double ;
+    ADI_R_VERBAL_TOTAL_BV: "NaN"^^xsd:double ;
+    ADI_RRB_TOTAL_C: "NaN"^^xsd:double ;
+    ndar:gender "1" .
+
+nidm:_eed7e578-89da-11e8-aa05-8c8590aa91df a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf nidm:_eed787d4-89da-11e8-9a18-8c8590aa91df ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent nidm:_eed7eabe-89da-11e8-bcb0-8c8590aa91df ;
+            prov:hadRole sio:Subject ] ;
+    prov:wasAssociatedWith nidm:_eed7eabe-89da-11e8-bcb0-8c8590aa91df .
+
+nidm:_eed86e50-89da-11e8-bff5-8c8590aa91df a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf nidm:_eed787d4-89da-11e8-9a18-8c8590aa91df ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent nidm:_eed7eabe-89da-11e8-bcb0-8c8590aa91df ;
+            prov:hadRole sio:Subject ] ;
+    prov:wasAssociatedWith nidm:_eed7eabe-89da-11e8-bcb0-8c8590aa91df .
+
+nidm:_eedb3ea8-89da-11e8-9ec8-8c8590aa91df a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf nidm:_eedaf222-89da-11e8-978d-8c8590aa91df ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent nidm:_eedb4290-89da-11e8-a882-8c8590aa91df ;
+            prov:hadRole sio:Subject ] ;
+    prov:wasAssociatedWith nidm:_eedb4290-89da-11e8-a882-8c8590aa91df .
+
+nidm:_eedbac58-89da-11e8-bbfc-8c8590aa91df a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf nidm:_eedaf222-89da-11e8-978d-8c8590aa91df ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent nidm:_eedb4290-89da-11e8-a882-8c8590aa91df ;
+            prov:hadRole sio:Subject ] ;
+    prov:wasAssociatedWith nidm:_eedb4290-89da-11e8-a882-8c8590aa91df .
+
+nidm:_eedc54b4-89da-11e8-b6b2-8c8590aa91df a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf nidm:_eedc1398-89da-11e8-8530-8c8590aa91df ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent nidm:_eedc5892-89da-11e8-9aa9-8c8590aa91df ;
+            prov:hadRole sio:Subject ] ;
+    prov:wasAssociatedWith nidm:_eedc5892-89da-11e8-9aa9-8c8590aa91df .
+
+nidm:_eedcbb5c-89da-11e8-86ea-8c8590aa91df a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf nidm:_eedc1398-89da-11e8-8530-8c8590aa91df ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent nidm:_eedc5892-89da-11e8-9aa9-8c8590aa91df ;
+            prov:hadRole sio:Subject ] ;
+    prov:wasAssociatedWith nidm:_eedc5892-89da-11e8-9aa9-8c8590aa91df .
+
+nidm:_eedd6cdc-89da-11e8-9a9b-8c8590aa91df a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf nidm:_eedd28ee-89da-11e8-a1ad-8c8590aa91df ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent nidm:_eedd70cc-89da-11e8-97bd-8c8590aa91df ;
+            prov:hadRole sio:Subject ] ;
+    prov:wasAssociatedWith nidm:_eedd70cc-89da-11e8-97bd-8c8590aa91df .
+
+nidm:_eeddcc86-89da-11e8-8144-8c8590aa91df a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf nidm:_eedd28ee-89da-11e8-a1ad-8c8590aa91df ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent nidm:_eedd70cc-89da-11e8-97bd-8c8590aa91df ;
+            prov:hadRole sio:Subject ] ;
+    prov:wasAssociatedWith nidm:_eedd70cc-89da-11e8-97bd-8c8590aa91df .
+
+nidm:_eede6a54-89da-11e8-b7af-8c8590aa91df a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf nidm:_eede2578-89da-11e8-b0d0-8c8590aa91df ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent nidm:_eede6e00-89da-11e8-a434-8c8590aa91df ;
+            prov:hadRole sio:Subject ] ;
+    prov:wasAssociatedWith nidm:_eede6e00-89da-11e8-a434-8c8590aa91df .
+
+nidm:_eeded4dc-89da-11e8-8e90-8c8590aa91df a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf nidm:_eede2578-89da-11e8-b0d0-8c8590aa91df ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent nidm:_eede6e00-89da-11e8-a434-8c8590aa91df ;
+            prov:hadRole sio:Subject ] ;
+    prov:wasAssociatedWith nidm:_eede6e00-89da-11e8-a434-8c8590aa91df .
+
+nidm:_eedf874c-89da-11e8-b684-8c8590aa91df a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf nidm:_eedf4964-89da-11e8-8ed5-8c8590aa91df ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent nidm:_eedf8b3e-89da-11e8-a0c1-8c8590aa91df ;
+            prov:hadRole sio:Subject ] ;
+    prov:wasAssociatedWith nidm:_eedf8b3e-89da-11e8-a0c1-8c8590aa91df .
+
+nidm:_eedfe87a-89da-11e8-acf4-8c8590aa91df a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf nidm:_eedf4964-89da-11e8-8ed5-8c8590aa91df ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent nidm:_eedf8b3e-89da-11e8-a0c1-8c8590aa91df ;
+            prov:hadRole sio:Subject ] ;
+    prov:wasAssociatedWith nidm:_eedf8b3e-89da-11e8-a0c1-8c8590aa91df .
+
+nidm:_f12aa54a-89da-11e8-829f-8c8590aa91df a onli:instrument-based-assessment,
+        nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf nidm:_eedaf222-89da-11e8-978d-8c8590aa91df ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent nidm:_eedb4290-89da-11e8-a882-8c8590aa91df ;
+            prov:hadRole sio:Subject ] ;
+    prov:wasAssociatedWith nidm:_eedb4290-89da-11e8-a882-8c8590aa91df .
+
+nidm:_f12f3b26-89da-11e8-8693-8c8590aa91df a onli:instrument-based-assessment,
+        nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf nidm:_eed787d4-89da-11e8-9a18-8c8590aa91df ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent nidm:_eed7eabe-89da-11e8-bcb0-8c8590aa91df ;
+            prov:hadRole sio:Subject ] ;
+    prov:wasAssociatedWith nidm:_eed7eabe-89da-11e8-bcb0-8c8590aa91df .
+
+nidm:_f130aeae-89da-11e8-acda-8c8590aa91df a onli:instrument-based-assessment,
+        nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf nidm:_eede2578-89da-11e8-b0d0-8c8590aa91df ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent nidm:_eede6e00-89da-11e8-a434-8c8590aa91df ;
+            prov:hadRole sio:Subject ] ;
+    prov:wasAssociatedWith nidm:_eede6e00-89da-11e8-a434-8c8590aa91df .
+
+nidm:_f13297dc-89da-11e8-a4da-8c8590aa91df a onli:instrument-based-assessment,
+        nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf nidm:_eedf4964-89da-11e8-8ed5-8c8590aa91df ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent nidm:_eedf8b3e-89da-11e8-a0c1-8c8590aa91df ;
+            prov:hadRole sio:Subject ] ;
+    prov:wasAssociatedWith nidm:_eedf8b3e-89da-11e8-a0c1-8c8590aa91df .
+
+nidm:_f1343470-89da-11e8-87d2-8c8590aa91df a onli:instrument-based-assessment,
+        nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf nidm:_eedd28ee-89da-11e8-a1ad-8c8590aa91df ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent nidm:_eedd70cc-89da-11e8-97bd-8c8590aa91df ;
+            prov:hadRole sio:Subject ] ;
+    prov:wasAssociatedWith nidm:_eedd70cc-89da-11e8-97bd-8c8590aa91df .
+
+nidm:_f1357df8-89da-11e8-a29e-8c8590aa91df a onli:instrument-based-assessment,
+        nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf nidm:_eedc1398-89da-11e8-8530-8c8590aa91df ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent nidm:_eedc5892-89da-11e8-9aa9-8c8590aa91df ;
+            prov:hadRole sio:Subject ] ;
+    prov:wasAssociatedWith nidm:_eedc5892-89da-11e8-9aa9-8c8590aa91df .
+
+nidm:_eed787d4-89da-11e8-9a18-8c8590aa91df a nidm:Session,
+        prov:Activity ;
+    dct:isPartOf nidm:_eea513a2-89da-11e8-9ecd-8c8590aa91df .
+
+nidm:_eedaf222-89da-11e8-978d-8c8590aa91df a nidm:Session,
+        prov:Activity ;
+    dct:isPartOf nidm:_eea513a2-89da-11e8-9ecd-8c8590aa91df .
+
+nidm:_eedc1398-89da-11e8-8530-8c8590aa91df a nidm:Session,
+        prov:Activity ;
+    dct:isPartOf nidm:_eea513a2-89da-11e8-9ecd-8c8590aa91df .
+
+nidm:_eedd28ee-89da-11e8-a1ad-8c8590aa91df a nidm:Session,
+        prov:Activity ;
+    dct:isPartOf nidm:_eea513a2-89da-11e8-9ecd-8c8590aa91df .
+
+nidm:_eede2578-89da-11e8-b0d0-8c8590aa91df a nidm:Session,
+        prov:Activity ;
+    dct:isPartOf nidm:_eea513a2-89da-11e8-9ecd-8c8590aa91df .
+
+nidm:_eedf4964-89da-11e8-8ed5-8c8590aa91df a nidm:Session,
+        prov:Activity ;
+    dct:isPartOf nidm:_eea513a2-89da-11e8-9ecd-8c8590aa91df .
+
+nidm:_eea513a2-89da-11e8-9ecd-8c8590aa91df a nidm:Project,
+        prov:Activity ;
+    dctypes:title "ABIDE MaxMun_b Site"^^xsd:string ;
+    sio:Identifier "1.0.1"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/abide/RawDataBIDS/MaxMun_b"^^xsd:string .
+
+nidm:_eed7eabe-89da-11e8-bcb0-8c8590aa91df a prov:Agent,
+        prov:Person ;
+    ndar:src_subject_id "0051322"^^xsd:string .
+
+nidm:_eedb4290-89da-11e8-a882-8c8590aa91df a prov:Agent,
+        prov:Person ;
+    ndar:src_subject_id "0051323"^^xsd:string .
+
+nidm:_eedc5892-89da-11e8-9aa9-8c8590aa91df a prov:Agent,
+        prov:Person ;
+    ndar:src_subject_id "0051324"^^xsd:string .
+
+nidm:_eedd70cc-89da-11e8-97bd-8c8590aa91df a prov:Agent,
+        prov:Person ;
+    ndar:src_subject_id "0051325"^^xsd:string .
+
+nidm:_eede6e00-89da-11e8-a434-8c8590aa91df a prov:Agent,
+        prov:Person ;
+    ndar:src_subject_id "0051326"^^xsd:string .
+
+nidm:_eedf8b3e-89da-11e8-a0c1-8c8590aa91df a prov:Agent,
+        prov:Person ;
+    ndar:src_subject_id "0051327"^^xsd:string .
+
