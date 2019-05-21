@@ -15,6 +15,7 @@
 @prefix ADOS_TOTAL: <https://github.com/dbkeator/nidm-local-terms/issues/12> .
 @prefix AGE_AT_MPRAGE: <https://github.com/dbkeator/nidm-local-terms/issues/55> .
 @prefix AGE_AT_SCAN: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Age> .
+@prefix ANTS: <http://stnava.github.io/ANTs/> .
 @prefix AQ_TOTAL: <http://uri.interlex.org/base/ilx_0353139> .
 @prefix BMI: <http://uri.interlex.org/NDA/uris/datadictionary/elements/2069392> .
 @prefix COMORBIDITY: <https://github.com/dbkeator/nidm-local-terms/issues/23> .
@@ -25,9 +26,12 @@
 @prefix FILE_ID: <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#filename> .
 @prefix FIQ: <https://github.com/dbkeator/nidm-local-terms/issues/2> .
 @prefix FIQ_TEST_TYPE: <http://uri.interlex.org/NDA/uris/datadictionary/elements/2068345> .
+@prefix FSL: <http://purl.org/nidash/fsl#> .
+@prefix FreeSurfer: <https://surfer.nmr.mgh.harvard.edu/> .
 @prefix HANDEDNESS_CATEGORY: <http://purl.obolibrary.org/obo/handedness> .
 @prefix HANDEDNESS_SCORES: <http://uri.interlex.org/base/ilx_0161044> .
 @prefix MEDICATION_NAME: <http://uri.interlex.org/NDA/uris/datadictionary/elements/2138403> .
+@prefix Neuroimaging_Analysis_Software: <http://purl.org/nidash/nidm#NIDM_0000164> .
 @prefix OFF_STIMULANTS_AT_SCAN: <https://github.com/dbkeator/nidm-local-terms/issues/25> .
 @prefix PIQ: <https://github.com/dbkeator/nidm-local-terms/issues/4> .
 @prefix PIQ_TEST_TYPE: <https://github.com/dbkeator/nidm-local-terms/issues/6> .
@@ -75,6 +79,13 @@
 @prefix afni: <http://purl.org/nidash/afni#> .
 @prefix bids: <http://bids.neuroimaging.io/> .
 @prefix birnlex: <http://bioontology.org/projects/ontologies/birnlex/> .
+@prefix brain_gray_matter_volume: <http://uri.interlex.org/base/ilx_0381390#> .
+@prefix brainstem_volume: <http://uri.interlex.org/base/ilx_0381391#> .
+@prefix cavum_septum_pellucidum_volume: <http://uri.interlex.org/base/ilx_0381392#> .
+@prefix cerebral_cortex_volume: <http://uri.interlex.org/base/ilx_0381393#> .
+@prefix cerebrum_cerebral_spinal_fluid_volume: <http://uri.interlex.org/base/ilx_0381394#> .
+@prefix cerebrum_tissue_volume: <http://uri.interlex.org/base/ilx_0381395#> .
+@prefix cerebrum_white_matter_volume: <http://uri.interlex.org/base/ilx_0381396#> .
 @prefix crypto: <http://id.loc.gov/vocabulary/preservation/cryptographicHashFunctions#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
@@ -82,7 +93,25 @@
 @prefix dctypes: <http://purl.org/dc/dcmitype/> .
 @prefix dicom: <http://neurolex.org/wiki/Category:DICOM_term/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix fourth_ventricle_volume: <http://uri.interlex.org/base/ilx_0381399#> .
 @prefix fsl: <http://purl.org/nidash/fsl#> .
+@prefix left_amygdala_volume: <http://uri.interlex.org/base/ilx_0381401#> .
+@prefix left_basal_forebrain_gray_matter_volume: <http://uri.interlex.org/base/ilx_0381402#> .
+@prefix left_caudate_nucleus_volume: <http://uri.interlex.org/base/ilx_0381403#> .
+@prefix left_cerebellar_cortex_volume: <http://uri.interlex.org/base/ilx_0381404#> .
+@prefix left_cerebellum_white_matter_volume: <http://uri.interlex.org/base/ilx_0381405#> .
+@prefix left_cerebral_cortex_volume: <http://uri.interlex.org/base/ilx_0381406#> .
+@prefix left_cerebrum_white_matter_volume: <http://uri.interlex.org/base/ilx_0381408#> .
+@prefix left_choroid_plexus_volume: <http://uri.interlex.org/base/ilx_0381409#> .
+@prefix left_hippocampus_volume: <http://uri.interlex.org/base/ilx_0381410#> .
+@prefix left_inferior_horn_of_the_lateral_ventricle_volume: <http://uri.interlex.org/base/ilx_0381411#> .
+@prefix left_lateral_ventricle_volume: <http://uri.interlex.org/base/ilx_0381413#> .
+@prefix left_nucleus_accumbens_volume: <http://uri.interlex.org/base/ilx_0381414#> .
+@prefix left_pallidum_volume: <http://uri.interlex.org/base/ilx_0381415#> .
+@prefix left_perivascular_space_volume: <http://uri.interlex.org/base/ilx_0381416#> .
+@prefix left_putamen_volume: <http://uri.interlex.org/base/ilx_0381417#> .
+@prefix left_thalamus_volume: <http://uri.interlex.org/base/ilx_0381419#> .
+@prefix left_ventral_diencephalon_gray_matter_volume: <http://uri.interlex.org/base/ilx_0381420#> .
 @prefix ncicb: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#> .
 @prefix ncit: <http://ncitt.ncit.nih.gov/> .
 @prefix ndar: <https://ndar.nih.gov/api/datadictionary/v2/dataelement/> .
@@ -93,23 +122,543 @@
 @prefix ns1: <http://uri.interlex.org/base/> .
 @prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix onli: <http://neurolog.unice.fr/ontoneurolog/v3.0/instrument.owl#> .
+@prefix optic_chiasm_volume: <http://uri.interlex.org/base/ilx_0381422#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix pato: <http://purl.obolibrary.org/obo/pato#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix right_amygdala_volume: <http://uri.interlex.org/base/ilx_0381423#> .
+@prefix right_basal_forebrain_gray_matter_volume: <http://uri.interlex.org/base/ilx_0381424#> .
+@prefix right_caudate_nucleus_volume: <http://uri.interlex.org/base/ilx_0381425#> .
+@prefix right_cerebellar_cortex_volume: <http://uri.interlex.org/base/ilx_0381426#> .
+@prefix right_cerebellum_white_matter_volume: <http://uri.interlex.org/base/ilx_0381427#> .
+@prefix right_cerebral_cortex_volume: <http://uri.interlex.org/base/ilx_0381428#> .
+@prefix right_cerebrum_white_matter_volume: <http://uri.interlex.org/base/ilx_0381430#> .
+@prefix right_choroid_plexus_volume: <http://uri.interlex.org/base/ilx_0381431#> .
+@prefix right_hippocampus_volume: <http://uri.interlex.org/base/ilx_0381432#> .
+@prefix right_inferior_horn_of_the_lateral_ventricle_volume: <http://uri.interlex.org/base/ilx_0381433#> .
+@prefix right_lateral_ventricle_volume: <http://uri.interlex.org/base/ilx_0381435#> .
+@prefix right_nucleus_accumbens_volume: <http://uri.interlex.org/base/ilx_0381436#> .
+@prefix right_pallidum_volume: <http://uri.interlex.org/base/ilx_0381437#> .
+@prefix right_perivascular_space_volume: <http://uri.interlex.org/base/ilx_0381438#> .
+@prefix right_putamen_volume: <http://uri.interlex.org/base/ilx_0381439#> .
+@prefix right_thalamus_volume: <http://uri.interlex.org/base/ilx_0381441#> .
+@prefix right_ventral_diencephalon_gray_matter_volume: <http://uri.interlex.org/base/ilx_0381442#> .
 @prefix scr: <http://scicrunch.org/resolver/> .
 @prefix sio: <http://semanticscience.org/ontology/sio.owl#> .
 @prefix spm: <http://purl.org/nidash/spm#> .
+@prefix sub_cortical_gray_matter_volume: <http://uri.interlex.org/base/ilx_0381443#> .
+@prefix third_ventricle_volume: <http://uri.interlex.org/base/ilx_0381444#> .
 @prefix vc: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+nidm:_d3c76f88-7be7-11e9-a294-003ee1ce9545 a prov:Entity ;
+    brain_gray_matter_volume: 6.01727e+05 ;
+    brainstem_volume: 5.99511e+05 ;
+    cerebrum_cerebral_spinal_fluid_volume: 2.26636e+05 ;
+    left_amygdala_volume: 1.197e+03 ;
+    left_caudate_nucleus_volume: 3.111e+03 ;
+    left_hippocampus_volume: 4.15e+03 ;
+    left_nucleus_accumbens_volume: 5.6e+02 ;
+    left_pallidum_volume: 1.92e+03 ;
+    left_putamen_volume: 5.41e+03 ;
+    left_thalamus_volume: 8.899e+03 ;
+    right_amygdala_volume: 7.02e+02 ;
+    right_caudate_nucleus_volume: 3.377e+03 ;
+    right_hippocampus_volume: 4.234e+03 ;
+    right_nucleus_accumbens_volume: 3.46e+02 ;
+    right_pallidum_volume: 1.947e+03 ;
+    right_putamen_volume: 5.9e+03 ;
+    right_thalamus_volume: 8.459e+03 ;
+    prov:wasGeneratedBy nidm:_d3c74b5c-7be7-11e9-a294-003ee1ce9545 .
+
+nidm:_d3c85358-7be7-11e9-a294-003ee1ce9545 a prov:Entity ;
+    brain_gray_matter_volume: 7.569565e+05 ;
+    brainstem_volume: 2.13463e+04 ;
+    cavum_septum_pellucidum_volume: 0e+00 ;
+    cerebral_cortex_volume: 5.857265e+05 ;
+    cerebrum_cerebral_spinal_fluid_volume: 9.747e+02 ;
+    cerebrum_tissue_volume: 1.186289e+06 ;
+    cerebrum_white_matter_volume: 5.182468e+05 ;
+    fourth_ventricle_volume: 1.4959e+03 ;
+    left_amygdala_volume: 1.7844e+03 ;
+    left_caudate_nucleus_volume: 3.0449e+03 ;
+    left_cerebellar_cortex_volume: 5.29103e+04 ;
+    left_cerebellum_white_matter_volume: 1.34549e+04 ;
+    left_cerebral_cortex_volume: 2.926883e+05 ;
+    left_cerebrum_white_matter_volume: 2.60402e+05 ;
+    left_choroid_plexus_volume: 5.503e+02 ;
+    left_hippocampus_volume: 4.3896e+03 ;
+    left_inferior_horn_of_the_lateral_ventricle_volume: 3.088e+02 ;
+    left_lateral_ventricle_volume: 8.6556e+03 ;
+    left_nucleus_accumbens_volume: 6.175e+02 ;
+    left_pallidum_volume: 2.1583e+03 ;
+    left_perivascular_space_volume: 3.12e+01 ;
+    left_putamen_volume: 5.9152e+03 ;
+    left_thalamus_volume: 8.4327e+03 ;
+    left_ventral_diencephalon_gray_matter_volume: 4.3767e+03 ;
+    optic_chiasm_volume: 2.162e+02 ;
+    right_amygdala_volume: 1.9683e+03 ;
+    right_caudate_nucleus_volume: 3.2671e+03 ;
+    right_cerebellar_cortex_volume: 5.51725e+04 ;
+    right_cerebellum_white_matter_volume: 1.28483e+04 ;
+    right_cerebral_cortex_volume: 2.930383e+05 ;
+    right_cerebrum_white_matter_volume: 2.578448e+05 ;
+    right_choroid_plexus_volume: 4.843e+02 ;
+    right_hippocampus_volume: 4.5671e+03 ;
+    right_inferior_horn_of_the_lateral_ventricle_volume: 3.923e+02 ;
+    right_lateral_ventricle_volume: 7.1826e+03 ;
+    right_nucleus_accumbens_volume: 5.215e+02 ;
+    right_pallidum_volume: 2.0146e+03 ;
+    right_perivascular_space_volume: 2.41e+01 ;
+    right_putamen_volume: 5.9287e+03 ;
+    right_thalamus_volume: 7.9716e+03 ;
+    right_ventral_diencephalon_gray_matter_volume: 4.1149e+03 ;
+    sub_cortical_gray_matter_volume: 6.2429e+04 ;
+    third_ventricle_volume: 1.4016e+03 ;
+    prov:wasGeneratedBy nidm:_d3c83850-7be7-11e9-a294-003ee1ce9545 .
+
+nidm:_d3ca7f98-7be7-11e9-a294-003ee1ce9545 a prov:Entity ;
+    brainstem_volume: "NaN"^^xsd:double ;
+    cerebrum_cerebral_spinal_fluid_volume: "NaN"^^xsd:double ;
+    fourth_ventricle_volume: "NaN"^^xsd:double ;
+    left_amygdala_volume: "NaN"^^xsd:double ;
+    left_basal_forebrain_gray_matter_volume: "NaN"^^xsd:double ;
+    left_caudate_nucleus_volume: "NaN"^^xsd:double ;
+    left_cerebellum_white_matter_volume: "NaN"^^xsd:double ;
+    left_hippocampus_volume: "NaN"^^xsd:double ;
+    left_inferior_horn_of_the_lateral_ventricle_volume: "NaN"^^xsd:double ;
+    left_lateral_ventricle_volume: "NaN"^^xsd:double ;
+    left_nucleus_accumbens_volume: "NaN"^^xsd:double ;
+    left_pallidum_volume: "NaN"^^xsd:double ;
+    left_perivascular_space_volume: "NaN"^^xsd:double ;
+    left_putamen_volume: "NaN"^^xsd:double ;
+    left_thalamus_volume: "NaN"^^xsd:double ;
+    left_ventral_diencephalon_gray_matter_volume: "NaN"^^xsd:double ;
+    optic_chiasm_volume: "NaN"^^xsd:double ;
+    right_amygdala_volume: "NaN"^^xsd:double ;
+    right_basal_forebrain_gray_matter_volume: "NaN"^^xsd:double ;
+    right_caudate_nucleus_volume: "NaN"^^xsd:double ;
+    right_cerebellum_white_matter_volume: "NaN"^^xsd:double ;
+    right_hippocampus_volume: "NaN"^^xsd:double ;
+    right_inferior_horn_of_the_lateral_ventricle_volume: "NaN"^^xsd:double ;
+    right_lateral_ventricle_volume: "NaN"^^xsd:double ;
+    right_nucleus_accumbens_volume: "NaN"^^xsd:double ;
+    right_pallidum_volume: "NaN"^^xsd:double ;
+    right_perivascular_space_volume: "NaN"^^xsd:double ;
+    right_putamen_volume: "NaN"^^xsd:double ;
+    right_thalamus_volume: "NaN"^^xsd:double ;
+    right_ventral_diencephalon_gray_matter_volume: "NaN"^^xsd:double ;
+    third_ventricle_volume: "NaN"^^xsd:double ;
+    prov:wasGeneratedBy nidm:_d3ca63a0-7be7-11e9-a294-003ee1ce9545 .
+
+nidm:_d3cc7762-7be7-11e9-a294-003ee1ce9545 a prov:Entity ;
+    brain_gray_matter_volume: 5.07008e+05 ;
+    brainstem_volume: 4.98896e+05 ;
+    cerebrum_cerebral_spinal_fluid_volume: 2.46621e+05 ;
+    left_amygdala_volume: 1.481e+03 ;
+    left_caudate_nucleus_volume: 3.883e+03 ;
+    left_hippocampus_volume: 4.121e+03 ;
+    left_nucleus_accumbens_volume: 4.65e+02 ;
+    left_pallidum_volume: 1.92e+03 ;
+    left_putamen_volume: 5.13e+03 ;
+    left_thalamus_volume: 7.933e+03 ;
+    right_amygdala_volume: 1.171e+03 ;
+    right_caudate_nucleus_volume: 4.004e+03 ;
+    right_hippocampus_volume: 4.036e+03 ;
+    right_nucleus_accumbens_volume: 3.87e+02 ;
+    right_pallidum_volume: 1.89e+03 ;
+    right_putamen_volume: 4.854e+03 ;
+    right_thalamus_volume: 7.644e+03 ;
+    prov:wasGeneratedBy nidm:_d3cc5f0c-7be7-11e9-a294-003ee1ce9545 .
+
+nidm:_d3cd196a-7be7-11e9-a294-003ee1ce9545 a prov:Entity ;
+    brain_gray_matter_volume: "NaN"^^xsd:double ;
+    brainstem_volume: "NaN"^^xsd:double ;
+    cavum_septum_pellucidum_volume: "NaN"^^xsd:double ;
+    cerebral_cortex_volume: "NaN"^^xsd:double ;
+    cerebrum_cerebral_spinal_fluid_volume: "NaN"^^xsd:double ;
+    cerebrum_tissue_volume: "NaN"^^xsd:double ;
+    cerebrum_white_matter_volume: "NaN"^^xsd:double ;
+    fourth_ventricle_volume: "NaN"^^xsd:double ;
+    left_amygdala_volume: "NaN"^^xsd:double ;
+    left_caudate_nucleus_volume: "NaN"^^xsd:double ;
+    left_cerebellar_cortex_volume: "NaN"^^xsd:double ;
+    left_cerebellum_white_matter_volume: "NaN"^^xsd:double ;
+    left_cerebral_cortex_volume: "NaN"^^xsd:double ;
+    left_cerebrum_white_matter_volume: "NaN"^^xsd:double ;
+    left_choroid_plexus_volume: "NaN"^^xsd:double ;
+    left_hippocampus_volume: "NaN"^^xsd:double ;
+    left_inferior_horn_of_the_lateral_ventricle_volume: "NaN"^^xsd:double ;
+    left_lateral_ventricle_volume: "NaN"^^xsd:double ;
+    left_nucleus_accumbens_volume: "NaN"^^xsd:double ;
+    left_pallidum_volume: "NaN"^^xsd:double ;
+    left_perivascular_space_volume: "NaN"^^xsd:double ;
+    left_putamen_volume: "NaN"^^xsd:double ;
+    left_thalamus_volume: "NaN"^^xsd:double ;
+    left_ventral_diencephalon_gray_matter_volume: "NaN"^^xsd:double ;
+    optic_chiasm_volume: "NaN"^^xsd:double ;
+    right_amygdala_volume: "NaN"^^xsd:double ;
+    right_caudate_nucleus_volume: "NaN"^^xsd:double ;
+    right_cerebellar_cortex_volume: "NaN"^^xsd:double ;
+    right_cerebellum_white_matter_volume: "NaN"^^xsd:double ;
+    right_cerebral_cortex_volume: "NaN"^^xsd:double ;
+    right_cerebrum_white_matter_volume: "NaN"^^xsd:double ;
+    right_choroid_plexus_volume: "NaN"^^xsd:double ;
+    right_hippocampus_volume: "NaN"^^xsd:double ;
+    right_inferior_horn_of_the_lateral_ventricle_volume: "NaN"^^xsd:double ;
+    right_lateral_ventricle_volume: "NaN"^^xsd:double ;
+    right_nucleus_accumbens_volume: "NaN"^^xsd:double ;
+    right_pallidum_volume: "NaN"^^xsd:double ;
+    right_perivascular_space_volume: "NaN"^^xsd:double ;
+    right_putamen_volume: "NaN"^^xsd:double ;
+    right_thalamus_volume: "NaN"^^xsd:double ;
+    right_ventral_diencephalon_gray_matter_volume: "NaN"^^xsd:double ;
+    sub_cortical_gray_matter_volume: "NaN"^^xsd:double ;
+    third_ventricle_volume: "NaN"^^xsd:double ;
+    prov:wasGeneratedBy nidm:_d3cd002e-7be7-11e9-a294-003ee1ce9545 .
+
+nidm:_d3ced0d4-7be7-11e9-a294-003ee1ce9545 a prov:Entity ;
+    brainstem_volume: "NaN"^^xsd:double ;
+    cerebrum_cerebral_spinal_fluid_volume: "NaN"^^xsd:double ;
+    fourth_ventricle_volume: "NaN"^^xsd:double ;
+    left_amygdala_volume: "NaN"^^xsd:double ;
+    left_basal_forebrain_gray_matter_volume: "NaN"^^xsd:double ;
+    left_caudate_nucleus_volume: "NaN"^^xsd:double ;
+    left_cerebellum_white_matter_volume: "NaN"^^xsd:double ;
+    left_hippocampus_volume: "NaN"^^xsd:double ;
+    left_inferior_horn_of_the_lateral_ventricle_volume: "NaN"^^xsd:double ;
+    left_lateral_ventricle_volume: "NaN"^^xsd:double ;
+    left_nucleus_accumbens_volume: "NaN"^^xsd:double ;
+    left_pallidum_volume: "NaN"^^xsd:double ;
+    left_perivascular_space_volume: "NaN"^^xsd:double ;
+    left_putamen_volume: "NaN"^^xsd:double ;
+    left_thalamus_volume: "NaN"^^xsd:double ;
+    left_ventral_diencephalon_gray_matter_volume: "NaN"^^xsd:double ;
+    optic_chiasm_volume: "NaN"^^xsd:double ;
+    right_amygdala_volume: "NaN"^^xsd:double ;
+    right_basal_forebrain_gray_matter_volume: "NaN"^^xsd:double ;
+    right_caudate_nucleus_volume: "NaN"^^xsd:double ;
+    right_cerebellum_white_matter_volume: "NaN"^^xsd:double ;
+    right_hippocampus_volume: "NaN"^^xsd:double ;
+    right_inferior_horn_of_the_lateral_ventricle_volume: "NaN"^^xsd:double ;
+    right_lateral_ventricle_volume: "NaN"^^xsd:double ;
+    right_nucleus_accumbens_volume: "NaN"^^xsd:double ;
+    right_pallidum_volume: "NaN"^^xsd:double ;
+    right_perivascular_space_volume: "NaN"^^xsd:double ;
+    right_putamen_volume: "NaN"^^xsd:double ;
+    right_thalamus_volume: "NaN"^^xsd:double ;
+    right_ventral_diencephalon_gray_matter_volume: "NaN"^^xsd:double ;
+    third_ventricle_volume: "NaN"^^xsd:double ;
+    prov:wasGeneratedBy nidm:_d3ceb9a0-7be7-11e9-a294-003ee1ce9545 .
+
+nidm:_d3d1148e-7be7-11e9-a294-003ee1ce9545 a prov:Entity ;
+    brain_gray_matter_volume: 5.07854e+05 ;
+    brainstem_volume: 4.83185e+05 ;
+    cerebrum_cerebral_spinal_fluid_volume: 2.39731e+05 ;
+    left_amygdala_volume: 1.195e+03 ;
+    left_caudate_nucleus_volume: 3.397e+03 ;
+    left_hippocampus_volume: 4.087e+03 ;
+    left_nucleus_accumbens_volume: 6.6e+02 ;
+    left_pallidum_volume: 1.701e+03 ;
+    left_putamen_volume: 4.775e+03 ;
+    left_thalamus_volume: 7.898e+03 ;
+    right_amygdala_volume: 1.441e+03 ;
+    right_caudate_nucleus_volume: 3.592e+03 ;
+    right_hippocampus_volume: 4.578e+03 ;
+    right_nucleus_accumbens_volume: 5.68e+02 ;
+    right_pallidum_volume: 1.929e+03 ;
+    right_putamen_volume: 5.046e+03 ;
+    right_thalamus_volume: 7.761e+03 ;
+    prov:wasGeneratedBy nidm:_d3d0fcc4-7be7-11e9-a294-003ee1ce9545 .
+
+nidm:_d3d1aa7a-7be7-11e9-a294-003ee1ce9545 a prov:Entity ;
+    brain_gray_matter_volume: 6.001419e+05 ;
+    brainstem_volume: 2.08376e+04 ;
+    cavum_septum_pellucidum_volume: 0e+00 ;
+    cerebral_cortex_volume: 4.233429e+05 ;
+    cerebrum_cerebral_spinal_fluid_volume: 1.0347e+03 ;
+    cerebrum_tissue_volume: 8.885083e+05 ;
+    cerebrum_white_matter_volume: 3.866684e+05 ;
+    fourth_ventricle_volume: 1.8741e+03 ;
+    left_amygdala_volume: 1.739e+03 ;
+    left_caudate_nucleus_volume: 3.5702e+03 ;
+    left_cerebellar_cortex_volume: 5.86365e+04 ;
+    left_cerebellum_white_matter_volume: 1.33724e+04 ;
+    left_cerebral_cortex_volume: 2.120813e+05 ;
+    left_cerebrum_white_matter_volume: 1.953784e+05 ;
+    left_choroid_plexus_volume: 6.494e+02 ;
+    left_hippocampus_volume: 4.4216e+03 ;
+    left_inferior_horn_of_the_lateral_ventricle_volume: 5.049e+02 ;
+    left_lateral_ventricle_volume: 9.4385e+03 ;
+    left_nucleus_accumbens_volume: 5.569e+02 ;
+    left_pallidum_volume: 2.0535e+03 ;
+    left_perivascular_space_volume: 5.58e+01 ;
+    left_putamen_volume: 4.7805e+03 ;
+    left_thalamus_volume: 7.1875e+03 ;
+    left_ventral_diencephalon_gray_matter_volume: 4.2732e+03 ;
+    optic_chiasm_volume: 1.263e+02 ;
+    right_amygdala_volume: 1.7214e+03 ;
+    right_caudate_nucleus_volume: 3.7962e+03 ;
+    right_cerebellar_cortex_volume: 5.98123e+04 ;
+    right_cerebellum_white_matter_volume: 1.33958e+04 ;
+    right_cerebral_cortex_volume: 2.112616e+05 ;
+    right_cerebrum_white_matter_volume: 1.9129e+05 ;
+    right_choroid_plexus_volume: 6.297e+02 ;
+    right_hippocampus_volume: 4.6523e+03 ;
+    right_inferior_horn_of_the_lateral_ventricle_volume: 5.941e+02 ;
+    right_lateral_ventricle_volume: 6.9813e+03 ;
+    right_nucleus_accumbens_volume: 5.843e+02 ;
+    right_pallidum_volume: 1.7402e+03 ;
+    right_perivascular_space_volume: 6.43e+01 ;
+    right_putamen_volume: 4.6904e+03 ;
+    right_thalamus_volume: 7.4999e+03 ;
+    right_ventral_diencephalon_gray_matter_volume: 3.9262e+03 ;
+    sub_cortical_gray_matter_volume: 5.8415e+04 ;
+    third_ventricle_volume: 9.923e+02 ;
+    prov:wasGeneratedBy nidm:_d3d1971a-7be7-11e9-a294-003ee1ce9545 .
+
+nidm:_d3d3460a-7be7-11e9-a294-003ee1ce9545 a prov:Entity ;
+    brainstem_volume: "NaN"^^xsd:double ;
+    cerebrum_cerebral_spinal_fluid_volume: "NaN"^^xsd:double ;
+    fourth_ventricle_volume: "NaN"^^xsd:double ;
+    left_amygdala_volume: "NaN"^^xsd:double ;
+    left_basal_forebrain_gray_matter_volume: "NaN"^^xsd:double ;
+    left_caudate_nucleus_volume: "NaN"^^xsd:double ;
+    left_cerebellum_white_matter_volume: "NaN"^^xsd:double ;
+    left_hippocampus_volume: "NaN"^^xsd:double ;
+    left_inferior_horn_of_the_lateral_ventricle_volume: "NaN"^^xsd:double ;
+    left_lateral_ventricle_volume: "NaN"^^xsd:double ;
+    left_nucleus_accumbens_volume: "NaN"^^xsd:double ;
+    left_pallidum_volume: "NaN"^^xsd:double ;
+    left_perivascular_space_volume: "NaN"^^xsd:double ;
+    left_putamen_volume: "NaN"^^xsd:double ;
+    left_thalamus_volume: "NaN"^^xsd:double ;
+    left_ventral_diencephalon_gray_matter_volume: "NaN"^^xsd:double ;
+    optic_chiasm_volume: "NaN"^^xsd:double ;
+    right_amygdala_volume: "NaN"^^xsd:double ;
+    right_basal_forebrain_gray_matter_volume: "NaN"^^xsd:double ;
+    right_caudate_nucleus_volume: "NaN"^^xsd:double ;
+    right_cerebellum_white_matter_volume: "NaN"^^xsd:double ;
+    right_hippocampus_volume: "NaN"^^xsd:double ;
+    right_inferior_horn_of_the_lateral_ventricle_volume: "NaN"^^xsd:double ;
+    right_lateral_ventricle_volume: "NaN"^^xsd:double ;
+    right_nucleus_accumbens_volume: "NaN"^^xsd:double ;
+    right_pallidum_volume: "NaN"^^xsd:double ;
+    right_perivascular_space_volume: "NaN"^^xsd:double ;
+    right_putamen_volume: "NaN"^^xsd:double ;
+    right_thalamus_volume: "NaN"^^xsd:double ;
+    right_ventral_diencephalon_gray_matter_volume: "NaN"^^xsd:double ;
+    third_ventricle_volume: "NaN"^^xsd:double ;
+    prov:wasGeneratedBy nidm:_d3d330ca-7be7-11e9-a294-003ee1ce9545 .
+
+nidm:_d3d55ee0-7be7-11e9-a294-003ee1ce9545 a prov:Entity ;
+    brain_gray_matter_volume: 5.82395e+05 ;
+    brainstem_volume: 6.26432e+05 ;
+    cerebrum_cerebral_spinal_fluid_volume: 2.61878e+05 ;
+    left_amygdala_volume: 1.206e+03 ;
+    left_caudate_nucleus_volume: 3.503e+03 ;
+    left_hippocampus_volume: 2.817e+03 ;
+    left_nucleus_accumbens_volume: 6.98e+02 ;
+    left_pallidum_volume: 1.994e+03 ;
+    left_putamen_volume: 4.677e+03 ;
+    left_thalamus_volume: 7.971e+03 ;
+    right_amygdala_volume: 2.095e+03 ;
+    right_caudate_nucleus_volume: 3.663e+03 ;
+    right_hippocampus_volume: 4.716e+03 ;
+    right_nucleus_accumbens_volume: 4.39e+02 ;
+    right_pallidum_volume: 1.92e+03 ;
+    right_putamen_volume: 4.872e+03 ;
+    right_thalamus_volume: 8.352e+03 ;
+    prov:wasGeneratedBy nidm:_d3d545f4-7be7-11e9-a294-003ee1ce9545 .
+
+nidm:_d3d601ba-7be7-11e9-a294-003ee1ce9545 a prov:Entity ;
+    brain_gray_matter_volume: 7.141329e+05 ;
+    brainstem_volume: 2.19093e+04 ;
+    cavum_septum_pellucidum_volume: 0e+00 ;
+    cerebral_cortex_volume: 5.378489e+05 ;
+    cerebrum_cerebral_spinal_fluid_volume: 6.728e+02 ;
+    cerebrum_tissue_volume: 1.16371e+06 ;
+    cerebrum_white_matter_volume: 5.294971e+05 ;
+    fourth_ventricle_volume: 2.2784e+03 ;
+    left_amygdala_volume: 2.1111e+03 ;
+    left_caudate_nucleus_volume: 3.5053e+03 ;
+    left_cerebellar_cortex_volume: 5.53955e+04 ;
+    left_cerebellum_white_matter_volume: 1.45204e+04 ;
+    left_cerebral_cortex_volume: 2.650127e+05 ;
+    left_cerebrum_white_matter_volume: 2.622038e+05 ;
+    left_choroid_plexus_volume: 4.647e+02 ;
+    left_hippocampus_volume: 4.2931e+03 ;
+    left_inferior_horn_of_the_lateral_ventricle_volume: 7.68e+02 ;
+    left_lateral_ventricle_volume: 2.156e+04 ;
+    left_nucleus_accumbens_volume: 6.093e+02 ;
+    left_pallidum_volume: 2.2232e+03 ;
+    left_perivascular_space_volume: 9.47e+01 ;
+    left_putamen_volume: 4.809e+03 ;
+    left_thalamus_volume: 8.2432e+03 ;
+    left_ventral_diencephalon_gray_matter_volume: 4.2826e+03 ;
+    optic_chiasm_volume: 1.716e+02 ;
+    right_amygdala_volume: 2.462e+03 ;
+    right_caudate_nucleus_volume: 3.6383e+03 ;
+    right_cerebellar_cortex_volume: 5.69186e+04 ;
+    right_cerebellum_white_matter_volume: 1.33947e+04 ;
+    right_cerebral_cortex_volume: 2.728362e+05 ;
+    right_cerebrum_white_matter_volume: 2.672933e+05 ;
+    right_choroid_plexus_volume: 4.191e+02 ;
+    right_hippocampus_volume: 4.8777e+03 ;
+    right_inferior_horn_of_the_lateral_ventricle_volume: 4.627e+02 ;
+    right_lateral_ventricle_volume: 7.9838e+03 ;
+    right_nucleus_accumbens_volume: 6.054e+02 ;
+    right_pallidum_volume: 2.1141e+03 ;
+    right_perivascular_space_volume: 3.17e+01 ;
+    right_putamen_volume: 4.922e+03 ;
+    right_thalamus_volume: 8.3745e+03 ;
+    right_ventral_diencephalon_gray_matter_volume: 4.3614e+03 ;
+    sub_cortical_gray_matter_volume: 6.2832e+04 ;
+    third_ventricle_volume: 1.9905e+03 ;
+    prov:wasGeneratedBy nidm:_d3d5eb80-7be7-11e9-a294-003ee1ce9545 .
+
+nidm:_d3d7d102-7be7-11e9-a294-003ee1ce9545 a prov:Entity ;
+    brainstem_volume: "NaN"^^xsd:double ;
+    cerebrum_cerebral_spinal_fluid_volume: "NaN"^^xsd:double ;
+    fourth_ventricle_volume: "NaN"^^xsd:double ;
+    left_amygdala_volume: "NaN"^^xsd:double ;
+    left_basal_forebrain_gray_matter_volume: "NaN"^^xsd:double ;
+    left_caudate_nucleus_volume: "NaN"^^xsd:double ;
+    left_cerebellum_white_matter_volume: "NaN"^^xsd:double ;
+    left_hippocampus_volume: "NaN"^^xsd:double ;
+    left_inferior_horn_of_the_lateral_ventricle_volume: "NaN"^^xsd:double ;
+    left_lateral_ventricle_volume: "NaN"^^xsd:double ;
+    left_nucleus_accumbens_volume: "NaN"^^xsd:double ;
+    left_pallidum_volume: "NaN"^^xsd:double ;
+    left_perivascular_space_volume: "NaN"^^xsd:double ;
+    left_putamen_volume: "NaN"^^xsd:double ;
+    left_thalamus_volume: "NaN"^^xsd:double ;
+    left_ventral_diencephalon_gray_matter_volume: "NaN"^^xsd:double ;
+    optic_chiasm_volume: "NaN"^^xsd:double ;
+    right_amygdala_volume: "NaN"^^xsd:double ;
+    right_basal_forebrain_gray_matter_volume: "NaN"^^xsd:double ;
+    right_caudate_nucleus_volume: "NaN"^^xsd:double ;
+    right_cerebellum_white_matter_volume: "NaN"^^xsd:double ;
+    right_hippocampus_volume: "NaN"^^xsd:double ;
+    right_inferior_horn_of_the_lateral_ventricle_volume: "NaN"^^xsd:double ;
+    right_lateral_ventricle_volume: "NaN"^^xsd:double ;
+    right_nucleus_accumbens_volume: "NaN"^^xsd:double ;
+    right_pallidum_volume: "NaN"^^xsd:double ;
+    right_perivascular_space_volume: "NaN"^^xsd:double ;
+    right_putamen_volume: "NaN"^^xsd:double ;
+    right_thalamus_volume: "NaN"^^xsd:double ;
+    right_ventral_diencephalon_gray_matter_volume: "NaN"^^xsd:double ;
+    third_ventricle_volume: "NaN"^^xsd:double ;
+    prov:wasGeneratedBy nidm:_d3d7b83e-7be7-11e9-a294-003ee1ce9545 .
+
+nidm:_d3da40e0-7be7-11e9-a294-003ee1ce9545 a prov:Entity ;
+    brain_gray_matter_volume: 5.74866e+05 ;
+    brainstem_volume: 6.12601e+05 ;
+    cerebrum_cerebral_spinal_fluid_volume: 2.55966e+05 ;
+    left_amygdala_volume: 1.119e+03 ;
+    left_caudate_nucleus_volume: 3.808e+03 ;
+    left_hippocampus_volume: 4.603e+03 ;
+    left_nucleus_accumbens_volume: 7.44e+02 ;
+    left_pallidum_volume: 2.034e+03 ;
+    left_putamen_volume: 5.694e+03 ;
+    left_thalamus_volume: 8.876e+03 ;
+    right_amygdala_volume: 1.427e+03 ;
+    right_caudate_nucleus_volume: 3.712e+03 ;
+    right_hippocampus_volume: 4.41e+03 ;
+    right_nucleus_accumbens_volume: 5.76e+02 ;
+    right_pallidum_volume: 2.107e+03 ;
+    right_putamen_volume: 5.883e+03 ;
+    right_thalamus_volume: 8.439e+03 ;
+    prov:wasGeneratedBy nidm:_d3da26be-7be7-11e9-a294-003ee1ce9545 .
+
+nidm:_d3dacf74-7be7-11e9-a294-003ee1ce9545 a prov:Entity ;
+    brain_gray_matter_volume: 6.93099e+05 ;
+    brainstem_volume: 2.17272e+04 ;
+    cavum_septum_pellucidum_volume: 0e+00 ;
+    cerebral_cortex_volume: 5.14563e+05 ;
+    cerebrum_cerebral_spinal_fluid_volume: 1.1685e+03 ;
+    cerebrum_tissue_volume: 1.124944e+06 ;
+    cerebrum_white_matter_volume: 5.253962e+05 ;
+    fourth_ventricle_volume: 2.2934e+03 ;
+    left_amygdala_volume: 1.8411e+03 ;
+    left_caudate_nucleus_volume: 3.8069e+03 ;
+    left_cerebellar_cortex_volume: 5.62867e+04 ;
+    left_cerebellum_white_matter_volume: 1.55187e+04 ;
+    left_cerebral_cortex_volume: 2.56421e+05 ;
+    left_cerebrum_white_matter_volume: 2.635204e+05 ;
+    left_choroid_plexus_volume: 5.472e+02 ;
+    left_hippocampus_volume: 4.5772e+03 ;
+    left_inferior_horn_of_the_lateral_ventricle_volume: 5.362e+02 ;
+    left_lateral_ventricle_volume: 7.2073e+03 ;
+    left_nucleus_accumbens_volume: 5.562e+02 ;
+    left_pallidum_volume: 2.3305e+03 ;
+    left_perivascular_space_volume: 2.04e+01 ;
+    left_putamen_volume: 5.813e+03 ;
+    left_thalamus_volume: 8.6698e+03 ;
+    left_ventral_diencephalon_gray_matter_volume: 4.4319e+03 ;
+    optic_chiasm_volume: 2.159e+02 ;
+    right_amygdala_volume: 1.8656e+03 ;
+    right_caudate_nucleus_volume: 4.001e+03 ;
+    right_cerebellar_cortex_volume: 5.60925e+04 ;
+    right_cerebellum_white_matter_volume: 1.41418e+04 ;
+    right_cerebral_cortex_volume: 2.58142e+05 ;
+    right_cerebrum_white_matter_volume: 2.618758e+05 ;
+    right_choroid_plexus_volume: 6.373e+02 ;
+    right_hippocampus_volume: 4.6358e+03 ;
+    right_inferior_horn_of_the_lateral_ventricle_volume: 4.084e+02 ;
+    right_lateral_ventricle_volume: 8.55e+03 ;
+    right_nucleus_accumbens_volume: 4.262e+02 ;
+    right_pallidum_volume: 2.175e+03 ;
+    right_perivascular_space_volume: 1.77e+01 ;
+    right_putamen_volume: 5.962e+03 ;
+    right_thalamus_volume: 8.481e+03 ;
+    right_ventral_diencephalon_gray_matter_volume: 4.5011e+03 ;
+    sub_cortical_gray_matter_volume: 6.5505e+04 ;
+    third_ventricle_volume: 1.1917e+03 ;
+    prov:wasGeneratedBy nidm:_d3dabbce-7be7-11e9-a294-003ee1ce9545 .
+
+nidm:_d3dc6ef6-7be7-11e9-a294-003ee1ce9545 a prov:Entity ;
+    brainstem_volume: "NaN"^^xsd:double ;
+    cerebrum_cerebral_spinal_fluid_volume: "NaN"^^xsd:double ;
+    fourth_ventricle_volume: "NaN"^^xsd:double ;
+    left_amygdala_volume: "NaN"^^xsd:double ;
+    left_basal_forebrain_gray_matter_volume: "NaN"^^xsd:double ;
+    left_caudate_nucleus_volume: "NaN"^^xsd:double ;
+    left_cerebellum_white_matter_volume: "NaN"^^xsd:double ;
+    left_hippocampus_volume: "NaN"^^xsd:double ;
+    left_inferior_horn_of_the_lateral_ventricle_volume: "NaN"^^xsd:double ;
+    left_lateral_ventricle_volume: "NaN"^^xsd:double ;
+    left_nucleus_accumbens_volume: "NaN"^^xsd:double ;
+    left_pallidum_volume: "NaN"^^xsd:double ;
+    left_perivascular_space_volume: "NaN"^^xsd:double ;
+    left_putamen_volume: "NaN"^^xsd:double ;
+    left_thalamus_volume: "NaN"^^xsd:double ;
+    left_ventral_diencephalon_gray_matter_volume: "NaN"^^xsd:double ;
+    optic_chiasm_volume: "NaN"^^xsd:double ;
+    right_amygdala_volume: "NaN"^^xsd:double ;
+    right_basal_forebrain_gray_matter_volume: "NaN"^^xsd:double ;
+    right_caudate_nucleus_volume: "NaN"^^xsd:double ;
+    right_cerebellum_white_matter_volume: "NaN"^^xsd:double ;
+    right_hippocampus_volume: "NaN"^^xsd:double ;
+    right_inferior_horn_of_the_lateral_ventricle_volume: "NaN"^^xsd:double ;
+    right_lateral_ventricle_volume: "NaN"^^xsd:double ;
+    right_nucleus_accumbens_volume: "NaN"^^xsd:double ;
+    right_pallidum_volume: "NaN"^^xsd:double ;
+    right_perivascular_space_volume: "NaN"^^xsd:double ;
+    right_putamen_volume: "NaN"^^xsd:double ;
+    right_thalamus_volume: "NaN"^^xsd:double ;
+    right_ventral_diencephalon_gray_matter_volume: "NaN"^^xsd:double ;
+    third_ventricle_volume: "NaN"^^xsd:double ;
+    prov:wasGeneratedBy nidm:_d3dc5ad8-7be7-11e9-a294-003ee1ce9545 .
 
 nidm:_eed7f4fa-89da-11e8-b205-8c8590aa91df a nidm:AcquisitionObject,
         prov:Entity ;
     nidm:AcquisitionModality nidm:MagneticResonanceImaging ;
     nidm:hasImageUsageType nidm:Anatomical ;
-    nfo:filename "/sub-0051322/anat/sub-0051322_T1w.nii.gz"^^xsd:string ;
+    FILE_ID: "/sub-0051322/anat/sub-0051322_T1w.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy nidm:_eed7e578-89da-11e8-aa05-8c8590aa91df .
 
 nidm:_eed87880-89da-11e8-a498-8c8590aa91df a nidm:AcquisitionObject,
@@ -117,91 +666,56 @@ nidm:_eed87880-89da-11e8-a498-8c8590aa91df a nidm:AcquisitionObject,
     nidm:AcquisitionModality nidm:MagneticResonanceImaging ;
     nidm:AcquisitionObject "1"^^xsd:string ;
     nidm:hasImageUsageType nidm:Functional ;
-    nfo:filename "/sub-0051322/func/sub-0051322_task-rest_run-1_bold.nii.gz"^^xsd:string ;
+    FILE_ID: "/sub-0051322/func/sub-0051322_task-rest_run-1_bold.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy nidm:_eed86e50-89da-11e8-bff5-8c8590aa91df .
-
-nidm:_eedb49c0-89da-11e8-ac5d-8c8590aa91df a nidm:AcquisitionObject,
-        prov:Entity ;
-    nidm:AcquisitionModality nidm:MagneticResonanceImaging ;
-    nidm:hasImageUsageType nidm:Anatomical ;
-    nfo:filename "/sub-0051323/anat/sub-0051323_T1w.nii.gz"^^xsd:string ;
-    prov:wasGeneratedBy nidm:_eedb3ea8-89da-11e8-9ec8-8c8590aa91df .
 
 nidm:_eedbb55c-89da-11e8-9fd3-8c8590aa91df a nidm:AcquisitionObject,
         prov:Entity ;
     nidm:AcquisitionModality nidm:MagneticResonanceImaging ;
     nidm:AcquisitionObject "1"^^xsd:string ;
     nidm:hasImageUsageType nidm:Functional ;
-    nfo:filename "/sub-0051323/func/sub-0051323_task-rest_run-1_bold.nii.gz"^^xsd:string ;
+    FILE_ID: "/sub-0051323/func/sub-0051323_task-rest_run-1_bold.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy nidm:_eedbac58-89da-11e8-bbfc-8c8590aa91df .
-
-nidm:_eedc5f48-89da-11e8-aaf1-8c8590aa91df a nidm:AcquisitionObject,
-        prov:Entity ;
-    nidm:AcquisitionModality nidm:MagneticResonanceImaging ;
-    nidm:hasImageUsageType nidm:Anatomical ;
-    nfo:filename "/sub-0051324/anat/sub-0051324_T1w.nii.gz"^^xsd:string ;
-    prov:wasGeneratedBy nidm:_eedc54b4-89da-11e8-b6b2-8c8590aa91df .
 
 nidm:_eedcc62e-89da-11e8-b197-8c8590aa91df a nidm:AcquisitionObject,
         prov:Entity ;
     nidm:AcquisitionModality nidm:MagneticResonanceImaging ;
     nidm:AcquisitionObject "1"^^xsd:string ;
     nidm:hasImageUsageType nidm:Functional ;
-    nfo:filename "/sub-0051324/func/sub-0051324_task-rest_run-1_bold.nii.gz"^^xsd:string ;
+    FILE_ID: "/sub-0051324/func/sub-0051324_task-rest_run-1_bold.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy nidm:_eedcbb5c-89da-11e8-86ea-8c8590aa91df .
-
-nidm:_eedd779a-89da-11e8-a147-8c8590aa91df a nidm:AcquisitionObject,
-        prov:Entity ;
-    nidm:AcquisitionModality nidm:MagneticResonanceImaging ;
-    nidm:hasImageUsageType nidm:Anatomical ;
-    nfo:filename "/sub-0051325/anat/sub-0051325_T1w.nii.gz"^^xsd:string ;
-    prov:wasGeneratedBy nidm:_eedd6cdc-89da-11e8-9a9b-8c8590aa91df .
 
 nidm:_eeddd3a4-89da-11e8-9648-8c8590aa91df a nidm:AcquisitionObject,
         prov:Entity ;
     nidm:AcquisitionModality nidm:MagneticResonanceImaging ;
     nidm:AcquisitionObject "1"^^xsd:string ;
     nidm:hasImageUsageType nidm:Functional ;
-    nfo:filename "/sub-0051325/func/sub-0051325_task-rest_run-1_bold.nii.gz"^^xsd:string ;
+    FILE_ID: "/sub-0051325/func/sub-0051325_task-rest_run-1_bold.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy nidm:_eeddcc86-89da-11e8-8144-8c8590aa91df .
-
-nidm:_eede745e-89da-11e8-8eb0-8c8590aa91df a nidm:AcquisitionObject,
-        prov:Entity ;
-    nidm:AcquisitionModality nidm:MagneticResonanceImaging ;
-    nidm:hasImageUsageType nidm:Anatomical ;
-    nfo:filename "/sub-0051326/anat/sub-0051326_T1w.nii.gz"^^xsd:string ;
-    prov:wasGeneratedBy nidm:_eede6a54-89da-11e8-b7af-8c8590aa91df .
 
 nidm:_eedee03a-89da-11e8-be5e-8c8590aa91df a nidm:AcquisitionObject,
         prov:Entity ;
     nidm:AcquisitionModality nidm:MagneticResonanceImaging ;
     nidm:AcquisitionObject "1"^^xsd:string ;
     nidm:hasImageUsageType nidm:Functional ;
-    nfo:filename "/sub-0051326/func/sub-0051326_task-rest_run-1_bold.nii.gz"^^xsd:string ;
+    FILE_ID: "/sub-0051326/func/sub-0051326_task-rest_run-1_bold.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy nidm:_eeded4dc-89da-11e8-8e90-8c8590aa91df .
-
-nidm:_eedf9200-89da-11e8-a5d9-8c8590aa91df a nidm:AcquisitionObject,
-        prov:Entity ;
-    nidm:AcquisitionModality nidm:MagneticResonanceImaging ;
-    nidm:hasImageUsageType nidm:Anatomical ;
-    nfo:filename "/sub-0051327/anat/sub-0051327_T1w.nii.gz"^^xsd:string ;
-    prov:wasGeneratedBy nidm:_eedf874c-89da-11e8-b684-8c8590aa91df .
 
 nidm:_eedfefa4-89da-11e8-a8c7-8c8590aa91df a nidm:AcquisitionObject,
         prov:Entity ;
     nidm:AcquisitionModality nidm:MagneticResonanceImaging ;
     nidm:AcquisitionObject "1"^^xsd:string ;
     nidm:hasImageUsageType nidm:Functional ;
-    nfo:filename "/sub-0051327/func/sub-0051327_task-rest_run-1_bold.nii.gz"^^xsd:string ;
+    FILE_ID: "/sub-0051327/func/sub-0051327_task-rest_run-1_bold.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy nidm:_eedfe87a-89da-11e8-acf4-8c8590aa91df .
 
 nidm:_f12ca994-89da-11e8-a404-8c8590aa91df a onli:assessment-instrument,
         nidm:AcquisitionObject,
         prov:Entity ;
-    ncicb:Age 3e+01 ;
-    ncit:Diagnosis "1" ;
-    obo:handedness "R"^^xsd:string ;
-    EYE_STATUS_AT_SCAN: "2" ;
+    AGE_AT_SCAN: 3e+01 ;
+    DX_GROUP: "1"^^xsd:string ;
+    HANDEDNESS_CATEGORY: "R"^^xsd:string ;
+    EYE_STATUS_AT_SCAN: "2"^^xsd:string ;
     ADOS_STEREO_BEHAV: "NaN"^^xsd:double ;
     SRS_VERSION: "NaN"^^xsd:double ;
     ADOS_SOCIAL: "NaN"^^xsd:double ;
@@ -212,12 +726,12 @@ nidm:_f12ca994-89da-11e8-a404-8c8590aa91df a onli:assessment-instrument,
     BMI: "NaN"^^xsd:double ;
     ADOS_GOTHAM_RRB: "NaN"^^xsd:double ;
     MEDICATION_NAME: "NaN"^^xsd:double ;
-    ns1:ilx_0161044 "NaN"^^xsd:double ;
-    ns1:ilx_0352279 "NaN"^^xsd:double ;
-    ns1:ilx_0353139 "NaN"^^xsd:double ;
-    nfo:filename "MaxMun_b_0051323"^^xsd:string ;
+    HANDEDNESS_SCORES: "NaN"^^xsd:double ;
+    ADOS_MODULE: "NaN"^^xsd:double ;
+    AQ_TOTAL: "NaN"^^xsd:double ;
+    FILE_ID: "MaxMun_b_0051323"^^xsd:string ;
     prov:wasGeneratedBy nidm:_f12aa54a-89da-11e8-829f-8c8590aa91df ;
-    DSM_IV_TR: "2" ;
+    DSM_IV_TR: "2"^^xsd:string ;
     ADI_R_ONSET_TOTAL_D: "NaN"^^xsd:double ;
     ADI_R_RSRCH_RELIABLE: "NaN"^^xsd:double ;
     ADOS_TOTAL: "NaN"^^xsd:double ;
@@ -272,15 +786,15 @@ nidm:_f12ca994-89da-11e8-a404-8c8590aa91df a onli:assessment-instrument,
     ADI_R_SOCIAL_TOTAL_A: "NaN"^^xsd:double ;
     ADI_R_VERBAL_TOTAL_BV: "NaN"^^xsd:double ;
     ADI_RRB_TOTAL_C: "NaN"^^xsd:double ;
-    ndar:gender "1" .
+    SEX: "1"^^xsd:string .
 
 nidm:_f12f4906-89da-11e8-a368-8c8590aa91df a onli:assessment-instrument,
         nidm:AcquisitionObject,
         prov:Entity ;
-    ncicb:Age 2.9e+01 ;
-    ncit:Diagnosis "1" ;
-    obo:handedness "L"^^xsd:string ;
-    EYE_STATUS_AT_SCAN: "2" ;
+    AGE_AT_SCAN: 2.9e+01 ;
+    DX_GROUP: "1"^^xsd:string ;
+    HANDEDNESS_CATEGORY: "L"^^xsd:string ;
+    EYE_STATUS_AT_SCAN: "2"^^xsd:string ;
     ADOS_STEREO_BEHAV: "NaN"^^xsd:double ;
     SRS_VERSION: "NaN"^^xsd:double ;
     ADOS_SOCIAL: "NaN"^^xsd:double ;
@@ -291,12 +805,12 @@ nidm:_f12f4906-89da-11e8-a368-8c8590aa91df a onli:assessment-instrument,
     BMI: "NaN"^^xsd:double ;
     ADOS_GOTHAM_RRB: "NaN"^^xsd:double ;
     MEDICATION_NAME: "NaN"^^xsd:double ;
-    ns1:ilx_0161044 "NaN"^^xsd:double ;
-    ns1:ilx_0352279 "NaN"^^xsd:double ;
-    ns1:ilx_0353139 "NaN"^^xsd:double ;
-    nfo:filename "MaxMun_b_0051322"^^xsd:string ;
+    HANDEDNESS_SCORES: "NaN"^^xsd:double ;
+    ADOS_MODULE: "NaN"^^xsd:double ;
+    AQ_TOTAL: "NaN"^^xsd:double ;
+    FILE_ID: "MaxMun_b_0051322"^^xsd:string ;
     prov:wasGeneratedBy nidm:_f12f3b26-89da-11e8-8693-8c8590aa91df ;
-    DSM_IV_TR: "2" ;
+    DSM_IV_TR: "2"^^xsd:string ;
     ADI_R_ONSET_TOTAL_D: "NaN"^^xsd:double ;
     ADI_R_RSRCH_RELIABLE: "NaN"^^xsd:double ;
     ADOS_TOTAL: "NaN"^^xsd:double ;
@@ -351,15 +865,15 @@ nidm:_f12f4906-89da-11e8-a368-8c8590aa91df a onli:assessment-instrument,
     ADI_R_SOCIAL_TOTAL_A: "NaN"^^xsd:double ;
     ADI_R_VERBAL_TOTAL_BV: "NaN"^^xsd:double ;
     ADI_RRB_TOTAL_C: "NaN"^^xsd:double ;
-    ndar:gender "1" .
+    SEX: "1"^^xsd:string .
 
 nidm:_f130b7a8-89da-11e8-835c-8c8590aa91df a onli:assessment-instrument,
         nidm:AcquisitionObject,
         prov:Entity ;
-    ncicb:Age 4.2e+01 ;
-    ncit:Diagnosis "1" ;
-    obo:handedness "R"^^xsd:string ;
-    EYE_STATUS_AT_SCAN: "2" ;
+    AGE_AT_SCAN: 4.2e+01 ;
+    DX_GROUP: "1"^^xsd:string ;
+    HANDEDNESS_CATEGORY: "R"^^xsd:string ;
+    EYE_STATUS_AT_SCAN: "2"^^xsd:string ;
     ADOS_STEREO_BEHAV: "NaN"^^xsd:double ;
     SRS_VERSION: "NaN"^^xsd:double ;
     ADOS_SOCIAL: "NaN"^^xsd:double ;
@@ -370,12 +884,12 @@ nidm:_f130b7a8-89da-11e8-835c-8c8590aa91df a onli:assessment-instrument,
     BMI: "NaN"^^xsd:double ;
     ADOS_GOTHAM_RRB: "NaN"^^xsd:double ;
     MEDICATION_NAME: "NaN"^^xsd:double ;
-    ns1:ilx_0161044 "NaN"^^xsd:double ;
-    ns1:ilx_0352279 "NaN"^^xsd:double ;
-    ns1:ilx_0353139 "NaN"^^xsd:double ;
-    nfo:filename "MaxMun_b_0051326"^^xsd:string ;
+    HANDEDNESS_SCORES: "NaN"^^xsd:double ;
+    ADOS_MODULE: "NaN"^^xsd:double ;
+    AQ_TOTAL: "NaN"^^xsd:double ;
+    FILE_ID: "MaxMun_b_0051326"^^xsd:string ;
     prov:wasGeneratedBy nidm:_f130aeae-89da-11e8-acda-8c8590aa91df ;
-    DSM_IV_TR: "2" ;
+    DSM_IV_TR: "2"^^xsd:string ;
     ADI_R_ONSET_TOTAL_D: "NaN"^^xsd:double ;
     ADI_R_RSRCH_RELIABLE: "NaN"^^xsd:double ;
     ADOS_TOTAL: "NaN"^^xsd:double ;
@@ -430,15 +944,15 @@ nidm:_f130b7a8-89da-11e8-835c-8c8590aa91df a onli:assessment-instrument,
     ADI_R_SOCIAL_TOTAL_A: "NaN"^^xsd:double ;
     ADI_R_VERBAL_TOTAL_BV: "NaN"^^xsd:double ;
     ADI_RRB_TOTAL_C: "NaN"^^xsd:double ;
-    ndar:gender "1" .
+    SEX: "1"^^xsd:string .
 
 nidm:_f132a2f6-89da-11e8-8caa-8c8590aa91df a onli:assessment-instrument,
         nidm:AcquisitionObject,
         prov:Entity ;
-    ncicb:Age 5.8e+01 ;
-    ncit:Diagnosis "1" ;
-    obo:handedness "R"^^xsd:string ;
-    EYE_STATUS_AT_SCAN: "2" ;
+    AGE_AT_SCAN: 5.8e+01 ;
+    DX_GROUP: "1"^^xsd:string ;
+    HANDEDNESS_CATEGORY: "R"^^xsd:string ;
+    EYE_STATUS_AT_SCAN: "2"^^xsd:string ;
     ADOS_STEREO_BEHAV: "NaN"^^xsd:double ;
     SRS_VERSION: "NaN"^^xsd:double ;
     ADOS_SOCIAL: "NaN"^^xsd:double ;
@@ -449,12 +963,12 @@ nidm:_f132a2f6-89da-11e8-8caa-8c8590aa91df a onli:assessment-instrument,
     BMI: "NaN"^^xsd:double ;
     ADOS_GOTHAM_RRB: "NaN"^^xsd:double ;
     MEDICATION_NAME: "NaN"^^xsd:double ;
-    ns1:ilx_0161044 "NaN"^^xsd:double ;
-    ns1:ilx_0352279 "NaN"^^xsd:double ;
-    ns1:ilx_0353139 "NaN"^^xsd:double ;
-    nfo:filename "MaxMun_b_0051327"^^xsd:string ;
+    HANDEDNESS_SCORES: "NaN"^^xsd:double ;
+    ADOS_MODULE: "NaN"^^xsd:double ;
+    AQ_TOTAL: "NaN"^^xsd:double ;
+    FILE_ID: "MaxMun_b_0051327"^^xsd:string ;
     prov:wasGeneratedBy nidm:_f13297dc-89da-11e8-a4da-8c8590aa91df ;
-    DSM_IV_TR: "2" ;
+    DSM_IV_TR: "2"^^xsd:string ;
     ADI_R_ONSET_TOTAL_D: "NaN"^^xsd:double ;
     ADI_R_RSRCH_RELIABLE: "NaN"^^xsd:double ;
     ADOS_TOTAL: "NaN"^^xsd:double ;
@@ -509,15 +1023,15 @@ nidm:_f132a2f6-89da-11e8-8caa-8c8590aa91df a onli:assessment-instrument,
     ADI_R_SOCIAL_TOTAL_A: "NaN"^^xsd:double ;
     ADI_R_VERBAL_TOTAL_BV: "NaN"^^xsd:double ;
     ADI_RRB_TOTAL_C: "NaN"^^xsd:double ;
-    ndar:gender "1" .
+    SEX: "1"^^xsd:string .
 
 nidm:_f1344190-89da-11e8-a23d-8c8590aa91df a onli:assessment-instrument,
         nidm:AcquisitionObject,
         prov:Entity ;
-    ncicb:Age 3.2e+01 ;
-    ncit:Diagnosis "1" ;
-    obo:handedness "L"^^xsd:string ;
-    EYE_STATUS_AT_SCAN: "2" ;
+    AGE_AT_SCAN: 3.2e+01 ;
+    DX_GROUP: "1"^^xsd:string ;
+    HANDEDNESS_CATEGORY: "L"^^xsd:string ;
+    EYE_STATUS_AT_SCAN: "2"^^xsd:string ;
     ADOS_STEREO_BEHAV: "NaN"^^xsd:double ;
     SRS_VERSION: "NaN"^^xsd:double ;
     ADOS_SOCIAL: "NaN"^^xsd:double ;
@@ -528,12 +1042,12 @@ nidm:_f1344190-89da-11e8-a23d-8c8590aa91df a onli:assessment-instrument,
     BMI: "NaN"^^xsd:double ;
     ADOS_GOTHAM_RRB: "NaN"^^xsd:double ;
     MEDICATION_NAME: "NaN"^^xsd:double ;
-    ns1:ilx_0161044 "NaN"^^xsd:double ;
-    ns1:ilx_0352279 "NaN"^^xsd:double ;
-    ns1:ilx_0353139 "NaN"^^xsd:double ;
-    nfo:filename "MaxMun_b_0051325"^^xsd:string ;
+    HANDEDNESS_SCORES: "NaN"^^xsd:double ;
+    ADOS_MODULE: "NaN"^^xsd:double ;
+    AQ_TOTAL: "NaN"^^xsd:double ;
+    FILE_ID: "MaxMun_b_0051325"^^xsd:string ;
     prov:wasGeneratedBy nidm:_f1343470-89da-11e8-87d2-8c8590aa91df ;
-    DSM_IV_TR: "2" ;
+    DSM_IV_TR: "2"^^xsd:string ;
     ADI_R_ONSET_TOTAL_D: "NaN"^^xsd:double ;
     ADI_R_RSRCH_RELIABLE: "NaN"^^xsd:double ;
     ADOS_TOTAL: "NaN"^^xsd:double ;
@@ -588,15 +1102,15 @@ nidm:_f1344190-89da-11e8-a23d-8c8590aa91df a onli:assessment-instrument,
     ADI_R_SOCIAL_TOTAL_A: "NaN"^^xsd:double ;
     ADI_R_VERBAL_TOTAL_BV: "NaN"^^xsd:double ;
     ADI_RRB_TOTAL_C: "NaN"^^xsd:double ;
-    ndar:gender "2" .
+    SEX: "2"^^xsd:string .
 
 nidm:_f1358a8a-89da-11e8-afa7-8c8590aa91df a onli:assessment-instrument,
         nidm:AcquisitionObject,
         prov:Entity ;
-    ncicb:Age 5.2e+01 ;
-    ncit:Diagnosis "1" ;
-    obo:handedness "R"^^xsd:string ;
-    EYE_STATUS_AT_SCAN: "2" ;
+    AGE_AT_SCAN: 5.2e+01 ;
+    DX_GROUP: "1"^^xsd:string ;
+    HANDEDNESS_CATEGORY: "R"^^xsd:string ;
+    EYE_STATUS_AT_SCAN: "2"^^xsd:string ;
     ADOS_STEREO_BEHAV: "NaN"^^xsd:double ;
     SRS_VERSION: "NaN"^^xsd:double ;
     ADOS_SOCIAL: "NaN"^^xsd:double ;
@@ -607,12 +1121,12 @@ nidm:_f1358a8a-89da-11e8-afa7-8c8590aa91df a onli:assessment-instrument,
     BMI: "NaN"^^xsd:double ;
     ADOS_GOTHAM_RRB: "NaN"^^xsd:double ;
     MEDICATION_NAME: "NaN"^^xsd:double ;
-    ns1:ilx_0161044 "NaN"^^xsd:double ;
-    ns1:ilx_0352279 "NaN"^^xsd:double ;
-    ns1:ilx_0353139 "NaN"^^xsd:double ;
-    nfo:filename "MaxMun_b_0051324"^^xsd:string ;
+    HANDEDNESS_SCORES: "NaN"^^xsd:double ;
+    ADOS_MODULE: "NaN"^^xsd:double ;
+    AQ_TOTAL: "NaN"^^xsd:double ;
+    FILE_ID: "MaxMun_b_0051324"^^xsd:string ;
     prov:wasGeneratedBy nidm:_f1357df8-89da-11e8-a29e-8c8590aa91df ;
-    DSM_IV_TR: "2" ;
+    DSM_IV_TR: "2"^^xsd:string ;
     ADI_R_ONSET_TOTAL_D: "NaN"^^xsd:double ;
     ADI_R_RSRCH_RELIABLE: "NaN"^^xsd:double ;
     ADOS_TOTAL: "NaN"^^xsd:double ;
@@ -667,7 +1181,202 @@ nidm:_f1358a8a-89da-11e8-afa7-8c8590aa91df a onli:assessment-instrument,
     ADI_R_SOCIAL_TOTAL_A: "NaN"^^xsd:double ;
     ADI_R_VERBAL_TOTAL_BV: "NaN"^^xsd:double ;
     ADI_RRB_TOTAL_C: "NaN"^^xsd:double ;
-    ndar:gender "1" .
+    SEX: "1"^^xsd:string .
+
+nidm:_d3c74b5c-7be7-11e9-a294-003ee1ce9545 a prov:Activity ;
+    dct:description "brain volume computation"^^xsd:string ;
+    dct:isPartOf nidm:_d2e2d454-7be7-11e9-a294-003ee1ce9545 ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent nidm:_eedb4290-89da-11e8-a882-8c8590aa91df ;
+            prov:hadRole sio:Subject ],
+        [ a prov:Association ;
+            prov:agent nidm:_d3c75f8e-7be7-11e9-a294-003ee1ce9545 ;
+            prov:hadRole Neuroimaging_Analysis_Software: ] ;
+    prov:usedEntity nidm:_eedb49c0-89da-11e8-ac5d-8c8590aa91df ;
+    prov:wasAssociatedWith nidm:_d3c75f8e-7be7-11e9-a294-003ee1ce9545,
+        nidm:_eedb4290-89da-11e8-a882-8c8590aa91df .
+
+nidm:_d3c83850-7be7-11e9-a294-003ee1ce9545 a prov:Activity ;
+    dct:description "brain volume computation"^^xsd:string ;
+    dct:isPartOf nidm:_d2e2d454-7be7-11e9-a294-003ee1ce9545 ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent nidm:_d3c848c2-7be7-11e9-a294-003ee1ce9545 ;
+            prov:hadRole Neuroimaging_Analysis_Software: ],
+        [ a prov:Association ;
+            prov:agent nidm:_eedb4290-89da-11e8-a882-8c8590aa91df ;
+            prov:hadRole sio:Subject ] ;
+    prov:usedEntity nidm:_eedb49c0-89da-11e8-ac5d-8c8590aa91df ;
+    prov:wasAssociatedWith nidm:_d3c848c2-7be7-11e9-a294-003ee1ce9545,
+        nidm:_eedb4290-89da-11e8-a882-8c8590aa91df .
+
+nidm:_d3ca63a0-7be7-11e9-a294-003ee1ce9545 a prov:Activity ;
+    dct:description "brain volume computation"^^xsd:string ;
+    dct:isPartOf nidm:_d2e2d454-7be7-11e9-a294-003ee1ce9545 ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent nidm:_eedb4290-89da-11e8-a882-8c8590aa91df ;
+            prov:hadRole sio:Subject ],
+        [ a prov:Association ;
+            prov:agent nidm:_d3ca74c6-7be7-11e9-a294-003ee1ce9545 ;
+            prov:hadRole Neuroimaging_Analysis_Software: ] ;
+    prov:usedEntity nidm:_eedb49c0-89da-11e8-ac5d-8c8590aa91df ;
+    prov:wasAssociatedWith nidm:_d3ca74c6-7be7-11e9-a294-003ee1ce9545,
+        nidm:_eedb4290-89da-11e8-a882-8c8590aa91df .
+
+nidm:_d3cc5f0c-7be7-11e9-a294-003ee1ce9545 a prov:Activity ;
+    dct:description "brain volume computation"^^xsd:string ;
+    dct:isPartOf nidm:_d2e2d454-7be7-11e9-a294-003ee1ce9545 ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent nidm:_d3c75f8e-7be7-11e9-a294-003ee1ce9545 ;
+            prov:hadRole Neuroimaging_Analysis_Software: ],
+        [ a prov:Association ;
+            prov:agent nidm:_eedc5892-89da-11e8-9aa9-8c8590aa91df ;
+            prov:hadRole sio:Subject ] ;
+    prov:usedEntity nidm:_eedc5f48-89da-11e8-aaf1-8c8590aa91df ;
+    prov:wasAssociatedWith nidm:_d3c75f8e-7be7-11e9-a294-003ee1ce9545,
+        nidm:_eedc5892-89da-11e8-9aa9-8c8590aa91df .
+
+nidm:_d3cd002e-7be7-11e9-a294-003ee1ce9545 a prov:Activity ;
+    dct:description "brain volume computation"^^xsd:string ;
+    dct:isPartOf nidm:_d2e2d454-7be7-11e9-a294-003ee1ce9545 ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent nidm:_eedc5892-89da-11e8-9aa9-8c8590aa91df ;
+            prov:hadRole sio:Subject ],
+        [ a prov:Association ;
+            prov:agent nidm:_d3c848c2-7be7-11e9-a294-003ee1ce9545 ;
+            prov:hadRole Neuroimaging_Analysis_Software: ] ;
+    prov:usedEntity nidm:_eedc5f48-89da-11e8-aaf1-8c8590aa91df ;
+    prov:wasAssociatedWith nidm:_d3c848c2-7be7-11e9-a294-003ee1ce9545,
+        nidm:_eedc5892-89da-11e8-9aa9-8c8590aa91df .
+
+nidm:_d3ceb9a0-7be7-11e9-a294-003ee1ce9545 a prov:Activity ;
+    dct:description "brain volume computation"^^xsd:string ;
+    dct:isPartOf nidm:_d2e2d454-7be7-11e9-a294-003ee1ce9545 ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent nidm:_d3ca74c6-7be7-11e9-a294-003ee1ce9545 ;
+            prov:hadRole Neuroimaging_Analysis_Software: ],
+        [ a prov:Association ;
+            prov:agent nidm:_eedc5892-89da-11e8-9aa9-8c8590aa91df ;
+            prov:hadRole sio:Subject ] ;
+    prov:usedEntity nidm:_eedc5f48-89da-11e8-aaf1-8c8590aa91df ;
+    prov:wasAssociatedWith nidm:_d3ca74c6-7be7-11e9-a294-003ee1ce9545,
+        nidm:_eedc5892-89da-11e8-9aa9-8c8590aa91df .
+
+nidm:_d3d0fcc4-7be7-11e9-a294-003ee1ce9545 a prov:Activity ;
+    dct:description "brain volume computation"^^xsd:string ;
+    dct:isPartOf nidm:_d2e2d454-7be7-11e9-a294-003ee1ce9545 ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent nidm:_eedd70cc-89da-11e8-97bd-8c8590aa91df ;
+            prov:hadRole sio:Subject ],
+        [ a prov:Association ;
+            prov:agent nidm:_d3c75f8e-7be7-11e9-a294-003ee1ce9545 ;
+            prov:hadRole Neuroimaging_Analysis_Software: ] ;
+    prov:usedEntity nidm:_eedd779a-89da-11e8-a147-8c8590aa91df ;
+    prov:wasAssociatedWith nidm:_d3c75f8e-7be7-11e9-a294-003ee1ce9545,
+        nidm:_eedd70cc-89da-11e8-97bd-8c8590aa91df .
+
+nidm:_d3d1971a-7be7-11e9-a294-003ee1ce9545 a prov:Activity ;
+    dct:description "brain volume computation"^^xsd:string ;
+    dct:isPartOf nidm:_d2e2d454-7be7-11e9-a294-003ee1ce9545 ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent nidm:_eedd70cc-89da-11e8-97bd-8c8590aa91df ;
+            prov:hadRole sio:Subject ],
+        [ a prov:Association ;
+            prov:agent nidm:_d3c848c2-7be7-11e9-a294-003ee1ce9545 ;
+            prov:hadRole Neuroimaging_Analysis_Software: ] ;
+    prov:usedEntity nidm:_eedd779a-89da-11e8-a147-8c8590aa91df ;
+    prov:wasAssociatedWith nidm:_d3c848c2-7be7-11e9-a294-003ee1ce9545,
+        nidm:_eedd70cc-89da-11e8-97bd-8c8590aa91df .
+
+nidm:_d3d330ca-7be7-11e9-a294-003ee1ce9545 a prov:Activity ;
+    dct:description "brain volume computation"^^xsd:string ;
+    dct:isPartOf nidm:_d2e2d454-7be7-11e9-a294-003ee1ce9545 ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent nidm:_eedd70cc-89da-11e8-97bd-8c8590aa91df ;
+            prov:hadRole sio:Subject ],
+        [ a prov:Association ;
+            prov:agent nidm:_d3ca74c6-7be7-11e9-a294-003ee1ce9545 ;
+            prov:hadRole Neuroimaging_Analysis_Software: ] ;
+    prov:usedEntity nidm:_eedd779a-89da-11e8-a147-8c8590aa91df ;
+    prov:wasAssociatedWith nidm:_d3ca74c6-7be7-11e9-a294-003ee1ce9545,
+        nidm:_eedd70cc-89da-11e8-97bd-8c8590aa91df .
+
+nidm:_d3d545f4-7be7-11e9-a294-003ee1ce9545 a prov:Activity ;
+    dct:description "brain volume computation"^^xsd:string ;
+    dct:isPartOf nidm:_d2e2d454-7be7-11e9-a294-003ee1ce9545 ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent nidm:_d3c75f8e-7be7-11e9-a294-003ee1ce9545 ;
+            prov:hadRole Neuroimaging_Analysis_Software: ],
+        [ a prov:Association ;
+            prov:agent nidm:_eedf8b3e-89da-11e8-a0c1-8c8590aa91df ;
+            prov:hadRole sio:Subject ] ;
+    prov:usedEntity nidm:_eedf9200-89da-11e8-a5d9-8c8590aa91df ;
+    prov:wasAssociatedWith nidm:_d3c75f8e-7be7-11e9-a294-003ee1ce9545,
+        nidm:_eedf8b3e-89da-11e8-a0c1-8c8590aa91df .
+
+nidm:_d3d5eb80-7be7-11e9-a294-003ee1ce9545 a prov:Activity ;
+    dct:description "brain volume computation"^^xsd:string ;
+    dct:isPartOf nidm:_d2e2d454-7be7-11e9-a294-003ee1ce9545 ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent nidm:_eedf8b3e-89da-11e8-a0c1-8c8590aa91df ;
+            prov:hadRole sio:Subject ],
+        [ a prov:Association ;
+            prov:agent nidm:_d3c848c2-7be7-11e9-a294-003ee1ce9545 ;
+            prov:hadRole Neuroimaging_Analysis_Software: ] ;
+    prov:usedEntity nidm:_eedf9200-89da-11e8-a5d9-8c8590aa91df ;
+    prov:wasAssociatedWith nidm:_d3c848c2-7be7-11e9-a294-003ee1ce9545,
+        nidm:_eedf8b3e-89da-11e8-a0c1-8c8590aa91df .
+
+nidm:_d3d7b83e-7be7-11e9-a294-003ee1ce9545 a prov:Activity ;
+    dct:description "brain volume computation"^^xsd:string ;
+    dct:isPartOf nidm:_d2e2d454-7be7-11e9-a294-003ee1ce9545 ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent nidm:_d3ca74c6-7be7-11e9-a294-003ee1ce9545 ;
+            prov:hadRole Neuroimaging_Analysis_Software: ],
+        [ a prov:Association ;
+            prov:agent nidm:_eedf8b3e-89da-11e8-a0c1-8c8590aa91df ;
+            prov:hadRole sio:Subject ] ;
+    prov:usedEntity nidm:_eedf9200-89da-11e8-a5d9-8c8590aa91df ;
+    prov:wasAssociatedWith nidm:_d3ca74c6-7be7-11e9-a294-003ee1ce9545,
+        nidm:_eedf8b3e-89da-11e8-a0c1-8c8590aa91df .
+
+nidm:_d3da26be-7be7-11e9-a294-003ee1ce9545 a prov:Activity ;
+    dct:description "brain volume computation"^^xsd:string ;
+    dct:isPartOf nidm:_d2e2d454-7be7-11e9-a294-003ee1ce9545 ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent nidm:_d3c75f8e-7be7-11e9-a294-003ee1ce9545 ;
+            prov:hadRole Neuroimaging_Analysis_Software: ],
+        [ a prov:Association ;
+            prov:agent nidm:_eede6e00-89da-11e8-a434-8c8590aa91df ;
+            prov:hadRole sio:Subject ] ;
+    prov:usedEntity nidm:_eede745e-89da-11e8-8eb0-8c8590aa91df ;
+    prov:wasAssociatedWith nidm:_d3c75f8e-7be7-11e9-a294-003ee1ce9545,
+        nidm:_eede6e00-89da-11e8-a434-8c8590aa91df .
+
+nidm:_d3dabbce-7be7-11e9-a294-003ee1ce9545 a prov:Activity ;
+    dct:description "brain volume computation"^^xsd:string ;
+    dct:isPartOf nidm:_d2e2d454-7be7-11e9-a294-003ee1ce9545 ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent nidm:_eede6e00-89da-11e8-a434-8c8590aa91df ;
+            prov:hadRole sio:Subject ],
+        [ a prov:Association ;
+            prov:agent nidm:_d3c848c2-7be7-11e9-a294-003ee1ce9545 ;
+            prov:hadRole Neuroimaging_Analysis_Software: ] ;
+    prov:usedEntity nidm:_eede745e-89da-11e8-8eb0-8c8590aa91df ;
+    prov:wasAssociatedWith nidm:_d3c848c2-7be7-11e9-a294-003ee1ce9545,
+        nidm:_eede6e00-89da-11e8-a434-8c8590aa91df .
+
+nidm:_d3dc5ad8-7be7-11e9-a294-003ee1ce9545 a prov:Activity ;
+    dct:description "brain volume computation"^^xsd:string ;
+    dct:isPartOf nidm:_d2e2d454-7be7-11e9-a294-003ee1ce9545 ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent nidm:_d3ca74c6-7be7-11e9-a294-003ee1ce9545 ;
+            prov:hadRole Neuroimaging_Analysis_Software: ],
+        [ a prov:Association ;
+            prov:agent nidm:_eede6e00-89da-11e8-a434-8c8590aa91df ;
+            prov:hadRole sio:Subject ] ;
+    prov:usedEntity nidm:_eede745e-89da-11e8-8eb0-8c8590aa91df ;
+    prov:wasAssociatedWith nidm:_d3ca74c6-7be7-11e9-a294-003ee1ce9545,
+        nidm:_eede6e00-89da-11e8-a434-8c8590aa91df .
 
 nidm:_eed7e578-89da-11e8-aa05-8c8590aa91df a nidm:Acquisition,
         prov:Activity ;
@@ -768,56 +1477,32 @@ nidm:_eedfe87a-89da-11e8-acf4-8c8590aa91df a nidm:Acquisition,
 nidm:_f12aa54a-89da-11e8-829f-8c8590aa91df a onli:instrument-based-assessment,
         nidm:Acquisition,
         prov:Activity ;
-    dct:isPartOf nidm:_eedaf222-89da-11e8-978d-8c8590aa91df ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent nidm:_eedb4290-89da-11e8-a882-8c8590aa91df ;
-            prov:hadRole sio:Subject ] ;
-    prov:wasAssociatedWith nidm:_eedb4290-89da-11e8-a882-8c8590aa91df .
+    dct:isPartOf nidm:_eedaf222-89da-11e8-978d-8c8590aa91df .
 
 nidm:_f12f3b26-89da-11e8-8693-8c8590aa91df a onli:instrument-based-assessment,
         nidm:Acquisition,
         prov:Activity ;
-    dct:isPartOf nidm:_eed787d4-89da-11e8-9a18-8c8590aa91df ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent nidm:_eed7eabe-89da-11e8-bcb0-8c8590aa91df ;
-            prov:hadRole sio:Subject ] ;
-    prov:wasAssociatedWith nidm:_eed7eabe-89da-11e8-bcb0-8c8590aa91df .
+    dct:isPartOf nidm:_eed787d4-89da-11e8-9a18-8c8590aa91df .
 
 nidm:_f130aeae-89da-11e8-acda-8c8590aa91df a onli:instrument-based-assessment,
         nidm:Acquisition,
         prov:Activity ;
-    dct:isPartOf nidm:_eede2578-89da-11e8-b0d0-8c8590aa91df ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent nidm:_eede6e00-89da-11e8-a434-8c8590aa91df ;
-            prov:hadRole sio:Subject ] ;
-    prov:wasAssociatedWith nidm:_eede6e00-89da-11e8-a434-8c8590aa91df .
+    dct:isPartOf nidm:_eede2578-89da-11e8-b0d0-8c8590aa91df .
 
 nidm:_f13297dc-89da-11e8-a4da-8c8590aa91df a onli:instrument-based-assessment,
         nidm:Acquisition,
         prov:Activity ;
-    dct:isPartOf nidm:_eedf4964-89da-11e8-8ed5-8c8590aa91df ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent nidm:_eedf8b3e-89da-11e8-a0c1-8c8590aa91df ;
-            prov:hadRole sio:Subject ] ;
-    prov:wasAssociatedWith nidm:_eedf8b3e-89da-11e8-a0c1-8c8590aa91df .
+    dct:isPartOf nidm:_eedf4964-89da-11e8-8ed5-8c8590aa91df .
 
 nidm:_f1343470-89da-11e8-87d2-8c8590aa91df a onli:instrument-based-assessment,
         nidm:Acquisition,
         prov:Activity ;
-    dct:isPartOf nidm:_eedd28ee-89da-11e8-a1ad-8c8590aa91df ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent nidm:_eedd70cc-89da-11e8-97bd-8c8590aa91df ;
-            prov:hadRole sio:Subject ] ;
-    prov:wasAssociatedWith nidm:_eedd70cc-89da-11e8-97bd-8c8590aa91df .
+    dct:isPartOf nidm:_eedd28ee-89da-11e8-a1ad-8c8590aa91df .
 
 nidm:_f1357df8-89da-11e8-a29e-8c8590aa91df a onli:instrument-based-assessment,
         nidm:Acquisition,
         prov:Activity ;
-    dct:isPartOf nidm:_eedc1398-89da-11e8-8530-8c8590aa91df ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent nidm:_eedc5892-89da-11e8-9aa9-8c8590aa91df ;
-            prov:hadRole sio:Subject ] ;
-    prov:wasAssociatedWith nidm:_eedc5892-89da-11e8-9aa9-8c8590aa91df .
+    dct:isPartOf nidm:_eedc1398-89da-11e8-8530-8c8590aa91df .
 
 nidm:_eed787d4-89da-11e8-9a18-8c8590aa91df a nidm:Session,
         prov:Activity ;
@@ -827,21 +1512,60 @@ nidm:_eedaf222-89da-11e8-978d-8c8590aa91df a nidm:Session,
         prov:Activity ;
     dct:isPartOf nidm:_eea513a2-89da-11e8-9ecd-8c8590aa91df .
 
+nidm:_eedb49c0-89da-11e8-ac5d-8c8590aa91df a nidm:AcquisitionObject,
+        prov:Entity ;
+    nidm:AcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hasImageUsageType nidm:Anatomical ;
+    FILE_ID: "/sub-0051323/anat/sub-0051323_T1w.nii.gz"^^xsd:string ;
+    prov:wasGeneratedBy nidm:_eedb3ea8-89da-11e8-9ec8-8c8590aa91df .
+
 nidm:_eedc1398-89da-11e8-8530-8c8590aa91df a nidm:Session,
         prov:Activity ;
     dct:isPartOf nidm:_eea513a2-89da-11e8-9ecd-8c8590aa91df .
+
+nidm:_eedc5f48-89da-11e8-aaf1-8c8590aa91df a nidm:AcquisitionObject,
+        prov:Entity ;
+    nidm:AcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hasImageUsageType nidm:Anatomical ;
+    FILE_ID: "/sub-0051324/anat/sub-0051324_T1w.nii.gz"^^xsd:string ;
+    prov:wasGeneratedBy nidm:_eedc54b4-89da-11e8-b6b2-8c8590aa91df .
 
 nidm:_eedd28ee-89da-11e8-a1ad-8c8590aa91df a nidm:Session,
         prov:Activity ;
     dct:isPartOf nidm:_eea513a2-89da-11e8-9ecd-8c8590aa91df .
 
+nidm:_eedd779a-89da-11e8-a147-8c8590aa91df a nidm:AcquisitionObject,
+        prov:Entity ;
+    nidm:AcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hasImageUsageType nidm:Anatomical ;
+    FILE_ID: "/sub-0051325/anat/sub-0051325_T1w.nii.gz"^^xsd:string ;
+    prov:wasGeneratedBy nidm:_eedd6cdc-89da-11e8-9a9b-8c8590aa91df .
+
 nidm:_eede2578-89da-11e8-b0d0-8c8590aa91df a nidm:Session,
         prov:Activity ;
     dct:isPartOf nidm:_eea513a2-89da-11e8-9ecd-8c8590aa91df .
 
+nidm:_eede745e-89da-11e8-8eb0-8c8590aa91df a nidm:AcquisitionObject,
+        prov:Entity ;
+    nidm:AcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hasImageUsageType nidm:Anatomical ;
+    FILE_ID: "/sub-0051326/anat/sub-0051326_T1w.nii.gz"^^xsd:string ;
+    prov:wasGeneratedBy nidm:_eede6a54-89da-11e8-b7af-8c8590aa91df .
+
 nidm:_eedf4964-89da-11e8-8ed5-8c8590aa91df a nidm:Session,
         prov:Activity ;
     dct:isPartOf nidm:_eea513a2-89da-11e8-9ecd-8c8590aa91df .
+
+nidm:_eedf9200-89da-11e8-a5d9-8c8590aa91df a nidm:AcquisitionObject,
+        prov:Entity ;
+    nidm:AcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hasImageUsageType nidm:Anatomical ;
+    FILE_ID: "/sub-0051327/anat/sub-0051327_T1w.nii.gz"^^xsd:string ;
+    prov:wasGeneratedBy nidm:_eedf874c-89da-11e8-b684-8c8590aa91df .
+
+nidm:_eed7eabe-89da-11e8-bcb0-8c8590aa91df a prov:Agent,
+        prov:Person ;
+    ndar:src_subject_id "0051322"^^xsd:string .
 
 nidm:_eea513a2-89da-11e8-9ecd-8c8590aa91df a nidm:Project,
         prov:Activity ;
@@ -849,9 +1573,17 @@ nidm:_eea513a2-89da-11e8-9ecd-8c8590aa91df a nidm:Project,
     sio:Identifier "1.0.1"^^xsd:string ;
     prov:Location "/datasets.datalad.org/abide/RawDataBIDS/MaxMun_b"^^xsd:string .
 
-nidm:_eed7eabe-89da-11e8-bcb0-8c8590aa91df a prov:Agent,
-        prov:Person ;
-    ndar:src_subject_id "0051322"^^xsd:string .
+nidm:_d3c75f8e-7be7-11e9-a294-003ee1ce9545 a Neuroimaging_Analysis_Software:,
+        prov:Agent ;
+    Neuroimaging_Analysis_Software: fsl: .
+
+nidm:_d3c848c2-7be7-11e9-a294-003ee1ce9545 a Neuroimaging_Analysis_Software:,
+        prov:Agent ;
+    Neuroimaging_Analysis_Software: FreeSurfer: .
+
+nidm:_d3ca74c6-7be7-11e9-a294-003ee1ce9545 a Neuroimaging_Analysis_Software:,
+        prov:Agent ;
+    Neuroimaging_Analysis_Software: ANTS: .
 
 nidm:_eedb4290-89da-11e8-a882-8c8590aa91df a prov:Agent,
         prov:Person ;
@@ -872,4 +1604,7 @@ nidm:_eede6e00-89da-11e8-a434-8c8590aa91df a prov:Agent,
 nidm:_eedf8b3e-89da-11e8-a0c1-8c8590aa91df a prov:Agent,
         prov:Person ;
     ndar:src_subject_id "0051327"^^xsd:string .
+
+nidm:_d2e2d454-7be7-11e9-a294-003ee1ce9545 a prov:Activity ;
+    dct:description "Brain volumes provenance document"^^xsd:string .
 
