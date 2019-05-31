@@ -1,0 +1,4672 @@
+{
+    "@context": {
+        "@version": "1.1",
+        "Acquisition": "http://purl.org/nidash/nidm#Acquisition",
+        "AcquisitionObject": "http://purl.org/nidash/nidm#AcquisitionObject",
+        "Age": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Age",
+        "Anatomical": "http://purl.org/nidash/nidm#Anatomical",
+        "DemographicsInstrument": "http://purl.org/nidash/nidm#DemographicsInstrument",
+        "Diagnosis": "http://ncitt.ncit.nih.gov/Diagnosis",
+        "DiffusionTensor": "http://purl.org/nidash/nidm#DiffusionTensor",
+        "DiffusionWeighted": "http://purl.org/nidash/nidm#DiffusionWeighted",
+        "FlowWeighted": "http://purl.org/nidash/nidm#FlowWeighted",
+        "FreeSurfer": "https://surfer.nmr.mgh.harvard.edu/",
+        "Functional": "http://purl.org/nidash/nidm#Functional",
+        "Identifier": "http://semanticscience.org/ontology/sio.owl#Identifier",
+        "MagneticResonanceImaging": "http://purl.org/nidash/nidm#MagneticResonanceImaging",
+        "Neuroimaging_Analysis_Software": "http://purl.org/nidash/nidm#NIDM_0000164",
+        "PhenotypicSex": "http://purl.obolibrary.org/obo/pato#PhenotypicSex",
+        "Project": "http://purl.org/nidash/nidm#Project",
+        "Session": "http://purl.org/nidash/nidm#Session",
+        "StimulusResponseFile": "http://purl.org/nidash/nidm#StimulusResponseFile",
+        "Structural": "http://purl.org/nidash/nidm#Structural",
+        "Subject": "http://semanticscience.org/ontology/sio.owl#Subject",
+        "T1Weighted": "http://purl.org/nidash/nidm#T1Weighted",
+        "T2StarWeighted": "http://purl.org/nidash/nidm#T2StarWeighted",
+        "T2Weighted": "http://purl.org/nidash/nidm#T2Weighted",
+        "Task": "http://purl.org/nidash/nidm#Task",
+        "URL": "http://semanticscience.org/ontology/sio.owl#URL",
+        "activity": {
+            "@id": "prov:activity",
+            "@type": "@id"
+        },
+        "afni": "http://purl.org/nidash/afni#",
+        "agent": {
+            "@id": "prov:agent",
+            "@type": "@id"
+        },
+        "anterior_corpus_callosum_volume": "http://uri.interlex.org/base/ilx_0172283#",
+        "ants": "http://stnava.github.io/ANTs/",
+        "assessment-instrument": "http://neurolog.unice.fr/ontoneurolog/v3.0/instrument.owl#assessment-instrument",
+        "association": {
+            "@id": "prov:qualifiedAssociation",
+            "@type": "@id"
+        },
+        "author": "http://www.w3.org/ns/dcat#author",
+        "b-value": "http://purl.org/nidash/nidm#b-value",
+        "b-vector": "http://purl.org/nidash/nidm#b-vector",
+        "bids": "http://bids.neuroimaging.io/",
+        "birnlex": "http://bioontology.org/projects/ontologies/birnlex/",
+        "birnlex_2152": "http://bioontology.org/projects/ontologies/birnlex/birnlex_2152",
+        "birnlex_2199": "http://bioontology.org/projects/ontologies/birnlex/birnlex_2199",
+        "brain_gray_matter_volume": "http://uri.interlex.org/base/ilx_0381390#",
+        "brainstem_volume": "http://uri.interlex.org/base/ilx_0381391#",
+        "cavum_septum_pellucidum_volume": "http://uri.interlex.org/base/ilx_0381392#",
+        "central_corpus_callosum_volume": "http://uri.interlex.org/base/ilx_0172281#",
+        "cerebral_cortex_volume": "http://uri.interlex.org/base/ilx_0381393#",
+        "cerebrum_cerebral_spinal_fluid_volume": "http://uri.interlex.org/base/ilx_0381394#",
+        "cerebrum_tissue_volume": "http://uri.interlex.org/base/ilx_0381395#",
+        "cerebrum_white_matter_volume": "http://uri.interlex.org/base/ilx_0381396#",
+        "creator": "http://www.w3.org/ns/dcat#creator",
+        "crypto": "http://id.loc.gov/vocabulary/preservation/cryptographicHashFunctions#",
+        "dc": "http://purl.org/dc/elements/1.1/",
+        "dcat": "http://www.w3.org/ns/dcat#",
+        "dct": "http://purl.org/dc/terms/",
+        "dctypes": "http://purl.org/dc/dcmitype/",
+        "description": "http://purl.org/dc/terms/description",
+        "dicom": "http://neurolex.org/wiki/Category:DICOM_term/",
+        "endedAtTime": {
+            "@id": "prov:endedAtTime",
+            "@type": "xsd:dateTime"
+        },
+        "entity": {
+            "@id": "prov:entity",
+            "@type": "@id"
+        },
+        "ethnicity": "http://semanticscience.org/ontology/sio.owl#ethnicity",
+        "familyName": "http://xmlns.com/foaf/0.1/familyName",
+        "file": "http://semanticscience.org/ontology/sio.owl#file",
+        "filename": "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#filename",
+        "foaf": "http://xmlns.com/foaf/0.1/",
+        "fourth_ventricle_volume": "http://uri.interlex.org/base/ilx_0381399#",
+        "freesurfer": "https://surfer.nmr.mgh.harvard.edu/",
+        "fsl": "http://purl.org/nidash/fsl#",
+        "full4_iq": "https://github.com/dbkeator/nidm-local-terms/issues/2",
+        "gender": "https://ndar.nih.gov/api/datadictionary/v2/dataelement/gender",
+        "generation": {
+            "@id": "prov:qualifiedGeneration",
+            "@type": "@id"
+        },
+        "givenName": "http://xmlns.com/foaf/0.1/givenName",
+        "hadAcquisitionModality": "http://purl.org/nidash/nidm#hadAcquisitionModality",
+        "hadImageContrastType": "http://purl.org/nidash/nidm#hadImageContrastType",
+        "hadImageUsageType": "http://purl.org/nidash/nidm#hadImageUsageType",
+        "hadPlan": {
+            "@id": "prov:hadPlan",
+            "@type": "@id"
+        },
+        "hadRole": {
+            "@id": "prov:hadRole",
+            "@type": "@id"
+        },
+        "handedness": "http://purl.obolibrary.org/obo/handedness",
+        "instrument-based-assessment": "http://neurolog.unice.fr/ontoneurolog/v3.0/instrument.owl#instrument-based-assessment",
+        "left_amygdala_volume": "http://uri.interlex.org/base/ilx_0381401#",
+        "left_caudate_nucleus_volume": "http://uri.interlex.org/base/ilx_0381403#",
+        "left_cerebellar_cortex_volume": "http://uri.interlex.org/base/ilx_0381404#",
+        "left_cerebellum_white_matter_volume": "http://uri.interlex.org/base/ilx_0381405#",
+        "left_cerebral_cortex_volume": "http://uri.interlex.org/base/ilx_0381406#",
+        "left_cerebrum_white_matter_volume": "http://uri.interlex.org/base/ilx_0381408#",
+        "left_choroid_plexus_volume": "http://uri.interlex.org/base/ilx_0381409#",
+        "left_hippocampus_volume": "http://uri.interlex.org/base/ilx_0381410#",
+        "left_inferior_horn_of_the_lateral_ventricle_volume": "http://uri.interlex.org/base/ilx_0381411#",
+        "left_lateral_ventricle_volume": "http://uri.interlex.org/base/ilx_0381413#",
+        "left_nucleus_accumbens_volume": "http://uri.interlex.org/base/ilx_0381414#",
+        "left_pallidum_volume": "http://uri.interlex.org/base/ilx_0381415#",
+        "left_perivascular_space_volume": "http://uri.interlex.org/base/ilx_0381416#",
+        "left_putamen_volume": "http://uri.interlex.org/base/ilx_0381417#",
+        "left_thalamus_volume": "http://uri.interlex.org/base/ilx_0381419#",
+        "left_ventral_diencephalon_gray_matter_volume": "http://uri.interlex.org/base/ilx_0381420#",
+        "license": "http://purl.org/dc/terms/license",
+        "middle_anterior_corpus_callosum_volume": "http://uri.interlex.org/base/ilx_0172282#",
+        "middle_posterior_corpus_callosum_volume": "http://uri.interlex.org/base/ilx_0172280#",
+        "ncicb": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#",
+        "ncit": "http://ncitt.ncit.nih.gov/",
+        "ndar": "https://ndar.nih.gov/api/datadictionary/v2/dataelement/",
+        "nfo": "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#",
+        "nidm": "http://purl.org/nidash/nidm#",
+        "niiri": "http://iri.nidash.org/",
+        "nlx": "http://uri.neuinfo.org/nif/nifstd/",
+        "obo": "http://purl.obolibrary.org/obo/",
+        "onli": "http://neurolog.unice.fr/ontoneurolog/v3.0/instrument.owl#",
+        "optic_chiasm_volume": "http://uri.interlex.org/base/ilx_0381422#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "pato": "http://purl.obolibrary.org/obo/pato#",
+        "performance_iq": "https://github.com/dbkeator/nidm-local-terms/issues/4",
+        "posterior_corpus_callosum_volume": "http://uri.interlex.org/base/ilx_0172279#",
+        "prov": "http://www.w3.org/ns/prov#",
+        "qc_anatomical_1": "https://github.com/dbkeator/nidm-local-terms/issues/63",
+        "qc_rest_1": "https://github.com/dbkeator/nidm-local-terms/issues/62",
+        "race": "http://semanticscience.org/ontology/sio.owl#race",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "records": {
+            "@container": "@type",
+            "@id": "@graph"
+        },
+        "right_amygdala_volume": "http://uri.interlex.org/base/ilx_0381423#",
+        "right_caudate_nucleus_volume": "http://uri.interlex.org/base/ilx_0381425#",
+        "right_cerebellar_cortex_volume": "http://uri.interlex.org/base/ilx_0381426#",
+        "right_cerebellum_white_matter_volume": "http://uri.interlex.org/base/ilx_0381427#",
+        "right_cerebral_cortex_volume": "http://uri.interlex.org/base/ilx_0381428#",
+        "right_cerebrum_white_matter_volume": "http://uri.interlex.org/base/ilx_0381430#",
+        "right_choroid_plexus_volume": "http://uri.interlex.org/base/ilx_0381431#",
+        "right_hippocampus_volume": "http://uri.interlex.org/base/ilx_0381432#",
+        "right_inferior_horn_of_the_lateral_ventricle_volume": "http://uri.interlex.org/base/ilx_0381433#",
+        "right_lateral_ventricle_volume": "http://uri.interlex.org/base/ilx_0381435#",
+        "right_nucleus_accumbens_volume": "http://uri.interlex.org/base/ilx_0381436#",
+        "right_pallidum_volume": "http://uri.interlex.org/base/ilx_0381437#",
+        "right_perivascular_space_volume": "http://uri.interlex.org/base/ilx_0381438#",
+        "right_putamen_volume": "http://uri.interlex.org/base/ilx_0381439#",
+        "right_thalamus_volume": "http://uri.interlex.org/base/ilx_0381441#",
+        "right_ventral_diencephalon_gray_matter_volume": "http://uri.interlex.org/base/ilx_0381442#",
+        "scr": "http://scicrunch.org/resolver/",
+        "sio": "http://semanticscience.org/ontology/sio.owl#",
+        "spm": "http://purl.org/nidash/spm#",
+        "src_subject_id": "https://ndar.nih.gov/api/datadictionary/v2/dataelement/src_subject_id",
+        "startedAtTime": {
+            "@id": "prov:startedAtTime",
+            "@type": "xsd:dateTime"
+        },
+        "sub_cortical_gray_matter_volume": "http://uri.interlex.org/base/ilx_0381443#",
+        "third_ventricle_volume": "http://uri.interlex.org/base/ilx_0381444#",
+        "title": "http://purl.org/dc/dcmitype/title",
+        "usage": {
+            "@id": "prov:qualifiedUsage",
+            "@type": "@id"
+        },
+        "vc": "http://www.w3.org/2006/vcard/ns#",
+        "verbal_iq": "https://github.com/dbkeator/nidm-local-terms/issues/3",
+        "wasAttributedTo": {
+            "@id": "prov:wasAttributedTo",
+            "@type": "@id"
+        },
+        "xml": "http://www.w3.org/XML/1998/namespace",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "xsi": "http://www.w3.org/2001/XMLSchema-instance"
+    },
+    "records": [
+        {
+            "@id": "nidm:_5f5b20ba-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "Acquisition",
+                "instrument-based-assessment",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5f5b1d9a-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_64719ed0-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Session"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5dec4b6e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5db186-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "Session",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5dec4b6e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_608fa140-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Agent",
+                "prov:Person"
+            ],
+            "src_subject_id": "0026014"
+        },
+        {
+            "@id": "nidm:_60250f60-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Agent",
+                "prov:Person"
+            ],
+            "src_subject_id": "0026005"
+        },
+        {
+            "@id": "nidm:_60c3b91c-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Agent",
+                "prov:Person"
+            ],
+            "src_subject_id": "0026015"
+        },
+        {
+            "@id": "nidm:_62a1dcaa-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Person",
+                "prov:Agent"
+            ],
+            "src_subject_id": "0026041"
+        },
+        {
+            "@id": "nidm:_5f5dfcae-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "Session",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5dec4b6e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5ff80574-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Acquisition"
+            ],
+            "association": "_:ub2bL1769C31",
+            "dct:isPartOf": {
+                "@id": "nidm:_5fe7533c-8261-11e9-b671-003ee1ce9545"
+            },
+            "prov:wasAssociatedWith": {
+                "@id": "nidm:_5ff00aea-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_61003cc0-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "Acquisition",
+                "prov:Activity"
+            ],
+            "association": "_:ub2bL1849C31",
+            "dct:isPartOf": {
+                "@id": "nidm:_60ef3736-8261-11e9-b671-003ee1ce9545"
+            },
+            "prov:wasAssociatedWith": {
+                "@id": "nidm:_60f804c4-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5ba9ea-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "AcquisitionObject",
+                "assessment-instrument",
+                "prov:Entity"
+            ],
+            "Age": "12.02",
+            "full4_iq": "125.0",
+            "gender": "Female",
+            "handedness": "Right",
+            "performance_iq": "109.0",
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_5f5ba67a-8261-11e9-b671-003ee1ce9545"
+            },
+            "qc_anatomical_1": "Pass",
+            "qc_rest_1": "Pass",
+            "verbal_iq": "136.0"
+        },
+        {
+            "@id": "nidm:_5f5c854a-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "Session",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5dec4b6e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5fba941e-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Entity",
+                "AcquisitionObject"
+            ],
+            "crypto:sha512": "4a87a632c3cb1821fb94ab82914477968c6f1422a0112aa84fcfa01273b50103f206288d09484e68e811268447cdf63345a642f6cced6a02d06fb8b6e0ff1521",
+            "filename": "/sub-0026002/ses-1/anat/sub-0026002_ses-1_run-1_T1w.nii.gz",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:T1Weighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Anatomical"
+            },
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_5fba8a00-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5a338a-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "Session",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5dec4b6e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_640f50ae-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "AcquisitionObject",
+                "prov:Entity"
+            ],
+            "crypto:sha512": "cafae2e8ba09bfa0c49c7b4a1cbf433492b9e3ba35e0a872f55af32188169cc078366380f68d2fc04606199fcbc108044720c192aa9a9a05b63cd9700f9eb2e0",
+            "filename": "/sub-0026053/ses-1/anat/sub-0026053_ses-1_run-1_T1w.nii.gz",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:T1Weighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Anatomical"
+            },
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_640f464a-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_64181b94-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "AcquisitionObject",
+                "prov:Entity"
+            ],
+            "AcquisitionObject": {
+                "@type": "xsd:int",
+                "@value": "1"
+            },
+            "crypto:sha512": "583cf13d1808f5b0f6703af8d3bc606c36a619bac3226575ab70db1b16832f25a6b7ce762420ea720a7c5c656425f381e44e6fc6bf61f473c986c180be360a27",
+            "filename": "/sub-0026053/ses-1/func/sub-0026053_ses-1_task-rest_run-1_bold.nii.gz",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:FlowWeighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Functional"
+            },
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_641813b0-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f59a69a-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Entity",
+                "AcquisitionObject",
+                "assessment-instrument"
+            ],
+            "Age": "16.92",
+            "full4_iq": "120.0",
+            "gender": "Male",
+            "handedness": "Right",
+            "performance_iq": "104.0",
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_5f59a276-8261-11e9-b671-003ee1ce9545"
+            },
+            "qc_anatomical_1": "Pass",
+            "qc_rest_1": "Pass",
+            "verbal_iq": "133.0"
+        },
+        {
+            "@id": "nidm:_5f5cf264-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "Session",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5dec4b6e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_63dab182-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Agent",
+                "prov:Person"
+            ],
+            "src_subject_id": "0026052"
+        },
+        {
+            "@id": "nidm:_5f5d54ac-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "AcquisitionObject",
+                "prov:Entity",
+                "assessment-instrument"
+            ],
+            "Age": "13.82",
+            "full4_iq": "109.0",
+            "gender": "Female",
+            "handedness": "Right",
+            "performance_iq": "110.0",
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_5f5d516e-8261-11e9-b671-003ee1ce9545"
+            },
+            "qc_anatomical_1": "Pass",
+            "qc_rest_1": "Pass",
+            "verbal_iq": "106.0"
+        },
+        {
+            "@id": "nidm:_5ff00aea-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Agent",
+                "prov:Person"
+            ],
+            "src_subject_id": "0026004"
+        },
+        {
+            "@id": "nidm:_633e364a-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "AcquisitionObject",
+                "prov:Entity"
+            ],
+            "crypto:sha512": "b28be36551d431abc558d6435392a33a8e1e1eac2f79ff8e3ee1a0d03ddba0f8709badae37cda4f552403ed615e58f07e294b00b2043769c733fcd00cbc9727c",
+            "filename": "/sub-0026044/ses-1/anat/sub-0026044_ses-1_run-1_T1w.nii.gz",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:T1Weighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Anatomical"
+            },
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_633e2c68-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5deb9c-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "Acquisition",
+                "instrument-based-assessment",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5f5de656-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5cb088-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "Session",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5dec4b6e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_640f464a-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "Acquisition",
+                "prov:Activity"
+            ],
+            "association": "_:ub2bL2081C31",
+            "dct:isPartOf": {
+                "@id": "nidm:_64069d6a-8261-11e9-b671-003ee1ce9545"
+            },
+            "prov:wasAssociatedWith": {
+                "@id": "nidm:_640f49ba-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5d3d8c-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Entity",
+                "assessment-instrument",
+                "AcquisitionObject"
+            ],
+            "Age": "13.68",
+            "full4_iq": "128.0",
+            "gender": "Female",
+            "handedness": "Right",
+            "performance_iq": "120.0",
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_5f5d3ada-8261-11e9-b671-003ee1ce9545"
+            },
+            "qc_anatomical_1": "Questionable",
+            "qc_rest_1": "Pass",
+            "verbal_iq": "129.0"
+        },
+        {
+            "@id": "nidm:_5f5a71b0-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "Session",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5dec4b6e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_609781e4-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Acquisition"
+            ],
+            "association": "_:ub2bL1817C31",
+            "dct:isPartOf": {
+                "@id": "nidm:_60870a80-8261-11e9-b671-003ee1ce9545"
+            },
+            "prov:wasAssociatedWith": {
+                "@id": "nidm:_608fa140-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_6051af34-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "Session",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5dec4b6e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5d97dc-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Session"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5dec4b6e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_60251640-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "AcquisitionObject",
+                "prov:Entity"
+            ],
+            "crypto:sha512": "8d29a9966cf7a14ea3d66b0280fdd89a330be43a6fff73cf6870d17d27b08a640369b5dfd0ba7f571181d933c6784c930561620fef28104b5d396493dbbc9520",
+            "filename": "/sub-0026005/ses-1/anat/sub-0026005_ses-1_run-1_T1w.nii.gz",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:T1Weighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Anatomical"
+            },
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_60250bbe-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5bbbce-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "instrument-based-assessment",
+                "prov:Activity",
+                "Acquisition"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5f5bb840-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5bd3fc-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Session"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5dec4b6e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5abbac-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Entity",
+                "AcquisitionObject",
+                "assessment-instrument"
+            ],
+            "Age": "14.51",
+            "full4_iq": "123.0",
+            "gender": "Female",
+            "handedness": "Right",
+            "performance_iq": "119.0",
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_5f5ab864-8261-11e9-b671-003ee1ce9545"
+            },
+            "qc_anatomical_1": "Pass",
+            "qc_rest_1": "Pass",
+            "verbal_iq": "121.0"
+        },
+        {
+            "@id": "nidm:_610043b4-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Entity",
+                "AcquisitionObject"
+            ],
+            "AcquisitionObject": {
+                "@type": "xsd:int",
+                "@value": "1"
+            },
+            "crypto:sha512": "9f7fcf55976f539634d73e58dd3a95b628c23d1778c18369230ec620ee62a791e0f5648af45d2b660ce9e3eb7c784c56729309742856a75f52b5924ff78706a4",
+            "filename": "/sub-0026016/ses-1/func/sub-0026016_ses-1_task-rest_run-1_bold.nii.gz",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:FlowWeighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Functional"
+            },
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_61003cc0-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_6445a0fa-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Acquisition"
+            ],
+            "association": "_:ub2bL2097C31",
+            "dct:isPartOf": {
+                "@id": "nidm:_643d09fe-8261-11e9-b671-003ee1ce9545"
+            },
+            "prov:wasAssociatedWith": {
+                "@id": "nidm:_6445a4a6-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_641813b0-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Acquisition"
+            ],
+            "association": "_:ub2bL2089C31",
+            "dct:isPartOf": {
+                "@id": "nidm:_64069d6a-8261-11e9-b671-003ee1ce9545"
+            },
+            "prov:wasAssociatedWith": {
+                "@id": "nidm:_640f49ba-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5a4c44-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "Acquisition",
+                "instrument-based-assessment",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5f5a496a-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_61368d66-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Acquisition"
+            ],
+            "association": "_:ub2bL1865C31",
+            "dct:isPartOf": {
+                "@id": "nidm:_61252ab2-8261-11e9-b671-003ee1ce9545"
+            },
+            "prov:wasAssociatedWith": {
+                "@id": "nidm:_612e5ef2-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5c769a-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "assessment-instrument",
+                "prov:Entity",
+                "AcquisitionObject"
+            ],
+            "Age": "15.2",
+            "full4_iq": "113.0",
+            "gender": "Female",
+            "handedness": "Right",
+            "performance_iq": "98.0",
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_5f5c73e8-8261-11e9-b671-003ee1ce9545"
+            },
+            "qc_anatomical_1": "Pass",
+            "qc_rest_1": "Pass",
+            "verbal_iq": "127.0"
+        },
+        {
+            "@id": "nidm:_5f5af6d0-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Session"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5dec4b6e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_61985f28-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "AcquisitionObject",
+                "prov:Entity"
+            ],
+            "crypto:sha512": "3289a6812ecc1bd6113b96df07a5f97e2bfa667a42158fc27588032d1e84ad35842e8670286b6264577b9806bbc3186d506425e1e8f3418e03ab7e4d3574b881",
+            "filename": "/sub-0026024/ses-1/anat/sub-0026024_ses-1_run-1_T1w.nii.gz",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:T1Weighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Anatomical"
+            },
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_6198549c-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5c0b9c-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "AcquisitionObject",
+                "prov:Entity",
+                "assessment-instrument"
+            ],
+            "Age": "15.68",
+            "full4_iq": "107.0",
+            "gender": "Male",
+            "handedness": "Right",
+            "performance_iq": "106.0",
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_5f5c08ea-8261-11e9-b671-003ee1ce9545"
+            },
+            "qc_anatomical_1": "Pass",
+            "qc_rest_1": "Pass",
+            "verbal_iq": "106.0"
+        },
+        {
+            "@id": "nidm:_5f5c6100-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "AcquisitionObject",
+                "prov:Entity",
+                "assessment-instrument"
+            ],
+            "Age": "16.21",
+            "full4_iq": "102.0",
+            "gender": "Female",
+            "handedness": "Right",
+            "performance_iq": "102.0",
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_5f5c5e4e-8261-11e9-b671-003ee1ce9545"
+            },
+            "qc_anatomical_1": "Pass",
+            "qc_rest_1": "Pass",
+            "verbal_iq": "101.0"
+        },
+        {
+            "@id": "nidm:_5f5ce0e4-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Acquisition",
+                "instrument-based-assessment"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5f5cdc8e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_64aff0a4-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "AcquisitionObject",
+                "prov:Entity"
+            ],
+            "crypto:sha512": "0d5bc7fdd15df381a09f11a4c06a6532a4ef55650ae2de7a0a388abd29e05c5a7cbd0758e029c2a9b5711a3cf639731c2203ad1d37e56327d6c33b9de70a6315",
+            "filename": "/sub-0026057/ses-1/anat/sub-0026057_ses-1_run-1_T1w.nii.gz",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:T1Weighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Anatomical"
+            },
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_64afe6cc-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5b3816-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Entity",
+                "AcquisitionObject",
+                "assessment-instrument"
+            ],
+            "Age": "9.32",
+            "full4_iq": "107.0",
+            "gender": "Female",
+            "handedness": "Right",
+            "performance_iq": "93.0",
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_5f5b3460-8261-11e9-b671-003ee1ce9545"
+            },
+            "qc_anatomical_1": "Pass",
+            "qc_rest_1": "Pass",
+            "verbal_iq": "119.0"
+        },
+        {
+            "@id": "nidm:_620d16ba-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Entity",
+                "AcquisitionObject"
+            ],
+            "AcquisitionObject": {
+                "@type": "xsd:int",
+                "@value": "1"
+            },
+            "crypto:sha512": "bf94446595bc96df1b6dd7cbac2de0f2def0812d6a1e875139530edbae3c61faf87b6cc1e1907e9d4e6f323f8fbbdda57dc9a60e1de216ba576765127a18fd78",
+            "filename": "/sub-0026030/ses-1/func/sub-0026030_ses-1_task-rest_run-1_bold.nii.gz",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:FlowWeighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Functional"
+            },
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_620d0f76-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_6482e47e-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Acquisition"
+            ],
+            "association": "_:ub2bL2121C31",
+            "dct:isPartOf": {
+                "@id": "nidm:_64719ed0-8261-11e9-b671-003ee1ce9545"
+            },
+            "prov:wasAssociatedWith": {
+                "@id": "nidm:_647a68e4-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5ae596-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "instrument-based-assessment",
+                "prov:Activity",
+                "Acquisition"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5f5ae0fa-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5b0ff8-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "AcquisitionObject",
+                "prov:Entity",
+                "assessment-instrument"
+            ],
+            "Age": "13.82",
+            "full4_iq": "109.0",
+            "gender": "Female",
+            "handedness": "Right",
+            "performance_iq": "110.0",
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_5f5b0d50-8261-11e9-b671-003ee1ce9545"
+            },
+            "qc_anatomical_1": "Pass",
+            "qc_rest_1": "Pass",
+            "verbal_iq": "106.0"
+        },
+        {
+            "@id": "nidm:_5f5e141e-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "Session",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5dec4b6e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5a6134-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "Acquisition",
+                "prov:Activity",
+                "instrument-based-assessment"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5f5a5ea0-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_626d12e0-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "AcquisitionObject",
+                "prov:Entity"
+            ],
+            "crypto:sha512": "dbb5c2fbf6f916c9b29fd2783aeb58575940c20807460ae404796668797aff5881632afa53da85d7c7efb1108abe2a1aac1605bcfc410e58f1e7501a42112523",
+            "filename": "/sub-0026040/ses-1/anat/sub-0026040_ses-1_run-1_T1w.nii.gz",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:T1Weighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Anatomical"
+            },
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_626d0912-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5b52a6-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Entity",
+                "assessment-instrument",
+                "AcquisitionObject"
+            ],
+            "Age": "14.67",
+            "full4_iq": "111.0",
+            "gender": "Male",
+            "handedness": "Right",
+            "performance_iq": "109.0",
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_5f5b4f7c-8261-11e9-b671-003ee1ce9545"
+            },
+            "qc_anatomical_1": "Pass",
+            "qc_rest_1": "Pass",
+            "verbal_iq": "109.0"
+        },
+        {
+            "@id": "nidm:_5f5c1cf4-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "Acquisition",
+                "prov:Activity",
+                "instrument-based-assessment"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5f5c192a-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_623064ee-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Session"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5dec4b6e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5d9f5c-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "AcquisitionObject",
+                "assessment-instrument",
+                "prov:Entity"
+            ],
+            "Age": "14.67",
+            "full4_iq": "111.0",
+            "gender": "Male",
+            "handedness": "Right",
+            "performance_iq": "109.0",
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_5f5d9caa-8261-11e9-b671-003ee1ce9545"
+            },
+            "qc_anatomical_1": "Pass",
+            "qc_rest_1": "Pass",
+            "verbal_iq": "109.0"
+        },
+        {
+            "@id": "nidm:_5fba8a00-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "Acquisition",
+                "prov:Activity"
+            ],
+            "association": "_:ub2bL1745C31",
+            "dct:isPartOf": {
+                "@id": "nidm:_5fafd10a-8261-11e9-b671-003ee1ce9545"
+            },
+            "prov:wasAssociatedWith": {
+                "@id": "nidm:_5fba8d5c-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_61a01ce0-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "Acquisition",
+                "prov:Activity"
+            ],
+            "association": "_:ub2bL1897C31",
+            "dct:isPartOf": {
+                "@id": "nidm:_618fb242-8261-11e9-b671-003ee1ce9545"
+            },
+            "prov:wasAssociatedWith": {
+                "@id": "nidm:_619857ee-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5bee82-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "Acquisition",
+                "instrument-based-assessment",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5f5bea4a-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5d85d0-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "instrument-based-assessment",
+                "Acquisition"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5f5d806c-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_647a68e4-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Agent",
+                "prov:Person"
+            ],
+            "src_subject_id": "0026055"
+        },
+        {
+            "@id": "nidm:_5f5bf238-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Entity",
+                "assessment-instrument",
+                "AcquisitionObject"
+            ],
+            "Age": "16.92",
+            "full4_iq": "120.0",
+            "gender": "Male",
+            "handedness": "Right",
+            "performance_iq": "104.0",
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_5f5bee82-8261-11e9-b671-003ee1ce9545"
+            },
+            "qc_anatomical_1": "Pass",
+            "qc_rest_1": "Pass",
+            "verbal_iq": "133.0"
+        },
+        {
+            "@id": "nidm:_5f5de656-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Session"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5dec4b6e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_63ae3db4-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "Acquisition",
+                "prov:Activity"
+            ],
+            "association": "_:ub2bL2057C31",
+            "dct:isPartOf": {
+                "@id": "nidm:_639dbb74-8261-11e9-b671-003ee1ce9545"
+            },
+            "prov:wasAssociatedWith": {
+                "@id": "nidm:_63a67886-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_62d4d466-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Entity",
+                "AcquisitionObject"
+            ],
+            "crypto:sha512": "875ee2d07e9d1e5900528b42104efc260f39777b983c235ea827bde4076ae37f4602c6206daf9ea18ec1a7141213c01aa1cb0fa5d201c88243adc51e1dbafb06",
+            "filename": "/sub-0026042/ses-1/anat/sub-0026042_ses-1_run-1_T1w.nii.gz",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:T1Weighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Anatomical"
+            },
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_62d4cab6-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5b1d9a-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "Session",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5dec4b6e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5fba8d5c-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Agent",
+                "prov:Person"
+            ],
+            "src_subject_id": "0026002"
+        },
+        {
+            "@id": "nidm:_602d2830-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "AcquisitionObject",
+                "prov:Entity"
+            ],
+            "AcquisitionObject": {
+                "@type": "xsd:int",
+                "@value": "1"
+            },
+            "crypto:sha512": "f0ac79048a26a161e902b7262c014724e812cddd6b8f75232bae2affb644b927d14dd5c4ebeb7c0a9453fb2ed2700a6be84fd55d18a24b866c2035383da5b8e2",
+            "filename": "/sub-0026005/ses-1/func/sub-0026005_ses-1_task-rest_run-1_bold.nii.gz",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:FlowWeighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Functional"
+            },
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_602d20ce-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_619857ee-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Person",
+                "prov:Agent"
+            ],
+            "src_subject_id": "0026024"
+        },
+        {
+            "@id": "nidm:_637993e8-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "Acquisition",
+                "prov:Activity"
+            ],
+            "association": "_:ub2bL2041C31",
+            "dct:isPartOf": {
+                "@id": "nidm:_6368e3c2-8261-11e9-b671-003ee1ce9545"
+            },
+            "prov:wasAssociatedWith": {
+                "@id": "nidm:_6371986e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5a223c-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "Acquisition",
+                "instrument-based-assessment",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5f5a1f9e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5bc060-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "assessment-instrument",
+                "prov:Entity",
+                "AcquisitionObject"
+            ],
+            "Age": "17.74",
+            "full4_iq": "116.0",
+            "gender": "Male",
+            "handedness": "Right",
+            "performance_iq": "119.0",
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_5f5bbbce-8261-11e9-b671-003ee1ce9545"
+            },
+            "qc_anatomical_1": "Pass",
+            "qc_rest_1": "Pass",
+            "verbal_iq": "109.0"
+        },
+        {
+            "@id": "nidm:_5f59e150-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "AcquisitionObject",
+                "prov:Entity",
+                "assessment-instrument"
+            ],
+            "Age": "14.99",
+            "full4_iq": "125.0",
+            "gender": "Female",
+            "handedness": "Right",
+            "performance_iq": "123.0",
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_5f59ddd6-8261-11e9-b671-003ee1ce9545"
+            },
+            "qc_anatomical_1": "Pass",
+            "qc_rest_1": "Pass",
+            "verbal_iq": "119.0"
+        },
+        {
+            "@id": "nidm:_5dec4b6e-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "Project",
+                "prov:Activity"
+            ],
+            "Identifier": "1.0.1",
+            "prov:Location": "/datasets.datalad.org/adhd200/RawDataBIDS/Brown",
+            "title": "ADHD200"
+        },
+        {
+            "@id": "nidm:_602d20ce-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "Acquisition",
+                "prov:Activity"
+            ],
+            "association": "_:ub2bL1785C31",
+            "dct:isPartOf": {
+                "@id": "nidm:_601bcd9c-8261-11e9-b671-003ee1ce9545"
+            },
+            "prov:wasAssociatedWith": {
+                "@id": "nidm:_60250f60-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f81f92e-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Person",
+                "prov:Agent"
+            ],
+            "src_subject_id": "0026001"
+        },
+        {
+            "@id": "nidm:_60c3c024-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "AcquisitionObject",
+                "prov:Entity"
+            ],
+            "crypto:sha512": "1eb1cf281d3a3cf7023f85249eca8263e54a560f9e5dc94db0d456c5998aebf4013a46fe87dcc7a6668195e103f9ac9e1142680a9e6d5913034e92085bf9be64",
+            "filename": "/sub-0026015/ses-1/anat/sub-0026015_ses-1_run-1_T1w.nii.gz",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:T1Weighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Anatomical"
+            },
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_60c3b5ac-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5b3460-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "instrument-based-assessment",
+                "Acquisition"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5f5b312c-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_63719f12-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Entity",
+                "AcquisitionObject"
+            ],
+            "crypto:sha512": "240b11491ec877a9517e6c88250d7cdbcf0cab07789c3aa9170928cfea9943718fc2cbfc0aab11d7a99452d654c8d6ee107310c3fa4344fa1599771c519ad818",
+            "filename": "/sub-0026045/ses-1/anat/sub-0026045_ses-1_run-1_T1w.nii.gz",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:T1Weighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Anatomical"
+            },
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_6371951c-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f59c404-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "instrument-based-assessment",
+                "prov:Activity",
+                "Acquisition"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5f59c166-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_62a1d94e-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Acquisition"
+            ],
+            "association": "_:ub2bL1969C31",
+            "dct:isPartOf": {
+                "@id": "nidm:_62991aac-8261-11e9-b671-003ee1ce9545"
+            },
+            "prov:wasAssociatedWith": {
+                "@id": "nidm:_62a1dcaa-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5ff0118e-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "AcquisitionObject",
+                "prov:Entity"
+            ],
+            "crypto:sha512": "a298b90ffa409a70b3899cb577e238982d808223efc13cc6fb212fe3c61de98a7b91c180589c989c8d59c9304c38439c0b5c36302c365328b6c469ac6a595904",
+            "filename": "/sub-0026004/ses-1/anat/sub-0026004_ses-1_run-1_T1w.nii.gz",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:T1Weighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Anatomical"
+            },
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_5ff007c0-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5b7e0c-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Entity",
+                "AcquisitionObject",
+                "assessment-instrument"
+            ],
+            "Age": "17.87",
+            "full4_iq": "112.0",
+            "gender": "Female",
+            "handedness": "Right",
+            "performance_iq": "109.0",
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_5f5b7b50-8261-11e9-b671-003ee1ce9545"
+            },
+            "qc_anatomical_1": "Pass",
+            "qc_rest_1": "Pass",
+            "verbal_iq": "111.0"
+        },
+        {
+            "@id": "nidm:_61d1869a-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "AcquisitionObject",
+                "prov:Entity"
+            ],
+            "crypto:sha512": "0e7de85015ec9858bb63f1ffffe8cc757e76b3bc79f70bf41826f231ec99fd82f05afd337a0c1aab216bb018197c0ba5d11a659ed4c942ea6434f17c578a6e73",
+            "filename": "/sub-0026027/ses-1/anat/sub-0026027_ses-1_run-1_T1w.nii.gz",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:T1Weighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Anatomical"
+            },
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_61d17b14-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_6482ee10-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Entity",
+                "AcquisitionObject"
+            ],
+            "AcquisitionObject": {
+                "@type": "xsd:int",
+                "@value": "1"
+            },
+            "crypto:sha512": "1b2cd6c0ce436e124bfeb94e11bb3dedb366dbf4aa762ddae177212b42fd5bad532d30275244a09f50b6f9c8449202140f20eca98ce90551a066b484a89d18a8",
+            "filename": "/sub-0026055/ses-1/func/sub-0026055_ses-1_task-rest_run-1_bold.nii.gz",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:FlowWeighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Functional"
+            },
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_6482e47e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5a2502-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "assessment-instrument",
+                "AcquisitionObject",
+                "prov:Entity"
+            ],
+            "Age": "16.21",
+            "full4_iq": "102.0",
+            "gender": "Female",
+            "handedness": "Right",
+            "performance_iq": "102.0",
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_5f5a223c-8261-11e9-b671-003ee1ce9545"
+            },
+            "qc_anatomical_1": "Pass",
+            "qc_rest_1": "Pass",
+            "verbal_iq": "101.0"
+        },
+        {
+            "@id": "nidm:_5f5c3112-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Session"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5dec4b6e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_61252ab2-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Session"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5dec4b6e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5c8964-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Acquisition",
+                "instrument-based-assessment"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5f5c854a-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5db8d4-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "Acquisition",
+                "prov:Activity",
+                "instrument-based-assessment"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5f5db186-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5a7ac0-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Entity",
+                "assessment-instrument",
+                "AcquisitionObject"
+            ],
+            "Age": "17.83",
+            "full4_iq": "109.0",
+            "gender": "Male",
+            "handedness": "Right",
+            "performance_iq": "111.0",
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_5f5a7458-8261-11e9-b671-003ee1ce9545"
+            },
+            "qc_anatomical_1": "Pass",
+            "qc_rest_1": "Pass",
+            "verbal_iq": "105.0"
+        },
+        {
+            "@id": "nidm:_644dcbcc-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Entity",
+                "AcquisitionObject"
+            ],
+            "AcquisitionObject": {
+                "@type": "xsd:int",
+                "@value": "1"
+            },
+            "crypto:sha512": "0723b9bfba467212d294338570dbf17950273eeb9222d8f3010feb3edfa5329a1ead6e52de847d20c04bc1c865b00708e9fa3e339ea2dfed4b1829ad659d91ad",
+            "filename": "/sub-0026054/ses-1/func/sub-0026054_ses-1_task-rest_run-1_bold.nii.gz",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:FlowWeighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Functional"
+            },
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_644dc460-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_62752c8c-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "Acquisition",
+                "prov:Activity"
+            ],
+            "association": "_:ub2bL1961C31",
+            "dct:isPartOf": {
+                "@id": "nidm:_626475e0-8261-11e9-b671-003ee1ce9545"
+            },
+            "prov:wasAssociatedWith": {
+                "@id": "nidm:_626d0c46-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5ff007c0-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "Acquisition",
+                "prov:Activity"
+            ],
+            "association": "_:ub2bL1761C31",
+            "dct:isPartOf": {
+                "@id": "nidm:_5fe7533c-8261-11e9-b671-003ee1ce9545"
+            },
+            "prov:wasAssociatedWith": {
+                "@id": "nidm:_5ff00aea-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_64afe6cc-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Acquisition"
+            ],
+            "association": "_:ub2bL2129C31",
+            "dct:isPartOf": {
+                "@id": "nidm:_64a7587c-8261-11e9-b671-003ee1ce9545"
+            },
+            "prov:wasAssociatedWith": {
+                "@id": "nidm:_64afe9f6-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_63466b62-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "Acquisition",
+                "prov:Activity"
+            ],
+            "association": "_:ub2bL2025C31",
+            "dct:isPartOf": {
+                "@id": "nidm:_63358a18-8261-11e9-b671-003ee1ce9545"
+            },
+            "prov:wasAssociatedWith": {
+                "@id": "nidm:_633e2fa6-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_63e34e46-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Acquisition"
+            ],
+            "association": "_:ub2bL2073C31",
+            "dct:isPartOf": {
+                "@id": "nidm:_63d1e3c2-8261-11e9-b671-003ee1ce9545"
+            },
+            "prov:wasAssociatedWith": {
+                "@id": "nidm:_63dab182-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5d88a0-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "assessment-instrument",
+                "AcquisitionObject",
+                "prov:Entity"
+            ],
+            "Age": "9.32",
+            "full4_iq": "107.0",
+            "gender": "Female",
+            "handedness": "Right",
+            "performance_iq": "93.0",
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_5f5d85d0-8261-11e9-b671-003ee1ce9545"
+            },
+            "qc_anatomical_1": "Pass",
+            "qc_rest_1": "Pass",
+            "verbal_iq": "119.0"
+        },
+        {
+            "@id": "nidm:_5f5a63fa-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Entity",
+                "AcquisitionObject",
+                "assessment-instrument"
+            ],
+            "Age": "14.56",
+            "full4_iq": "89.0",
+            "gender": "Female",
+            "handedness": "Right",
+            "performance_iq": "87.0",
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_5f5a6134-8261-11e9-b671-003ee1ce9545"
+            },
+            "qc_anatomical_1": "Pass",
+            "qc_rest_1": "Pass",
+            "verbal_iq": "95.0"
+        },
+        {
+            "@id": "nidm:_63a674a8-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Acquisition"
+            ],
+            "association": "_:ub2bL2049C31",
+            "dct:isPartOf": {
+                "@id": "nidm:_639dbb74-8261-11e9-b671-003ee1ce9545"
+            },
+            "prov:wasAssociatedWith": {
+                "@id": "nidm:_63a67886-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5d363e-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Session"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5dec4b6e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5d205e-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Session"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5dec4b6e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5dbbcc-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "AcquisitionObject",
+                "prov:Entity",
+                "assessment-instrument"
+            ],
+            "Age": "8.5",
+            "full4_iq": "121.0",
+            "gender": "Female",
+            "handedness": "Right",
+            "performance_iq": "116.0",
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_5f5db8d4-8261-11e9-b671-003ee1ce9545"
+            },
+            "qc_anatomical_1": "Pass",
+            "qc_rest_1": "Pass",
+            "verbal_iq": "121.0"
+        },
+        {
+            "@id": "nidm:_5f5a9064-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "AcquisitionObject",
+                "assessment-instrument",
+                "prov:Entity"
+            ],
+            "Age": "17.77",
+            "full4_iq": "85.0",
+            "gender": "Female",
+            "handedness": "Right",
+            "performance_iq": "83.0",
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_5f5a8d80-8261-11e9-b671-003ee1ce9545"
+            },
+            "qc_anatomical_1": "Pass",
+            "qc_rest_1": "Pass",
+            "verbal_iq": "89.0"
+        },
+        {
+            "@id": "nidm:_5f59a276-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "instrument-based-assessment",
+                "Acquisition"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5f599e3e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5b632c-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Session"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5dec4b6e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5c08ea-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "Acquisition",
+                "prov:Activity",
+                "instrument-based-assessment"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5f5c046c-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5dd260-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Acquisition",
+                "instrument-based-assessment"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5f5dcc84-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_618fb242-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "Session",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5dec4b6e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_605ad0aa-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Acquisition"
+            ],
+            "association": "_:ub2bL1793C31",
+            "dct:isPartOf": {
+                "@id": "nidm:_6051af34-8261-11e9-b671-003ee1ce9545"
+            },
+            "prov:wasAssociatedWith": {
+                "@id": "nidm:_605ad49c-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5aa3b0-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "assessment-instrument",
+                "AcquisitionObject",
+                "prov:Entity"
+            ],
+            "Age": "11.28",
+            "full4_iq": "106.0",
+            "gender": "Female",
+            "handedness": "Right",
+            "performance_iq": "103.0",
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_5f5aa0fe-8261-11e9-b671-003ee1ce9545"
+            },
+            "qc_anatomical_1": "Pass",
+            "qc_rest_1": "Pass",
+            "verbal_iq": "108.0"
+        },
+        {
+            "@id": "nidm:_5f5b4f7c-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "Acquisition",
+                "instrument-based-assessment",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5f5b4bb2-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5cdc8e-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Session"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5dec4b6e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_620d0f76-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Acquisition"
+            ],
+            "association": "_:ub2bL1929C31",
+            "dct:isPartOf": {
+                "@id": "nidm:_61fc5cf8-8261-11e9-b671-003ee1ce9545"
+            },
+            "prov:wasAssociatedWith": {
+                "@id": "nidm:_6204d176-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_6368e3c2-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "Session",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5dec4b6e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5ca25a-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "AcquisitionObject",
+                "prov:Entity",
+                "assessment-instrument"
+            ],
+            "Age": "14.56",
+            "full4_iq": "89.0",
+            "gender": "Female",
+            "handedness": "Right",
+            "performance_iq": "87.0",
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_5f5c9fa8-8261-11e9-b671-003ee1ce9545"
+            },
+            "qc_anatomical_1": "Pass",
+            "qc_rest_1": "Pass",
+            "verbal_iq": "95.0"
+        },
+        {
+            "@id": "nidm:_5f5d6dc0-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "assessment-instrument",
+                "prov:Entity",
+                "AcquisitionObject"
+            ],
+            "Age": "11.6",
+            "full4_iq": "129.0",
+            "gender": "Female",
+            "handedness": "Right",
+            "performance_iq": "127.0",
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_5f5d6aa0-8261-11e9-b671-003ee1ce9545"
+            },
+            "qc_anatomical_1": "Pass",
+            "qc_rest_1": "Pass",
+            "verbal_iq": "125.0"
+        },
+        {
+            "@id": "nidm:_5fc31008-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Entity",
+                "AcquisitionObject"
+            ],
+            "AcquisitionObject": {
+                "@type": "xsd:int",
+                "@value": "1"
+            },
+            "crypto:sha512": "12699d32bacb598900fa400eb000050fa88b64089b2f07d38ec5f752be70b249b4b272ee90f08e1385668e9a8f3128ab7213d77042028874c87b37245c07b13d",
+            "filename": "/sub-0026002/ses-1/func/sub-0026002_ses-1_task-rest_run-1_bold.nii.gz",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:FlowWeighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Functional"
+            },
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_5fc308d8-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5b6692-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "instrument-based-assessment",
+                "prov:Activity",
+                "Acquisition"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5f5b632c-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_63dab81c-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Entity",
+                "AcquisitionObject"
+            ],
+            "crypto:sha512": "a0214fb5cb02d2cbe809679d40304f483e99ad1a0764cc886638066d9a00963a8b9c3ac230985697e63c0ef49d2742892a68f24a7005d906ec4899e6f60e861a",
+            "filename": "/sub-0026052/ses-1/anat/sub-0026052_ses-1_run-1_T1w.nii.gz",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:T1Weighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Anatomical"
+            },
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_63daae44-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_60c3b5ac-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Acquisition"
+            ],
+            "association": "_:ub2bL1825C31",
+            "dct:isPartOf": {
+                "@id": "nidm:_60baf5de-8261-11e9-b671-003ee1ce9545"
+            },
+            "prov:wasAssociatedWith": {
+                "@id": "nidm:_60c3b91c-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5c1fa6-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Entity",
+                "AcquisitionObject",
+                "assessment-instrument"
+            ],
+            "Age": "14.99",
+            "full4_iq": "125.0",
+            "gender": "Female",
+            "handedness": "Right",
+            "performance_iq": "123.0",
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_5f5c1cf4-8261-11e9-b671-003ee1ce9545"
+            },
+            "qc_anatomical_1": "Pass",
+            "qc_rest_1": "Pass",
+            "verbal_iq": "119.0"
+        },
+        {
+            "@id": "nidm:_60978a68-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "AcquisitionObject",
+                "prov:Entity"
+            ],
+            "AcquisitionObject": {
+                "@type": "xsd:int",
+                "@value": "1"
+            },
+            "crypto:sha512": "ef67c0dbb99b073c6256d9c645f618685dd5fb17a25a4d3f44488e6ac12abb03f041dce1bf1e5521f073527d003b6cceee3e55cb1183b833eabb434c058a5cc9",
+            "filename": "/sub-0026014/ses-1/func/sub-0026014_ses-1_task-rest_run-1_bold.nii.gz",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:FlowWeighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Functional"
+            },
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_609781e4-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5c8cb6-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Entity",
+                "assessment-instrument",
+                "AcquisitionObject"
+            ],
+            "Age": "16.07",
+            "full4_iq": "109.0",
+            "gender": "Male",
+            "handedness": "Right",
+            "performance_iq": "96.0",
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_5f5c8964-8261-11e9-b671-003ee1ce9545"
+            },
+            "qc_anatomical_1": "Pass",
+            "qc_rest_1": "Pass",
+            "verbal_iq": "120.0"
+        },
+        {
+            "@id": "nidm:_5f8ab938-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "AcquisitionObject",
+                "prov:Entity"
+            ],
+            "AcquisitionObject": {
+                "@type": "xsd:int",
+                "@value": "1"
+            },
+            "crypto:sha512": "36a5645c7659421c7bc7b61d2fe37bcb0829df9d18077cd98c8c8b1591c75ebe6aa5bb105a927e3e65daa8987ad713571a6fc0ca68d580090fe5c404aaa44b5d",
+            "filename": "/sub-0026001/ses-1/func/sub-0026001_ses-1_task-rest_run-1_bold.nii.gz",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:FlowWeighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Functional"
+            },
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_5f8ab136-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_62d4cab6-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Acquisition"
+            ],
+            "association": "_:ub2bL1985C31",
+            "dct:isPartOf": {
+                "@id": "nidm:_62cc5138-8261-11e9-b671-003ee1ce9545"
+            },
+            "prov:wasAssociatedWith": {
+                "@id": "nidm:_62d4cdea-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5cc780-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "Session",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5dec4b6e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5a496a-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "Session",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5dec4b6e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_64a7587c-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "Session",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5dec4b6e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5a8d80-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "instrument-based-assessment",
+                "Acquisition"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5f5a8ab0-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5cb51a-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "Acquisition",
+                "prov:Activity",
+                "instrument-based-assessment"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5f5cb088-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_6239086a-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Person",
+                "prov:Agent"
+            ],
+            "src_subject_id": "0026039"
+        },
+        {
+            "@id": "nidm:_5f59ddd6-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Acquisition",
+                "instrument-based-assessment"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5f59d944-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f820126-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Entity",
+                "AcquisitionObject"
+            ],
+            "crypto:sha512": "cad2aff662e46f19b29f9629084111e1108999661bbdce649c32acd9abb9b720c0916dcb0bb3bccde3c30424c2e5c001dc63ded5abf360813439f81befde6ca4",
+            "filename": "/sub-0026001/ses-1/anat/sub-0026001_ses-1_run-1_T1w.nii.gz",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:T1Weighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Anatomical"
+            },
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_5f81f41a-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_63a67886-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Person",
+                "prov:Agent"
+            ],
+            "src_subject_id": "0026050"
+        },
+        {
+            "@id": "nidm:_5f59d944-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Session"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5dec4b6e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_6371951c-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Acquisition"
+            ],
+            "association": "_:ub2bL2033C31",
+            "dct:isPartOf": {
+                "@id": "nidm:_6368e3c2-8261-11e9-b671-003ee1ce9545"
+            },
+            "prov:wasAssociatedWith": {
+                "@id": "nidm:_6371986e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5b93f6-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "AcquisitionObject",
+                "assessment-instrument",
+                "prov:Entity"
+            ],
+            "Age": "15.79",
+            "full4_iq": "120.0",
+            "gender": "Male",
+            "handedness": "Right",
+            "performance_iq": "111.0",
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_5f5b9068-8261-11e9-b671-003ee1ce9545"
+            },
+            "qc_anatomical_1": "Pass",
+            "qc_rest_1": "Pass",
+            "verbal_iq": "123.0"
+        },
+        {
+            "@id": "nidm:_5f81f41a-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Acquisition"
+            ],
+            "association": "_:ub2bL1729C31",
+            "dct:isPartOf": {
+                "@id": "nidm:_5f790fc6-8261-11e9-b671-003ee1ce9545"
+            },
+            "prov:wasAssociatedWith": {
+                "@id": "nidm:_5f81f92e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_6198549c-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Acquisition"
+            ],
+            "association": "_:ub2bL1889C31",
+            "dct:isPartOf": {
+                "@id": "nidm:_618fb242-8261-11e9-b671-003ee1ce9545"
+            },
+            "prov:wasAssociatedWith": {
+                "@id": "nidm:_619857ee-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5c192a-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Session"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5dec4b6e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5c5a52-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "Session",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5dec4b6e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_608f9e16-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Acquisition"
+            ],
+            "association": "_:ub2bL1809C31",
+            "dct:isPartOf": {
+                "@id": "nidm:_60870a80-8261-11e9-b671-003ee1ce9545"
+            },
+            "prov:wasAssociatedWith": {
+                "@id": "nidm:_608fa140-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5a1062-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Entity",
+                "assessment-instrument",
+                "AcquisitionObject"
+            ],
+            "Age": "16.91",
+            "full4_iq": "97.0",
+            "gender": "Male",
+            "handedness": "Left",
+            "performance_iq": "81.0",
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_5f5a0d60-8261-11e9-b671-003ee1ce9545"
+            },
+            "qc_anatomical_1": "Pass",
+            "qc_rest_1": "Pass",
+            "verbal_iq": "113.0"
+        },
+        {
+            "@id": "nidm:_605adb9a-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "AcquisitionObject",
+                "prov:Entity"
+            ],
+            "crypto:sha512": "2392dd19ab4948c6dd341237e45a6d6b459e85312f003310e8632e23fd3ce283a5e4189e6cc2174e04c81ddddd48552019d102a0aa1c29ce1e08b98c57af413f",
+            "filename": "/sub-0026009/ses-1/anat/sub-0026009_ses-1_run-1_T1w.nii.gz",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:T1Weighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Anatomical"
+            },
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_605ad0aa-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_61a023d4-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "AcquisitionObject",
+                "prov:Entity"
+            ],
+            "AcquisitionObject": {
+                "@type": "xsd:int",
+                "@value": "1"
+            },
+            "crypto:sha512": "7aa3c2d4a546d6ef90e30583e0f0159039c155763974b8b553f12dab7be7e04a0ff05b97a50e49b4e8b079461a70cd1134d8c0dce5f93702b20d7a26d14d1cc0",
+            "filename": "/sub-0026024/ses-1/func/sub-0026024_ses-1_task-rest_run-1_bold.nii.gz",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:FlowWeighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Functional"
+            },
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_61a01ce0-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5d0f4c-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Acquisition",
+                "instrument-based-assessment"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5f5d0ad8-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5e1c02-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "AcquisitionObject",
+                "prov:Entity",
+                "assessment-instrument"
+            ],
+            "Age": "17.74",
+            "full4_iq": "116.0",
+            "gender": "Male",
+            "handedness": "Right",
+            "performance_iq": "119.0",
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_5f5e1950-8261-11e9-b671-003ee1ce9545"
+            },
+            "qc_anatomical_1": "Pass",
+            "qc_rest_1": "Pass",
+            "verbal_iq": "109.0"
+        },
+        {
+            "@id": "nidm:_5f5ce396-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "assessment-instrument",
+                "prov:Entity",
+                "AcquisitionObject"
+            ],
+            "Age": "11.28",
+            "full4_iq": "106.0",
+            "gender": "Female",
+            "handedness": "Right",
+            "performance_iq": "103.0",
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_5f5ce0e4-8261-11e9-b671-003ee1ce9545"
+            },
+            "qc_anatomical_1": "Pass",
+            "qc_rest_1": "Pass",
+            "verbal_iq": "108.0"
+        },
+        {
+            "@id": "nidm:_647a6fa6-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Entity",
+                "AcquisitionObject"
+            ],
+            "crypto:sha512": "2b82943ff265ab81aa5cfb4b86c21a1c6fbd3e5b0a3f2b710225029db9e30cd1508e2dc21682269dd927f3e0ae80c484ddf4985126ad25fae1502eca113ef799",
+            "filename": "/sub-0026055/ses-1/anat/sub-0026055_ses-1_run-1_T1w.nii.gz",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:T1Weighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Anatomical"
+            },
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_647a6592-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5c3860-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Entity",
+                "AcquisitionObject",
+                "assessment-instrument"
+            ],
+            "Age": "15.16",
+            "full4_iq": "126.0",
+            "gender": "Female",
+            "handedness": "Right",
+            "performance_iq": "131.0",
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_5f5c3518-8261-11e9-b671-003ee1ce9545"
+            },
+            "qc_anatomical_1": "Pass",
+            "qc_rest_1": "Pass",
+            "verbal_iq": "116.0"
+        },
+        {
+            "@id": "nidm:_61fc5cf8-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "Session",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5dec4b6e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_63d1e3c2-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "Session",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5dec4b6e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5ff80d76-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Entity",
+                "AcquisitionObject"
+            ],
+            "AcquisitionObject": {
+                "@type": "xsd:int",
+                "@value": "1"
+            },
+            "crypto:sha512": "06c0643455990faf89a46002efa42241e30404440c04ee4f7c53107cd401bcd382641fc9d2cb2cb8f6037f308a7b2f6ab2c9aa11f605d1ff63dacda45cfd4516",
+            "filename": "/sub-0026004/ses-1/func/sub-0026004_ses-1_task-rest_run-1_bold.nii.gz",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:FlowWeighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Functional"
+            },
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_5ff80574-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5bea4a-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Session"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5dec4b6e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_63467314-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Entity",
+                "AcquisitionObject"
+            ],
+            "AcquisitionObject": {
+                "@type": "xsd:int",
+                "@value": "1"
+            },
+            "crypto:sha512": "0f22d78968fe56ced7d5ca318d735939cac9012606c32d90cb6572412b5b7372390d71a36a0aefe52efaf97b69ddf0ae14f1a901886597dde5688a24bf2c091f",
+            "filename": "/sub-0026044/ses-1/func/sub-0026044_ses-1_task-rest_run-1_bold.nii.gz",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:FlowWeighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Functional"
+            },
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_63466b62-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5aca16-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "Session",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5dec4b6e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_633e2fa6-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Person",
+                "prov:Agent"
+            ],
+            "src_subject_id": "0026044"
+        },
+        {
+            "@id": "nidm:_5f5c9fa8-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Acquisition",
+                "instrument-based-assessment"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5f5c9b70-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_64afe9f6-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Person",
+                "prov:Agent"
+            ],
+            "src_subject_id": "0026057"
+        },
+        {
+            "@id": "nidm:_626d0912-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Acquisition"
+            ],
+            "association": "_:ub2bL1953C31",
+            "dct:isPartOf": {
+                "@id": "nidm:_626475e0-8261-11e9-b671-003ee1ce9545"
+            },
+            "prov:wasAssociatedWith": {
+                "@id": "nidm:_626d0c46-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5c73e8-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "instrument-based-assessment",
+                "Acquisition",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5f5c6f74-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_626475e0-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Session"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5dec4b6e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5a38a8-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "AcquisitionObject",
+                "prov:Entity",
+                "assessment-instrument"
+            ],
+            "Age": "15.2",
+            "full4_iq": "113.0",
+            "gender": "Female",
+            "handedness": "Right",
+            "performance_iq": "98.0",
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_5f5a3600-8261-11e9-b671-003ee1ce9545"
+            },
+            "qc_anatomical_1": "Pass",
+            "qc_rest_1": "Pass",
+            "verbal_iq": "127.0"
+        },
+        {
+            "@id": "nidm:_6371986e-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Person",
+                "prov:Agent"
+            ],
+            "src_subject_id": "0026045"
+        },
+        {
+            "@id": "nidm:_63daae44-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Acquisition"
+            ],
+            "association": "_:ub2bL2065C31",
+            "dct:isPartOf": {
+                "@id": "nidm:_63d1e3c2-8261-11e9-b671-003ee1ce9545"
+            },
+            "prov:wasAssociatedWith": {
+                "@id": "nidm:_63dab182-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5d806c-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "Session",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5dec4b6e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5e330e-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Entity",
+                "assessment-instrument",
+                "AcquisitionObject"
+            ],
+            "Age": "12.0",
+            "full4_iq": "114.0",
+            "gender": "Male",
+            "handedness": "Right",
+            "performance_iq": "110.0",
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_5f5e3002-8261-11e9-b671-003ee1ce9545"
+            },
+            "qc_anatomical_1": "Pass",
+            "qc_rest_1": "Pass",
+            "verbal_iq": "114.0"
+        },
+        {
+            "@id": "nidm:_5f5cb7d6-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Entity",
+                "assessment-instrument",
+                "AcquisitionObject"
+            ],
+            "Age": "17.83",
+            "full4_iq": "109.0",
+            "gender": "Male",
+            "handedness": "Right",
+            "performance_iq": "111.0",
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_5f5cb51a-8261-11e9-b671-003ee1ce9545"
+            },
+            "qc_anatomical_1": "Pass",
+            "qc_rest_1": "Pass",
+            "verbal_iq": "105.0"
+        },
+        {
+            "@id": "nidm:_5f5b6976-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "AcquisitionObject",
+                "assessment-instrument",
+                "prov:Entity"
+            ],
+            "Age": "8.5",
+            "full4_iq": "121.0",
+            "gender": "Female",
+            "handedness": "Right",
+            "performance_iq": "116.0",
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_5f5b6692-8261-11e9-b671-003ee1ce9545"
+            },
+            "qc_anatomical_1": "Pass",
+            "qc_rest_1": "Pass",
+            "verbal_iq": "121.0"
+        },
+        {
+            "@id": "nidm:_5f5b9068-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "Acquisition",
+                "instrument-based-assessment",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5f5b8bc2-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_63799adc-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "AcquisitionObject",
+                "prov:Entity"
+            ],
+            "AcquisitionObject": {
+                "@type": "xsd:int",
+                "@value": "1"
+            },
+            "crypto:sha512": "60f8bcce753192b4a8bf5658fba66cd51c005af19afdd0d7a64e250a9c583b0189e4df4723308d36db2c186b0fe9e75ba15472cc51b1eea655cb881bce64bd07",
+            "filename": "/sub-0026045/ses-1/func/sub-0026045_ses-1_task-rest_run-1_bold.nii.gz",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:FlowWeighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Functional"
+            },
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_637993e8-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_612e5ef2-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Agent",
+                "prov:Person"
+            ],
+            "src_subject_id": "0026017"
+        },
+        {
+            "@id": "nidm:_639dbb74-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "Session",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5dec4b6e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5e04ce-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "AcquisitionObject",
+                "assessment-instrument",
+                "prov:Entity"
+            ],
+            "Age": "12.02",
+            "full4_iq": "125.0",
+            "gender": "Female",
+            "handedness": "Right",
+            "performance_iq": "109.0",
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_5f5e01c2-8261-11e9-b671-003ee1ce9545"
+            },
+            "qc_anatomical_1": "Pass",
+            "qc_rest_1": "Pass",
+            "verbal_iq": "136.0"
+        },
+        {
+            "@id": "nidm:_6308b588-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Agent",
+                "prov:Person"
+            ],
+            "src_subject_id": "0026043"
+        },
+        {
+            "@id": "nidm:_5f5c3518-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Acquisition",
+                "instrument-based-assessment"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5f5c3112-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_64b8a528-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Entity",
+                "AcquisitionObject"
+            ],
+            "AcquisitionObject": {
+                "@type": "xsd:int",
+                "@value": "1"
+            },
+            "crypto:sha512": "fc42e77c5d4192371c16a7d6ea2ce2779fbbcd682a58c8f57538aff0fcaaabab5f6d6d40af99c2c069a61189238cda654d4d33b5b5b45ad7613bc7415b932f78",
+            "filename": "/sub-0026057/ses-1/func/sub-0026057_ses-1_task-rest_run-1_bold.nii.gz",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:FlowWeighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Functional"
+            },
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_64b89d76-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_60baf5de-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "Session",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5dec4b6e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f59f5c8-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "instrument-based-assessment",
+                "prov:Activity",
+                "Acquisition"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5f59f352-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5d252c-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "instrument-based-assessment",
+                "prov:Activity",
+                "Acquisition"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5f5d205e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_640f49ba-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Agent",
+                "prov:Person"
+            ],
+            "src_subject_id": "0026053"
+        },
+        {
+            "@id": "nidm:_5f5c460c-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Session"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5dec4b6e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_615a541c-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "Session",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5dec4b6e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_6163170a-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "Acquisition",
+                "prov:Activity"
+            ],
+            "association": "_:ub2bL1873C31",
+            "dct:isPartOf": {
+                "@id": "nidm:_615a541c-8261-11e9-b671-003ee1ce9545"
+            },
+            "prov:wasAssociatedWith": {
+                "@id": "nidm:_61631a34-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5a9e38-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "Session",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5dec4b6e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5dee58-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "AcquisitionObject",
+                "assessment-instrument",
+                "prov:Entity"
+            ],
+            "Age": "15.79",
+            "full4_iq": "120.0",
+            "gender": "Male",
+            "handedness": "Right",
+            "performance_iq": "111.0",
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_5f5deb9c-8261-11e9-b671-003ee1ce9545"
+            },
+            "qc_anatomical_1": "Pass",
+            "qc_rest_1": "Pass",
+            "verbal_iq": "123.0"
+        },
+        {
+            "@id": "nidm:_5f5a0a2c-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Session"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5dec4b6e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5d0ad8-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "Session",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5dec4b6e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_6062d462-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "Acquisition",
+                "prov:Activity"
+            ],
+            "association": "_:ub2bL1801C31",
+            "dct:isPartOf": {
+                "@id": "nidm:_6051af34-8261-11e9-b671-003ee1ce9545"
+            },
+            "prov:wasAssociatedWith": {
+                "@id": "nidm:_605ad49c-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_616320c4-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Entity",
+                "AcquisitionObject"
+            ],
+            "crypto:sha512": "adb22cd252487a37e20b586ad9e4b7631529a6e0dc5390437877da3b6ea7e5b7edea528ebaef9ecd001b01019656e95e5947641f7c6187fb8eb81fb9b6656a8c",
+            "filename": "/sub-0026022/ses-1/anat/sub-0026022_ses-1_run-1_T1w.nii.gz",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:T1Weighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Anatomical"
+            },
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_6163170a-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_612e5b3c-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Acquisition"
+            ],
+            "association": "_:ub2bL1857C31",
+            "dct:isPartOf": {
+                "@id": "nidm:_61252ab2-8261-11e9-b671-003ee1ce9545"
+            },
+            "prov:wasAssociatedWith": {
+                "@id": "nidm:_612e5ef2-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_63001fae-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Session"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5dec4b6e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5e1950-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "instrument-based-assessment",
+                "prov:Activity",
+                "Acquisition"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5f5e141e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_60250bbe-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Acquisition"
+            ],
+            "association": "_:ub2bL1777C31",
+            "dct:isPartOf": {
+                "@id": "nidm:_601bcd9c-8261-11e9-b671-003ee1ce9545"
+            },
+            "prov:wasAssociatedWith": {
+                "@id": "nidm:_60250f60-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5e2ad0-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "Session",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5dec4b6e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5cfc00-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Entity",
+                "AcquisitionObject",
+                "assessment-instrument"
+            ],
+            "Age": "14.51",
+            "full4_iq": "123.0",
+            "gender": "Female",
+            "handedness": "Right",
+            "performance_iq": "119.0",
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_5f5cf912-8261-11e9-b671-003ee1ce9545"
+            },
+            "qc_anatomical_1": "Pass",
+            "qc_rest_1": "Pass",
+            "verbal_iq": "121.0"
+        },
+        {
+            "@id": "nidm:_5f5a1f9e-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "Session",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5dec4b6e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_62cc5138-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "Session",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5dec4b6e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5e3002-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "instrument-based-assessment",
+                "Acquisition"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5f5e2ad0-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5cce88-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "assessment-instrument",
+                "prov:Entity",
+                "AcquisitionObject"
+            ],
+            "Age": "17.77",
+            "full4_iq": "85.0",
+            "gender": "Female",
+            "handedness": "Right",
+            "performance_iq": "83.0",
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_5f5ccbd6-8261-11e9-b671-003ee1ce9545"
+            },
+            "qc_anatomical_1": "Pass",
+            "qc_rest_1": "Pass",
+            "verbal_iq": "89.0"
+        },
+        {
+            "@id": "nidm:_62d4cdea-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Agent",
+                "prov:Person"
+            ],
+            "src_subject_id": "0026042"
+        },
+        {
+            "@id": "nidm:_62414318-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "Acquisition",
+                "prov:Activity"
+            ],
+            "association": "_:ub2bL1945C31",
+            "dct:isPartOf": {
+                "@id": "nidm:_623064ee-8261-11e9-b671-003ee1ce9545"
+            },
+            "prov:wasAssociatedWith": {
+                "@id": "nidm:_6239086a-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5fe7533c-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Session"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5dec4b6e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5ab4ae-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Session"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5dec4b6e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f8ab136-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "Acquisition",
+                "prov:Activity"
+            ],
+            "association": "_:ub2bL1737C31",
+            "dct:isPartOf": {
+                "@id": "nidm:_5f790fc6-8261-11e9-b671-003ee1ce9545"
+            },
+            "prov:wasAssociatedWith": {
+                "@id": "nidm:_5f81f92e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5a7458-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "instrument-based-assessment",
+                "Acquisition"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5f5a71b0-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5ba2ce-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Session"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5dec4b6e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5a4f50-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "AcquisitionObject",
+                "assessment-instrument",
+                "prov:Entity"
+            ],
+            "Age": "16.07",
+            "full4_iq": "109.0",
+            "gender": "Male",
+            "handedness": "Right",
+            "performance_iq": "96.0",
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_5f5a4c44-8261-11e9-b671-003ee1ce9545"
+            },
+            "qc_anatomical_1": "Pass",
+            "qc_rest_1": "Pass",
+            "verbal_iq": "120.0"
+        },
+        {
+            "@id": "nidm:_5f5c49fe-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Acquisition",
+                "instrument-based-assessment"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5f5c460c-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f59f352-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "Session",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5dec4b6e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_6308b254-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "Acquisition",
+                "prov:Activity"
+            ],
+            "association": "_:ub2bL2001C31",
+            "dct:isPartOf": {
+                "@id": "nidm:_63001fae-8261-11e9-b671-003ee1ce9545"
+            },
+            "prov:wasAssociatedWith": {
+                "@id": "nidm:_6308b588-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_61c8daf4-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Session"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5dec4b6e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5aa0fe-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "instrument-based-assessment",
+                "Acquisition"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5f5a9e38-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5a3600-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "instrument-based-assessment",
+                "prov:Activity",
+                "Acquisition"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5f5a338a-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5b312c-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Session"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5dec4b6e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5b4bb2-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Session"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5dec4b6e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_6204d82e-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "AcquisitionObject",
+                "prov:Entity"
+            ],
+            "crypto:sha512": "cff903ed1d698c50801988e1056fe8b415763e73717e20cd8daeea8e47461436d7e9de197c26d563e71c04185f406140460c23ec84126a2c645b1dc3d73bbd9d",
+            "filename": "/sub-0026030/ses-1/anat/sub-0026030_ses-1_run-1_T1w.nii.gz",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:T1Weighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Anatomical"
+            },
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_6204ce1a-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_6445a4a6-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Person",
+                "prov:Agent"
+            ],
+            "src_subject_id": "0026054"
+        },
+        {
+            "@id": "nidm:_60cbafb4-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "Acquisition",
+                "prov:Activity"
+            ],
+            "association": "_:ub2bL1833C31",
+            "dct:isPartOf": {
+                "@id": "nidm:_60baf5de-8261-11e9-b671-003ee1ce9545"
+            },
+            "prov:wasAssociatedWith": {
+                "@id": "nidm:_60c3b91c-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5fc308d8-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "Acquisition",
+                "prov:Activity"
+            ],
+            "association": "_:ub2bL1753C31",
+            "dct:isPartOf": {
+                "@id": "nidm:_5fafd10a-8261-11e9-b671-003ee1ce9545"
+            },
+            "prov:wasAssociatedWith": {
+                "@id": "nidm:_5fba8d5c-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5b0a3a-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Session"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5dec4b6e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5bdc30-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Entity",
+                "assessment-instrument",
+                "AcquisitionObject"
+            ],
+            "Age": "12.0",
+            "full4_iq": "114.0",
+            "gender": "Male",
+            "handedness": "Right",
+            "performance_iq": "110.0",
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_5f5bd8ca-8261-11e9-b671-003ee1ce9545"
+            },
+            "qc_anatomical_1": "Pass",
+            "qc_rest_1": "Pass",
+            "verbal_iq": "114.0"
+        },
+        {
+            "@id": "nidm:_5f5accfa-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "Acquisition",
+                "prov:Activity",
+                "instrument-based-assessment"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5f5aca16-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_62991aac-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Session"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5dec4b6e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_63358a18-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "Session",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5dec4b6e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5d4cc8-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "Session",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5dec4b6e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5ab864-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "Acquisition",
+                "prov:Activity",
+                "instrument-based-assessment"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5f5ab4ae-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5b77c2-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Session"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5dec4b6e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_63111ef8-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Entity",
+                "AcquisitionObject"
+            ],
+            "AcquisitionObject": {
+                "@type": "xsd:int",
+                "@value": "1"
+            },
+            "crypto:sha512": "8ae82e47625b87077ee3ae8df627461358e68ff5cad33ef0d3a8240b0b17f53abdb099aac2bfe2c72eba7b57ac2622613efe0a433242e6048528ea4ee33858b0",
+            "filename": "/sub-0026043/ses-1/func/sub-0026043_ses-1_task-rest_run-1_bold.nii.gz",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:FlowWeighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Functional"
+            },
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_63111534-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5a5ea0-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "Session",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5dec4b6e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_60870a80-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Session"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5dec4b6e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_60ef3736-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "Session",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5dec4b6e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_612e65d2-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Entity",
+                "AcquisitionObject"
+            ],
+            "crypto:sha512": "672db043e85ee1fabf7bf786052d95ddc117160f4154d9490d04e740157b140f360cfcc9aa2b0450bf281c022ec82c11cc3482dc50a79537fabe882d2aeb1d00",
+            "filename": "/sub-0026017/ses-1/anat/sub-0026017_ses-1_run-1_T1w.nii.gz",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:T1Weighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Anatomical"
+            },
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_612e5b3c-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_626d0c46-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Person",
+                "prov:Agent"
+            ],
+            "src_subject_id": "0026040"
+        },
+        {
+            "@id": "nidm:_64069d6a-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "Session",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5dec4b6e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5d6aa0-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Acquisition",
+                "instrument-based-assessment"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5f5d647e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f59c166-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Session"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5dec4b6e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5c046c-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "Session",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5dec4b6e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5d516e-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "Acquisition",
+                "prov:Activity",
+                "instrument-based-assessment"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5f5d4cc8-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5ccbd6-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Acquisition",
+                "instrument-based-assessment"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5f5cc780-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5bb840-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Session"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5dec4b6e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_605ad49c-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Agent",
+                "prov:Person"
+            ],
+            "src_subject_id": "0026009"
+        },
+        {
+            "@id": "nidm:_5f5afc98-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "assessment-instrument",
+                "prov:Entity",
+                "AcquisitionObject"
+            ],
+            "Age": "13.68",
+            "full4_iq": "128.0",
+            "gender": "Female",
+            "handedness": "Right",
+            "performance_iq": "120.0",
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_5f5af9e6-8261-11e9-b671-003ee1ce9545"
+            },
+            "qc_anatomical_1": "Questionable",
+            "qc_rest_1": "Pass",
+            "verbal_iq": "129.0"
+        },
+        {
+            "@id": "nidm:_647a6592-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "Acquisition",
+                "prov:Activity"
+            ],
+            "association": "_:ub2bL2113C31",
+            "dct:isPartOf": {
+                "@id": "nidm:_64719ed0-8261-11e9-b671-003ee1ce9545"
+            },
+            "prov:wasAssociatedWith": {
+                "@id": "nidm:_647a68e4-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5af9e6-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "Acquisition",
+                "instrument-based-assessment",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5f5af6d0-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5b0d50-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "instrument-based-assessment",
+                "prov:Activity",
+                "Acquisition"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5f5b0a3a-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5a0d60-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Acquisition",
+                "instrument-based-assessment"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5f5a0a2c-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_61d941aa-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "Acquisition",
+                "prov:Activity"
+            ],
+            "association": "_:ub2bL1913C31",
+            "dct:isPartOf": {
+                "@id": "nidm:_61c8daf4-8261-11e9-b671-003ee1ce9545"
+            },
+            "prov:wasAssociatedWith": {
+                "@id": "nidm:_61d17e98-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_62a1e376-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Entity",
+                "AcquisitionObject"
+            ],
+            "crypto:sha512": "b8fb1f343b81eb68f2ffa3f7190eb514015cec1d32453bc299761a0f883dd1f58816fed8ea3b8e497aedc967ab9476a6e0cb6ff3df2e153bfb0def8eeb99b58d",
+            "filename": "/sub-0026041/ses-1/anat/sub-0026041_ses-1_run-1_T1w.nii.gz",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:T1Weighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Anatomical"
+            },
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_62a1d94e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5ba67a-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "instrument-based-assessment",
+                "Acquisition"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5f5ba2ce-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5c5e4e-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Acquisition",
+                "instrument-based-assessment"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5f5c5a52-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_60f80186-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "Acquisition",
+                "prov:Activity"
+            ],
+            "association": "_:ub2bL1841C31",
+            "dct:isPartOf": {
+                "@id": "nidm:_60ef3736-8261-11e9-b671-003ee1ce9545"
+            },
+            "prov:wasAssociatedWith": {
+                "@id": "nidm:_60f804c4-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_60f80b5e-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "AcquisitionObject",
+                "prov:Entity"
+            ],
+            "crypto:sha512": "a49aa22bc9c460aa6f81e22f44fa7baee105bd061576d37ef511566d4778e69d60169a616defceb7fa4f9772b0ff6be284bc1cac317f392a08567ff27b864e18",
+            "filename": "/sub-0026016/ses-1/anat/sub-0026016_ses-1_run-1_T1w.nii.gz",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:T1Weighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Anatomical"
+            },
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_60f80186-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5fafd10a-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "Session",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5dec4b6e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f790fc6-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Session"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5dec4b6e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5a8ab0-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Session"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5dec4b6e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_61d17b14-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "Acquisition",
+                "prov:Activity"
+            ],
+            "association": "_:ub2bL1905C31",
+            "dct:isPartOf": {
+                "@id": "nidm:_61c8daf4-8261-11e9-b671-003ee1ce9545"
+            },
+            "prov:wasAssociatedWith": {
+                "@id": "nidm:_61d17e98-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_62dd1432-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Entity",
+                "AcquisitionObject"
+            ],
+            "AcquisitionObject": {
+                "@type": "xsd:int",
+                "@value": "1"
+            },
+            "crypto:sha512": "ee3508b6ecb3d5dcc7ae39c58db1622f9ed03f881e3a6923960468b7618ba295d31c74cd9f8de34886386294dbd9cf22b363ac6461cc242e9637850049d772dc",
+            "filename": "/sub-0026042/ses-1/func/sub-0026042_ses-1_task-rest_run-1_bold.nii.gz",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:FlowWeighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Functional"
+            },
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_62dd0c30-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5d9caa-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "Acquisition",
+                "prov:Activity",
+                "instrument-based-assessment"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5f5d97dc-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5acfac-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Entity",
+                "assessment-instrument",
+                "AcquisitionObject"
+            ],
+            "Age": "14.19",
+            "full4_iq": "124.0",
+            "gender": "Female",
+            "handedness": "Right",
+            "performance_iq": "117.0",
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_5f5accfa-8261-11e9-b671-003ee1ce9545"
+            },
+            "qc_anatomical_1": "Pass",
+            "qc_rest_1": "Pass",
+            "verbal_iq": "125.0"
+        },
+        {
+            "@id": "nidm:_63e35634-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "AcquisitionObject",
+                "prov:Entity"
+            ],
+            "AcquisitionObject": {
+                "@type": "xsd:int",
+                "@value": "1"
+            },
+            "crypto:sha512": "42dc39a89ec02ee638d5043af76f869f36b9b56a46e90b720a62904e36a3cf39918002b2ef0d56f8315508280ae5afab731b0c945009e87fec95e7de938f9600",
+            "filename": "/sub-0026052/ses-1/func/sub-0026052_ses-1_task-rest_run-1_bold.nii.gz",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:FlowWeighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Functional"
+            },
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_63e34e46-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5dd530-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "assessment-instrument",
+                "AcquisitionObject",
+                "prov:Entity"
+            ],
+            "Age": "17.87",
+            "full4_iq": "112.0",
+            "gender": "Female",
+            "handedness": "Right",
+            "performance_iq": "109.0",
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_5f5dd260-8261-11e9-b671-003ee1ce9545"
+            },
+            "qc_anatomical_1": "Pass",
+            "qc_rest_1": "Pass",
+            "verbal_iq": "111.0"
+        },
+        {
+            "@id": "nidm:_627533a8-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Entity",
+                "AcquisitionObject"
+            ],
+            "AcquisitionObject": {
+                "@type": "xsd:int",
+                "@value": "1"
+            },
+            "crypto:sha512": "7a9963326f07139713e671cfb1499bf41f95c25922cd2142af743fb206cff1610111be55d2135b0c354a95626d71e1d0a7f79e9f3b1f4f4ee853fe10571e4d05",
+            "filename": "/sub-0026040/ses-1/func/sub-0026040_ses-1_task-rest_run-1_bold.nii.gz",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:FlowWeighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Functional"
+            },
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_62752c8c-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5c4ca6-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "AcquisitionObject",
+                "assessment-instrument",
+                "prov:Entity"
+            ],
+            "Age": "16.91",
+            "full4_iq": "97.0",
+            "gender": "Male",
+            "handedness": "Left",
+            "performance_iq": "81.0",
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_5f5c49fe-8261-11e9-b671-003ee1ce9545"
+            },
+            "qc_anatomical_1": "Pass",
+            "qc_rest_1": "Pass",
+            "verbal_iq": "113.0"
+        },
+        {
+            "@id": "nidm:_623904b4-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "Acquisition",
+                "prov:Activity"
+            ],
+            "association": "_:ub2bL1937C31",
+            "dct:isPartOf": {
+                "@id": "nidm:_623064ee-8261-11e9-b671-003ee1ce9545"
+            },
+            "prov:wasAssociatedWith": {
+                "@id": "nidm:_6239086a-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5b236c-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "AcquisitionObject",
+                "assessment-instrument",
+                "prov:Entity"
+            ],
+            "Age": "11.6",
+            "full4_iq": "129.0",
+            "gender": "Female",
+            "handedness": "Right",
+            "performance_iq": "127.0",
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_5f5b20ba-8261-11e9-b671-003ee1ce9545"
+            },
+            "qc_anatomical_1": "Pass",
+            "qc_rest_1": "Pass",
+            "verbal_iq": "125.0"
+        },
+        {
+            "@id": "nidm:_5f5d3ada-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "instrument-based-assessment",
+                "Acquisition"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5f5d363e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_6239109e-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "AcquisitionObject",
+                "prov:Entity"
+            ],
+            "crypto:sha512": "5ceebe929d10f06c83eb5ce1b17c6ccaed0cc6d7ae5c37b38ce3603b0f95f280ebf75ecd61277af0cfc0b52179445ffeb608f01d928765a45e134286a84546f2",
+            "filename": "/sub-0026039/ses-1/anat/sub-0026039_ses-1_run-1_T1w.nii.gz",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:T1Weighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Anatomical"
+            },
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_623904b4-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5b8bc2-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Session"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5dec4b6e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_63a67fe8-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "AcquisitionObject",
+                "prov:Entity"
+            ],
+            "crypto:sha512": "87b4757b7ce35cabb1daf406497d5155697bc44fb55b390bc0dccaae9149a5f97f087cef79d38913933fe14d838aee7b32588c86156245715068c1c003551fc2",
+            "filename": "/sub-0026050/ses-1/anat/sub-0026050_ses-1_run-1_T1w.nii.gz",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:T1Weighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Anatomical"
+            },
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_63a674a8-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5ae0fa-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "Session",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5dec4b6e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_62a9f4b2-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "Acquisition",
+                "prov:Activity"
+            ],
+            "association": "_:ub2bL1977C31",
+            "dct:isPartOf": {
+                "@id": "nidm:_62991aac-8261-11e9-b671-003ee1ce9545"
+            },
+            "prov:wasAssociatedWith": {
+                "@id": "nidm:_62a1dcaa-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5c6f74-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Session"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5dec4b6e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_62414a3e-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Entity",
+                "AcquisitionObject"
+            ],
+            "AcquisitionObject": {
+                "@type": "xsd:int",
+                "@value": "1"
+            },
+            "crypto:sha512": "378303ed23584e025aff016284377d35fce8c5b19d7fabb0cea430a3751d6ab53d444eab76e4c47a74c12cd71241255e0491fea66ccd930d76f72824a8b9c62e",
+            "filename": "/sub-0026039/ses-1/func/sub-0026039_ses-1_task-rest_run-1_bold.nii.gz",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:FlowWeighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Functional"
+            },
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_62414318-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_644dc460-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "Acquisition",
+                "prov:Activity"
+            ],
+            "association": "_:ub2bL2105C31",
+            "dct:isPartOf": {
+                "@id": "nidm:_643d09fe-8261-11e9-b671-003ee1ce9545"
+            },
+            "prov:wasAssociatedWith": {
+                "@id": "nidm:_6445a4a6-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_61631a34-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Person",
+                "prov:Agent"
+            ],
+            "src_subject_id": "0026022"
+        },
+        {
+            "@id": "nidm:_5f5d27e8-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "AcquisitionObject",
+                "assessment-instrument",
+                "prov:Entity"
+            ],
+            "Age": "13.67",
+            "full4_iq": "102.0",
+            "gender": "Female",
+            "handedness": "Right",
+            "performance_iq": "93.0",
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_5f5d252c-8261-11e9-b671-003ee1ce9545"
+            },
+            "qc_anatomical_1": "Pass",
+            "qc_rest_1": "Pass",
+            "verbal_iq": "111.0"
+        },
+        {
+            "@id": "nidm:_6204ce1a-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Acquisition"
+            ],
+            "association": "_:ub2bL1921C31",
+            "dct:isPartOf": {
+                "@id": "nidm:_61fc5cf8-8261-11e9-b671-003ee1ce9545"
+            },
+            "prov:wasAssociatedWith": {
+                "@id": "nidm:_6204d176-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5cf912-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "instrument-based-assessment",
+                "prov:Activity",
+                "Acquisition"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5f5cf264-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f599e3e-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Session"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5dec4b6e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_6308bd6c-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "AcquisitionObject",
+                "prov:Entity"
+            ],
+            "crypto:sha512": "c714fb8abf4dd9a01af953f361ccfe34323b84d429e8a002a9a288f6b6216292c61f071d4cd8cb091cc6ee1220b3b05a2c38a9aab86c1d4bf60143847a47b444",
+            "filename": "/sub-0026043/ses-1/anat/sub-0026043_ses-1_run-1_T1w.nii.gz",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:T1Weighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Anatomical"
+            },
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_6308b254-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5dcc84-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "Session",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5dec4b6e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_60cbb6a8-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Entity",
+                "AcquisitionObject"
+            ],
+            "AcquisitionObject": {
+                "@type": "xsd:int",
+                "@value": "1"
+            },
+            "crypto:sha512": "c49328f581b88f668e1ea2ebeeb977d09d990629d8d21ef760feb5df1c1ee58d920a75dd56cf67ea065f10eac7140ac5ca8951adf426a9564d25ddde5523eedd",
+            "filename": "/sub-0026015/ses-1/func/sub-0026015_ses-1_task-rest_run-1_bold.nii.gz",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:FlowWeighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Functional"
+            },
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_60cbafb4-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f59c710-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "AcquisitionObject",
+                "assessment-instrument",
+                "prov:Entity"
+            ],
+            "Age": "15.68",
+            "full4_iq": "107.0",
+            "gender": "Male",
+            "handedness": "Right",
+            "performance_iq": "106.0",
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_5f59c404-8261-11e9-b671-003ee1ce9545"
+            },
+            "qc_anatomical_1": "Pass",
+            "qc_rest_1": "Pass",
+            "verbal_iq": "106.0"
+        },
+        {
+            "@id": "nidm:_5f5d647e-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "Session",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5dec4b6e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_60f804c4-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Agent",
+                "prov:Person"
+            ],
+            "src_subject_id": "0026016"
+        },
+        {
+            "@id": "nidm:_5f5c9b70-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "Session",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5dec4b6e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5e01c2-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Acquisition",
+                "instrument-based-assessment"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5f5dfcae-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_6204d176-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Agent",
+                "prov:Person"
+            ],
+            "src_subject_id": "0026030"
+        },
+        {
+            "@id": "nidm:_62dd0c30-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Acquisition"
+            ],
+            "association": "_:ub2bL1993C31",
+            "dct:isPartOf": {
+                "@id": "nidm:_62cc5138-8261-11e9-b671-003ee1ce9545"
+            },
+            "prov:wasAssociatedWith": {
+                "@id": "nidm:_62d4cdea-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_613694dc-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "AcquisitionObject",
+                "prov:Entity"
+            ],
+            "AcquisitionObject": {
+                "@type": "xsd:int",
+                "@value": "1"
+            },
+            "crypto:sha512": "e252f0f310bef9ed86dcacde36a6db6a90a5f7c2b85e34ec7bf1d5d4451c46115c0f7662bb5732550cb980b6b426ad1dcef9a83b17bee681fc66494ed4ebb053",
+            "filename": "/sub-0026017/ses-1/func/sub-0026017_ses-1_task-rest_run-1_bold.nii.gz",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:FlowWeighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Functional"
+            },
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_61368d66-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_61d948ee-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Entity",
+                "AcquisitionObject"
+            ],
+            "AcquisitionObject": {
+                "@type": "xsd:int",
+                "@value": "1"
+            },
+            "crypto:sha512": "c42c9a380513f657b476b536e82f6b0f8de3477d606df2434e3cbf63265097620abd6ad7c39cf4c4480ec22751306ac6fe404aff83cc4332501f4e4281e2d95e",
+            "filename": "/sub-0026027/ses-1/func/sub-0026027_ses-1_task-rest_run-1_bold.nii.gz",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:FlowWeighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Functional"
+            },
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_61d941aa-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5ae866-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "AcquisitionObject",
+                "prov:Entity",
+                "assessment-instrument"
+            ],
+            "Age": "13.67",
+            "full4_iq": "102.0",
+            "gender": "Female",
+            "handedness": "Right",
+            "performance_iq": "93.0",
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_5f5ae596-8261-11e9-b671-003ee1ce9545"
+            },
+            "qc_anatomical_1": "Pass",
+            "qc_rest_1": "Pass",
+            "verbal_iq": "111.0"
+        },
+        {
+            "@id": "nidm:_5f59f898-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Entity",
+                "assessment-instrument",
+                "AcquisitionObject"
+            ],
+            "Age": "15.16",
+            "full4_iq": "126.0",
+            "gender": "Female",
+            "handedness": "Right",
+            "performance_iq": "131.0",
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_5f59f5c8-8261-11e9-b671-003ee1ce9545"
+            },
+            "qc_anatomical_1": "Pass",
+            "qc_rest_1": "Pass",
+            "verbal_iq": "116.0"
+        },
+        {
+            "@id": "nidm:_5f5b7b50-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Acquisition",
+                "instrument-based-assessment"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5f5b77c2-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_643d09fe-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "Session",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5dec4b6e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_616b308e-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Acquisition"
+            ],
+            "association": "_:ub2bL1881C31",
+            "dct:isPartOf": {
+                "@id": "nidm:_615a541c-8261-11e9-b671-003ee1ce9545"
+            },
+            "prov:wasAssociatedWith": {
+                "@id": "nidm:_61631a34-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_616b385e-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "AcquisitionObject",
+                "prov:Entity"
+            ],
+            "AcquisitionObject": {
+                "@type": "xsd:int",
+                "@value": "1"
+            },
+            "crypto:sha512": "f2a893d993f4f76734d02fee85e125f39e602865a502a5efa53b80a8aaadc0cf9fcb9309ec6087a12de1fdd4f875b85618b8459775eba79ad7ecda18eca04ef0",
+            "filename": "/sub-0026022/ses-1/func/sub-0026022_ses-1_task-rest_run-1_bold.nii.gz",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:FlowWeighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Functional"
+            },
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_616b308e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_6062dcbe-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Entity",
+                "AcquisitionObject"
+            ],
+            "AcquisitionObject": {
+                "@type": "xsd:int",
+                "@value": "1"
+            },
+            "crypto:sha512": "72dfb90a27f9381802deb0b636cbc060bbb4943bb615eb051d4ffa12e2658bd8986ccfe60c2d58cae330894088f850f3ae017f676369d522d5989e4dfd569bcd",
+            "filename": "/sub-0026009/ses-1/func/sub-0026009_ses-1_task-rest_run-1_bold.nii.gz",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:FlowWeighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Functional"
+            },
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_6062d462-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_633e2c68-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Acquisition"
+            ],
+            "association": "_:ub2bL2017C31",
+            "dct:isPartOf": {
+                "@id": "nidm:_63358a18-8261-11e9-b671-003ee1ce9545"
+            },
+            "prov:wasAssociatedWith": {
+                "@id": "nidm:_633e2fa6-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_6445aca8-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "AcquisitionObject",
+                "prov:Entity"
+            ],
+            "crypto:sha512": "b904a89c42ee28bec4db363fe6bb07e68d0eb9c6330b69ccc2bbc101f1445b123e1426f3ca7ef32fd8c6a5fe7097e1115efc11b75fcc801005242e29e28f2ff7",
+            "filename": "/sub-0026054/ses-1/anat/sub-0026054_ses-1_run-1_T1w.nii.gz",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:T1Weighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Anatomical"
+            },
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_6445a0fa-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_63ae452a-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Entity",
+                "AcquisitionObject"
+            ],
+            "AcquisitionObject": {
+                "@type": "xsd:int",
+                "@value": "1"
+            },
+            "crypto:sha512": "627602d765578af678e3f5cd301ffd717a836130bc0a1245cf1e047c1076de0354ae61c8a2214bc3782a53791a90dd205ec4527870172fc9027655f2fa8b9616",
+            "filename": "/sub-0026050/ses-1/func/sub-0026050_ses-1_task-rest_run-1_bold.nii.gz",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:FlowWeighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Functional"
+            },
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_63ae3db4-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5d1208-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "AcquisitionObject",
+                "prov:Entity",
+                "assessment-instrument"
+            ],
+            "Age": "14.19",
+            "full4_iq": "124.0",
+            "gender": "Female",
+            "handedness": "Right",
+            "performance_iq": "117.0",
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_5f5d0f4c-8261-11e9-b671-003ee1ce9545"
+            },
+            "qc_anatomical_1": "Pass",
+            "qc_rest_1": "Pass",
+            "verbal_iq": "125.0"
+        },
+        {
+            "@id": "nidm:_608fa7bc-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "AcquisitionObject",
+                "prov:Entity"
+            ],
+            "crypto:sha512": "2b2cd3fe450a96e0191a39a2e644a41633b14e151f0166c10a429e61f25aff997767dcb751ad9f111981a863271d5740ed778bca2695b9b3f5637042baeb81e1",
+            "filename": "/sub-0026014/ses-1/anat/sub-0026014_ses-1_run-1_T1w.nii.gz",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:T1Weighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Anatomical"
+            },
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_608f9e16-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_5f5bd8ca-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Acquisition",
+                "instrument-based-assessment"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5f5bd3fc-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_61d17e98-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Person",
+                "prov:Agent"
+            ],
+            "src_subject_id": "0026027"
+        },
+        {
+            "@id": "nidm:_64b89d76-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Acquisition"
+            ],
+            "association": "_:ub2bL2137C31",
+            "dct:isPartOf": {
+                "@id": "nidm:_64a7587c-8261-11e9-b671-003ee1ce9545"
+            },
+            "prov:wasAssociatedWith": {
+                "@id": "nidm:_64afe9f6-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_601bcd9c-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "Session",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "nidm:_5dec4b6e-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_63111534-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "Acquisition",
+                "prov:Activity"
+            ],
+            "association": "_:ub2bL2009C31",
+            "dct:isPartOf": {
+                "@id": "nidm:_63001fae-8261-11e9-b671-003ee1ce9545"
+            },
+            "prov:wasAssociatedWith": {
+                "@id": "nidm:_6308b588-8261-11e9-b671-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "nidm:_62a9fbe2-8261-11e9-b671-003ee1ce9545",
+            "@type": [
+                "prov:Entity",
+                "AcquisitionObject"
+            ],
+            "AcquisitionObject": {
+                "@type": "xsd:int",
+                "@value": "1"
+            },
+            "crypto:sha512": "d914af262e3e13136ae02d8c8395a9d7a8022847d856100469d16094ba255c3d4784140ef629bfa3d659ccb93e1287f61f3ad2e490133ea94ae29206b1b82230",
+            "filename": "/sub-0026041/ses-1/func/sub-0026041_ses-1_task-rest_run-1_bold.nii.gz",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:FlowWeighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Functional"
+            },
+            "prov:wasGeneratedBy": {
+                "@id": "nidm:_62a9f4b2-8261-11e9-b671-003ee1ce9545"
+            }
+        }
+    ]
+}
