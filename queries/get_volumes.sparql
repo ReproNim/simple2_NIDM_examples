@@ -1,0 +1,32 @@
+SELECT DISTINCT  ?ID ?Gender ?diagnosis ?Age ?vol ?software ?region ?project
+WHERE
+{
+  ?bvol_act prov:usedEntity ?t1_entity; 
+            prov:qualifiedAssociation [ prov:agent ?agent ] .
+
+  ?agent rdf:type prov:Agent; 
+         ndar:src_subject_id ?ID .
+
+  ?activity prov:wasAssociatedWith ?agent;
+            dct:isPartOf ?session .
+
+  ?ass_activity dct:isPartOf ?session . 
+  ?session dct:isPartOf [ dctypes:title ?project ] . 
+  ?ass_entity prov:wasGeneratedBy ?ass_activity;
+              rdf:type onli:assessment-instrument; 
+              ncicb:Age ?Age; 
+              ndar:gender ?Gender; 
+              <http://ncitt.ncit.nih.gov/Diagnosis> ?diagnosis . 
+
+  bind(IF(?Gender="1"^^xsd:string, "Male"^^xsd:string, "Female"^^xsd:string) as ?Gender) .
+  FILTER(?diagnosis="Typically Developing Children"^^xsd:string || ?diagnosis="1"^^xsd:string) .
+
+# brain volume stuff#######################################
+
+  ?bvol_entity prov:wasGeneratedBy ?bvol_act; 
+             ?region ?vol .
+  FILTER isLiteral(?vol)
+  ?bvol_act prov:wasAssociatedWith ?bvol_soft_agent .
+  ?bvol_soft_agent <http://purl.org/nidash/nidm#NIDM_0000164> ?software .
+
+}
