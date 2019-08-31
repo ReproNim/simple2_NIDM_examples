@@ -22,3 +22,20 @@ docker stop blazegraph
 ```
 
 this will delete the instance and remove all the data. go back to step 1 to restart.
+
+
+### Querying with python and rdflib
+
+To query programmatically one can use:
+
+```python
+import rdflib as rl
+with open('queries/get_volumes.sparql', 'r') as fp:
+    query = fp.read()
+
+from SPARQLWrapper import SPARQLWrapper, JSON
+sparql = SPARQLWrapper("http://localhost:8889/bigdata/sparql")
+sparql.setQuery(query)
+sparql.setReturnFormat(JSON)
+results = sparql.query().convert()
+```
