@@ -59,19 +59,18 @@ WHERE
     prov:wasAssociatedWith [ a prov:Person;
                              ndar:src_subject_id ?ID ] .
 
-  ?fs_stats a nidm:FSStatsCollection;
-            prov:wasGeneratedBy ?fs_act;
+  ?tool_act a prov:Activity ;
+          prov:qualifiedAssociation [prov:wasAssociatedWith [ndar:src_subject_id ?ID]],
+                                    [prov:wasAssociatedWith [nidm:NIDM_0000164 ?tool]] .
+
+
+  ?tool_stats prov:wasGeneratedBy ?tool_act;
             ?measure ?value .
 
   ?measure a measurement_datum:;
            rdfs:label ?label;
            isAbout: ?structure; #<http://purl.obolibrary.org/obo/UBERON_0001873>;
-           hasMeasurementType: <http://uri.interlex.org/baseilx_0112559>;
+           hasMeasurementType: ilx:0112559;
            hasDatumType: ?datum_uri .
-
-  ?fs_act a prov:Activity ;
-          prov:qualifiedAssociation [prov:wasAssociatedWith [ndar:src_subject_id ?ID]],
-                                    [prov:wasAssociatedWith [nidm:NIDM_0000164 ?tool]] .
-
 
 }
