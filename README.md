@@ -29,7 +29,6 @@ this will delete the instance and remove all the data. go back to step 1 to rest
 To query programmatically one can use:
 
 ```python
-import rdflib as rl
 with open('queries/get_volumes.sparql', 'r') as fp:
     query = fp.read()
 
@@ -38,4 +37,5 @@ sparql = SPARQLWrapper("http://localhost:8889/bigdata/sparql")
 sparql.setQuery(query)
 sparql.setReturnFormat(JSON)
 results = sparql.query().convert()
+print(len(results['results']['bindings']))
 ```
