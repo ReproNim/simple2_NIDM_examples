@@ -4,6 +4,7 @@ from os.path import join,basename,splitext,isfile
 from os import system
 
 
+
 def main():
 
     parser = argparse.ArgumentParser(prog='add_ants_segvols.py',
@@ -24,10 +25,6 @@ def main():
                                                                        './datasets.datalad.org/abide/RawDataBIDS/SDSU/sub-0050190'
                                                                        './datasets.datalad.org/abide/RawDataBIDS/SDSU/sub-0050199'
                                                                        '...')
-    parser.add_argument('-j','--jmap',dest='jmap',required=False, help='Location of JSON mapping file for brain regions. This'
-                                                                      'is available here: '
-                        'https://github.com/dbkeator/ants_seg_to_nidm/blob/master/ants_seg_to_nidm/mapping_data/antsmap.json ')
-    parser.add_argument('-f', '--f', dest='fslut',required=True, help='Freesurfer LUT used in labelmap value -> region lookups')
 
     args = parser.parse_args()
 
@@ -63,9 +60,6 @@ def main():
                     base_url + line[loc:] + "/antsbrainvols.csv," + \
                     base_url + line[loc:] + "/antsBrainSegmentation.nii.gz\" -subjid " + line[loc+4:] + \
                     " -fslut " + args.fslut
-
-                if args.jmap:
-                    cmd=cmd + " -jmap " + args.jmap
 
                 cmd = cmd + " -n " + line[:loc] + "nidm.ttl -o " + line[:loc] + \
                     "nidm.ttl"
