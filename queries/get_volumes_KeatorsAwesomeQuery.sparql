@@ -8,7 +8,7 @@ prefix freesurfer: <https://surfer.nmr.mgh.harvard.edu/>
 prefix dx: <http://ncitt.ncit.nih.gov/Diagnosis>
 
 
-select ?ID ?Age ?dx ?Gender ?FIQ ?PIQ ?VIQ 	?tool ?softwareLabel ?federatedLabel ?volume
+select ?ID ?Age ?dx ?Gender ?FIQ ?PIQ ?VIQ 	?tool ?softwareLabel ?federatedLabel ?laterality ?volume
 where {
  	        ?tool_act a prov:Activity ;
 		            prov:qualifiedAssociation [prov:wasAssociatedWith [nidm:NIDM_0000164 ?tool]] ;
@@ -20,14 +20,16 @@ where {
 				    fsl:label ?softwareLabel;
 				    nidm:measureOf <http://uri.interlex.org/base/ilx_0112559> ;
 				    nidm:datumType <http://uri.interlex.org/base/ilx_0738276> ;
-					nidm:isAbout ?federatedLabel .
+					nidm:isAbout ?federatedLabel ;
+					nidm:hasLaterality ?laterality .
 			}
 			UNION
 			{?measure a freesurfer:DataElement ;
 				    freesurfer:label ?softwareLabel;
 				    nidm:measureOf <http://uri.interlex.org/base/ilx_0112559> ;
 				    nidm:datumType <http://uri.interlex.org/base/ilx_0738276> ;
-					nidm:isAbout ?federatedLabel .
+					nidm:isAbout ?federatedLabel ;
+					nidm:hasLaterality ?laterality .
 			}
 			?as_activity prov:qualifiedAssociation [prov:agent ?agent] .
 				?agent ndar:src_subject_id ?ID.
