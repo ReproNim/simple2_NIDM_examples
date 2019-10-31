@@ -20,17 +20,15 @@ where {
 				    fsl:label ?softwareLabel;
 				    nidm:measureOf <http://uri.interlex.org/base/ilx_0112559> ;
 				    nidm:datumType <http://uri.interlex.org/base/ilx_0738276> ;
-					nidm:isAbout ?federatedLabel ;
-					nidm:hasLaterality ?laterality .
 			}
 			UNION
 			{?measure a freesurfer:DataElement ;
 				    freesurfer:label ?softwareLabel;
 				    nidm:measureOf <http://uri.interlex.org/base/ilx_0112559> ;
 				    nidm:datumType <http://uri.interlex.org/base/ilx_0738276> ;
-					nidm:isAbout ?federatedLabel ;
-					nidm:hasLaterality ?laterality .
 			}
+			OPTIONAL {?measure nidm:isAbout ?federatedLabel }.
+			OPTIONAL {?measure nidm:hasLaterality ?laterality }.
 			?as_activity prov:qualifiedAssociation [prov:agent ?agent] .
 				?agent ndar:src_subject_id ?ID.
 			
