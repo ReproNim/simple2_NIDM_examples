@@ -24,10 +24,7 @@ def main():
                                                                        './datasets.datalad.org/abide/RawDataBIDS/SDSU/sub-0050190'
                                                                        './datasets.datalad.org/abide/RawDataBIDS/SDSU/sub-0050199'
                                                                        '...')
-    parser.add_argument('-j','--jmap',dest='jmap',required=False, help='Location of JSON mapping file for brain regions. This'
-                                                                      'is available here: '
-                        'https://github.com/dbkeator/segstats_jsonld/blob/master/segstats_jsonld/mapping_data/jsonmap.json '
-                        'If not supplied then live InterLex scraping will be used.')
+
 
     args = parser.parse_args()
 
@@ -57,8 +54,6 @@ def main():
 
                 cmd=cmd + "Outputs/mindboggle_swf/mindboggle/freesurfer_subjects/" + line[loc:] + \
                     "/stats/aseg.stats\" -subjid " + line[loc+4:]
-                if args.jmap:
-                    cmd=cmd + " -jmap " + args.jmap
 
                 cmd = cmd + " -n " + line[:loc] + "nidm.ttl -o " + line[:loc] + \
                     "nidm.ttl"

@@ -1,0 +1,48 @@
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix prov: <http://www.w3.org/ns/prov#>
+prefix ndar: <https://ndar.nih.gov/api/datadictionary/v2/dataelement/>
+prefix fsl: <http://purl.org/nidash/fsl#>
+prefix nidm: <http://purl.org/nidash/nidm#>
+prefix onli: <http://neurolog.unice.fr/ontoneurolog/v3.0/instrument.owl#>
+prefix freesurfer: <https://surfer.nmr.mgh.harvard.edu/>
+prefix dx: <http://ncitt.ncit.nih.gov/Diagnosis>
+
+
+select ?ID ?Age ?dx ?Gender ?FIQ ?PIQ ?VIQ 	?tool ?softwareLabel ?federatedLabel ?laterality ?volume
+where {
+ 	        ?tool_act a prov:Activity ;
+		            prov:qualifiedAssociation [prov:wasAssociatedWith [nidm:NIDM_0000164 ?tool]] ;
+					prov:qualifiedAssociation [prov:wasAssociatedWith [ndar:src_subject_id ?ID]] .
+			?tool_entity prov:wasGeneratedBy ?tool_act ;
+				?measure ?volume .
+			
+			{?measure a fsl:DataElement ;
+				    fsl:label ?softwareLabel;
+				    nidm:measureOf <http://uri.interlex.org/base/ilx_0112559> ;
+				    nidm:datumType <http://uri.interlex.org/base/ilx_0738276> ;
+			}
+			UNION
+			{?measure a freesurfer:DataElement ;
+				    freesurfer:label ?softwareLabel;
+				    nidm:measureOf <http://uri.interlex.org/base/ilx_0112559> ;
+				    nidm:datumType <http://uri.interlex.org/base/ilx_0738276> ;
+			}
+			OPTIONAL {?measure nidm:isAbout ?federatedLabel }.
+			OPTIONAL {?measure nidm:hasLaterality ?laterality }.
+			?as_activity prov:qualifiedAssociation [prov:agent ?agent] .
+				?agent ndar:src_subject_id ?ID.
+			
+			?as_entity prov:wasGeneratedBy ?as_activity ;
+	        	ncicb:Age ?Age;
+	        	ndar:gender ?Gender ;
+                <https://github.com/dbkeator/nidm-local-terms/issues/2> ?FIQ ;
+                <https://github.com/dbkeator/nidm-local-terms/issues/4>  ?PIQ ;
+                <https://github.com/dbkeator/nidm-local-terms/issues/3> ?VIQ .
+            
+			OPTIONAL {?as_entity ncit:Diagnosis ?dx} .
+			
+			bind(IF(?Gender ="1"^^xsd:string, "Male"^^xsd:string,"Female"^^xsd:string) as ?Gender) .
+					
+				
+}
+
