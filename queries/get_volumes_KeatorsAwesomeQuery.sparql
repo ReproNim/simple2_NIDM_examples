@@ -6,9 +6,9 @@ prefix nidm: <http://purl.org/nidash/nidm#>
 prefix onli: <http://neurolog.unice.fr/ontoneurolog/v3.0/instrument.owl#>
 prefix freesurfer: <https://surfer.nmr.mgh.harvard.edu/>
 prefix dx: <http://ncitt.ncit.nih.gov/Diagnosis>
+prefix ants: <http://stnava.github.io/ANTs/> 
 
-
-select ?ID ?Age ?dx ?Gender ?FIQ ?PIQ ?VIQ 	?tool ?softwareLabel ?federatedLabel ?laterality ?volume
+select distinct ?ID ?Age ?dx ?Gender ?FIQ ?PIQ ?VIQ 	?tool ?softwareLabel ?federatedLabel ?laterality ?volume
 where {
  	        ?tool_act a prov:Activity ;
 		            prov:qualifiedAssociation [prov:wasAssociatedWith [nidm:NIDM_0000164 ?tool]] ;
@@ -27,8 +27,15 @@ where {
 				    nidm:measureOf <http://uri.interlex.org/base/ilx_0112559> ;
 				    nidm:datumType <http://uri.interlex.org/base/ilx_0738276> ;
 			}
+			UNION
+			{?measure a ants:DataElement ;
+				    ants:label ?softwareLabel;
+				    nidm:measureOf <http://uri.interlex.org/base/ilx_0112559> ;
+				    nidm:datumType <http://uri.interlex.org/base/ilx_0738276> ;
+			}
 			OPTIONAL {?measure nidm:isAbout ?federatedLabel }.
 			OPTIONAL {?measure nidm:hasLaterality ?laterality }.
+			
 			?as_activity prov:qualifiedAssociation [prov:agent ?agent] .
 				?agent ndar:src_subject_id ?ID.
 			
@@ -41,7 +48,7 @@ where {
             
 			OPTIONAL {?as_entity ncit:Diagnosis ?dx} .
 			
-			bind(IF(?Gender ="1"^^xsd:string, "Male"^^xsd:string,"Female"^^xsd:string) as ?Gender) .
+			bind(IF((?Gender ="1"^^xsd:string || ?Gender ="Male"^^xsd:string), "Male"^^xsd:string,"Female"^^xsd:string) as ?Gender) .
 					
 				
 }
