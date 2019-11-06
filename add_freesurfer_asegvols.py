@@ -25,6 +25,7 @@ def main():
                                                                        './datasets.datalad.org/abide/RawDataBIDS/SDSU/sub-0050199'
                                                                        '...')
 
+    parser.add_argument('-new','--new', action='store_true', required=False, help="If flag set then new NIDM files will")
 
     args = parser.parse_args()
 
@@ -35,32 +36,42 @@ def main():
             #strip training \n from line
             line=line.rstrip('\n')
             loc = line.find("sub")
-            if not isfile(join(line[:loc-1],"nidm.ttl")):
-                print("No existing NIDM-E file for site: %s" %line[:loc-1])
-                print("Skipping subject: %s" %line[loc:])
-                continue
-            else:
-                # set up command to add brain volumes from Amazon bucket
-                cmd="segstats2nidm -f \"https://fcp-indi.s3.amazonaws.com/data/Projects/"
-                #get dataset (abide or adhd200) from line
-                if "abide" in line:
-                    cmd=cmd + "ABIDE/"
-                elif "adhd200" in line:
-                    cmd=cmd + "ADHD200/"
-                else:
-                    print("Error, can't find dataset (abide | adhd200) in line: %s" %line)
-                    print("Skipping...")
+            if not args.new:
+                if not isfile(join(line[:loc-1],"nidm.ttl")):
+                    print("No existing NIDM-E file for site: %s" %line[:loc-1])
+                    print("Skipping subject: %s" %line[loc:])
                     continue
 
-                cmd=cmd + "Outputs/mindboggle_swf/mindboggle/freesurfer_subjects/" + line[loc:] + \
+            # set up command to add brain volumes from Amazon bucket
+            cmd="segstats2nidm -f \"https://fcp-indi.s3.amazonaws.com/data/Projects/"
+
+            if "abide" in line:
+                #get dataset (abide or adhd200) from line
+                cmd=cmd + "ABIDE/"
+            elif "adhd200" in line:
+                # set up command to add brain volumes from Amazon bucket
+                #get dataset (abide or adhd200) from line
+                cmd=cmd + "ADHD200/"
+            elif "corr" in line:
+                cmd=cmd + "CORR/"
+            else:
+                print("Error, can't find dataset (abide | adhd200 | corr) in line: %s" %line)
+                print("Skipping...")
+                continue
+
+            cmd=cmd + "Outputs/mindboggle_swf/mindboggle/freesurfer_subjects/" + line[loc:] + \
                     "/stats/aseg.stats\" -subjid " + line[loc+4:]
 
+            if not args.new:
                 cmd = cmd + " -n " + line[:loc] + "nidm.ttl -o " + line[:loc] + \
-                    "nidm.ttl"
+                        "nidm.ttl"
+            else:
+                cmd = cmd + " -o " + join(line[:loc],"nidm.ttl")
 
-                # execute command
-                print(cmd)
-                system(cmd)
+
+            # execute command
+            print(cmd)
+            system(cmd)
 
 
 if __name__ == "__main__":
