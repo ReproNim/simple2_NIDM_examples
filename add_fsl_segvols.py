@@ -24,7 +24,9 @@ def main():
                                                                        './datasets.datalad.org/abide/RawDataBIDS/SDSU/sub-0050190'
                                                                        './datasets.datalad.org/abide/RawDataBIDS/SDSU/sub-0050199'
                                                                        '...')
-    parser.add_argument('-new','--new', action='store_true', required=False, help="If flag set then new NIDM files will")
+    parser.add_argument('-new','--new', action='store_true', required=False, help="If flag set then new NIDM files will created")
+    parser.add_argument('-forcenidm','--forcenidm', action='store_true', required=False, help="If flag set then data will be"
+                                        "added to existing NIDM file regardless if subject already exists.")
 
     args = parser.parse_args()
 
@@ -63,6 +65,8 @@ def main():
                     "nidm.ttl"
             else:
                 cmd = cmd + " -o " + join(line[:loc],"nidm.ttl")
+                if args.forcenidm is not None:
+                    cmd = cmd + " -forcenidm "
 
             # execute command
             print(cmd)
