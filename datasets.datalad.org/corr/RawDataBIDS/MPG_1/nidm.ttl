@@ -1,17 +1,17 @@
+@prefix dct: <http://purl.org/dc/terms/> .
 @prefix fs: <https://surfer.nmr.mgh.harvard.edu/> .
+@prefix ndar: <https://ndar.nih.gov/api/datadictionary/v2/dataelement/> .
 @prefix nidm: <http://purl.org/nidash/nidm#> .
 @prefix niiri: <http://iri.nidash.org/> .
-@prefix ns1: <http://purl.org/dc/terms/> .
-@prefix ns2: <https://ndar.nih.gov/api/datadictionary/v2/dataelement/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-niiri:be23fe48-00d4-11ea-bfea-003ee1ce9545 a nidm:FSStatsCollection,
+niiri:f89c4dd6-01c5-11ea-be3c-003ee1ce9545 a nidm:FSStatsCollection,
         prov:Entity ;
-    prov:wasGeneratedBy niiri:efbe72ec-00d4-11ea-bfea-003ee1ce9545 ;
+    prov:wasGeneratedBy niiri:aa2abc14-01c5-11ea-be3c-003ee1ce9545 ;
     fs:fs_000003 "1172245.0"^^xsd:float ;
     fs:fs_000004 "1161165.0"^^xsd:float ;
     fs:fs_000005 "1161967.920811"^^xsd:float ;
@@ -48047,17 +48047,14 @@ fs:fs_003579 a fs:DataElement ;
     fs:structure_id 255 ;
     fs:unit "MR" .
 
-niiri:dfbea5be-00d4-11ea-bfea-003ee1ce9545 a prov:Agent ;
-    ns2:src_subject_id "0027445" .
-
-niiri:efbe72ec-00d4-11ea-bfea-003ee1ce9545 a prov:Activity ;
-    ns1:description "Freesurfer segmentation statistics" ;
+niiri:aa2abc14-01c5-11ea-be3c-003ee1ce9545 a prov:Activity ;
+    dct:description "Freesurfer segmentation statistics" ;
     prov:qualifiedAssociation [ a prov:Agent ;
             prov:hadRole <http://semanticscience.org/ontology/sio.owl#Subject> ;
-            prov:wasAssociatedWith niiri:dfbea5be-00d4-11ea-bfea-003ee1ce9545 ],
+            prov:wasAssociatedWith niiri:ea2af62a-01c5-11ea-be3c-003ee1ce9545 ],
         [ a prov:Agent ;
             prov:hadRole nidm:NIDM_0000164 ;
-            prov:wasAssociatedWith niiri:efbe9c90-00d4-11ea-bfea-003ee1ce9545 ] ;
+            prov:wasAssociatedWith niiri:ea2ae95a-01c5-11ea-be3c-003ee1ce9545 ] ;
     fs:ColorTable "/opt/freesurfer-6.0.0-min/ASegStatsLUT.txt" ;
     fs:ColorTableTimeStamp "2017/01/18 22:00:02" ;
     fs:ExcludeSegId "0 2 3 41 42" ;
@@ -48084,7 +48081,10 @@ niiri:efbe72ec-00d4-11ea-bfea-003ee1ce9545 a prov:Activity ;
     fs:sysname "Linux" ;
     fs:user "root" .
 
-niiri:efbe9c90-00d4-11ea-bfea-003ee1ce9545 a prov:Agent,
+niiri:ea2ae95a-01c5-11ea-be3c-003ee1ce9545 a prov:Agent,
         prov:SoftwareAgent ;
     nidm:NIDM_0000164 fs: .
+
+niiri:ea2af62a-01c5-11ea-be3c-003ee1ce9545 a prov:Agent ;
+    ndar:src_subject_id "0027445" .
 
