@@ -6,12 +6,13 @@
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sio: <http://semanticscience.org/ontology/sio.owl#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-niiri:dfb7c9ba-0200-11ea-8a7d-003ee1ce9545 a nidm:FSStatsCollection,
+niiri:a1d689d6-05d1-11ea-8ed8-003ee1ce9545 a nidm:FSStatsCollection,
         prov:Entity ;
-    prov:wasGeneratedBy niiri:e1491aea-0200-11ea-8a7d-003ee1ce9545 ;
+    prov:wasGeneratedBy niiri:f365f480-05d1-11ea-8ed8-003ee1ce9545 ;
     fs:fs_000003 "1194684.0"^^xsd:float ;
     fs:fs_000004 "1163740.0"^^xsd:float ;
     fs:fs_000005 "1162891.113094"^^xsd:float ;
@@ -48047,14 +48048,21 @@ fs:fs_003579 a fs:DataElement ;
     fs:structure_id 255 ;
     fs:unit "MR" .
 
-niiri:e1491aea-0200-11ea-8a7d-003ee1ce9545 a prov:Activity ;
+niiri:c3661e9c-05d1-11ea-8ed8-003ee1ce9545 a prov:Agent,
+        prov:SoftwareAgent ;
+    nidm:NIDM_0000164 fs: .
+
+niiri:c366282e-05d1-11ea-8ed8-003ee1ce9545 a prov:Agent ;
+    ndar:src_subject_id "0025988"^^xsd:string .
+
+niiri:f365f480-05d1-11ea-8ed8-003ee1ce9545 a prov:Activity ;
     dct:description "Freesurfer segmentation statistics" ;
     prov:qualifiedAssociation [ a prov:Agent ;
-            prov:hadRole <http://semanticscience.org/ontology/sio.owl#Subject> ;
-            prov:wasAssociatedWith niiri:e14951ea-0200-11ea-8a7d-003ee1ce9545 ],
+            prov:hadRole sio:Subject ;
+            prov:wasAssociatedWith niiri:c366282e-05d1-11ea-8ed8-003ee1ce9545 ],
         [ a prov:Agent ;
             prov:hadRole nidm:NIDM_0000164 ;
-            prov:wasAssociatedWith niiri:e1494704-0200-11ea-8a7d-003ee1ce9545 ] ;
+            prov:wasAssociatedWith niiri:c3661e9c-05d1-11ea-8ed8-003ee1ce9545 ] ;
     fs:ColorTable "/opt/freesurfer-6.0.0-min/ASegStatsLUT.txt" ;
     fs:ColorTableTimeStamp "2017/01/18 22:00:02" ;
     fs:ExcludeSegId "0 2 3 41 42" ;
@@ -48080,11 +48088,4 @@ niiri:e1491aea-0200-11ea-8a7d-003ee1ce9545 a prov:Activity ;
     fs:subjectname "sub-0025988" ;
     fs:sysname "Linux" ;
     fs:user "root" .
-
-niiri:e1494704-0200-11ea-8a7d-003ee1ce9545 a prov:Agent,
-        prov:SoftwareAgent ;
-    nidm:NIDM_0000164 fs: .
-
-niiri:e14951ea-0200-11ea-8a7d-003ee1ce9545 a prov:Agent ;
-    ndar:src_subject_id "0025988" .
 
