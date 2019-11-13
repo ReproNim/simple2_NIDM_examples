@@ -7,8 +7,9 @@ prefix onli: <http://neurolog.unice.fr/ontoneurolog/v3.0/instrument.owl#>
 prefix freesurfer: <https://surfer.nmr.mgh.harvard.edu/>
 prefix dx: <http://ncitt.ncit.nih.gov/Diagnosis>
 prefix ants: <http://stnava.github.io/ANTs/> 
+prefix dct: <http://purl.org/dc/terms/>
 
-select distinct ?ID ?Age ?dx ?Gender ?FIQ ?PIQ ?VIQ 	?tool ?softwareLabel ?federatedLabel ?laterality ?volume
+select distinct ?study ?ID ?Age ?dx ?Gender ?FIQ ?PIQ ?VIQ 	?tool ?softwareLabel ?federatedLabel ?laterality ?volume
 where {
  	        ?tool_act a prov:Activity ;
 		            prov:qualifiedAssociation [prov:wasAssociatedWith [nidm:NIDM_0000164 ?tool]] ;
@@ -36,8 +37,10 @@ where {
 			OPTIONAL {?measure nidm:isAbout ?federatedLabel }.
 			OPTIONAL {?measure nidm:hasLaterality ?laterality }.
 			
-			?as_activity prov:qualifiedAssociation [prov:agent ?agent] .
-				?agent ndar:src_subject_id ?ID.
+			?as_activity prov:qualifiedAssociation [prov:agent ?agent] ; 
+					dct:isPartOf/dct:isPartOf [dctypes:title ?study] .
+			?agent ndar:src_subject_id ?ID .
+				
 			
 			?as_entity prov:wasGeneratedBy ?as_activity ;
 	        	ncicb:Age ?Age;
