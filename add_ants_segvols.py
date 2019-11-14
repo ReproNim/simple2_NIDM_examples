@@ -56,11 +56,11 @@ def main():
             base_url = "https://fcp-indi.s3.amazonaws.com/data/Projects/"
             #get dataset (abide or adhd200) from line
             if "abide" in line:
-                cmd=cmd + "ABIDE/"
+                base_url=base_url + "ABIDE/"
             elif "adhd200" in line:
-                cmd=cmd + "ADHD200/"
+                base_url=base_url + "ADHD200/"
             elif "corr" in line:
-                cmd=cmd + "CORR/"
+                base_url=base_url + "CORR/"
             else:
                 print("Error, can't find dataset (abide | adhd200) in line: %s" %line)
                 print("Skipping...")
