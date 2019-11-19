@@ -61,6 +61,8 @@ def main():
                 base_url=base_url + "ADHD200/"
             elif "corr" in line:
                 base_url=base_url + "CORR/"
+            elif "openneuro" in line:
+                cmd=cmd + "OPENNEURO/"
             else:
                 print("Error, can't find dataset (abide | adhd200) in line: %s" %line)
                 print("Skipping...")

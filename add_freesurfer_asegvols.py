@@ -64,8 +64,10 @@ def main():
                 cmd=cmd + "ADHD200/"
             elif "corr" in line:
                 cmd=cmd + "CORR/"
+            elif "openneuro" in line:
+                cmd=segstats2nidm -f \"https://openneuro-proc-mindboggle/mindboggle/"
             else:
-                print("Error, can't find dataset (abide | adhd200 | corr) in line: %s" %line)
+                print("Error, can't find dataset (abide | adhd200 | corr | openneuro) in line: %s" %line)
                 print("Skipping...")
                 continue
 

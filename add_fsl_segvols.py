@@ -59,6 +59,8 @@ def main():
                 cmd=cmd + "ADHD200/"
             elif "corr" in line:
                 cmd=cmd + "CORR/"
+            elif "openneuro" in line:
+                cmd=cmd + "OPENNEURO/"
             else:
                 print("Error, can't find dataset (abide | adhd200) in line: %s" %line)
                 print("Skipping...")
