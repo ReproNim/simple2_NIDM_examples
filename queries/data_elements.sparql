@@ -1,0 +1,9 @@
+select distinct ?uuid ?p ?o
+where {
+
+	?uuid a ?DataElementType ;
+		?p ?o .
+
+    filter( regex(str(?DataElementType), "DataElement" ))
+
+} order by ?uuid ?p
