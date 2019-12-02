@@ -24,42 +24,64 @@ def main():
                                                                        './datasets.datalad.org/abide/RawDataBIDS/SDSU/sub-0050190'
                                                                        './datasets.datalad.org/abide/RawDataBIDS/SDSU/sub-0050199'
                                                                        '...')
+    parser.add_argument('-new','--new', action='store_true', required=False, help="If flag set then new NIDM files will created")
+    parser.add_argument('-forcenidm','--forcenidm', action='store_true', required=False, help="If flag set then data will be"
+                                        "added to existing NIDM file regardless if subject already exists.")
+
     args = parser.parse_args()
+    new  = args.new
 
     with open(args.subj,'r') as f:
         for line in f:
+            new = args.new
             # set up command line for get brain volume data and adding it to existing NIDM file
             # first check if a NIDM file exists in the site location
             #strip training \n from line
             line=line.rstrip('\n')
             loc = line.find("sub")
-            if not isfile(join(line[:loc-1],"nidm.ttl")):
-                print("No existing NIDM-E file for site: %s" %line[:loc-1])
-                print("Skipping subject: %s" %line[loc:])
-                continue
-            else:
-                # set up command to add brain volumes from Amazon bucket
-                # https://fcp-indi.s3.amazonaws.com/data/Projects/ABIDE/Outputs/mindboggle_swf/simple_workflow/sub-0050665/segstats.json
-                cmd="fslsegstats2nidm -f \"https://fcp-indi.s3.amazonaws.com/data/Projects/"
-                #get dataset (abide or adhd200) from line
-                if "abide" in line:
-                    cmd=cmd + "ABIDE/"
-                elif "adhd200" in line:
-                    cmd=cmd + "ADHD200/"
-                else:
-                    print("Error, can't find dataset (abide | adhd200) in line: %s" %line)
-                    print("Skipping...")
+            if not new:
+                if not isfile(join(line[:loc-1],"nidm.ttl")):
+                    print("No existing NIDM-E file for site: %s" %line[:loc-1])
+                    print("Skipping subject: %s" %line[loc:])
                     continue
+            else:
+                #check if nidm.ttl file actually exists and if so use it otherwise create from scratch
+                 if isfile(join(line[:loc-1],"nidm.ttl")):
+                     new = False
 
-                cmd=cmd + "Outputs/mindboggle_swf/simple_workflow/" + line[loc:] + \
+            # set up command to add brain volumes from Amazon bucket
+            # https://fcp-indi.s3.amazonaws.com/data/Projects/ABIDE/Outputs/mindboggle_swf/simple_workflow/sub-0050665/segstats.json
+            cmd="fslsegstats2nidm -f \"https://fcp-indi.s3.amazonaws.com/data/Projects/"
+            #get dataset (abide or adhd200) from line
+            if "abide" in line:
+                cmd=cmd + "ABIDE/"
+            elif "adhd200" in line:
+                cmd=cmd + "ADHD200/"
+            elif "corr" in line:
+                cmd=cmd + "CORR/"
+            elif "openneuro" in line:
+                cmd=cmd + "OPENNEURO/"
+            else:
+                print("Error, can't find dataset (abide | adhd200) in line: %s" %line)
+                print("Skipping...")
+                continue
+
+            cmd=cmd + "Outputs/mindboggle_swf/simple_workflow/" + line[loc:] + \
                     "/segstats.json\" -subjid " + line[loc+4:]
 
+            if not new:
                 cmd = cmd + " -n " + line[:loc] + "nidm.ttl -o " + line[:loc] + \
                     "nidm.ttl"
+                if args.forcenidm is not False:
+                    cmd = cmd + " -forcenidm "
+            else:
+                cmd = cmd + " -o " + join(line[:loc],"nidm.ttl")
+                if args.forcenidm is not False:
+                    cmd = cmd + " -forcenidm "
 
-                # execute command
-                print(cmd)
-                system(cmd)
+            # execute command
+            print(cmd)
+            system(cmd)
 
 
 if __name__ == "__main__":
