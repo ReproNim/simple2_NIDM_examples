@@ -1,1 +1,2 @@
+#curl -X POST http://localhost:8889/bigdata/sparql --data-urlencode 'query=construct {?uuid ?p ?o .} where {?uuid a ?DataElementType ; ?p ?o . filter( regex(str(?DataElementType), "DataElement" ))}' -H 'Accept:application/x-turtle-RDR' > data_elements.ttl
 construct {?uuid ?p ?o .} where {?uuid a ?DataElementType ; ?p ?o . filter( regex(str(?DataElementType), "DataElement" ))}
