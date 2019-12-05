@@ -1,9 +1,7 @@
+prefix nidm: <http://purl.org/nidash/nidm#>
 select distinct ?uuid ?p ?o
 where {
-
-	?uuid a ?DataElementType ;
-		?p ?o .
-
-    filter( regex(str(?DataElementType), "DataElement" ))
-
-} order by ?uuid ?p
+  
+  ?uuid a/rdfs:subClassOf* nidm:DataElement ;
+         ?p ?o .   
+} order by ?uuid
