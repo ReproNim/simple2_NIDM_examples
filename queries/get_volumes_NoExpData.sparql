@@ -20,24 +20,12 @@ where {
 			?tool_entity prov:wasGeneratedBy ?tool_act ;
 				?measure ?volume .
 			
-			{?measure a fsl:DataElement ;
-				    fsl:label ?softwareLabel;
-				    nidm:measureOf <http://uri.interlex.org/base/ilx_0112559> ;
-				    nidm:datumType <http://uri.interlex.org/base/ilx_0738276> ;
-			}
-			UNION
-			{?measure a freesurfer:DataElement ;
-				    freesurfer:label ?softwareLabel;
-				    nidm:measureOf <http://uri.interlex.org/base/ilx_0112559> ;
-				    nidm:datumType <http://uri.interlex.org/base/ilx_0738276> ;
-			}
-			UNION
-			{?measure a ants:DataElement ;
-				    ants:label ?softwareLabel;
-				    nidm:measureOf <http://uri.interlex.org/base/ilx_0112559> ;
-				    nidm:datumType <http://uri.interlex.org/base/ilx_0738276> ;
-			}
-			OPTIONAL {?measure nidm:isAbout ?federatedLabel }.
-			OPTIONAL {?measure nidm:hasLaterality ?laterality }.	
+				?measure a/rdfs:subClassOf* nidm:DataElement ;
+					 rdfs:label ?softwareLabel;
+					 nidm:measureOf <http://uri.interlex.org/base/ilx_0112559> ;
+					 nidm:datumType <http://uri.interlex.org/base/ilx_0738276> .
+				OPTIONAL {?measure nidm:isAbout ?federatedLabel }.
+				OPTIONAL {?measure nidm:hasLaterality ?laterality }.
+			
 }
 
