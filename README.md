@@ -76,7 +76,6 @@ If you have NIDM files that contain ONLY brain volume data (i.e. you didn't usin
 To query programmatically one can use:
 
 ```python
-import rdflib as rl
 with open('queries/get_volumes.sparql', 'r') as fp:
     query = fp.read()
 
@@ -85,4 +84,5 @@ sparql = SPARQLWrapper("http://localhost:8889/bigdata/sparql")
 sparql.setQuery(query)
 sparql.setReturnFormat(JSON)
 results = sparql.query().convert()
+print(len(results['results']['bindings']))
 ```

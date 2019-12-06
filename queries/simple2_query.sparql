@@ -14,18 +14,20 @@ prefix ncit: <http://ncitt.ncit.nih.gov/>
 
 select distinct ?study ?ID ?Age ?dx ?Gender ?FIQ ?PIQ ?VIQ 	?tool ?softwareLabel ?federatedLabel ?laterality ?volume
 where {
- 	        ?tool_act a prov:Activity ;
-		            prov:qualifiedAssociation [prov:agent [nidm:NIDM_0000164 ?tool]] ;
-					prov:qualifiedAssociation [prov:agent [ndar:src_subject_id ?ID]] .
-			?tool_entity prov:wasGeneratedBy ?tool_act ;
-				?measure ?volume .
-			
-			?measure a/rdfs:subClassOf* nidm:DataElement ;
-				 rdfs:label ?softwareLabel;
-				 nidm:measureOf <http://uri.interlex.org/base/ilx_0112559> ;
-				 nidm:datumType <http://uri.interlex.org/base/ilx_0738276> .
-			OPTIONAL {?measure nidm:isAbout ?federatedLabel }.
-			OPTIONAL {?measure nidm:hasLaterality ?laterality }.
+            ?measure a/rdfs:subClassOf nidm:DataElement;
+                 rdfs:label ?softwareLabel;
+                 nidm:measureOf <http://uri.interlex.org/base/ilx_0112559> ;
+                 nidm:datumType <http://uri.interlex.org/base/ilx_0738276> .
+            OPTIONAL {?measure nidm:isAbout ?federatedLabel }.
+            OPTIONAL {?measure nidm:hasLaterality ?laterality }.
+
+            ?tool_entity a prov:Entity;
+                ?measure ?volume .
+
+            ?tool_act a prov:Activity ;
+                    prov:qualifiedAssociation [prov:agent [nidm:NIDM_0000164 ?tool]] ;
+                    prov:qualifiedAssociation [prov:agent [ndar:src_subject_id ?ID]] .
+            ?tool_entity prov:wasGeneratedBy ?tool_act .
 			
 			?as_activity prov:qualifiedAssociation [prov:agent ?agent] ; 
 					dct:isPartOf/dct:isPartOf [dctypes:title ?study] .
