@@ -1,0 +1,17 @@
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+prefix prov: <http://www.w3.org/ns/prov#> 
+prefix onli: <http://neurolog.unice.fr/ontoneurolog/v3.0/instrument.owl#> 
+prefix ndar: <https://ndar.nih.gov/api/datadictionary/v2/dataelement/> 
+prefix ncit: <http://ncitt.ncit.nih.gov/> 
+prefix ncicb: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#> 
+prefix obo: <http://purl.obolibrary.org/obo/> 
+prefix ilx: <http://uri.interlex.org/base/> 
+prefix nidm: <http://purl.org/nidash/nidm#> 
+prefix fs: <https://surfer.nmr.mgh.harvard.edu/> 
+prefix fsl: <http://purl.org/nidash/fsl#>
+select distinct ?uuid ?p ?o
+where {
+  
+  ?uuid a/rdfs:subClassOf* nidm:DataElement ;
+         ?p ?o .   
+} order by ?uuid
