@@ -51,6 +51,13 @@ docker stop blazegraph
 this will delete the instance and remove all the data. go back to step 1 to restart.
 
 
+### Querying from the command line
+```
+$ curl -X POST --data-binary '@queries/simple2_query_participants.sparql' \
+ -H 'Content-Type: application/sparql-query' -H 'Accept: text/csv' \
+ http://localhost:8889/bigdata/sparql > result_participants.csv
+```
+
 ### Simple 2 SPARQL Query (using PyNIDM, running time TOO LONG for > 10 files):
 This query will return study name, participant ID, age, diagnosis, gender, FIQ, PIQ, VIQ, and brain volume data.  It depends on NIDM files that include all of this information. The examples from ABIDE and ADHD200 have been converted to NIDM in 3 steps: (1) BIDS2MRI to get metadata about project information; (2) CSV2NIDM to convert/annotate assessment and demographics information (i.e. age, gender, diagnosis, FIQ, ...) (3) Exported brain volume data from ANTS, FSL, and Freesurfer using https://github.com/dbkeator/ants_seg_to_nidm, https://github.com/dbkeator/fsl_seg_to_nidm, and https://github.com/dbkeator/segstats_jsonld/ respectively.  The simple_2_NIDM_examples repo has some helper scripts for the brain volume stuff on a large scale (see add_freesurfer_asegvols.py, add_fsl_segvols.py, and add_fsl_segvols.py).
 
