@@ -1,0 +1,2886 @@
+@prefix afni: <http://purl.org/nidash/afni#> .
+@prefix age_at_scan_1: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Age/> .
+@prefix ants: <http://stnava.github.io/ANTs/> .
+@prefix bids: <http://bids.neuroimaging.io/> .
+@prefix birnlex: <http://bioontology.org/projects/ontologies/birnlex/> .
+@prefix crypto: <http://id.loc.gov/vocabulary/preservation/cryptographicHashFunctions#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dctypes: <http://purl.org/dc/dcmitype/> .
+@prefix dicom: <http://neurolex.org/wiki/Category:DICOM_term/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix freesurfer: <https://surfer.nmr.mgh.harvard.edu/> .
+@prefix fsl: <http://purl.org/nidash/fsl#> .
+@prefix ncicb: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#> .
+@prefix ncit: <http://ncitt.ncit.nih.gov/> .
+@prefix ndar: <https://ndar.nih.gov/api/datadictionary/v2/dataelement/> .
+@prefix nfo: <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#> .
+@prefix nidm: <http://purl.org/nidash/nidm#> .
+@prefix niiri: <http://iri.nidash.org/> .
+@prefix nlx: <http://uri.neuinfo.org/nif/nifstd/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix onli: <http://neurolog.unice.fr/ontoneurolog/v3.0/instrument.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pato: <http://purl.obolibrary.org/obo/pato#> .
+@prefix preceding_condition: <https://github.com/dbkeator/nidm-local-terms/issues/81/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix retest_design: <https://github.com/dbkeator/nidm-local-terms/issues/80/> .
+@prefix scr: <http://scicrunch.org/resolver/> .
+@prefix sio: <http://semanticscience.org/ontology/sio.owl#> .
+@prefix spm: <http://purl.org/nidash/spm#> .
+@prefix vc: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+bids:handedness a nidm:DataElement ;
+    rdfs:label "handedness" ;
+    nidm:isAbout obo:handedness ;
+    nidm:source_variable "handedness" ;
+    rdfs:comment "BIDS participants variable fixed in specification" .
+
+bids:sex a nidm:DataElement ;
+    rdfs:label "gender" ;
+    nidm:isAbout ndar:gender ;
+    nidm:source_variable "sex" ;
+    rdfs:comment "BIDS participants variable fixed in specification" .
+
+niiri:a03fef66-3370-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "7de58d27b46c335c934e8c5bb667dc0af5f7a4ae70cd819936d30bafb83bd5dda1a3edae7604e46cc3ed47eebddf874b618dbf0e417509367f322ca608b79f64"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "6"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-9/func/sub-0026017_ses-9_task-rest_run-6_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:c03fe8ea-3370-11ea-8dec-003ee1ce9545 .
+
+niiri:a08cd762-336f-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "da582ee67a4bfce14cd4379129dd067956a30ac6562118360ba80468f0c3944f3001781722f8f7d3f14b528fff2bea007e11713cea08a1773db795bf7e88cfe1"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "7"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-2/func/sub-0026017_ses-2_task-rest_run-7_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:a08cd122-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:a12ab2dc-3370-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "bd76e39518ed794ad474aa9bb76b49ca254f3b2b536f035620183d3dcbcfb88213c1da72215fe57fbec62e5b0687641d5116aa719352bc7062e52d82787ca78e"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "1"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-8/func/sub-0026017_ses-8_task-rest_run-1_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:a12aaba2-3370-11ea-8dec-003ee1ce9545 .
+
+niiri:a1634984-336f-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "d94839605a9a53945495e78860a8cca8fe627a078a54a7d710cac41c723fc35b3d3e270612a8320225922b44ef369cab3c62d3b950834c9f6e70fc591ef35ff4"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "2"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-1/func/sub-0026017_ses-1_task-rest_run-2_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:a1634204-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:a1e06b8e-336f-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "f5daf7fb831f27e5ee3fd770c24f91a12b52535cc9c58c316693840fb1e541de9f2d6cbb19f208a4999702144257df4d90441b0a06194d40cc8a76e88ff1e79d"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "10"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-1/func/sub-0026017_ses-1_task-rest_run-10_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:c1e06562-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:a294c34e-336f-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "267c22fad38bff2ae842cfbdf1cbc5df0fec58a43ea805846d547b68a53807251d03cd4f3d7d7f952577971c77219da38d1dc7db9b024aa5833e098719e1d3f9"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "8"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-2/func/sub-0026017_ses-2_task-rest_run-8_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:a294bd36-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:a37c8f00-336f-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "e0bfeed7006019c07c2cd05204cb64307226e2308f523ed000cbd40fb135f568acaed0598059a3c0506a5882c29148b948603174b4f1e3086d07de90db6952aa"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "3"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-1/func/sub-0026017_ses-1_task-rest_run-3_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:c37c894c-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:a4995024-336f-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "9b75e9890ca751ee8a0188a8e612ea9ba980af0fc4fdbd911a8f6771c71eab1101cd42b68c7a7e19fbeeec4a32bf6158dcebc2b5dc4fe91546f927807dece4b8"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "9"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-2/func/sub-0026017_ses-2_task-rest_run-9_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:a4994a20-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:a55f1884-3370-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "d83ccbd30beb14d9a209f46efd3016ecd6f4885d99d3bb779a036a2300cbf631db9478a01f2d7456c11900958d4f51e8d365464a00c661ee89cd69e9c716793d"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "3"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-8/func/sub-0026017_ses-8_task-rest_run-3_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:e55f11fe-3370-11ea-8dec-003ee1ce9545 .
+
+niiri:a663216a-3370-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "9c90340d5b4d89d6393efae243de26cf65045f97add2d4c1a1e5c3a81b8a8081e498515bdbd71e3852eb46c3aa55f405f25df654ed41d5622f3e255cc5b3e1b5"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "9"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-9/func/sub-0026017_ses-9_task-rest_run-9_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:f6631ada-3370-11ea-8dec-003ee1ce9545 .
+
+niiri:a6a23db8-336f-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "8d0549568c1dcec8f377e8d019d5f4640feabc6c2d3ce8a23d38166b02133ee74141e86fbd662a1ee03af5f96575c84f9416869555ce08a78975594fda9cbd51"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "10"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-2/func/sub-0026017_ses-2_task-rest_run-10_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:a6a2370a-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:a8dfc4ec-336f-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "a267e2df01471d045271709eb83f2b5ef146bd7cb6e7b61c6ac152bb24ae8065e081ed67491fbbcf76f92697ad775ede9899df5325c2557a772c2efea08c43c1"^^xsd:string ;
+    dicom:AcquisitionMatrix "256x256"^^xsd:string ;
+    dicom:EchoTime "0.00291"^^xsd:string ;
+    dicom:FlipAngle "9"^^xsd:string ;
+    dicom:InversionTime "0.9"^^xsd:string ;
+    dicom:MagneticFieldStrength "3T"^^xsd:string ;
+    dicom:PixelBandwidth 2.4e+02 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2.3e+00 ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:T1Weighted ;
+    nidm:hadImageUsageType nidm:Anatomical ;
+    nfo:filename "/sub-0026017/ses-3/anat/sub-0026017_ses-3_run-1_T1w.nii.gz"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:a8dfbd9e-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:a906e360-336f-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "140ae7a96ba60bb28fe1ae3f62ba02f4d6b50de64ffcc6c5143fcb0a753cfea01d432f02d301eb950471c225854e30f4b181e2ee14a86d14344fd8a6399569ae"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "1"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-3/func/sub-0026017_ses-3_task-rest_run-1_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:a906db40-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:a9b0bd60-336f-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "13a31f748d27cbbd1709f0fd6983ed251a9ad5968179444a5ae878e33bb124870cfac8ca58e1dcfbb1dcc4a76da56889e6e3d428e9fcb36fbd18ff3961f5d9c9"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "6"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-1/func/sub-0026017_ses-1_task-rest_run-6_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:f9b0b7ac-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:aa729628-336f-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "85f7d34a9997be5269bde3ea055e51d04999b004172dfe820df8986a19c7bd060c8e35fe1a1ac5fca6c830be4e39f23ea7371235e73b5e813b5916cce05ad52c"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "4"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-2/func/sub-0026017_ses-2_task-rest_run-4_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:ea728fac-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:aaa96b08-3370-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "1a74783f9c6c56f60d4ed84e80afa1a134406c2008715f46ead2588d45f123b19557f5c4d5d4c5684eb974da57e851ff577acb2ceca86fe4c145416772069e1a"^^xsd:string ;
+    dicom:AcquisitionMatrix "256x256"^^xsd:string ;
+    dicom:EchoTime "0.00291"^^xsd:string ;
+    dicom:FlipAngle "9"^^xsd:string ;
+    dicom:InversionTime "0.9"^^xsd:string ;
+    dicom:MagneticFieldStrength "3T"^^xsd:string ;
+    dicom:PixelBandwidth 2.4e+02 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2.3e+00 ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:T1Weighted ;
+    nidm:hadImageUsageType nidm:Anatomical ;
+    nfo:filename "/sub-0026017/ses-10/anat/sub-0026017_ses-10_run-1_T1w.nii.gz"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:eaa96310-3370-11ea-8dec-003ee1ce9545 .
+
+niiri:ab0e83a2-336f-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "03a4dcef8dc51d70e668bf008a0206fc9c9f671f83caf7bbc09ce5045a1ee968d839bbfd37493d23ae99867fb2b215149b4b35dd297f1e50efe89e22a5737e31"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "2"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-3/func/sub-0026017_ses-3_task-rest_run-2_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:ab0e7cc2-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:ad1d0614-336f-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "f892f0e28367d419b93d28d001f77e38c7ce57de56764996b2bd54d4a9e5f211e6e6379a68924d3b9042046a8ea40ca78aec36b314feeb841e86dd161ca13cee"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "3"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-3/func/sub-0026017_ses-3_task-rest_run-3_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:ad1cffac-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:ad2c3db4-3370-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "12b550044b63dffc42b3a77d467acb5c8452fa25bba870060b0d18510babd424bc825b942ed8745ab295c3bd076843e38b16c882ad0d1213f1fb3003b58ec430"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "10"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-10/func/sub-0026017_ses-10_task-rest_run-10_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:dd2c3724-3370-11ea-8dec-003ee1ce9545 .
+
+niiri:adcad7c8-336f-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "fde51d2846fd7fdae41b76eff5e86b046c4d2a9c9e5ceb5a41930291c1632698c4de551dc1020bdbe3327b8b1c26b720272c16b27a79a7d61f9f9eb64c70ba0c"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "8"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-1/func/sub-0026017_ses-1_task-rest_run-8_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:ddcad214-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:ae315246-3370-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "f2ab7b827f8f1a0c3557b98f95613b9b84f74c6e400732b322c3eaebe3816e503842df4bdcf9c5c85dbf09f94b66ce2a88b78be79befd29a1abaf2dd3145cfe2"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "5"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-9/func/sub-0026017_ses-9_task-rest_run-5_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:be314abc-3370-11ea-8dec-003ee1ce9545 .
+
+niiri:af21b842-336f-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "ca99ed4346e68ebb0e94b3ab32154d3fb90e95dd248ba8ef312e093d2ff0082558ea9353021bf5121eed6cc4348c003c79211cd0e7257cc76b15bdac7945b696"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "4"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-3/func/sub-0026017_ses-3_task-rest_run-4_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:af21b22a-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:b07e308a-3370-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "dc94039718f9e155e192dc0f49ca2b31e18cf1ae55638b14d7b43a28a48ad5f8e720c88c91067e494157d4456cc2fcbd3377f0a239543907bb07ccc898eba4e9"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "3"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-7/func/sub-0026017_ses-7_task-rest_run-3_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:b07e2a0e-3370-11ea-8dec-003ee1ce9545 .
+
+niiri:b1366236-336f-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "d5de2024c4c6eddfb2a126b548f6b22f0bb92c1b33a7146e29434d9e5d053ba9b371413bb8c077db55f1168d2ebdddd3359001a3ae2656285a82e7cc8ba36c19"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "5"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-3/func/sub-0026017_ses-3_task-rest_run-5_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:b1365c1e-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:b2808e0a-3370-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "6130e4ed2614877fc952c05c906bf9917cfeef229f4d90ec303d862025f18eda62e6f3b43719a37d13053bb76c3ed53525f5936fd0ff384073745da7b70b5a6a"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "4"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-7/func/sub-0026017_ses-7_task-rest_run-4_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:c2808798-3370-11ea-8dec-003ee1ce9545 .
+
+niiri:b345d0ca-336f-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "12e6b7fba36d03c4d769dacbd941a22a2264c9578c9654acb37f864a3c350c77e779038c48be277dd8d603fb4c91f7c23141204509f2c97e01f90ab1fe102d85"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "6"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-3/func/sub-0026017_ses-3_task-rest_run-6_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:b345c86e-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:b34a2b7e-3370-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "491f90448d448a808ab99db5e9f23cd9960b250847a28d2840010f65397a617624996d906e33fbb00225a606f0db6af0b0d7903bca3d896f82476907490c8b9e"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "2"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-8/func/sub-0026017_ses-8_task-rest_run-2_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:c34a2444-3370-11ea-8dec-003ee1ce9545 .
+
+niiri:b4254676-336f-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "d7764d5713c261f821bae55db09a6cbd70f3b9cd48ad2387135235e2d8fab60039485426df6dd4cd93d3e80eb522d1f96fcaf32e988c9845ce98450b6f16c526"^^xsd:string ;
+    dicom:AcquisitionMatrix "256x256"^^xsd:string ;
+    dicom:EchoTime "0.00291"^^xsd:string ;
+    dicom:FlipAngle "9"^^xsd:string ;
+    dicom:InversionTime "0.9"^^xsd:string ;
+    dicom:MagneticFieldStrength "3T"^^xsd:string ;
+    dicom:PixelBandwidth 2.4e+02 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2.3e+00 ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:T1Weighted ;
+    nidm:hadImageUsageType nidm:Anatomical ;
+    nfo:filename "/sub-0026017/ses-2/anat/sub-0026017_ses-2_run-1_T1w.nii.gz"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:e4253eb0-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:b563a206-336f-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "1835f6114985c76b922bfe349e1123436a8bed0d09de2803316a29ac3b3cbb03f9acd60f80b7b973b1ff688ca5371ec49a70d5ec8d5cdf1b88f6ccbb7d6e4b7f"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "7"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-3/func/sub-0026017_ses-3_task-rest_run-7_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:b5639bee-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:b5969bc8-336f-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "fbbdb47f1959be3d756f3819145cb87d4d1d7c034b4d0ababe7eb625820d75d82ae358733535648173575bf2eb1ebdb3e88091cee68fd6f370f3419d3d9d16aa"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "4"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-1/func/sub-0026017_ses-1_task-rest_run-4_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:d5969506-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:b609ec68-3370-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "1fb29c4bc8846579a60059247e028d3754531990926de40f2d7e0a14c80977cc5e0636efae5248ea006c6966551f8744e7cd2e73d618ba212fec77bef689e93b"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "1"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-9/func/sub-0026017_ses-9_task-rest_run-1_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:f609e524-3370-11ea-8dec-003ee1ce9545 .
+
+niiri:b65f27c2-336f-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "93b88e91745559823d0cf9180939446c48023c20a2bd0d8f6a502cb6ade1b74e48a73e29e30be6e6fe8c515740a6f8bca2a744d6236de83e4b5f857a05fe5714"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "2"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-2/func/sub-0026017_ses-2_task-rest_run-2_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:c65f2150-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:b7712b04-336f-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "ad5c52f0ae622a88321f4161ce9d3fe7559a157d4f4484d3212cd2b32ff2b02c1d828b152a2c721d4c1fc207cb48caeddba8af69c8988352300430bd5c0b31fe"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "8"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-3/func/sub-0026017_ses-3_task-rest_run-8_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:b77124ec-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:b79ca750-336f-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "af63e249309744ea29b02a9217645a07b2d44ba729d4b1abd473304073850fb779a4cf7a395e0dbc2b87405395222403c530352aab0f87bbda630fac78dfbf51"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "5"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-1/func/sub-0026017_ses-1_task-rest_run-5_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:e79ca1ce-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:b8108706-3370-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "9aea96cfe0a152e537f5e582aa5c661b38c2f6c1686e65c8adb4f005f34c44be9de80575dc871c9e47b88bc2fc81b1d7a520468d77efefcefdf7041e9eb22606"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "2"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-9/func/sub-0026017_ses-9_task-rest_run-2_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:f8108030-3370-11ea-8dec-003ee1ce9545 .
+
+niiri:b96edb4e-3370-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "b800a5da82734e25ccbae230cdf47a1565518691c0d2c0a1f0929e2601aec61ec902da8591ac181c03f2a09f2c84406492fc84090f187e2237b896b303b03a65"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "5"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-8/func/sub-0026017_ses-8_task-rest_run-5_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:e96ed4c8-3370-11ea-8dec-003ee1ce9545 .
+
+niiri:b97ae5de-336f-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "53b05f304d96d53c58dc5d187fda024ac5f98337ec4274f561e34207481bc18c5e8ac1e0a132927851ee7ac4eec1351af8ac3e4c272ab5961fd0967830495f36"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "9"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-3/func/sub-0026017_ses-3_task-rest_run-9_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:b97adfc6-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:bad08d3c-3370-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "40f662b7a127566575eca805ea0b0c05388cb1559b8a3e36be5caa1e414fc9593c7656cbaa447a10bd375c971eef050a99d786fbd5469c078b02a70aabbfe118"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "1"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-10/func/sub-0026017_ses-10_task-rest_run-1_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:aad085bc-3370-11ea-8dec-003ee1ce9545 .
+
+niiri:bb7f1d5a-336f-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "2799e25c9b5a2247dfa2dfe094551272aba0e843239c49511f7b9b70a97553d52e6013c918e94c519473bc2c16c0404c0cbc209a06e0cd44e5f946763be149d6"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "10"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-3/func/sub-0026017_ses-3_task-rest_run-10_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:bb7f16fc-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:bc818408-336f-11ea-8dec-003ee1ce9545 a onli:assessment-instrument,
+        nidm:AcquisitionObject,
+        prov:Entity ;
+    bids:handedness "R"^^xsd:string ;
+    bids:sex "male"^^xsd:string ;
+    age_at_scan_1:ab9ac4ea8cb933e546399fbe92c580fb "39"^^xsd:string ;
+    prov:wasGeneratedBy niiri:ac817f80-336f-11ea-8dec-003ee1ce9545 ;
+    retest_design:ba2f12d33c5c463add1af70d71cf4f59 "within and between"^^xsd:string ;
+    preceding_condition:f7f041ed4dba48e17d7487c00c549614 "no active task"^^xsd:string .
+
+niiri:bcdbc36c-3370-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "806da932bc832b7ccaea4585bab331338f930c849ebf8f39472bce9808631608b57ae0d8005049885f375379472b619da707b76469e76830689ef76b786fe28a"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "2"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-10/func/sub-0026017_ses-10_task-rest_run-2_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:fcdbbcd2-3370-11ea-8dec-003ee1ce9545 .
+
+niiri:bdc5b7d6-336f-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "1c1c169da6b4cf3af8fa14249492e6462bac619a9db0f460ce873afff31ab033a0ed4125ea77f2ca8b3fd34ed89ae1e61a66ad98f7ed33b4a162f2c06ad8016a"^^xsd:string ;
+    dicom:AcquisitionMatrix "256x256"^^xsd:string ;
+    dicom:EchoTime "0.00291"^^xsd:string ;
+    dicom:FlipAngle "9"^^xsd:string ;
+    dicom:InversionTime "0.9"^^xsd:string ;
+    dicom:MagneticFieldStrength "3T"^^xsd:string ;
+    dicom:PixelBandwidth 2.4e+02 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2.3e+00 ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:T1Weighted ;
+    nidm:hadImageUsageType nidm:Anatomical ;
+    nfo:filename "/sub-0026017/ses-4/anat/sub-0026017_ses-4_run-1_T1w.nii.gz"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:bdc5af20-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:bdece9fa-336f-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "b6c02472c2fa9304840730b2760f228ff08d997f98ceaee70c2b7c68059a1046f80f7d68fa5d29bd5a5087fbd696dc5d8cc88da0954ead7b70ff54ef113e8f44"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "1"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-4/func/sub-0026017_ses-4_task-rest_run-1_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:bdece2d4-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:bfff1eac-336f-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "b1b57b0944f43403a4fe720c362c68e10b86e32787fa2830ff3ac368fbb59957e4b311011b30296ce2fb7c936130e895308d92107ba6c565f6fa7658c1bf41d3"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "2"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-4/func/sub-0026017_ses-4_task-rest_run-2_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:bfff184e-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:c0e9b07c-3370-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "38d47b3327b186f42ed88c2f736c8dfa00c5feb0f6dbcdee7fbab3288ce9a0bf6e667bceee6efb89fbe437c69a01fdcef10269f6f16465f905b05a78c2409c88"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "4"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-10/func/sub-0026017_ses-10_task-rest_run-4_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:b0e9aa00-3370-11ea-8dec-003ee1ce9545 .
+
+niiri:c20708c2-336f-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "a27513fa1a3a726ad994241b95e62618b8179c73bed05dd634a949b1848152dbe13954005cb6c14851b73a4d249cdce777dd53abbe1450cc958c8d8641c023e4"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "3"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-4/func/sub-0026017_ses-4_task-rest_run-3_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:c20702aa-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:c2f635d4-3370-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "296900627f17434b4096ceb11986a908a052b3aaa25eb1dd66cedc78b4329554548a1a7cd9528c30fcbed97f04506f1c43b381575101ba96bf85502c69b3f85b"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "5"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-10/func/sub-0026017_ses-10_task-rest_run-5_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:a2f62f58-3370-11ea-8dec-003ee1ce9545 .
+
+niiri:c41a9c46-336f-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "bf15f9b935047f5176683cd6abc3cdd1d989ad2b361009e04930e02417910b60c384b9b091d20048f1dba21e9f84773a20a0075c9f38e2b9569d04c879b17c85"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "4"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-4/func/sub-0026017_ses-4_task-rest_run-4_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:c41a9534-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:c44becc2-336f-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "ad08105adec84369a46484e8104c2e793cfae5a79f9742ca9e1fd29712e634cce362e2729eb08e54b6676342f6eb74077a9f9386395ed2665def2767e90323e1"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "1"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-2/func/sub-0026017_ses-2_task-rest_run-1_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:d44be588-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:c4944baa-3370-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "f19cb55dfeda01fe4c01377456bdb6ae5d1d695595bedbc5bb078916daa987aecae7ef55ccadb7f73d81ea4e3aee07b5bf2495a6ea46336f06ad9a7ed0995d4e"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "5"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-7/func/sub-0026017_ses-7_task-rest_run-5_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:b4944524-3370-11ea-8dec-003ee1ce9545 .
+
+niiri:c61e5b68-336f-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "0b0a530264dafc20ffbfaa81e04d308facef0477c70d27e7adc6f202bd3c3f0d51772cc57ae9882e629f94a15446773293584d85d35d6d68ed471afe6dbc598b"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "5"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-4/func/sub-0026017_ses-4_task-rest_run-5_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:c61e5528-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:c6980496-3370-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "5c6b709848c485a722899469e7c0f85a19548a1b52c10391e7fe7de6673cc769f6e019c456d7aec58700c0ab712c13fb2902d65a7382729f257418fd3a60d7a2"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "6"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-7/func/sub-0026017_ses-7_task-rest_run-6_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:e697fe24-3370-11ea-8dec-003ee1ce9545 .
+
+niiri:c70d6f84-3370-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "3d26c2d046d56a130d8775d300c897010cef71bc6c9d850281a6e0097a5215fb8028c783f0371fdfc1e71106e9496744a31f53aab93c12b783b2ad0054c8d953"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "7"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-10/func/sub-0026017_ses-10_task-rest_run-7_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:b70d68fe-3370-11ea-8dec-003ee1ce9545 .
+
+niiri:c76a1912-3370-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "200d9a2adb38d2407fe40526e4ae66da0b934516efbaed67fb05dac6ae61f9df1549e356ca57f71e0d32e9a200965df008ede52ab3efbaa1475cbd997fd54a3c"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "4"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-8/func/sub-0026017_ses-8_task-rest_run-4_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:c76a1110-3370-11ea-8dec-003ee1ce9545 .
+
+niiri:c82b6f54-336f-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "3f1250f1b6278995a0cb7571ac76f571b976458cad6e2315e1446df26e27b847ca48515f0b6f678d068dee5e3913006369934204ea020dd6e76fe986bfb5e61e"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "6"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-4/func/sub-0026017_ses-4_task-rest_run-6_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:c82b6928-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:ca3adb90-336f-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "5f0fe20670b7fa044ac7cea771c5a03d0c82d1e370bbed1aad41405dd592daea459d0287dc5b0bbd85adc0259112bd4f900d7d072f7e7d1d0bda80396f749ec3"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "7"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-4/func/sub-0026017_ses-4_task-rest_run-7_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:ca3ad56e-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:cc3f0e16-336f-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "6f9c3ec513b2756579c43f7bdaf5641e61413179ff6508ba73f68de3f261eb2a6a225bdb40bb0500de17746d8f13a01f433388d4b36f8224ce59ca7f14e511c5"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "8"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-4/func/sub-0026017_ses-4_task-rest_run-8_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:cc3f0754-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:ce4c02e0-336f-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "6a536705d5901c12cf0a0822d79c5bfba7958cf8d6220934180bdb47a5c6468f60622d6f1e524bc6177395a205453eca83211136099d8b7d5c263a5e9bd856af"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "9"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-4/func/sub-0026017_ses-4_task-rest_run-9_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:ce4bfc00-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:cee690ec-3370-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "fde235a3dee4d8a39f0805384fa8e7238e5b5ad048ba95720474038c26ffc588424ee0e081eb6e3d51ee73061384e943eb7e6b33708a43b248f0113962b9135d"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "3"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-10/func/sub-0026017_ses-10_task-rest_run-3_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:bee68a66-3370-11ea-8dec-003ee1ce9545 .
+
+niiri:cefe5d6e-336f-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "d383ba55fb22a11ae5cb84e7b7c387bb3d8981adeae9daf8897e8a7f405ed5e6adfd17b4913269bc841870b071b213691660e12ad298b52d5917366c23068593"^^xsd:string ;
+    dicom:AcquisitionMatrix "256x256"^^xsd:string ;
+    dicom:EchoTime "0.00291"^^xsd:string ;
+    dicom:FlipAngle "9"^^xsd:string ;
+    dicom:InversionTime "0.9"^^xsd:string ;
+    dicom:MagneticFieldStrength "3T"^^xsd:string ;
+    dicom:PixelBandwidth 2.4e+02 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2.3e+00 ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:T1Weighted ;
+    nidm:hadImageUsageType nidm:Anatomical ;
+    nfo:filename "/sub-0026017/ses-1/anat/sub-0026017_ses-1_run-1_T1w.nii.gz"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:befe55f8-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:cfd7639c-336f-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "f9824d243d883865f8c210ff42d7344ad89da2219ffec7d26df388738a221e67dde4d5c95d15a7600f7877a313987524aa0081cb6a701fd739ec259d8ddea4d7"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "9"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-1/func/sub-0026017_ses-1_task-rest_run-9_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:afd75dde-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:d0587a46-336f-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "16349fb96456e1c167f2f7378a4709568ba414ef176290dd51d7ccd2def75695363d66f092425f1f399b8c9b1f77a620870ceddc26eb21c9b5f13a592a210972"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "10"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-4/func/sub-0026017_ses-4_task-rest_run-10_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:d058733e-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:d290c14c-336f-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "22119f574b692b6511fd8d50de3adae32f9838259b679a3e15df904fb4962cada4eac9b485d4dc74bc04158378094c2a264c9f400b8b665f0ef1e58784c248b2"^^xsd:string ;
+    dicom:AcquisitionMatrix "256x256"^^xsd:string ;
+    dicom:EchoTime "0.00291"^^xsd:string ;
+    dicom:FlipAngle "9"^^xsd:string ;
+    dicom:InversionTime "0.9"^^xsd:string ;
+    dicom:MagneticFieldStrength "3T"^^xsd:string ;
+    dicom:PixelBandwidth 2.4e+02 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2.3e+00 ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:T1Weighted ;
+    nidm:hadImageUsageType nidm:Anatomical ;
+    nfo:filename "/sub-0026017/ses-5/anat/sub-0026017_ses-5_run-1_T1w.nii.gz"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:d290b9ae-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:d2b7582a-336f-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "e3e02fcfd7bd864d6e052a780b08eeeb49c276f7ce0ccdcbaa03bdb5acb31a8acfac690f6744e6778cd5cf2a6e64d4307bc535dd9f93a5324ba83b948c148240"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "1"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-5/func/sub-0026017_ses-5_task-rest_run-1_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:d2b75168-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:d39f15b6-3370-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "fb14eaa8bf833d79c56d313c73d7c76a801ac0ae7c5db216aaa07cd6d0b05439a4edb92408bd6e0245fb31549368cf4bb5cb7066323db581365118f1335288ca"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "10"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-8/func/sub-0026017_ses-8_task-rest_run-10_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:b39f0f26-3370-11ea-8dec-003ee1ce9545 .
+
+niiri:d4c8a452-336f-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "32e03bdff9f2966cb80dcbfa62f8ab12ddd157a65e2eabaa51f2fc04262bff1ea25ee79910b5a943475127bb0fc61d7f75f47da271a96e71fbadab209074c0c6"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "2"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-5/func/sub-0026017_ses-5_task-rest_run-2_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:d4c89c96-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:d6d386fe-336f-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "b4eb9b2799a5b2534d86a61fd3313d215f6de68e3c4580ae360cdfdbac35eec474292093262dc4632ff3d0334eaf5df4b822120fea53f91d7d42397a7c884d5d"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "3"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-5/func/sub-0026017_ses-5_task-rest_run-3_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:d6d380e6-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:d86ee52a-3370-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "b2d95058b134f939d3cac8c657a7473c267d8003bf90837f52fdaf5a8d128604f34478236b2b5769d6140195baa3c6c9a80660f6c749b9b6841c72633f4fcd49"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "10"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-9/func/sub-0026017_ses-9_task-rest_run-10_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:d86edbde-3370-11ea-8dec-003ee1ce9545 .
+
+niiri:d8a71786-3370-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "da27fd6f81f7de6fc21254b519e48cbfe2a50b62d5ad1b380e6d1e189155e0373a0746d66b2d829b433fc13ce47fd4f02e8cb484a70900dd87151122abf7877a"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "7"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-7/func/sub-0026017_ses-7_task-rest_run-7_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:b8a70f02-3370-11ea-8dec-003ee1ce9545 .
+
+niiri:d8d6281c-336f-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "900925457d1da7c889f22d9ba68cd3e9534fea85299a27e071cddd93542326ff512539634447131c021afe6622de860f1d826fed083675ba2742eccd8881595f"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "4"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-5/func/sub-0026017_ses-5_task-rest_run-4_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:d8d62196-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:dae283bc-336f-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "c6b4290fbeb357e04e70c7d18dcdf301faf334a0234f4f59b0e59c6f9ef427e8b9c3486334b560fabacd82f562c60b9c26ae0c95f9f917d79fb960812d7b78c0"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "5"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-5/func/sub-0026017_ses-5_task-rest_run-5_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:dae27cdc-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:db266814-3370-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "329147236f10e8e9a26e6fa4b1fe7a586f29f3f53dfa570d97ac1480b4f3b5b5729b1018064a48c66a231b3ac55352baafb6b270485e3013e4915ac583e6784c"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "9"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-10/func/sub-0026017_ses-10_task-rest_run-9_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:db266198-3370-11ea-8dec-003ee1ce9545 .
+
+niiri:db79d272-3370-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "4d266fef423b445e3ee2d2747a3fd020cb7024f3451cb557f5282b806e53d25dde36bcfaa8f2461ee3c5d6cf07a957553db9b6b309dacd3cb9808bf6ea98357c"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "6"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-8/func/sub-0026017_ses-8_task-rest_run-6_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:fb79cbf6-3370-11ea-8dec-003ee1ce9545 .
+
+niiri:dc240b2e-3370-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "6fa6525b67eea0f82de95964cf2aa7afc3208ca968bf736056f7f188f6b59ba557dcea1861ade2cc45336627196360eeb022134a7547506ec1af4920062047ee"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "4"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-9/func/sub-0026017_ses-9_task-rest_run-4_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:ec24049e-3370-11ea-8dec-003ee1ce9545 .
+
+niiri:dcbaf9f0-3370-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "12e2342e2c6b8ed8211cc70f1274c004d6b56a90aaf336ff5bae6c10f164df89b49c8ec3dd6f793eccb9e169597c86c9b087708f252de102128953e6fd0dbbdb"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "9"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-7/func/sub-0026017_ses-7_task-rest_run-9_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:ecbaf360-3370-11ea-8dec-003ee1ce9545 .
+
+niiri:dceccfa0-336f-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "40142593eb813c160f9e99f2ed62b153042e059862adbdb9e00c8c5289e66cba8f171a2b13df12725ad41c5f369f6572bccdfb701709c278c300dd2f933c6b7f"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "6"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-5/func/sub-0026017_ses-5_task-rest_run-6_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:dcecc7ee-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:dd7e4a44-3370-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "8d469ea6381e7215598b7d28a98d930387b8d6576fbf1b988f2fba657c4f1d17263e03978c016acd1571662360d6e69a2fb1e26e56b50ba021796ae05bf5bd21"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "7"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-8/func/sub-0026017_ses-8_task-rest_run-7_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:fd7e43c8-3370-11ea-8dec-003ee1ce9545 .
+
+niiri:dec18fe8-3370-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "c5c0aecd4471c34140e1eb614e18de4c089e1528bd937a2aad9435eda53aff55c23bb0c96cf63d68eef9955d34454ec54ae22a312dd877e9980421dbcc5bd6d2"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "10"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-7/func/sub-0026017_ses-7_task-rest_run-10_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:aec18872-3370-11ea-8dec-003ee1ce9545 .
+
+niiri:def1c314-336f-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "6f940f50aedc4a38968663aefbb5ebda34061294817bcc054fff9f080aad15adb44301db4b4162ddee0b1b85ea2c960cb423919499133f22e0975f272224c3f4"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "7"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-5/func/sub-0026017_ses-5_task-rest_run-7_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:def1bd06-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:df3790b8-3370-11ea-8dec-003ee1ce9545 a nidm:Session,
+        prov:Activity ;
+    dct:isPartOf niiri:ccf0933a-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:e0fb64e4-336f-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "dfa0b70fd483701906cbbe62f43afcf300a3eccf6434976a8f2d64f0c492bd2f1b1da603398056e44f9635070e65e3af268d1d5f13a75448eece8d7ca9f93056"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "8"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-5/func/sub-0026017_ses-5_task-rest_run-8_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:e0fb5ea4-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:e193c820-3370-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "a1f6ca08ffb1cddaa3e51402cfae267a3ba214debfc0045b83a70651701336fadcf1d85094e8dfbf1aa16910d4543942be36f033e785493ad07be4f84a6f0317"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "9"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-8/func/sub-0026017_ses-8_task-rest_run-9_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:b193c096-3370-11ea-8dec-003ee1ce9545 .
+
+niiri:e24b80b8-3370-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "e26eb4024bfd80580ba8be5677708ad51e602dabba6829d9ed67a89b1efec0fcab8246230f5179e15cf4b7e012aae5459ac665036fbc6d6bf3307c46d8f3a7d1"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "7"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-9/func/sub-0026017_ses-9_task-rest_run-7_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:a24b7a32-3370-11ea-8dec-003ee1ce9545 .
+
+niiri:e304a1d8-336f-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "4e708c092980ac7299151531d0aa30ffa51a4d025f912271aafb4390414e57be662d5b8ee7ec6480f722030e93530aea5b93b24fcf358c7acab8c362f44b86dd"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "9"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-5/func/sub-0026017_ses-5_task-rest_run-9_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:e30499ae-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:e52196c4-336f-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "0459c4720449b3f3621af40e04a45d527fcfc426a6bda1b1d2e4ad3dea602612620f7c32f578ce78e1f4bce65911210ed85d40ed36135bb46df52a41d42c830c"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "10"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-5/func/sub-0026017_ses-5_task-rest_run-10_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:e5218ed6-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:e77a89ee-336f-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "8998df44c615b3395955054af10a2c2f9d7237f9acff75f42e330cd844869f39983d191fabc1835ac335b3645dc9441891d2d2325c322b18aef33f8e2fbb9151"^^xsd:string ;
+    dicom:AcquisitionMatrix "256x256"^^xsd:string ;
+    dicom:EchoTime "0.00291"^^xsd:string ;
+    dicom:FlipAngle "9"^^xsd:string ;
+    dicom:InversionTime "0.9"^^xsd:string ;
+    dicom:MagneticFieldStrength "3T"^^xsd:string ;
+    dicom:PixelBandwidth 2.4e+02 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2.3e+00 ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:T1Weighted ;
+    nidm:hadImageUsageType nidm:Anatomical ;
+    nfo:filename "/sub-0026017/ses-6/anat/sub-0026017_ses-6_run-1_T1w.nii.gz"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:e77a8142-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:e7a261bc-336f-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "9049157cf10a0683ebeaf74cfc7f75c0655ff3a5772d4395a38331a9c725a1db8d4591633e85bd7cd0ed18e25be6f66db36905fd58b8fa370bb23cee6c56ca6a"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "1"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-6/func/sub-0026017_ses-6_task-rest_run-1_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:e7a25a64-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:e8661b34-336f-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "56ed469648e7b73f0fdee3112dda433d2ccc4f63701dd5e9a11415f9bb3eaf5a1481cc80d3ef58e8d79061192851527d17ca2f95a917b429e318098caabc0bd3"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "3"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-2/func/sub-0026017_ses-2_task-rest_run-3_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:d86614ae-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:e917293c-3370-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "cf6ab52f55a6eada5035f4c1f09425adfa28ff4b3037c3624d13f5a274e13ffbd53d56930644d63c043c91fd73fc088a82a41c7fd54332737254c0dd55a8885c"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "8"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-10/func/sub-0026017_ses-10_task-rest_run-8_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:a91722ac-3370-11ea-8dec-003ee1ce9545 .
+
+niiri:e9af4f88-336f-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "ba3874fa41db50c11490154b310063150640f18949af271a0a075ca278f35cab165ab50f0cd87fc9382000b34461b30d112cf68e71f75920fbb54b3fa3155440"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "2"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-6/func/sub-0026017_ses-6_task-rest_run-2_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:e9af48e4-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:ea199ff6-3370-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "d2b34238a92fbaaa690bdf8173eb8796c05be5a7aef9c873a5901e2ce3afd32cd468af1a86c585fa27ae4c719e8eaceaee3861d8b7de426a9b93ded1b54d1cc3"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "3"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-9/func/sub-0026017_ses-9_task-rest_run-3_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:da19979a-3370-11ea-8dec-003ee1ce9545 .
+
+niiri:eab69e0c-3370-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "abf911ad2ecf5f2c25c98c6a88a8d4d2ca0e6410bcb6bf5982e4414045ce3bf382feabf11096ae7d4ef43a1a0dca166beb45f29430257649e0ab309e4bd3b79f"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "8"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-7/func/sub-0026017_ses-7_task-rest_run-8_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:aab69740-3370-11ea-8dec-003ee1ce9545 .
+
+niiri:ebbdb5e0-336f-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "71d572392010bbbdb1432d31521bbf04f5bd38c7a719539bf61474faa4415c38fe94820b4cbc8bab7090cc917e8bb6a5520f117a81ec5151b84ee83aff995ec5"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "7"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-1/func/sub-0026017_ses-1_task-rest_run-7_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:cbbdb02c-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:ebbf544e-336f-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "1bc2fd3bbeac884da1ef90328de3b0d6e15af3ad8f8735f9e00fe77197d8011c5714ab7a887be62e083c01236427742f83ddb5c188a9c346d15968a2c8c03875"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "3"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-6/func/sub-0026017_ses-6_task-rest_run-3_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:ebbf4e36-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:edcf3d12-336f-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "3b9e593e36664bca3ffe66c5d0882c7269d65871e8e89d5db6e2d5d0ad38d447314222a409830f7a78fb49b25696ae5a73670764901601519b5477f8216211c6"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "4"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-6/func/sub-0026017_ses-6_task-rest_run-4_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:edcf357e-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:ef27b646-336f-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "15ede7fb10a06eab9a8029d7614066de9d85a9ba9d811c3adf13e277765fa5c963dcc5b99266fdcff39d6a81f9fdcc888bb23a84066325dd7dbcc6b778c890bd"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "1"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-1/func/sub-0026017_ses-1_task-rest_run-1_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:ff27aff2-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:efdb11d0-336f-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "414b131e06620b98e3ede9f89f3eac82545033f8796445c88d933c0a40cc3992c72440e6a1d3e8ec0abba15674ec47cdf7a17bf5c8f8464467eb9acb6626a861"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "5"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-6/func/sub-0026017_ses-6_task-rest_run-5_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:efdb0bc2-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:f1030d36-3370-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "7e56267bc7ed6eb6543e21e12b3f5f315a348f8ee44f467bc9096e48a790101a8226308cf4905c898a9adc66c06d0dc10659705604bc9dac97e65eb212e85ad4"^^xsd:string ;
+    dicom:AcquisitionMatrix "256x256"^^xsd:string ;
+    dicom:EchoTime "0.00291"^^xsd:string ;
+    dicom:FlipAngle "9"^^xsd:string ;
+    dicom:InversionTime "0.9"^^xsd:string ;
+    dicom:MagneticFieldStrength "3T"^^xsd:string ;
+    dicom:PixelBandwidth 2.4e+02 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2.3e+00 ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:T1Weighted ;
+    nidm:hadImageUsageType nidm:Anatomical ;
+    nfo:filename "/sub-0026017/ses-8/anat/sub-0026017_ses-8_run-1_T1w.nii.gz"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:b10303ae-3370-11ea-8dec-003ee1ce9545 .
+
+niiri:f1dba170-336f-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "b4d879bc43397fe028cba5a0f7a3adf201bfe90152ba674495193042578974606a13a23b40c85efb935784413f570fccefc1aa7fb00e61dd978c2c2643003da1"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "6"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-6/func/sub-0026017_ses-6_task-rest_run-6_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:f1db9b62-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:f3e5f826-336f-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "7ab7d12d05fc2e4da2e75ef2eb3043d4fc1189082dcfc61d4d6c77bccb50bba060675d6b78fa4f17e99a331d21a58ba5e6437dd0d8f9a77161795cae5e8cb4a2"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "7"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-6/func/sub-0026017_ses-6_task-rest_run-7_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:f3e5efd4-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:f452894c-3370-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "fe20ebf14b96dc14c3792b160a1c54f75ae8b81605ae3957b683c9277e5eb3c4d0497011034dad39c40ad794979bdaf22acad5432299a27f0688d7f73e3bc254"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "8"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-9/func/sub-0026017_ses-9_task-rest_run-8_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:d452806e-3370-11ea-8dec-003ee1ce9545 .
+
+niiri:f507a89e-3370-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "54d630006a87d7205dd40bb7a1990c294fbc9441d9d7ad4c11c6ec8a81aa82b85b9d256c50aaa5fdb03472a9bf050c556505ea837277caa5573180ba9455d3c6"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "6"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-10/func/sub-0026017_ses-10_task-rest_run-6_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:f507a13c-3370-11ea-8dec-003ee1ce9545 .
+
+niiri:f5e2d98e-3370-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "a835152da61c66df76dcd55635ee621a1ec3414b5c4c9a0561188f59e37423b187551d76afc856d161d19e434c9a6be69870e2d5250a781ef17a87a0ca837c94"^^xsd:string ;
+    dicom:AcquisitionMatrix "256x256"^^xsd:string ;
+    dicom:EchoTime "0.00291"^^xsd:string ;
+    dicom:FlipAngle "9"^^xsd:string ;
+    dicom:InversionTime "0.9"^^xsd:string ;
+    dicom:MagneticFieldStrength "3T"^^xsd:string ;
+    dicom:PixelBandwidth 2.4e+02 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2.3e+00 ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:T1Weighted ;
+    nidm:hadImageUsageType nidm:Anatomical ;
+    nfo:filename "/sub-0026017/ses-9/anat/sub-0026017_ses-9_run-1_T1w.nii.gz"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:e5e2cffc-3370-11ea-8dec-003ee1ce9545 .
+
+niiri:f5e92b16-336f-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "e80a7276e87d997f5dd599646f1ddaa5254ee0bb7c1fc7885c0bd6324d8e1fb3c4587c7f7bf6c5b13a52dca827a88e4f26efa9ac2f99cdc68acc4294ef1af4e5"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "8"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-6/func/sub-0026017_ses-6_task-rest_run-8_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:f5e924cc-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:f7f232e0-336f-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "c8e6d9a81b84edd460e8ac1ce533f52d2da6aa346cf6e2f82783b189d887d9f95def3f6f1c6e41eb445ac6aeb8f146cf979ca316618a133e7160343ceccb610f"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "9"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-6/func/sub-0026017_ses-6_task-rest_run-9_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:f7f22c6e-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:fa011d9e-336f-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "dee0445e28b121030e970e807e99b4073ac73edfb8637d7b77cc3072fd4afb3167b67c78329b35792f4cf1e20e2e52e832e303d40249f2ce5952b6d3afbe23ec"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "10"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-6/func/sub-0026017_ses-6_task-rest_run-10_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:fa011786-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:fc3aa0f8-336f-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "c60ceb652d2e0583dc541204035ef17b1cd80faad3a1865c6997c09837aaae4a26bcc7fbb787ed6fa1b6e7215c90f95b9544cad4791efceff1d5ea0a28f2a2f2"^^xsd:string ;
+    dicom:AcquisitionMatrix "256x256"^^xsd:string ;
+    dicom:EchoTime "0.00291"^^xsd:string ;
+    dicom:FlipAngle "9"^^xsd:string ;
+    dicom:InversionTime "0.9"^^xsd:string ;
+    dicom:MagneticFieldStrength "3T"^^xsd:string ;
+    dicom:PixelBandwidth 2.4e+02 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2.3e+00 ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:T1Weighted ;
+    nidm:hadImageUsageType nidm:Anatomical ;
+    nfo:filename "/sub-0026017/ses-7/anat/sub-0026017_ses-7_run-1_T1w.nii.gz"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:fc3a9946-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:fc61a1ee-336f-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "6bdc5dc28b9d09cc234a58541ae9216aabe279f2ef7a16964fd6c8a1270a42478f86d7bd14cc9e1f1f9a06e8f96f627021b917b9b592fb14d5da4cb2efd2273c"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "1"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-7/func/sub-0026017_ses-7_task-rest_run-1_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:fc619ad2-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:fc7d5aac-336f-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "976e79266176adb654caa40b5f8ff115d7f67d2a6077ffab8fbca5cef8a6f4c23433ff39b7d6533d9e0dab47cf7c407120c107e3087e27c187d6bdee4951a72e"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "5"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-2/func/sub-0026017_ses-2_task-rest_run-5_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:dc7d5430-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:fe6f5e72-336f-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "decf226574cebe766ec6294eb1f3ab489564bd2be0a8221794edb1cc8c7c50653a27fe50188386f3a9ac6481a63553a569e18be5d946e4a150da7e38c415f8df"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "2"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-7/func/sub-0026017_ses-7_task-rest_run-2_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:fe6f5788-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:fe80bf88-336f-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "0781c693d604f39f53b241f46f29137e2fbdcc50e1662229e995250f0571924449115b4f601690c86056ee07f4b96354190aae881a3a6caaf533e72f2ac0c0c0"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "6"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-2/func/sub-0026017_ses-2_task-rest_run-6_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:be80b7d6-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:ff8564f8-3370-11ea-8dec-003ee1ce9545 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "f2110c76fad10d30ddcc08bd4d3c49d14719047bb1689cb82dbd79db4a4d0fbe6c34480178b613d88ecf87ddef0c62c3ca6692e48e8eb93858d32b8f6425d758"^^xsd:string ;
+    dicom:AcquisitionMatrix "64x64"^^xsd:string ;
+    dicom:EchoTime 2.8e-02 ;
+    dicom:FlipAngle "90"^^xsd:int ;
+    dicom:PixelBandwidth 2.894e+03 ;
+    dicom:ReceiveCoilName "12 Chan"^^xsd:string ;
+    dicom:RepetitionTime 2e+00 ;
+    dicom:ScanOptions "FS"^^xsd:string ;
+    nidm:AcquisitionObject "8"^^xsd:int ;
+    nidm:PhaseEncodingDirection "j-"^^xsd:string ;
+    nidm:SliceTiming "1000.0,0.0,1050.0,50.0,1100.0,100.0,1150.0,150.0,1200.0,200.0,1250.0,250.0,1300.0,300.0,1350.0,350.0,1400.0,400.0,1450.0,450.0,1500.0,500.0,1550.0,550.0,1600.0,600.0,1650.0,650.0,1700.0,700.0,1750.0,750.0,1800.0,800.0,1850.0,850.0,1900.0,900.0,1950.0,950.0"^^xsd:string ;
+    nidm:Task "rest"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-0026017/ses-8/func/sub-0026017_ses-8_task-rest_run-8_bold.nii"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string ;
+    prov:wasGeneratedBy niiri:af855d32-3370-11ea-8dec-003ee1ce9545 .
+
+age_at_scan_1:ab9ac4ea8cb933e546399fbe92c580fb a nidm:DataElement ;
+    rdfs:label "ncidb:Age" ;
+    nidm:isAbout ncicb:Age ;
+    nidm:source_variable "age_at_scan_1" ;
+    rdfs:comment "Age at scan 1 in years" .
+
+retest_design:ba2f12d33c5c463add1af70d71cf4f59 a nidm:DataElement ;
+    rdfs:label "retest_design" ;
+    nidm:isAbout <https://github.com/dbkeator/nidm-local-terms/issues/80> ;
+    nidm:levels "{'1': 'within session', '2': 'between session', '3': 'within + Between'}" ;
+    nidm:source_variable "retest_design" ;
+    rdfs:comment "Design of experiment repetition" .
+
+preceding_condition:f7f041ed4dba48e17d7487c00c549614 a nidm:DataElement ;
+    rdfs:label "preceding_condition" ;
+    nidm:isAbout <https://github.com/dbkeator/nidm-local-terms/issues/81> ;
+    nidm:levels "{'0': 'no active task', '1': 'active task', '2': 'music listening', '3': 'video watching', '4': 'unknown'}" ;
+    nidm:source_variable "preceding_condition" ;
+    rdfs:comment "Condition before current one" .
+
+niiri:a08cd122-336f-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:e3f02bc6-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:a12aaba2-3370-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:d0cd8864-3370-11ea-8dec-003ee1ce9545 .
+
+niiri:a1634204-336f-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:dec3f89a-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:a24b7a32-3370-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:e5ad4274-3370-11ea-8dec-003ee1ce9545 .
+
+niiri:a294bd36-336f-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:e3f02bc6-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:a2f62f58-3370-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:ca73fa9a-3370-11ea-8dec-003ee1ce9545 .
+
+niiri:a4994a20-336f-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:e3f02bc6-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:a6a2370a-336f-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:e3f02bc6-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:a8dfbd9e-336f-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:a8aa7e04-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:a906db40-336f-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:a8aa7e04-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:a91722ac-3370-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:ca73fa9a-3370-11ea-8dec-003ee1ce9545 .
+
+niiri:aab69740-3370-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:fc04451c-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:aad085bc-3370-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:ca73fa9a-3370-11ea-8dec-003ee1ce9545 .
+
+niiri:ab0e7cc2-336f-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:a8aa7e04-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:ac817f80-336f-11ea-8dec-003ee1ce9545 a onli:instrument-based-assessment,
+        nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:bc817ad0-336f-11ea-8dec-003ee1ce9545 ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:cc81884a-336f-11ea-8dec-003ee1ce9545 ;
+            prov:hadRole sio:Subject ] ;
+    prov:wasAssociatedWith niiri:cc81884a-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:ad1cffac-336f-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:a8aa7e04-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:aec18872-3370-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:fc04451c-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:af21b22a-336f-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:a8aa7e04-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:af855d32-3370-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:d0cd8864-3370-11ea-8dec-003ee1ce9545 .
+
+niiri:afd75dde-336f-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:dec3f89a-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:b07e2a0e-3370-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:fc04451c-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:b0e9aa00-3370-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:ca73fa9a-3370-11ea-8dec-003ee1ce9545 .
+
+niiri:b10303ae-3370-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:d0cd8864-3370-11ea-8dec-003ee1ce9545 .
+
+niiri:b1365c1e-336f-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:a8aa7e04-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:b193c096-3370-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:d0cd8864-3370-11ea-8dec-003ee1ce9545 .
+
+niiri:b345c86e-336f-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:a8aa7e04-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:b39f0f26-3370-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:d0cd8864-3370-11ea-8dec-003ee1ce9545 .
+
+niiri:b4944524-3370-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:fc04451c-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:b5639bee-336f-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:a8aa7e04-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:b70d68fe-3370-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:ca73fa9a-3370-11ea-8dec-003ee1ce9545 .
+
+niiri:b77124ec-336f-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:a8aa7e04-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:b8a70f02-3370-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:fc04451c-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:b97adfc6-336f-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:a8aa7e04-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:bb7f16fc-336f-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:a8aa7e04-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:bc817ad0-336f-11ea-8dec-003ee1ce9545 a nidm:Session,
+        prov:Activity ;
+    dct:isPartOf niiri:ccf0933a-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:bdc5af20-336f-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:bd90dcd2-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:bdece2d4-336f-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:bd90dcd2-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:be314abc-3370-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:e5ad4274-3370-11ea-8dec-003ee1ce9545 .
+
+niiri:be80b7d6-336f-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:e3f02bc6-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:bee68a66-3370-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:ca73fa9a-3370-11ea-8dec-003ee1ce9545 .
+
+niiri:befe55f8-336f-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:dec3f89a-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:bfff184e-336f-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:bd90dcd2-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:c03fe8ea-3370-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:e5ad4274-3370-11ea-8dec-003ee1ce9545 .
+
+niiri:c1e06562-336f-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:dec3f89a-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:c20702aa-336f-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:bd90dcd2-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:c2808798-3370-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:fc04451c-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:c34a2444-3370-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:d0cd8864-3370-11ea-8dec-003ee1ce9545 .
+
+niiri:c37c894c-336f-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:dec3f89a-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:c41a9534-336f-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:bd90dcd2-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:c61e5528-336f-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:bd90dcd2-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:c65f2150-336f-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:e3f02bc6-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:c76a1110-3370-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:d0cd8864-3370-11ea-8dec-003ee1ce9545 .
+
+niiri:c82b6928-336f-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:bd90dcd2-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:ca3ad56e-336f-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:bd90dcd2-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:cbbdb02c-336f-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:dec3f89a-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:cc3f0754-336f-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:bd90dcd2-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:ce4bfc00-336f-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:bd90dcd2-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:d058733e-336f-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:bd90dcd2-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:d290b9ae-336f-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:d25b389c-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:d2b75168-336f-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:d25b389c-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:d44be588-336f-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:e3f02bc6-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:d452806e-3370-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:e5ad4274-3370-11ea-8dec-003ee1ce9545 .
+
+niiri:d4c89c96-336f-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:d25b389c-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:d5969506-336f-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:dec3f89a-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:d6d380e6-336f-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:d25b389c-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:d86614ae-336f-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:e3f02bc6-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:d86edbde-3370-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:e5ad4274-3370-11ea-8dec-003ee1ce9545 .
+
+niiri:d8d62196-336f-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:d25b389c-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:da19979a-3370-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:e5ad4274-3370-11ea-8dec-003ee1ce9545 .
+
+niiri:dae27cdc-336f-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:d25b389c-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:db266198-3370-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:ca73fa9a-3370-11ea-8dec-003ee1ce9545 .
+
+niiri:dc7d5430-336f-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:e3f02bc6-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:dcecc7ee-336f-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:d25b389c-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:dd2c3724-3370-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:ca73fa9a-3370-11ea-8dec-003ee1ce9545 .
+
+niiri:ddcad214-336f-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:dec3f89a-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:def1bd06-336f-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:d25b389c-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:e0fb5ea4-336f-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:d25b389c-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:e30499ae-336f-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:d25b389c-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:e4253eb0-336f-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:e3f02bc6-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:e5218ed6-336f-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:d25b389c-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:e55f11fe-3370-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:d0cd8864-3370-11ea-8dec-003ee1ce9545 .
+
+niiri:e5e2cffc-3370-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:e5ad4274-3370-11ea-8dec-003ee1ce9545 .
+
+niiri:e697fe24-3370-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:fc04451c-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:e77a8142-336f-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:e743821e-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:e79ca1ce-336f-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:dec3f89a-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:e7a25a64-336f-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:e743821e-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:e96ed4c8-3370-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:d0cd8864-3370-11ea-8dec-003ee1ce9545 .
+
+niiri:e9af48e4-336f-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:e743821e-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:ea728fac-336f-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:e3f02bc6-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:eaa96310-3370-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:ca73fa9a-3370-11ea-8dec-003ee1ce9545 .
+
+niiri:ebbf4e36-336f-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:e743821e-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:ec24049e-3370-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:e5ad4274-3370-11ea-8dec-003ee1ce9545 .
+
+niiri:ecbaf360-3370-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:fc04451c-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:edcf357e-336f-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:e743821e-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:efdb0bc2-336f-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:e743821e-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:f1db9b62-336f-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:e743821e-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:f3e5efd4-336f-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:e743821e-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:f507a13c-3370-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:ca73fa9a-3370-11ea-8dec-003ee1ce9545 .
+
+niiri:f5e924cc-336f-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:e743821e-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:f609e524-3370-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:e5ad4274-3370-11ea-8dec-003ee1ce9545 .
+
+niiri:f6631ada-3370-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:e5ad4274-3370-11ea-8dec-003ee1ce9545 .
+
+niiri:f7f22c6e-336f-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:e743821e-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:f8108030-3370-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:e5ad4274-3370-11ea-8dec-003ee1ce9545 .
+
+niiri:f9b0b7ac-336f-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:dec3f89a-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:fa011786-336f-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:e743821e-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:fb79cbf6-3370-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:d0cd8864-3370-11ea-8dec-003ee1ce9545 .
+
+niiri:fc3a9946-336f-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:fc04451c-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:fc619ad2-336f-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:fc04451c-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:fcdbbcd2-3370-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:ca73fa9a-3370-11ea-8dec-003ee1ce9545 .
+
+niiri:fd7e43c8-3370-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:d0cd8864-3370-11ea-8dec-003ee1ce9545 .
+
+niiri:fe6f5788-336f-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:fc04451c-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:ff27aff2-336f-11ea-8dec-003ee1ce9545 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:dec3f89a-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:cc81884a-336f-11ea-8dec-003ee1ce9545 a prov:Agent,
+        prov:Person ;
+    ndar:src_subject_id "0026017"^^xsd:string .
+
+niiri:a8aa7e04-336f-11ea-8dec-003ee1ce9545 a nidm:Session,
+        prov:Activity ;
+    bids:session_number "3"^^xsd:string ;
+    dct:isPartOf niiri:ccf0933a-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:bd90dcd2-336f-11ea-8dec-003ee1ce9545 a nidm:Session,
+        prov:Activity ;
+    bids:session_number "4"^^xsd:string ;
+    dct:isPartOf niiri:ccf0933a-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:ca73fa9a-3370-11ea-8dec-003ee1ce9545 a nidm:Session,
+        prov:Activity ;
+    bids:session_number "10"^^xsd:string ;
+    dct:isPartOf niiri:ccf0933a-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:d0cd8864-3370-11ea-8dec-003ee1ce9545 a nidm:Session,
+        prov:Activity ;
+    bids:session_number "8"^^xsd:string ;
+    dct:isPartOf niiri:ccf0933a-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:d25b389c-336f-11ea-8dec-003ee1ce9545 a nidm:Session,
+        prov:Activity ;
+    bids:session_number "5"^^xsd:string ;
+    dct:isPartOf niiri:ccf0933a-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:dec3f89a-336f-11ea-8dec-003ee1ce9545 a nidm:Session,
+        prov:Activity ;
+    bids:session_number "1"^^xsd:string ;
+    dct:isPartOf niiri:ccf0933a-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:e3f02bc6-336f-11ea-8dec-003ee1ce9545 a nidm:Session,
+        prov:Activity ;
+    bids:session_number "2"^^xsd:string ;
+    dct:isPartOf niiri:ccf0933a-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:e5ad4274-3370-11ea-8dec-003ee1ce9545 a nidm:Session,
+        prov:Activity ;
+    bids:session_number "9"^^xsd:string ;
+    dct:isPartOf niiri:ccf0933a-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:e743821e-336f-11ea-8dec-003ee1ce9545 a nidm:Session,
+        prov:Activity ;
+    bids:session_number "6"^^xsd:string ;
+    dct:isPartOf niiri:ccf0933a-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:fc04451c-336f-11ea-8dec-003ee1ce9545 a nidm:Session,
+        prov:Activity ;
+    bids:session_number "7"^^xsd:string ;
+    dct:isPartOf niiri:ccf0933a-336f-11ea-8dec-003ee1ce9545 .
+
+niiri:ccf0933a-336f-11ea-8dec-003ee1ce9545 a nidm:Project,
+        prov:Activity ;
+    dctypes:title "Consortium for Reliability and Reproducibility (CoRR) Utah_2 Site"^^xsd:string ;
+    sio:Identifier "1.0.1"^^xsd:string ;
+    prov:Location "/datasets.datalad.org/corr/RawDataBIDS/Utah_2"^^xsd:string .
+
