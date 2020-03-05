@@ -1,0 +1,4006 @@
+{
+    "@context": {
+        "@version": 1.1,
+        "records": {
+            "@container": "@type",
+            "@id": "@graph"
+        },
+        "nidm": "http://purl.org/nidash/nidm#",
+        "niiri": "http://iri.nidash.org/",
+        "afni": "http://purl.org/nidash/afni#",
+        "spm": "http://purl.org/nidash/spm#",
+        "fsl": "http://purl.org/nidash/fsl#",
+        "freesurfer": "https://surfer.nmr.mgh.harvard.edu/",
+        "ants": "http://stnava.github.io/ANTs/",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "crypto": "http://id.loc.gov/vocabulary/preservation/cryptographicHashFunctions#",
+        "dct": "http://purl.org/dc/terms/",
+        "obo": "http://purl.obolibrary.org/obo/",
+        "nfo": "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#",
+        "dc": "http://purl.org/dc/elements/1.1/",
+        "nlx": "http://uri.neuinfo.org/nif/nifstd/",
+        "scr": "http://scicrunch.org/resolver/",
+        "foaf": "http://xmlns.com/foaf/0.1/",
+        "vc": "http://www.w3.org/2006/vcard/ns#",
+        "dicom": "http://neurolex.org/wiki/Category:DICOM_term/",
+        "dctypes": "http://purl.org/dc/dcmitype/",
+        "ncit": "http://ncitt.ncit.nih.gov/",
+        "dcat": "http://www.w3.org/ns/dcat#",
+        "birnlex": "http://bioontology.org/projects/ontologies/birnlex/",
+        "ndar": "https://ndar.nih.gov/api/datadictionary/v2/dataelement/",
+        "ncicb": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#",
+        "sio": "http://semanticscience.org/ontology/sio.owl#",
+        "bids": "http://bids.neuroimaging.io/",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "onli": "http://neurolog.unice.fr/ontoneurolog/v3.0/instrument.owl#",
+        "pato": "http://purl.obolibrary.org/obo/pato#",
+        "datalad": "http://datasets.datalad.org/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "prov": "http://www.w3.org/ns/prov#",
+        "agent": {
+            "@type": "@id",
+            "@id": "prov:agent"
+        },
+        "entity": {
+            "@type": "@id",
+            "@id": "prov:entity"
+        },
+        "activity": {
+            "@type": "@id",
+            "@id": "prov:activity"
+        },
+        "hadPlan": {
+            "@type": "@id",
+            "@id": "prov:hadPlan"
+        },
+        "hadRole": {
+            "@type": "@id",
+            "@id": "prov:hadRole"
+        },
+        "wasAttributedTo": {
+            "@type": "@id",
+            "@id": "prov:wasAttributedTo"
+        },
+        "association": {
+            "@type": "@id",
+            "@id": "prov:qualifiedAssociation"
+        },
+        "usage": {
+            "@type": "@id",
+            "@id": "prov:qualifiedUsage"
+        },
+        "generation": {
+            "@type": "@id",
+            "@id": "prov:qualifiedGeneration"
+        },
+        "startedAtTime": {
+            "@type": "xsd:dateTime",
+            "@id": "prov:startedAtTime"
+        },
+        "endedAtTime": {
+            "@type": "xsd:dateTime",
+            "@id": "prov:endedAtTime"
+        },
+        "Project": "http://purl.org/nidash/nidm#Project",
+        "Identifier": "http://semanticscience.org/ontology/sio.owl#Identifier",
+        "title": "http://purl.org/dc/dcmitype/title",
+        "description": "http://purl.org/dc/terms/description",
+        "license": "http://purl.org/dc/terms/license",
+        "URL": "http://semanticscience.org/ontology/sio.owl#URL",
+        "creator": "http://www.w3.org/ns/dcat#creator",
+        "author": "http://www.w3.org/ns/dcat#author",
+        "Session": "http://purl.org/nidash/nidm#Session",
+        "Acquisition": "http://purl.org/nidash/nidm#Acquisition",
+        "hadAcquisitionModality": "http://purl.org/nidash/nidm#hadAcquisitionModality",
+        "instrument-based-assessment": "http://neurolog.unice.fr/ontoneurolog/v3.0/instrument.owl#instrument-based-assessment",
+        "AcquisitionObject": "http://purl.org/nidash/nidm#AcquisitionObject",
+        "DemographicsInstrument": "http://purl.org/nidash/nidm#DemographicsInstrument",
+        "assessment-instrument": "http://neurolog.unice.fr/ontoneurolog/v3.0/instrument.owl#assessment-instrument",
+        "filename": "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#filename",
+        "file": "http://semanticscience.org/ontology/sio.owl#file",
+        "birnlex_2152": "http://bioontology.org/projects/ontologies/birnlex/birnlex_2152",
+        "birnlex_2199": "http://bioontology.org/projects/ontologies/birnlex/birnlex_2199",
+        "Subject": "http://semanticscience.org/ontology/sio.owl#Subject",
+        "Age": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Age",
+        "gender": "https://ndar.nih.gov/api/datadictionary/v2/dataelement/gender",
+        "PhenotypicSex": "http://purl.obolibrary.org/obo/pato#PhenotypicSex",
+        "handedness": "http://purl.obolibrary.org/obo/handedness",
+        "race": "http://semanticscience.org/ontology/sio.owl#race",
+        "ethnicity": "http://semanticscience.org/ontology/sio.owl#ethnicity",
+        "Diagnosis": "http://ncitt.ncit.nih.gov/Diagnosis",
+        "familyName": "http://xmlns.com/foaf/0.1/familyName",
+        "givenName": "http://xmlns.com/foaf/0.1/givenName",
+        "src_subject_id": "https://ndar.nih.gov/api/datadictionary/v2/dataelement/src_subject_id",
+        "hadImageContrastType": "http://purl.org/nidash/nidm#hadImageContrastType",
+        "hadImageUsageType": "http://purl.org/nidash/nidm#hadImageUsageType",
+        "MagneticResonanceImaging": "http://purl.org/nidash/nidm#MagneticResonanceImaging",
+        "Anatomical": "http://purl.org/nidash/nidm#Anatomical",
+        "Structural": "http://purl.org/nidash/nidm#Structural",
+        "Functional": "http://purl.org/nidash/nidm#Functional",
+        "DiffusionWeighted": "http://purl.org/nidash/nidm#DiffusionWeighted",
+        "b-value": "http://purl.org/nidash/nidm#b-value",
+        "b-vector": "http://purl.org/nidash/nidm#b-vector",
+        "Task": "http://purl.org/nidash/nidm#Task",
+        "T1Weighted": "http://purl.org/nidash/nidm#T1Weighted",
+        "T2Weighted": "http://purl.org/nidash/nidm#T2Weighted",
+        "T2StarWeighted": "http://purl.org/nidash/nidm#T2StarWeighted",
+        "DiffusionTensor": "http://purl.org/nidash/nidm#DiffusionTensor",
+        "FlowWeighted": "http://purl.org/nidash/nidm#FlowWeighted",
+        "StimulusResponseFile": "http://purl.org/nidash/nidm#StimulusResponseFile",
+        "xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "xml": "http://www.w3.org/XML/1998/namespace",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    },
+    "@graph": [
+        {
+            "@id": "niiri:d03b2c98-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Session"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:c8e9ea10-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d5c4bf08-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "Acquisition",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:d5b2bcea-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:ce079eac-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Acquisition",
+                "instrument-based-assessment"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:ce079ba0-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:ce081a3a-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "instrument-based-assessment",
+                "Acquisition"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:ce08162a-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d441a9f2-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "Acquisition",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:d406c576-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d2fdacda-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "Acquisition",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:d2c34fcc-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d15a875e-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "Acquisition",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:d1226b6c-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d3b67a6c-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "Acquisition",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:d39b327a-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:ce089212-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "instrument-based-assessment",
+                "Acquisition",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:ce088e3e-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d27635c0-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "AcquisitionObject",
+                "prov:Entity"
+            ],
+            "crypto:sha512": "21435dec20cfe3b39cbe9cdb458ee10e2a868be2fa20601f67af8f01cd966d2981b8f6fa11b97d549fb7eac5b0ce3742a182b7f8fde40e7512772a93d3cfa697",
+            "dicom:AcquisitionMatrix": "64x64",
+            "dicom:EchoTime": 0.03,
+            "dicom:FlipAngle": {
+                "@type": "xsd:int",
+                "@value": "90"
+            },
+            "dicom:PixelBandwidth": 250.0,
+            "dicom:ReceiveCoilName": "8 Chan",
+            "dicom:RepetitionTime": 2.0,
+            "dicom:ScanOptions": "FS",
+            "AcquisitionObject": {
+                "@type": "xsd:int",
+                "@value": "1"
+            },
+            "nidm:PhaseEncodingDirection": "j-",
+            "nidm:SliceTiming": "0.0,1027.03,54.05,1081.08,108.11,1135.14,162.16,1189.19,216.22,1243.24,270.27,1297.3,324.32,1351.35,378.38,1405.41,432.43,1459.46,486.49,1513.51,540.54,1567.57,594.59,1621.62,648.65,1675.68,702.7,1729.73,756.76,1783.78,810.81,1837.84,864.86,1891.89,918.92,1945.95,972.97",
+            "Task": "rest",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:FlowWeighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Functional"
+            },
+            "filename": "/sub-0026200/ses-1/func/sub-0026200_ses-1_task-rest_run-1_bold.nii.gz",
+            "prov:Location": "/datasets.datalad.org/corr/RawDataBIDS/IPCAS_4",
+            "prov:wasGeneratedBy": {
+                "@id": "niiri:d2762d28-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:cfb73096-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "Acquisition",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:cf7f0310-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d2b030d6-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Session"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:c8e9ea10-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:cf90539a-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Acquisition"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:cf7f0310-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:ce08f310-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "instrument-based-assessment",
+                "prov:Activity",
+                "Acquisition"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:ce08eece-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d39b327a-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Session"
+            ],
+            "bids:session_number": "1",
+            "dct:isPartOf": {
+                "@id": "niiri:c8e9ea10-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d2d534bc-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "Acquisition",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:d2c34fcc-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d2052eca-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Acquisition"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:d1f3fbd2-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:ce54620a-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Entity",
+                "AcquisitionObject"
+            ],
+            "crypto:sha512": "b379fc458fc5cac21021b45150e512778506c25670e3fa6cecea3b2c6d02fe6c7859d720ac8bcca54a7a2be404e8f485a37eabe26176c24a7b0c69e086404214",
+            "dicom:AcquisitionMatrix": "64x64",
+            "dicom:EchoTime": 0.03,
+            "dicom:FlipAngle": {
+                "@type": "xsd:int",
+                "@value": "90"
+            },
+            "dicom:PixelBandwidth": 250.0,
+            "dicom:ReceiveCoilName": "8 Chan",
+            "dicom:RepetitionTime": 2.0,
+            "dicom:ScanOptions": "FS",
+            "AcquisitionObject": {
+                "@type": "xsd:int",
+                "@value": "1"
+            },
+            "nidm:PhaseEncodingDirection": "j-",
+            "nidm:SliceTiming": "0.0,1027.03,54.05,1081.08,108.11,1135.14,162.16,1189.19,216.22,1243.24,270.27,1297.3,324.32,1351.35,378.38,1405.41,432.43,1459.46,486.49,1513.51,540.54,1567.57,594.59,1621.62,648.65,1675.68,702.7,1729.73,756.76,1783.78,810.81,1837.84,864.86,1891.89,918.92,1945.95,972.97",
+            "Task": "rest",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:FlowWeighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Functional"
+            },
+            "filename": "/sub-0026190/ses-1/func/sub-0026190_ses-1_task-rest_run-1_bold.nii.gz",
+            "prov:Location": "/datasets.datalad.org/corr/RawDataBIDS/IPCAS_4",
+            "prov:wasGeneratedBy": {
+                "@id": "niiri:ce545b0c-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d2d53d9a-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Entity",
+                "AcquisitionObject"
+            ],
+            "crypto:sha512": "ae0541d579e3aa40640aba79d5dc354e8f6fd017da0e29148d3a123f8ecb6bde1a2af4943e09c0714237353762619100bb0c4b6584182557ac5e9e5662984276",
+            "dicom:AcquisitionMatrix": "250x250",
+            "dicom:EchoTime": "0.003136",
+            "dicom:FlipAngle": "8",
+            "dicom:InversionTime": "0.45",
+            "dicom:MagneticFieldStrength": "3T",
+            "dicom:PixelBandwidth": 31.25,
+            "dicom:ReceiveCoilName": "8 Chan",
+            "dicom:RepetitionTime": 8.068,
+            "nidm:PhaseEncodingDirection": "j-",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:T1Weighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Anatomical"
+            },
+            "filename": "/sub-0026201/ses-1/anat/sub-0026201_ses-1_run-1_T1w.nii.gz",
+            "prov:Location": "/datasets.datalad.org/corr/RawDataBIDS/IPCAS_4",
+            "prov:wasGeneratedBy": {
+                "@id": "niiri:d2d534bc-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d36a0c9a-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "AcquisitionObject",
+                "prov:Entity"
+            ],
+            "crypto:sha512": "2ea126d7614adfaf8d8b2b3d6ae360c0522941e9364a8802c0f252d3cbfbd715be3a1936e8d9e870df8059843beb27ca4680e712fc2c82a077d5d14ff2479fed",
+            "dicom:AcquisitionMatrix": "64x64",
+            "dicom:EchoTime": 0.03,
+            "dicom:FlipAngle": {
+                "@type": "xsd:int",
+                "@value": "90"
+            },
+            "dicom:PixelBandwidth": 250.0,
+            "dicom:ReceiveCoilName": "8 Chan",
+            "dicom:RepetitionTime": 2.0,
+            "dicom:ScanOptions": "FS",
+            "AcquisitionObject": {
+                "@type": "xsd:int",
+                "@value": "2"
+            },
+            "nidm:PhaseEncodingDirection": "j-",
+            "nidm:SliceTiming": "0.0,1027.03,54.05,1081.08,108.11,1135.14,162.16,1189.19,216.22,1243.24,270.27,1297.3,324.32,1351.35,378.38,1405.41,432.43,1459.46,486.49,1513.51,540.54,1567.57,594.59,1621.62,648.65,1675.68,702.7,1729.73,756.76,1783.78,810.81,1837.84,864.86,1891.89,918.92,1945.95,972.97",
+            "Task": "rest",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:FlowWeighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Functional"
+            },
+            "filename": "/sub-0026202/ses-1/func/sub-0026202_ses-1_task-rest_run-2_bold.nii.gz",
+            "prov:Location": "/datasets.datalad.org/corr/RawDataBIDS/IPCAS_4",
+            "prov:wasGeneratedBy": {
+                "@id": "niiri:d36a0678-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d5ced97a-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Acquisition"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:d5b2bcea-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:ce070fb4-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "AcquisitionObject",
+                "assessment-instrument",
+                "prov:Entity"
+            ],
+            "bids:handedness": "#",
+            "prov:wasGeneratedBy": {
+                "@id": "niiri:ce070c80-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d10eb78e-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Session"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:c8e9ea10-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:ce091296-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "Acquisition",
+                "prov:Activity",
+                "instrument-based-assessment"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:ce090e4a-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:ce084fb4-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "Session",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:c8e9ea10-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:ce0837cc-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Acquisition",
+                "instrument-based-assessment"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:ce08345c-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:ce079ba0-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Session"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:c8e9ea10-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d1c3ffc2-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "Acquisition",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:d18c1170-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d4187ac8-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "AcquisitionObject",
+                "prov:Entity"
+            ],
+            "crypto:sha512": "1fc3248ede3273cdb5a3a129f2f95899eb97163351f013bae97edb822b178d491d172a415d2be16f142d36dc40de3f81b311d3202560e74cd67e169f9b8606e0",
+            "dicom:AcquisitionMatrix": "250x250",
+            "dicom:EchoTime": "0.003136",
+            "dicom:FlipAngle": "8",
+            "dicom:InversionTime": "0.45",
+            "dicom:MagneticFieldStrength": "3T",
+            "dicom:PixelBandwidth": 31.25,
+            "dicom:ReceiveCoilName": "8 Chan",
+            "dicom:RepetitionTime": 8.068,
+            "nidm:PhaseEncodingDirection": "j-",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:T1Weighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Anatomical"
+            },
+            "filename": "/sub-0026204/ses-1/anat/sub-0026204_ses-1_run-1_T1w.nii.gz",
+            "prov:Location": "/datasets.datalad.org/corr/RawDataBIDS/IPCAS_4",
+            "prov:wasGeneratedBy": {
+                "@id": "niiri:d4187276-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:ce39eb78-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Session"
+            ],
+            "bids:session_number": "1",
+            "dct:isPartOf": {
+                "@id": "niiri:c8e9ea10-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d15a8e2a-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Entity",
+                "AcquisitionObject"
+            ],
+            "crypto:sha512": "aa59332a7cd5a9eaf614541bcb5117ac45c815f4d40fce66e4e7d111b4c19c6cfda489256a721efc24b54827868ad14067246a416d233c835a7bb3f791a9f7d7",
+            "dicom:AcquisitionMatrix": "64x64",
+            "dicom:EchoTime": 0.03,
+            "dicom:FlipAngle": {
+                "@type": "xsd:int",
+                "@value": "90"
+            },
+            "dicom:PixelBandwidth": 250.0,
+            "dicom:ReceiveCoilName": "8 Chan",
+            "dicom:RepetitionTime": 2.0,
+            "dicom:ScanOptions": "FS",
+            "AcquisitionObject": {
+                "@type": "xsd:int",
+                "@value": "2"
+            },
+            "nidm:PhaseEncodingDirection": "j-",
+            "nidm:SliceTiming": "0.0,1027.03,54.05,1081.08,108.11,1135.14,162.16,1189.19,216.22,1243.24,270.27,1297.3,324.32,1351.35,378.38,1405.41,432.43,1459.46,486.49,1513.51,540.54,1567.57,594.59,1621.62,648.65,1675.68,702.7,1729.73,756.76,1783.78,810.81,1837.84,864.86,1891.89,918.92,1945.95,972.97",
+            "Task": "rest",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:FlowWeighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Functional"
+            },
+            "filename": "/sub-0026197/ses-1/func/sub-0026197_ses-1_task-rest_run-2_bold.nii.gz",
+            "prov:Location": "/datasets.datalad.org/corr/RawDataBIDS/IPCAS_4",
+            "prov:wasGeneratedBy": {
+                "@id": "niiri:d15a875e-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:ce08345c-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Session"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:c8e9ea10-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:ce732d20-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Entity",
+                "AcquisitionObject"
+            ],
+            "crypto:sha512": "f7e4e4b60666ea2466832faa9daa24cf0aece7a227a2e90405c9173139a64c745eed825901d281dba52f62f67a453be6d1641d9165b75cd19976508d7337c6c6",
+            "dicom:AcquisitionMatrix": "64x64",
+            "dicom:EchoTime": 0.03,
+            "dicom:FlipAngle": {
+                "@type": "xsd:int",
+                "@value": "90"
+            },
+            "dicom:PixelBandwidth": 250.0,
+            "dicom:ReceiveCoilName": "8 Chan",
+            "dicom:RepetitionTime": 2.0,
+            "dicom:ScanOptions": "FS",
+            "AcquisitionObject": {
+                "@type": "xsd:int",
+                "@value": "2"
+            },
+            "nidm:PhaseEncodingDirection": "j-",
+            "nidm:SliceTiming": "0.0,1027.03,54.05,1081.08,108.11,1135.14,162.16,1189.19,216.22,1243.24,270.27,1297.3,324.32,1351.35,378.38,1405.41,432.43,1459.46,486.49,1513.51,540.54,1567.57,594.59,1621.62,648.65,1675.68,702.7,1729.73,756.76,1783.78,810.81,1837.84,864.86,1891.89,918.92,1945.95,972.97",
+            "Task": "rest",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:FlowWeighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Functional"
+            },
+            "filename": "/sub-0026190/ses-1/func/sub-0026190_ses-1_task-rest_run-2_bold.nii.gz",
+            "prov:Location": "/datasets.datalad.org/corr/RawDataBIDS/IPCAS_4",
+            "prov:wasGeneratedBy": {
+                "@id": "niiri:ce7326e0-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d18c1170-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "Session",
+                "prov:Activity"
+            ],
+            "bids:session_number": "1",
+            "dct:isPartOf": {
+                "@id": "niiri:c8e9ea10-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:ce088e3e-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "Session",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:c8e9ea10-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d34b9e9a-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Entity",
+                "AcquisitionObject"
+            ],
+            "crypto:sha512": "46007ec34e58d99fdfd0842b5761c80bd0c6c34f6ccd8236303a383637ddb7e288c6eff3a047279583e26568ae6644311676aa5a20c4cc83ff8c157623c3d106",
+            "dicom:AcquisitionMatrix": "64x64",
+            "dicom:EchoTime": 0.03,
+            "dicom:FlipAngle": {
+                "@type": "xsd:int",
+                "@value": "90"
+            },
+            "dicom:PixelBandwidth": 250.0,
+            "dicom:ReceiveCoilName": "8 Chan",
+            "dicom:RepetitionTime": 2.0,
+            "dicom:ScanOptions": "FS",
+            "AcquisitionObject": {
+                "@type": "xsd:int",
+                "@value": "1"
+            },
+            "nidm:PhaseEncodingDirection": "j-",
+            "nidm:SliceTiming": "0.0,1027.03,54.05,1081.08,108.11,1135.14,162.16,1189.19,216.22,1243.24,270.27,1297.3,324.32,1351.35,378.38,1405.41,432.43,1459.46,486.49,1513.51,540.54,1567.57,594.59,1621.62,648.65,1675.68,702.7,1729.73,756.76,1783.78,810.81,1837.84,864.86,1891.89,918.92,1945.95,972.97",
+            "Task": "rest",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:FlowWeighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Functional"
+            },
+            "filename": "/sub-0026202/ses-1/func/sub-0026202_ses-1_task-rest_run-1_bold.nii.gz",
+            "prov:Location": "/datasets.datalad.org/corr/RawDataBIDS/IPCAS_4",
+            "prov:wasGeneratedBy": {
+                "@id": "niiri:d34b9850-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:ce087836-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Entity",
+                "assessment-instrument",
+                "AcquisitionObject"
+            ],
+            "bids:handedness": "#",
+            "prov:wasGeneratedBy": {
+                "@id": "niiri:ce087494-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d557e068-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "AcquisitionObject",
+                "prov:Entity"
+            ],
+            "crypto:sha512": "c754032ea4add759db8b990d88fa513471b47274cd95ae416335511e7f7df2eb1a394239482b57c5c6fe3d899b7655ebe9a58a342df4c6d6ecea467e68d0c301",
+            "dicom:AcquisitionMatrix": "250x250",
+            "dicom:EchoTime": "0.003136",
+            "dicom:FlipAngle": "8",
+            "dicom:InversionTime": "0.45",
+            "dicom:MagneticFieldStrength": "3T",
+            "dicom:PixelBandwidth": 31.25,
+            "dicom:ReceiveCoilName": "8 Chan",
+            "dicom:RepetitionTime": 8.068,
+            "nidm:PhaseEncodingDirection": "j-",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:T1Weighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Anatomical"
+            },
+            "filename": "/sub-0026207/ses-1/anat/sub-0026207_ses-1_run-1_T1w.nii.gz",
+            "prov:Location": "/datasets.datalad.org/corr/RawDataBIDS/IPCAS_4",
+            "prov:wasGeneratedBy": {
+                "@id": "niiri:d557d898-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d04e4850-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "Session",
+                "prov:Activity"
+            ],
+            "bids:session_number": "1",
+            "dct:isPartOf": {
+                "@id": "niiri:c8e9ea10-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:cebedd4c-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "Acquisition",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:cea61c3a-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d2937e00-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "AcquisitionObject",
+                "prov:Entity"
+            ],
+            "crypto:sha512": "144e5399933dc7b56f42d234a80603288077cf30abf0ce0fb015c1a621954a44f7803cbeab623942ae67ac41d119d1bddc3d0923ab1aa364915435af2ef2ea52",
+            "dicom:AcquisitionMatrix": "64x64",
+            "dicom:EchoTime": 0.03,
+            "dicom:FlipAngle": {
+                "@type": "xsd:int",
+                "@value": "90"
+            },
+            "dicom:PixelBandwidth": 250.0,
+            "dicom:ReceiveCoilName": "8 Chan",
+            "dicom:RepetitionTime": 2.0,
+            "dicom:ScanOptions": "FS",
+            "AcquisitionObject": {
+                "@type": "xsd:int",
+                "@value": "2"
+            },
+            "nidm:PhaseEncodingDirection": "j-",
+            "nidm:SliceTiming": "0.0,1027.03,54.05,1081.08,108.11,1135.14,162.16,1189.19,216.22,1243.24,270.27,1297.3,324.32,1351.35,378.38,1405.41,432.43,1459.46,486.49,1513.51,540.54,1567.57,594.59,1621.62,648.65,1675.68,702.7,1729.73,756.76,1783.78,810.81,1837.84,864.86,1891.89,918.92,1945.95,972.97",
+            "Task": "rest",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:FlowWeighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Functional"
+            },
+            "filename": "/sub-0026200/ses-1/func/sub-0026200_ses-1_task-rest_run-2_bold.nii.gz",
+            "prov:Location": "/datasets.datalad.org/corr/RawDataBIDS/IPCAS_4",
+            "prov:wasGeneratedBy": {
+                "@id": "niiri:d29377e8-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:ce08b08a-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "Acquisition",
+                "instrument-based-assessment",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:ce08ace8-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:ce075fc8-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "Session",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:c8e9ea10-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:cf4db9d6-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "AcquisitionObject",
+                "prov:Entity"
+            ],
+            "crypto:sha512": "423b51c0d6a813dfaee6b5e13c83165721a43cdd842f8489d529be969329495af1f6ccc7d790dbdf0a056c0135b35de6fc040677c0c7e91ba13249f7ffb6ba03",
+            "dicom:AcquisitionMatrix": "64x64",
+            "dicom:EchoTime": 0.03,
+            "dicom:FlipAngle": {
+                "@type": "xsd:int",
+                "@value": "90"
+            },
+            "dicom:PixelBandwidth": 250.0,
+            "dicom:ReceiveCoilName": "8 Chan",
+            "dicom:RepetitionTime": 2.0,
+            "dicom:ScanOptions": "FS",
+            "AcquisitionObject": {
+                "@type": "xsd:int",
+                "@value": "2"
+            },
+            "nidm:PhaseEncodingDirection": "j-",
+            "nidm:SliceTiming": "0.0,1027.03,54.05,1081.08,108.11,1135.14,162.16,1189.19,216.22,1243.24,270.27,1297.3,324.32,1351.35,378.38,1405.41,432.43,1459.46,486.49,1513.51,540.54,1567.57,594.59,1621.62,648.65,1675.68,702.7,1729.73,756.76,1783.78,810.81,1837.84,864.86,1891.89,918.92,1945.95,972.97",
+            "Task": "rest",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:FlowWeighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Functional"
+            },
+            "filename": "/sub-0026192/ses-1/func/sub-0026192_ses-1_task-rest_run-2_bold.nii.gz",
+            "prov:Location": "/datasets.datalad.org/corr/RawDataBIDS/IPCAS_4",
+            "prov:wasGeneratedBy": {
+                "@id": "niiri:cf4db468-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d1a6e5fe-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Acquisition"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:d18c1170-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d48fd442-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Acquisition"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:d474537a-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d20ed600-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Entity",
+                "AcquisitionObject"
+            ],
+            "crypto:sha512": "6491f5a882ada09540fdd6722b88a54fb85712b1d3403a734d9c9ee6fd3d6bb1248efedc97f479a053b1c0170bb2ee3e233fef33a72aecc2eb09e721d81f0cfb",
+            "dicom:AcquisitionMatrix": "64x64",
+            "dicom:EchoTime": 0.03,
+            "dicom:FlipAngle": {
+                "@type": "xsd:int",
+                "@value": "90"
+            },
+            "dicom:PixelBandwidth": 250.0,
+            "dicom:ReceiveCoilName": "8 Chan",
+            "dicom:RepetitionTime": 2.0,
+            "dicom:ScanOptions": "FS",
+            "AcquisitionObject": {
+                "@type": "xsd:int",
+                "@value": "1"
+            },
+            "nidm:PhaseEncodingDirection": "j-",
+            "nidm:SliceTiming": "0.0,1027.03,54.05,1081.08,108.11,1135.14,162.16,1189.19,216.22,1243.24,270.27,1297.3,324.32,1351.35,378.38,1405.41,432.43,1459.46,486.49,1513.51,540.54,1567.57,594.59,1621.62,648.65,1675.68,702.7,1729.73,756.76,1783.78,810.81,1837.84,864.86,1891.89,918.92,1945.95,972.97",
+            "Task": "rest",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:FlowWeighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Functional"
+            },
+            "filename": "/sub-0026199/ses-1/func/sub-0026199_ses-1_task-rest_run-1_bold.nii.gz",
+            "prov:Location": "/datasets.datalad.org/corr/RawDataBIDS/IPCAS_4",
+            "prov:wasGeneratedBy": {
+                "@id": "niiri:d20ece76-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d4ace384-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Entity",
+                "AcquisitionObject"
+            ],
+            "crypto:sha512": "c9cb131335eae693acbe1a72c6430c02e3bfac399d1e0ae7c4d95fb9a363aeca0b6b5bf101411461687ead977f0eff0e0e6e776ec9f9e9f81ae6bb8feedb9a30",
+            "dicom:AcquisitionMatrix": "64x64",
+            "dicom:EchoTime": 0.03,
+            "dicom:FlipAngle": {
+                "@type": "xsd:int",
+                "@value": "90"
+            },
+            "dicom:PixelBandwidth": 250.0,
+            "dicom:ReceiveCoilName": "8 Chan",
+            "dicom:RepetitionTime": 2.0,
+            "dicom:ScanOptions": "FS",
+            "AcquisitionObject": {
+                "@type": "xsd:int",
+                "@value": "2"
+            },
+            "nidm:PhaseEncodingDirection": "j-",
+            "nidm:SliceTiming": "0.0,1027.03,54.05,1081.08,108.11,1135.14,162.16,1189.19,216.22,1243.24,270.27,1297.3,324.32,1351.35,378.38,1405.41,432.43,1459.46,486.49,1513.51,540.54,1567.57,594.59,1621.62,648.65,1675.68,702.7,1729.73,756.76,1783.78,810.81,1837.84,864.86,1891.89,918.92,1945.95,972.97",
+            "Task": "rest",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:FlowWeighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Functional"
+            },
+            "filename": "/sub-0026205/ses-1/func/sub-0026205_ses-1_task-rest_run-2_bold.nii.gz",
+            "prov:Location": "/datasets.datalad.org/corr/RawDataBIDS/IPCAS_4",
+            "prov:wasGeneratedBy": {
+                "@id": "niiri:d4acdd58-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d08658f8-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Acquisition"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:d04e4850-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d557d898-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Acquisition"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:d5464fa6-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d441b064-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "AcquisitionObject",
+                "prov:Entity"
+            ],
+            "crypto:sha512": "04916e942626e0b7f24f010ab3c5b6ed8683d88e903c7eca5dec3c332515fadcc7b7aa29e17fc42b3a90689e3793f058e7abf7c34ebc5b4248f92f6287c388bb",
+            "dicom:AcquisitionMatrix": "64x64",
+            "dicom:EchoTime": 0.03,
+            "dicom:FlipAngle": {
+                "@type": "xsd:int",
+                "@value": "90"
+            },
+            "dicom:PixelBandwidth": 250.0,
+            "dicom:ReceiveCoilName": "8 Chan",
+            "dicom:RepetitionTime": 2.0,
+            "dicom:ScanOptions": "FS",
+            "AcquisitionObject": {
+                "@type": "xsd:int",
+                "@value": "2"
+            },
+            "nidm:PhaseEncodingDirection": "j-",
+            "nidm:SliceTiming": "0.0,1027.03,54.05,1081.08,108.11,1135.14,162.16,1189.19,216.22,1243.24,270.27,1297.3,324.32,1351.35,378.38,1405.41,432.43,1459.46,486.49,1513.51,540.54,1567.57,594.59,1621.62,648.65,1675.68,702.7,1729.73,756.76,1783.78,810.81,1837.84,864.86,1891.89,918.92,1945.95,972.97",
+            "Task": "rest",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:FlowWeighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Functional"
+            },
+            "filename": "/sub-0026204/ses-1/func/sub-0026204_ses-1_task-rest_run-2_bold.nii.gz",
+            "prov:Location": "/datasets.datalad.org/corr/RawDataBIDS/IPCAS_4",
+            "prov:wasGeneratedBy": {
+                "@id": "niiri:d441a9f2-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d4c9f488-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "Session",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:c8e9ea10-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:ce07f802-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Session"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:c8e9ea10-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:ce06cf68-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "AcquisitionObject",
+                "assessment-instrument",
+                "prov:Entity"
+            ],
+            "bids:handedness": "#",
+            "prov:wasGeneratedBy": {
+                "@id": "niiri:ce06cb3a-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:cf905b74-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Entity",
+                "AcquisitionObject"
+            ],
+            "crypto:sha512": "3a19cd5927e9e3ea506f023029f36b846c788143fea4de48815099d12da0f9a972419ed61ab47d965738c55ca95adb7855d2bbaf804bc76e6d9ddb2e399b8462",
+            "dicom:AcquisitionMatrix": "250x250",
+            "dicom:EchoTime": "0.003136",
+            "dicom:FlipAngle": "8",
+            "dicom:InversionTime": "0.45",
+            "dicom:MagneticFieldStrength": "3T",
+            "dicom:PixelBandwidth": 31.25,
+            "dicom:ReceiveCoilName": "8 Chan",
+            "dicom:RepetitionTime": 8.068,
+            "nidm:PhaseEncodingDirection": "j-",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:T1Weighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Anatomical"
+            },
+            "filename": "/sub-0026193/ses-1/anat/sub-0026193_ses-1_run-1_T1w.nii.gz",
+            "prov:Location": "/datasets.datalad.org/corr/RawDataBIDS/IPCAS_4",
+            "prov:wasGeneratedBy": {
+                "@id": "niiri:cf90539a-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:cfd46486-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Session"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:c8e9ea10-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d13d4860-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "AcquisitionObject",
+                "prov:Entity"
+            ],
+            "crypto:sha512": "7da1cd99d540ad06d1a932273aa7c653c9b924a0fd4d4d655e9176539bbb619b403607672059f00910e857834265d3ea58663b9bffc6c5616bb5f719adba85c3",
+            "dicom:AcquisitionMatrix": "64x64",
+            "dicom:EchoTime": 0.03,
+            "dicom:FlipAngle": {
+                "@type": "xsd:int",
+                "@value": "90"
+            },
+            "dicom:PixelBandwidth": 250.0,
+            "dicom:ReceiveCoilName": "8 Chan",
+            "dicom:RepetitionTime": 2.0,
+            "dicom:ScanOptions": "FS",
+            "AcquisitionObject": {
+                "@type": "xsd:int",
+                "@value": "1"
+            },
+            "nidm:PhaseEncodingDirection": "j-",
+            "nidm:SliceTiming": "0.0,1027.03,54.05,1081.08,108.11,1135.14,162.16,1189.19,216.22,1243.24,270.27,1297.3,324.32,1351.35,378.38,1405.41,432.43,1459.46,486.49,1513.51,540.54,1567.57,594.59,1621.62,648.65,1675.68,702.7,1729.73,756.76,1783.78,810.81,1837.84,864.86,1891.89,918.92,1945.95,972.97",
+            "Task": "rest",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:FlowWeighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Functional"
+            },
+            "filename": "/sub-0026197/ses-1/func/sub-0026197_ses-1_task-rest_run-1_bold.nii.gz",
+            "prov:Location": "/datasets.datalad.org/corr/RawDataBIDS/IPCAS_4",
+            "prov:wasGeneratedBy": {
+                "@id": "niiri:d13d409a-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:cfb73cf8-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "AcquisitionObject",
+                "prov:Entity"
+            ],
+            "crypto:sha512": "6d32b6af8124bc0954a71f707e980c7b432fa6724b987cba258be2130c116a594c253b11877a40dc6870a1cbd1455f6813356ff56618105cd7db6accc804b247",
+            "dicom:AcquisitionMatrix": "64x64",
+            "dicom:EchoTime": 0.03,
+            "dicom:FlipAngle": {
+                "@type": "xsd:int",
+                "@value": "90"
+            },
+            "dicom:PixelBandwidth": 250.0,
+            "dicom:ReceiveCoilName": "8 Chan",
+            "dicom:RepetitionTime": 2.0,
+            "dicom:ScanOptions": "FS",
+            "AcquisitionObject": {
+                "@type": "xsd:int",
+                "@value": "2"
+            },
+            "nidm:PhaseEncodingDirection": "j-",
+            "nidm:SliceTiming": "0.0,1027.03,54.05,1081.08,108.11,1135.14,162.16,1189.19,216.22,1243.24,270.27,1297.3,324.32,1351.35,378.38,1405.41,432.43,1459.46,486.49,1513.51,540.54,1567.57,594.59,1621.62,648.65,1675.68,702.7,1729.73,756.76,1783.78,810.81,1837.84,864.86,1891.89,918.92,1945.95,972.97",
+            "Task": "rest",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:FlowWeighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Functional"
+            },
+            "filename": "/sub-0026193/ses-1/func/sub-0026193_ses-1_task-rest_run-2_bold.nii.gz",
+            "prov:Location": "/datasets.datalad.org/corr/RawDataBIDS/IPCAS_4",
+            "prov:wasGeneratedBy": {
+                "@id": "niiri:cfb73096-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:ce074768-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "instrument-based-assessment",
+                "Acquisition"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:ce0743f8-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d341a700-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "Acquisition",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:d3301698-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d3ac89d0-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "Acquisition",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:d39b327a-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d1a6ede2-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Entity",
+                "AcquisitionObject"
+            ],
+            "crypto:sha512": "d5849ac06eedd1f9381688cd407c442e5e6ce78db18dac7a6edcdfebff03fdfefcbf5a965d55f7b203d633bd5033ca31482876070c4a88ff84cd3c1b92fd1b03",
+            "dicom:AcquisitionMatrix": "64x64",
+            "dicom:EchoTime": 0.03,
+            "dicom:FlipAngle": {
+                "@type": "xsd:int",
+                "@value": "90"
+            },
+            "dicom:PixelBandwidth": 250.0,
+            "dicom:ReceiveCoilName": "8 Chan",
+            "dicom:RepetitionTime": 2.0,
+            "dicom:ScanOptions": "FS",
+            "AcquisitionObject": {
+                "@type": "xsd:int",
+                "@value": "1"
+            },
+            "nidm:PhaseEncodingDirection": "j-",
+            "nidm:SliceTiming": "0.0,1027.03,54.05,1081.08,108.11,1135.14,162.16,1189.19,216.22,1243.24,270.27,1297.3,324.32,1351.35,378.38,1405.41,432.43,1459.46,486.49,1513.51,540.54,1567.57,594.59,1621.62,648.65,1675.68,702.7,1729.73,756.76,1783.78,810.81,1837.84,864.86,1891.89,918.92,1945.95,972.97",
+            "Task": "rest",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:FlowWeighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Functional"
+            },
+            "filename": "/sub-0026198/ses-1/func/sub-0026198_ses-1_task-rest_run-1_bold.nii.gz",
+            "prov:Location": "/datasets.datalad.org/corr/RawDataBIDS/IPCAS_4",
+            "prov:wasGeneratedBy": {
+                "@id": "niiri:d1a6e5fe-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:ce07fbb8-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "instrument-based-assessment",
+                "prov:Activity",
+                "Acquisition"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:ce07f802-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:ce0870d4-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Session"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:c8e9ea10-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:ce072954-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "Session",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:c8e9ea10-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:ce08b5d0-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Entity",
+                "AcquisitionObject",
+                "assessment-instrument"
+            ],
+            "bids:handedness": "#",
+            "prov:wasGeneratedBy": {
+                "@id": "niiri:ce08b08a-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:ce07668a-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "assessment-instrument",
+                "AcquisitionObject",
+                "prov:Entity"
+            ],
+            "bids:handedness": "#",
+            "prov:wasGeneratedBy": {
+                "@id": "niiri:ce0762ca-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:cf301e1c-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Acquisition"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:cf159ea2-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:ce08ace8-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Session"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:c8e9ea10-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:ce070c80-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "Acquisition",
+                "instrument-based-assessment",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:ce070906-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:ce4b1f74-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Entity",
+                "AcquisitionObject"
+            ],
+            "crypto:sha512": "0fdcff82cdb2ffb8a99539951061abb1b4c0572b02a1f43132fe6aa75787aaf8bb7221facaf282bb2965bd8d2008f52a283af23d68496938fcd94667b373e9f0",
+            "dicom:AcquisitionMatrix": "250x250",
+            "dicom:EchoTime": "0.003136",
+            "dicom:FlipAngle": "8",
+            "dicom:InversionTime": "0.45",
+            "dicom:MagneticFieldStrength": "3T",
+            "dicom:PixelBandwidth": 31.25,
+            "dicom:ReceiveCoilName": "8 Chan",
+            "dicom:RepetitionTime": 8.068,
+            "nidm:PhaseEncodingDirection": "j-",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:T1Weighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Anatomical"
+            },
+            "filename": "/sub-0026190/ses-1/anat/sub-0026190_ses-1_run-1_T1w.nii.gz",
+            "prov:Location": "/datasets.datalad.org/corr/RawDataBIDS/IPCAS_4",
+            "prov:wasGeneratedBy": {
+                "@id": "niiri:ce4b177c-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d1f3fbd2-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Session"
+            ],
+            "bids:session_number": "1",
+            "dct:isPartOf": {
+                "@id": "niiri:c8e9ea10-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d3b6819c-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Entity",
+                "AcquisitionObject"
+            ],
+            "crypto:sha512": "97cdd27688cf677223a3bca2a205e4947633e4ea73972a10694a3247bc01dc82dd114230a9fb4ea2d94185f0c8b51dfa3b518a7ea2f8162468943df3916a9003",
+            "dicom:AcquisitionMatrix": "64x64",
+            "dicom:EchoTime": 0.03,
+            "dicom:FlipAngle": {
+                "@type": "xsd:int",
+                "@value": "90"
+            },
+            "dicom:PixelBandwidth": 250.0,
+            "dicom:ReceiveCoilName": "8 Chan",
+            "dicom:RepetitionTime": 2.0,
+            "dicom:ScanOptions": "FS",
+            "AcquisitionObject": {
+                "@type": "xsd:int",
+                "@value": "1"
+            },
+            "nidm:PhaseEncodingDirection": "j-",
+            "nidm:SliceTiming": "0.0,1027.03,54.05,1081.08,108.11,1135.14,162.16,1189.19,216.22,1243.24,270.27,1297.3,324.32,1351.35,378.38,1405.41,432.43,1459.46,486.49,1513.51,540.54,1567.57,594.59,1621.62,648.65,1675.68,702.7,1729.73,756.76,1783.78,810.81,1837.84,864.86,1891.89,918.92,1945.95,972.97",
+            "Task": "rest",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:FlowWeighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Functional"
+            },
+            "filename": "/sub-0026203/ses-1/func/sub-0026203_ses-1_task-rest_run-1_bold.nii.gz",
+            "prov:Location": "/datasets.datalad.org/corr/RawDataBIDS/IPCAS_4",
+            "prov:wasGeneratedBy": {
+                "@id": "niiri:d3b67a6c-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d3301698-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "Session",
+                "prov:Activity"
+            ],
+            "bids:session_number": "1",
+            "dct:isPartOf": {
+                "@id": "niiri:c8e9ea10-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d387eada-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "Session",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:c8e9ea10-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d06041f4-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Entity",
+                "AcquisitionObject"
+            ],
+            "crypto:sha512": "b0f2e7868a462e9879450bad40a945317311e8d89360e33aed0c728597d113ad3a923eafef8f36cbfecfd6408c79221d548d9ef690557d426c3b75b173141998",
+            "dicom:AcquisitionMatrix": "250x250",
+            "dicom:EchoTime": "0.003136",
+            "dicom:FlipAngle": "8",
+            "dicom:InversionTime": "0.45",
+            "dicom:MagneticFieldStrength": "3T",
+            "dicom:PixelBandwidth": 31.25,
+            "dicom:ReceiveCoilName": "8 Chan",
+            "dicom:RepetitionTime": 8.068,
+            "nidm:PhaseEncodingDirection": "j-",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:T1Weighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Anatomical"
+            },
+            "filename": "/sub-0026195/ses-1/anat/sub-0026195_ses-1_run-1_T1w.nii.gz",
+            "prov:Location": "/datasets.datalad.org/corr/RawDataBIDS/IPCAS_4",
+            "prov:wasGeneratedBy": {
+                "@id": "niiri:d0603ace-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d133e0ea-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Entity",
+                "AcquisitionObject"
+            ],
+            "crypto:sha512": "665c1efa395455d59470d5ee5182fc155c6caaba1072c01f9bbbefbccfc78458bb1091e784dd98e63f936f7df01aaf080a7d6e24bbdf0f9c5622e58769d0ba61",
+            "dicom:AcquisitionMatrix": "250x250",
+            "dicom:EchoTime": "0.003136",
+            "dicom:FlipAngle": "8",
+            "dicom:InversionTime": "0.45",
+            "dicom:MagneticFieldStrength": "3T",
+            "dicom:PixelBandwidth": 31.25,
+            "dicom:ReceiveCoilName": "8 Chan",
+            "dicom:RepetitionTime": 8.068,
+            "nidm:PhaseEncodingDirection": "j-",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:T1Weighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Anatomical"
+            },
+            "filename": "/sub-0026197/ses-1/anat/sub-0026197_ses-1_run-1_T1w.nii.gz",
+            "prov:Location": "/datasets.datalad.org/corr/RawDataBIDS/IPCAS_4",
+            "prov:wasGeneratedBy": {
+                "@id": "niiri:d133d9ba-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:ce08cd86-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "Session",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:c8e9ea10-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d20ece76-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "Acquisition",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:d1f3fbd2-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d2fdb3a6-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "AcquisitionObject",
+                "prov:Entity"
+            ],
+            "crypto:sha512": "1221bb66274c512efe659c5dc7b0a0ed36bd6820ef23168f4d84a95f6982cedd2a18e64e5d96a9ea9cc6cf4ebe765d7266a04e7713602444b1eb0274ad798e6e",
+            "dicom:AcquisitionMatrix": "64x64",
+            "dicom:EchoTime": 0.03,
+            "dicom:FlipAngle": {
+                "@type": "xsd:int",
+                "@value": "90"
+            },
+            "dicom:PixelBandwidth": 250.0,
+            "dicom:ReceiveCoilName": "8 Chan",
+            "dicom:RepetitionTime": 2.0,
+            "dicom:ScanOptions": "FS",
+            "AcquisitionObject": {
+                "@type": "xsd:int",
+                "@value": "2"
+            },
+            "nidm:PhaseEncodingDirection": "j-",
+            "nidm:SliceTiming": "0.0,1027.03,54.05,1081.08,108.11,1135.14,162.16,1189.19,216.22,1243.24,270.27,1297.3,324.32,1351.35,378.38,1405.41,432.43,1459.46,486.49,1513.51,540.54,1567.57,594.59,1621.62,648.65,1675.68,702.7,1729.73,756.76,1783.78,810.81,1837.84,864.86,1891.89,918.92,1945.95,972.97",
+            "Task": "rest",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:FlowWeighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Functional"
+            },
+            "filename": "/sub-0026201/ses-1/func/sub-0026201_ses-1_task-rest_run-2_bold.nii.gz",
+            "prov:Location": "/datasets.datalad.org/corr/RawDataBIDS/IPCAS_4",
+            "prov:wasGeneratedBy": {
+                "@id": "niiri:d2fdacda-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d1e09eca-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "Session",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:c8e9ea10-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:ce07bb8a-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "Acquisition",
+                "instrument-based-assessment",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:ce07b810-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:cf7f0310-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Session"
+            ],
+            "bids:session_number": "1",
+            "dct:isPartOf": {
+                "@id": "niiri:c8e9ea10-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d4acdd58-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Acquisition"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:d474537a-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:ce078688-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "assessment-instrument",
+                "AcquisitionObject",
+                "prov:Entity"
+            ],
+            "bids:handedness": "#",
+            "prov:wasGeneratedBy": {
+                "@id": "niiri:ce078304-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:ce08d664-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Entity",
+                "AcquisitionObject",
+                "assessment-instrument"
+            ],
+            "bids:handedness": "#",
+            "prov:wasGeneratedBy": {
+                "@id": "niiri:ce08d236-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:cf26e57c-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Acquisition"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:cf159ea2-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d34b9850-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "Acquisition",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:d3301698-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:ce0743f8-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Session"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:c8e9ea10-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d4dce322-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "Session",
+                "prov:Activity"
+            ],
+            "bids:session_number": "1",
+            "dct:isPartOf": {
+                "@id": "niiri:c8e9ea10-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d514a140-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Entity",
+                "AcquisitionObject"
+            ],
+            "crypto:sha512": "3ebea2a198e90b5c8c5233b9f16d15bc3859d852dc7fde7cb1f474aef684436a6fc12f87f263278fd1f357787938ddda1589de8c977afc09c1c3388f07373f30",
+            "dicom:AcquisitionMatrix": "64x64",
+            "dicom:EchoTime": 0.03,
+            "dicom:FlipAngle": {
+                "@type": "xsd:int",
+                "@value": "90"
+            },
+            "dicom:PixelBandwidth": 250.0,
+            "dicom:ReceiveCoilName": "8 Chan",
+            "dicom:RepetitionTime": 2.0,
+            "dicom:ScanOptions": "FS",
+            "AcquisitionObject": {
+                "@type": "xsd:int",
+                "@value": "2"
+            },
+            "nidm:PhaseEncodingDirection": "j-",
+            "nidm:SliceTiming": "0.0,1027.03,54.05,1081.08,108.11,1135.14,162.16,1189.19,216.22,1243.24,270.27,1297.3,324.32,1351.35,378.38,1405.41,432.43,1459.46,486.49,1513.51,540.54,1567.57,594.59,1621.62,648.65,1675.68,702.7,1729.73,756.76,1783.78,810.81,1837.84,864.86,1891.89,918.92,1945.95,972.97",
+            "Task": "rest",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:FlowWeighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Functional"
+            },
+            "filename": "/sub-0026206/ses-1/func/sub-0026206_ses-1_task-rest_run-2_bold.nii.gz",
+            "prov:Location": "/datasets.datalad.org/corr/RawDataBIDS/IPCAS_4",
+            "prov:wasGeneratedBy": {
+                "@id": "niiri:d5149a6a-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:ce06c644-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "Session",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:c8e9ea10-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:cf159ea2-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Session"
+            ],
+            "bids:session_number": "1",
+            "dct:isPartOf": {
+                "@id": "niiri:c8e9ea10-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:ce085400-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "Acquisition",
+                "prov:Activity",
+                "instrument-based-assessment"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:ce084fb4-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:ce072efe-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Entity",
+                "assessment-instrument",
+                "AcquisitionObject"
+            ],
+            "bids:handedness": "#",
+            "prov:wasGeneratedBy": {
+                "@id": "niiri:ce072c10-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d640dca0-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Acquisition"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:d626c5e0-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:ce087494-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "instrument-based-assessment",
+                "Acquisition"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:ce0870d4-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d486156a-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "AcquisitionObject",
+                "prov:Entity"
+            ],
+            "crypto:sha512": "d0cb504aa80a80808bf5ec62b446d5f787bb1b0b367613732afba504a56d27ba46ac4116c8c7f2be1d73ba56d11f3c103afbea4bee37f1b13e7997e751e19233",
+            "dicom:AcquisitionMatrix": "250x250",
+            "dicom:EchoTime": "0.003136",
+            "dicom:FlipAngle": "8",
+            "dicom:InversionTime": "0.45",
+            "dicom:MagneticFieldStrength": "3T",
+            "dicom:PixelBandwidth": 31.25,
+            "dicom:ReceiveCoilName": "8 Chan",
+            "dicom:RepetitionTime": 8.068,
+            "nidm:PhaseEncodingDirection": "j-",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:T1Weighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Anatomical"
+            },
+            "filename": "/sub-0026205/ses-1/anat/sub-0026205_ses-1_run-1_T1w.nii.gz",
+            "prov:Location": "/datasets.datalad.org/corr/RawDataBIDS/IPCAS_4",
+            "prov:wasGeneratedBy": {
+                "@id": "niiri:d4860df4-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d247ef94-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "Session",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:c8e9ea10-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d3f34726-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "Session",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:c8e9ea10-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d6375fe0-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Acquisition"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:d626c5e0-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d26cdda4-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "Acquisition",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:d25b9152-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d29377e8-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Acquisition"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:d25b9152-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d20536ae-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Entity",
+                "AcquisitionObject"
+            ],
+            "crypto:sha512": "764d8ba125f4622d03bbd06881000f8757d72354899501f0b280a0b979322a93d5e6e09280e5cf0b660b72b0195895d4be113b8a9bb263ecf2f00e3af095add8",
+            "dicom:AcquisitionMatrix": "250x250",
+            "dicom:EchoTime": "0.003136",
+            "dicom:FlipAngle": "8",
+            "dicom:InversionTime": "0.45",
+            "dicom:MagneticFieldStrength": "3T",
+            "dicom:PixelBandwidth": 31.25,
+            "dicom:ReceiveCoilName": "8 Chan",
+            "dicom:RepetitionTime": 8.068,
+            "nidm:PhaseEncodingDirection": "j-",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:T1Weighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Anatomical"
+            },
+            "filename": "/sub-0026199/ses-1/anat/sub-0026199_ses-1_run-1_T1w.nii.gz",
+            "prov:Location": "/datasets.datalad.org/corr/RawDataBIDS/IPCAS_4",
+            "prov:wasGeneratedBy": {
+                "@id": "niiri:d2052eca-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d22b6482-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "Acquisition",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:d1f3fbd2-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:cfe765b8-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "Session",
+                "prov:Activity"
+            ],
+            "bids:session_number": "1",
+            "dct:isPartOf": {
+                "@id": "niiri:c8e9ea10-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d0f09e66-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Acquisition"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:d0b650ee-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:cebee5ee-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Entity",
+                "AcquisitionObject"
+            ],
+            "crypto:sha512": "e8d8a65cd427f4bc2855bfc4a6c69ba4630cf93344c0dcc524a62a7b06ba34c64a05cce8c44c69e411c8f9f33c77b9afe48e92f110ca234f0bae0f8a2376de9a",
+            "dicom:AcquisitionMatrix": "250x250",
+            "dicom:EchoTime": "0.003136",
+            "dicom:FlipAngle": "8",
+            "dicom:InversionTime": "0.45",
+            "dicom:MagneticFieldStrength": "3T",
+            "dicom:PixelBandwidth": 31.25,
+            "dicom:ReceiveCoilName": "8 Chan",
+            "dicom:RepetitionTime": 8.068,
+            "nidm:PhaseEncodingDirection": "j-",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:T1Weighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Anatomical"
+            },
+            "filename": "/sub-0026191/ses-1/anat/sub-0026191_ses-1_run-1_T1w.nii.gz",
+            "prov:Location": "/datasets.datalad.org/corr/RawDataBIDS/IPCAS_4",
+            "prov:wasGeneratedBy": {
+                "@id": "niiri:cebedd4c-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:cec838b0-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "Acquisition",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:cea61c3a-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d26ce4e8-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Entity",
+                "AcquisitionObject"
+            ],
+            "crypto:sha512": "0e9c651641187b620ef73b78fcdf623711141954d48fba0ff61f6fa0542d5fed733801548e08da0a45bb796d20a04a6a8f3dba1afdb93f13db2d19db3f5d8718",
+            "dicom:AcquisitionMatrix": "250x250",
+            "dicom:EchoTime": "0.003136",
+            "dicom:FlipAngle": "8",
+            "dicom:InversionTime": "0.45",
+            "dicom:MagneticFieldStrength": "3T",
+            "dicom:PixelBandwidth": 31.25,
+            "dicom:ReceiveCoilName": "8 Chan",
+            "dicom:RepetitionTime": 8.068,
+            "nidm:PhaseEncodingDirection": "j-",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:T1Weighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Anatomical"
+            },
+            "filename": "/sub-0026200/ses-1/anat/sub-0026200_ses-1_run-1_T1w.nii.gz",
+            "prov:Location": "/datasets.datalad.org/corr/RawDataBIDS/IPCAS_4",
+            "prov:wasGeneratedBy": {
+                "@id": "niiri:d26cdda4-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d4f768c8-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Acquisition"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:d4dce322-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d67a7406-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "Session",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:c8e9ea10-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d3d4ec7c-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "Acquisition",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:d39b327a-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d5464fa6-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "Session",
+                "prov:Activity"
+            ],
+            "bids:session_number": "1",
+            "dct:isPartOf": {
+                "@id": "niiri:c8e9ea10-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:ce08f676-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "AcquisitionObject",
+                "assessment-instrument",
+                "prov:Entity"
+            ],
+            "bids:handedness": "#",
+            "prov:wasGeneratedBy": {
+                "@id": "niiri:ce08f310-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:ce06eea8-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Acquisition",
+                "instrument-based-assessment"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:ce06ebb0-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d5149a6a-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "Acquisition",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:d4dce322-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:ce07d6f6-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Session"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:c8e9ea10-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d65db1d6-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Entity",
+                "AcquisitionObject"
+            ],
+            "crypto:sha512": "1b3389d50070f48e482c42e8ce61ce35e1ad3860d22d8ca3b45fd3d7f5f4863a1e730bd5a0b99f2abed81fcbc92a2213047ef805b5e5cf55e18affa525550424",
+            "dicom:AcquisitionMatrix": "64x64",
+            "dicom:EchoTime": 0.03,
+            "dicom:FlipAngle": {
+                "@type": "xsd:int",
+                "@value": "90"
+            },
+            "dicom:PixelBandwidth": 250.0,
+            "dicom:ReceiveCoilName": "8 Chan",
+            "dicom:RepetitionTime": 2.0,
+            "dicom:ScanOptions": "FS",
+            "AcquisitionObject": {
+                "@type": "xsd:int",
+                "@value": "2"
+            },
+            "nidm:PhaseEncodingDirection": "j-",
+            "nidm:SliceTiming": "0.0,1027.03,54.05,1081.08,108.11,1135.14,162.16,1189.19,216.22,1243.24,270.27,1297.3,324.32,1351.35,378.38,1405.41,432.43,1459.46,486.49,1513.51,540.54,1567.57,594.59,1621.62,648.65,1675.68,702.7,1729.73,756.76,1783.78,810.81,1837.84,864.86,1891.89,918.92,1945.95,972.97",
+            "Task": "rest",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:FlowWeighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Functional"
+            },
+            "filename": "/sub-0026209/ses-1/func/sub-0026209_ses-1_task-rest_run-2_bold.nii.gz",
+            "prov:Location": "/datasets.datalad.org/corr/RawDataBIDS/IPCAS_4",
+            "prov:wasGeneratedBy": {
+                "@id": "niiri:d65daad8-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d48fdb18-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Entity",
+                "AcquisitionObject"
+            ],
+            "crypto:sha512": "8f4077de638468df3f4c3bc76293421d59218426f7e0d0ce956dce32c07a4b54e7759672eaf29ece035f89f0fb3174ad7633224be481570383c1a8755a9a4784",
+            "dicom:AcquisitionMatrix": "64x64",
+            "dicom:EchoTime": 0.03,
+            "dicom:FlipAngle": {
+                "@type": "xsd:int",
+                "@value": "90"
+            },
+            "dicom:PixelBandwidth": 250.0,
+            "dicom:ReceiveCoilName": "8 Chan",
+            "dicom:RepetitionTime": 2.0,
+            "dicom:ScanOptions": "FS",
+            "AcquisitionObject": {
+                "@type": "xsd:int",
+                "@value": "1"
+            },
+            "nidm:PhaseEncodingDirection": "j-",
+            "nidm:SliceTiming": "0.0,1027.03,54.05,1081.08,108.11,1135.14,162.16,1189.19,216.22,1243.24,270.27,1297.3,324.32,1351.35,378.38,1405.41,432.43,1459.46,486.49,1513.51,540.54,1567.57,594.59,1621.62,648.65,1675.68,702.7,1729.73,756.76,1783.78,810.81,1837.84,864.86,1891.89,918.92,1945.95,972.97",
+            "Task": "rest",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:FlowWeighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Functional"
+            },
+            "filename": "/sub-0026205/ses-1/func/sub-0026205_ses-1_task-rest_run-1_bold.nii.gz",
+            "prov:Location": "/datasets.datalad.org/corr/RawDataBIDS/IPCAS_4",
+            "prov:wasGeneratedBy": {
+                "@id": "niiri:d48fd442-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d4187276-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "Acquisition",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:d406c576-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d2762d28-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "Acquisition",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:d25b9152-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:ce090e4a-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Session"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:c8e9ea10-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d58015c4-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Entity",
+                "AcquisitionObject"
+            ],
+            "crypto:sha512": "d675026cef62cf8128fd403e3b91ea54cfdc2b3a169c0c148dd8f3bc334b0bc9ab7b4acd374da788c82b6de67b44689210587627fd0b8122ff99a0aa2bec42f6",
+            "dicom:AcquisitionMatrix": "64x64",
+            "dicom:EchoTime": 0.03,
+            "dicom:FlipAngle": {
+                "@type": "xsd:int",
+                "@value": "90"
+            },
+            "dicom:PixelBandwidth": 250.0,
+            "dicom:ReceiveCoilName": "8 Chan",
+            "dicom:RepetitionTime": 2.0,
+            "dicom:ScanOptions": "FS",
+            "AcquisitionObject": {
+                "@type": "xsd:int",
+                "@value": "2"
+            },
+            "nidm:PhaseEncodingDirection": "j-",
+            "nidm:SliceTiming": "0.0,1027.03,54.05,1081.08,108.11,1135.14,162.16,1189.19,216.22,1243.24,270.27,1297.3,324.32,1351.35,378.38,1405.41,432.43,1459.46,486.49,1513.51,540.54,1567.57,594.59,1621.62,648.65,1675.68,702.7,1729.73,756.76,1783.78,810.81,1837.84,864.86,1891.89,918.92,1945.95,972.97",
+            "Task": "rest",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:FlowWeighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Functional"
+            },
+            "filename": "/sub-0026207/ses-1/func/sub-0026207_ses-1_task-rest_run-2_bold.nii.gz",
+            "prov:Location": "/datasets.datalad.org/corr/RawDataBIDS/IPCAS_4",
+            "prov:wasGeneratedBy": {
+                "@id": "niiri:d5800f48-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d0865e84-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Entity",
+                "AcquisitionObject"
+            ],
+            "crypto:sha512": "31353b12177e80b0afc0436b8f24f28ccc1efb05ff0a32faab8de3a26ca40a096d6828af72daf17bb110a495e3adee8e911ca151b21fedd23ebaf5fd040d029e",
+            "dicom:AcquisitionMatrix": "64x64",
+            "dicom:EchoTime": 0.03,
+            "dicom:FlipAngle": {
+                "@type": "xsd:int",
+                "@value": "90"
+            },
+            "dicom:PixelBandwidth": 250.0,
+            "dicom:ReceiveCoilName": "8 Chan",
+            "dicom:RepetitionTime": 2.0,
+            "dicom:ScanOptions": "FS",
+            "AcquisitionObject": {
+                "@type": "xsd:int",
+                "@value": "2"
+            },
+            "nidm:PhaseEncodingDirection": "j-",
+            "nidm:SliceTiming": "0.0,1027.03,54.05,1081.08,108.11,1135.14,162.16,1189.19,216.22,1243.24,270.27,1297.3,324.32,1351.35,378.38,1405.41,432.43,1459.46,486.49,1513.51,540.54,1567.57,594.59,1621.62,648.65,1675.68,702.7,1729.73,756.76,1783.78,810.81,1837.84,864.86,1891.89,918.92,1945.95,972.97",
+            "Task": "rest",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:FlowWeighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Functional"
+            },
+            "filename": "/sub-0026195/ses-1/func/sub-0026195_ses-1_task-rest_run-2_bold.nii.gz",
+            "prov:Location": "/datasets.datalad.org/corr/RawDataBIDS/IPCAS_4",
+            "prov:wasGeneratedBy": {
+                "@id": "niiri:d08658f8-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d626c5e0-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "Session",
+                "prov:Activity"
+            ],
+            "bids:session_number": "1",
+            "dct:isPartOf": {
+                "@id": "niiri:c8e9ea10-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:ce081ecc-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Entity",
+                "AcquisitionObject",
+                "assessment-instrument"
+            ],
+            "bids:handedness": "#",
+            "prov:wasGeneratedBy": {
+                "@id": "niiri:ce081a3a-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:ce06f1d2-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "assessment-instrument",
+                "AcquisitionObject",
+                "prov:Entity"
+            ],
+            "bids:handedness": "#",
+            "prov:wasGeneratedBy": {
+                "@id": "niiri:ce06eea8-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:ce06ebb0-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "Session",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:c8e9ea10-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d2df12c0-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Entity",
+                "AcquisitionObject"
+            ],
+            "crypto:sha512": "cc0e22038dd94ed9436c6caef5d0ae9c94d80151418d77bb35128a454893d6534cb39ad5d2786d9018faeea10f966f743504ef25f16f7c002a92d011d1f8f300",
+            "dicom:AcquisitionMatrix": "64x64",
+            "dicom:EchoTime": 0.03,
+            "dicom:FlipAngle": {
+                "@type": "xsd:int",
+                "@value": "90"
+            },
+            "dicom:PixelBandwidth": 250.0,
+            "dicom:ReceiveCoilName": "8 Chan",
+            "dicom:RepetitionTime": 2.0,
+            "dicom:ScanOptions": "FS",
+            "AcquisitionObject": {
+                "@type": "xsd:int",
+                "@value": "1"
+            },
+            "nidm:PhaseEncodingDirection": "j-",
+            "nidm:SliceTiming": "0.0,1027.03,54.05,1081.08,108.11,1135.14,162.16,1189.19,216.22,1243.24,270.27,1297.3,324.32,1351.35,378.38,1405.41,432.43,1459.46,486.49,1513.51,540.54,1567.57,594.59,1621.62,648.65,1675.68,702.7,1729.73,756.76,1783.78,810.81,1837.84,864.86,1891.89,918.92,1945.95,972.97",
+            "Task": "rest",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:FlowWeighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Functional"
+            },
+            "filename": "/sub-0026201/ses-1/func/sub-0026201_ses-1_task-rest_run-1_bold.nii.gz",
+            "prov:Location": "/datasets.datalad.org/corr/RawDataBIDS/IPCAS_4",
+            "prov:wasGeneratedBy": {
+                "@id": "niiri:d2df0ac8-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d01e256c-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "AcquisitionObject",
+                "prov:Entity"
+            ],
+            "crypto:sha512": "a211d5618bff807e983a170db4ab57d2dfc460d0f92f2ed8b9f270ea87ac77de9b9bf028b4779adc69392156a1c8d744aa2ec6e2cc5fdc7e4f33866a88d99575",
+            "dicom:AcquisitionMatrix": "64x64",
+            "dicom:EchoTime": 0.03,
+            "dicom:FlipAngle": {
+                "@type": "xsd:int",
+                "@value": "90"
+            },
+            "dicom:PixelBandwidth": 250.0,
+            "dicom:ReceiveCoilName": "8 Chan",
+            "dicom:RepetitionTime": 2.0,
+            "dicom:ScanOptions": "FS",
+            "AcquisitionObject": {
+                "@type": "xsd:int",
+                "@value": "2"
+            },
+            "nidm:PhaseEncodingDirection": "j-",
+            "nidm:SliceTiming": "0.0,1027.03,54.05,1081.08,108.11,1135.14,162.16,1189.19,216.22,1243.24,270.27,1297.3,324.32,1351.35,378.38,1405.41,432.43,1459.46,486.49,1513.51,540.54,1567.57,594.59,1621.62,648.65,1675.68,702.7,1729.73,756.76,1783.78,810.81,1837.84,864.86,1891.89,918.92,1945.95,972.97",
+            "Task": "rest",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:FlowWeighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Functional"
+            },
+            "filename": "/sub-0026194/ses-1/func/sub-0026194_ses-1_task-rest_run-2_bold.nii.gz",
+            "prov:Location": "/datasets.datalad.org/corr/RawDataBIDS/IPCAS_4",
+            "prov:wasGeneratedBy": {
+                "@id": "niiri:d01e1db0-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:cec84080-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "AcquisitionObject",
+                "prov:Entity"
+            ],
+            "crypto:sha512": "bc552f9d091c4c44228aafa360e73ffdf197be73726c984854a3f7a4f48e454705ad31f33ee14b49fb8009e157a0bb867826d962233cf9076bb524e46608bf93",
+            "dicom:AcquisitionMatrix": "64x64",
+            "dicom:EchoTime": 0.03,
+            "dicom:FlipAngle": {
+                "@type": "xsd:int",
+                "@value": "90"
+            },
+            "dicom:PixelBandwidth": 250.0,
+            "dicom:ReceiveCoilName": "8 Chan",
+            "dicom:RepetitionTime": 2.0,
+            "dicom:ScanOptions": "FS",
+            "AcquisitionObject": {
+                "@type": "xsd:int",
+                "@value": "1"
+            },
+            "nidm:PhaseEncodingDirection": "j-",
+            "nidm:SliceTiming": "0.0,1027.03,54.05,1081.08,108.11,1135.14,162.16,1189.19,216.22,1243.24,270.27,1297.3,324.32,1351.35,378.38,1405.41,432.43,1459.46,486.49,1513.51,540.54,1567.57,594.59,1621.62,648.65,1675.68,702.7,1729.73,756.76,1783.78,810.81,1837.84,864.86,1891.89,918.92,1945.95,972.97",
+            "Task": "rest",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:FlowWeighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Functional"
+            },
+            "filename": "/sub-0026191/ses-1/func/sub-0026191_ses-1_task-rest_run-1_bold.nii.gz",
+            "prov:Location": "/datasets.datalad.org/corr/RawDataBIDS/IPCAS_4",
+            "prov:wasGeneratedBy": {
+                "@id": "niiri:cec838b0-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d0603ace-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Acquisition"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:d04e4850-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:cf99a45e-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Acquisition"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:cf7f0310-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:cff7ce08-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Entity",
+                "AcquisitionObject"
+            ],
+            "crypto:sha512": "627c87d364fe18bdaeb84786eafcc98022c405199ca04105f9a1002c92d7fbcebc2c04f350cb192560c9f9eb4fa1840b3630ebe5b2e8b5de1e775dbfc0f2cc9d",
+            "dicom:AcquisitionMatrix": "250x250",
+            "dicom:EchoTime": "0.003136",
+            "dicom:FlipAngle": "8",
+            "dicom:InversionTime": "0.45",
+            "dicom:MagneticFieldStrength": "3T",
+            "dicom:PixelBandwidth": 31.25,
+            "dicom:ReceiveCoilName": "8 Chan",
+            "dicom:RepetitionTime": 8.068,
+            "nidm:PhaseEncodingDirection": "j-",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:T1Weighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Anatomical"
+            },
+            "filename": "/sub-0026194/ses-1/anat/sub-0026194_ses-1_run-1_T1w.nii.gz",
+            "prov:Location": "/datasets.datalad.org/corr/RawDataBIDS/IPCAS_4",
+            "prov:wasGeneratedBy": {
+                "@id": "niiri:cff7c5a2-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d0d20622-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Entity",
+                "AcquisitionObject"
+            ],
+            "crypto:sha512": "b38a0f9ba69b98f42185023a46f0d9e530a33d9fbab7022bf85c762d4046025b93d1a55e8f5e7e68c12f57df892e1bf8bf311674e83003422dc5c18efed827cc",
+            "dicom:AcquisitionMatrix": "64x64",
+            "dicom:EchoTime": 0.03,
+            "dicom:FlipAngle": {
+                "@type": "xsd:int",
+                "@value": "90"
+            },
+            "dicom:PixelBandwidth": 250.0,
+            "dicom:ReceiveCoilName": "8 Chan",
+            "dicom:RepetitionTime": 2.0,
+            "dicom:ScanOptions": "FS",
+            "AcquisitionObject": {
+                "@type": "xsd:int",
+                "@value": "1"
+            },
+            "nidm:PhaseEncodingDirection": "j-",
+            "nidm:SliceTiming": "0.0,1027.03,54.05,1081.08,108.11,1135.14,162.16,1189.19,216.22,1243.24,270.27,1297.3,324.32,1351.35,378.38,1405.41,432.43,1459.46,486.49,1513.51,540.54,1567.57,594.59,1621.62,648.65,1675.68,702.7,1729.73,756.76,1783.78,810.81,1837.84,864.86,1891.89,918.92,1945.95,972.97",
+            "Task": "rest",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:FlowWeighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Functional"
+            },
+            "filename": "/sub-0026196/ses-1/func/sub-0026196_ses-1_task-rest_run-1_bold.nii.gz",
+            "prov:Location": "/datasets.datalad.org/corr/RawDataBIDS/IPCAS_4",
+            "prov:wasGeneratedBy": {
+                "@id": "niiri:d0d1fe7a-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d0a33b62-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Session"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:c8e9ea10-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:ce078016-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Session"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:c8e9ea10-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d4224a08-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Entity",
+                "AcquisitionObject"
+            ],
+            "crypto:sha512": "5550015fb520aa3c0746f0829ca899307b43e67c1256a7659de2431cce5a7c707a27accc2c790cef69ff4411436ff3040438d4a4be021543c9fcea080a03201f",
+            "dicom:AcquisitionMatrix": "64x64",
+            "dicom:EchoTime": 0.03,
+            "dicom:FlipAngle": {
+                "@type": "xsd:int",
+                "@value": "90"
+            },
+            "dicom:PixelBandwidth": 250.0,
+            "dicom:ReceiveCoilName": "8 Chan",
+            "dicom:RepetitionTime": 2.0,
+            "dicom:ScanOptions": "FS",
+            "AcquisitionObject": {
+                "@type": "xsd:int",
+                "@value": "1"
+            },
+            "nidm:PhaseEncodingDirection": "j-",
+            "nidm:SliceTiming": "0.0,1027.03,54.05,1081.08,108.11,1135.14,162.16,1189.19,216.22,1243.24,270.27,1297.3,324.32,1351.35,378.38,1405.41,432.43,1459.46,486.49,1513.51,540.54,1567.57,594.59,1621.62,648.65,1675.68,702.7,1729.73,756.76,1783.78,810.81,1837.84,864.86,1891.89,918.92,1945.95,972.97",
+            "Task": "rest",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:FlowWeighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Functional"
+            },
+            "filename": "/sub-0026204/ses-1/func/sub-0026204_ses-1_task-rest_run-1_bold.nii.gz",
+            "prov:Location": "/datasets.datalad.org/corr/RawDataBIDS/IPCAS_4",
+            "prov:wasGeneratedBy": {
+                "@id": "niiri:d42241ac-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d4611328-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Session"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:c8e9ea10-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d5f640be-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Entity",
+                "AcquisitionObject"
+            ],
+            "crypto:sha512": "47c56dcbab460209203ba81a29bf0b3b6e7a6631b2035880b4913d54567fa837080aacb8806e008590d45f0045f80f50f3384cda812b9086d87e2fe4ae3c0552",
+            "dicom:AcquisitionMatrix": "64x64",
+            "dicom:EchoTime": 0.03,
+            "dicom:FlipAngle": {
+                "@type": "xsd:int",
+                "@value": "90"
+            },
+            "dicom:PixelBandwidth": 250.0,
+            "dicom:ReceiveCoilName": "8 Chan",
+            "dicom:RepetitionTime": 2.0,
+            "dicom:ScanOptions": "FS",
+            "AcquisitionObject": {
+                "@type": "xsd:int",
+                "@value": "2"
+            },
+            "nidm:PhaseEncodingDirection": "j-",
+            "nidm:SliceTiming": "0.0,1027.03,54.05,1081.08,108.11,1135.14,162.16,1189.19,216.22,1243.24,270.27,1297.3,324.32,1351.35,378.38,1405.41,432.43,1459.46,486.49,1513.51,540.54,1567.57,594.59,1621.62,648.65,1675.68,702.7,1729.73,756.76,1783.78,810.81,1837.84,864.86,1891.89,918.92,1945.95,972.97",
+            "Task": "rest",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:FlowWeighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Functional"
+            },
+            "filename": "/sub-0026208/ses-1/func/sub-0026208_ses-1_task-rest_run-2_bold.nii.gz",
+            "prov:Location": "/datasets.datalad.org/corr/RawDataBIDS/IPCAS_4",
+            "prov:wasGeneratedBy": {
+                "@id": "niiri:d5f6398e-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d19daac0-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "AcquisitionObject",
+                "prov:Entity"
+            ],
+            "crypto:sha512": "74cd620f1c29f826e3bb98915278b52da14c2da0e7936733a2b73d307e48e653f0bad72567b2d6ca513b76bf33de4e4d113ae4f1ee24a669060b1e0fed69d889",
+            "dicom:AcquisitionMatrix": "250x250",
+            "dicom:EchoTime": "0.003136",
+            "dicom:FlipAngle": "8",
+            "dicom:InversionTime": "0.45",
+            "dicom:MagneticFieldStrength": "3T",
+            "dicom:PixelBandwidth": 31.25,
+            "dicom:ReceiveCoilName": "8 Chan",
+            "dicom:RepetitionTime": 8.068,
+            "nidm:PhaseEncodingDirection": "j-",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:T1Weighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Anatomical"
+            },
+            "filename": "/sub-0026198/ses-1/anat/sub-0026198_ses-1_run-1_T1w.nii.gz",
+            "prov:Location": "/datasets.datalad.org/corr/RawDataBIDS/IPCAS_4",
+            "prov:wasGeneratedBy": {
+                "@id": "niiri:d19da304-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d25b9152-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Session"
+            ],
+            "bids:session_number": "1",
+            "dct:isPartOf": {
+                "@id": "niiri:c8e9ea10-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d0699bdc-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "AcquisitionObject",
+                "prov:Entity"
+            ],
+            "crypto:sha512": "38fdcd887864095493ff83930bfba094e48897528ed1d25fe6f60e97b49d282f871737df3d1c987f67c23979adc3ee4db4747a8f49f48866110b98c57202d7dc",
+            "dicom:AcquisitionMatrix": "64x64",
+            "dicom:EchoTime": 0.03,
+            "dicom:FlipAngle": {
+                "@type": "xsd:int",
+                "@value": "90"
+            },
+            "dicom:PixelBandwidth": 250.0,
+            "dicom:ReceiveCoilName": "8 Chan",
+            "dicom:RepetitionTime": 2.0,
+            "dicom:ScanOptions": "FS",
+            "AcquisitionObject": {
+                "@type": "xsd:int",
+                "@value": "1"
+            },
+            "nidm:PhaseEncodingDirection": "j-",
+            "nidm:SliceTiming": "0.0,1027.03,54.05,1081.08,108.11,1135.14,162.16,1189.19,216.22,1243.24,270.27,1297.3,324.32,1351.35,378.38,1405.41,432.43,1459.46,486.49,1513.51,540.54,1567.57,594.59,1621.62,648.65,1675.68,702.7,1729.73,756.76,1783.78,810.81,1837.84,864.86,1891.89,918.92,1945.95,972.97",
+            "Task": "rest",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:FlowWeighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Functional"
+            },
+            "filename": "/sub-0026195/ses-1/func/sub-0026195_ses-1_task-rest_run-1_bold.nii.gz",
+            "prov:Location": "/datasets.datalad.org/corr/RawDataBIDS/IPCAS_4",
+            "prov:wasGeneratedBy": {
+                "@id": "niiri:d06993b2-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:cf6ba342-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Session"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:c8e9ea10-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d5cee014-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "AcquisitionObject",
+                "prov:Entity"
+            ],
+            "crypto:sha512": "ec8f35127f22672c1188a3e8ec747d858244e33f8e69da22bb0b62f46ab9462ea9625a8e4fb4397367dacf553805e3eda1871f57aa4abc9dba0a0e102c134a3e",
+            "dicom:AcquisitionMatrix": "64x64",
+            "dicom:EchoTime": 0.03,
+            "dicom:FlipAngle": {
+                "@type": "xsd:int",
+                "@value": "90"
+            },
+            "dicom:PixelBandwidth": 250.0,
+            "dicom:ReceiveCoilName": "8 Chan",
+            "dicom:RepetitionTime": 2.0,
+            "dicom:ScanOptions": "FS",
+            "AcquisitionObject": {
+                "@type": "xsd:int",
+                "@value": "1"
+            },
+            "nidm:PhaseEncodingDirection": "j-",
+            "nidm:SliceTiming": "0.0,1027.03,54.05,1081.08,108.11,1135.14,162.16,1189.19,216.22,1243.24,270.27,1297.3,324.32,1351.35,378.38,1405.41,432.43,1459.46,486.49,1513.51,540.54,1567.57,594.59,1621.62,648.65,1675.68,702.7,1729.73,756.76,1783.78,810.81,1837.84,864.86,1891.89,918.92,1945.95,972.97",
+            "Task": "rest",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:FlowWeighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Functional"
+            },
+            "filename": "/sub-0026208/ses-1/func/sub-0026208_ses-1_task-rest_run-1_bold.nii.gz",
+            "prov:Location": "/datasets.datalad.org/corr/RawDataBIDS/IPCAS_4",
+            "prov:wasGeneratedBy": {
+                "@id": "niiri:d5ced97a-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:ce0762ca-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "Acquisition",
+                "instrument-based-assessment",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:ce075fc8-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:cf02a324-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "Session",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:c8e9ea10-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d6376814-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "AcquisitionObject",
+                "prov:Entity"
+            ],
+            "crypto:sha512": "68b12aee46fe53263f7e70b0470c65696baf6d4c4f71f092390cd65dec0b4d1bb7046463ea74718d7b3dc386497829ab5025891f52b28cbd617685d1cafff609",
+            "dicom:AcquisitionMatrix": "250x250",
+            "dicom:EchoTime": "0.003136",
+            "dicom:FlipAngle": "8",
+            "dicom:InversionTime": "0.45",
+            "dicom:MagneticFieldStrength": "3T",
+            "dicom:PixelBandwidth": 31.25,
+            "dicom:ReceiveCoilName": "8 Chan",
+            "dicom:RepetitionTime": 8.068,
+            "nidm:PhaseEncodingDirection": "j-",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:T1Weighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Anatomical"
+            },
+            "filename": "/sub-0026209/ses-1/anat/sub-0026209_ses-1_run-1_T1w.nii.gz",
+            "prov:Location": "/datasets.datalad.org/corr/RawDataBIDS/IPCAS_4",
+            "prov:wasGeneratedBy": {
+                "@id": "niiri:d6375fe0-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d3d4f352-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Entity",
+                "AcquisitionObject"
+            ],
+            "crypto:sha512": "7526fbdf569906a32935f50a5680d69f54402f43b24d30aff5f3daccce8fb13728a2b45677c05e2b33af3fa84040d6d5ebd03fe26739e139e0280d78671d065a",
+            "dicom:AcquisitionMatrix": "64x64",
+            "dicom:EchoTime": 0.03,
+            "dicom:FlipAngle": {
+                "@type": "xsd:int",
+                "@value": "90"
+            },
+            "dicom:PixelBandwidth": 250.0,
+            "dicom:ReceiveCoilName": "8 Chan",
+            "dicom:RepetitionTime": 2.0,
+            "dicom:ScanOptions": "FS",
+            "AcquisitionObject": {
+                "@type": "xsd:int",
+                "@value": "2"
+            },
+            "nidm:PhaseEncodingDirection": "j-",
+            "nidm:SliceTiming": "0.0,1027.03,54.05,1081.08,108.11,1135.14,162.16,1189.19,216.22,1243.24,270.27,1297.3,324.32,1351.35,378.38,1405.41,432.43,1459.46,486.49,1513.51,540.54,1567.57,594.59,1621.62,648.65,1675.68,702.7,1729.73,756.76,1783.78,810.81,1837.84,864.86,1891.89,918.92,1945.95,972.97",
+            "Task": "rest",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:FlowWeighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Functional"
+            },
+            "filename": "/sub-0026203/ses-1/func/sub-0026203_ses-1_task-rest_run-2_bold.nii.gz",
+            "prov:Location": "/datasets.datalad.org/corr/RawDataBIDS/IPCAS_4",
+            "prov:wasGeneratedBy": {
+                "@id": "niiri:d3d4ec7c-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d000dfa2-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "AcquisitionObject",
+                "prov:Entity"
+            ],
+            "crypto:sha512": "4c5c772dcc6be3b8279d7d7378b71c551165f3d9ed768ae77c5ee03c9bd80a7a95800b374e50a0264879ef8598ebc75ff9b87aaecf7acbf7fb445bb21578342a",
+            "dicom:AcquisitionMatrix": "64x64",
+            "dicom:EchoTime": 0.03,
+            "dicom:FlipAngle": {
+                "@type": "xsd:int",
+                "@value": "90"
+            },
+            "dicom:PixelBandwidth": 250.0,
+            "dicom:ReceiveCoilName": "8 Chan",
+            "dicom:RepetitionTime": 2.0,
+            "dicom:ScanOptions": "FS",
+            "AcquisitionObject": {
+                "@type": "xsd:int",
+                "@value": "1"
+            },
+            "nidm:PhaseEncodingDirection": "j-",
+            "nidm:SliceTiming": "0.0,1027.03,54.05,1081.08,108.11,1135.14,162.16,1189.19,216.22,1243.24,270.27,1297.3,324.32,1351.35,378.38,1405.41,432.43,1459.46,486.49,1513.51,540.54,1567.57,594.59,1621.62,648.65,1675.68,702.7,1729.73,756.76,1783.78,810.81,1837.84,864.86,1891.89,918.92,1945.95,972.97",
+            "Task": "rest",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:FlowWeighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Functional"
+            },
+            "filename": "/sub-0026194/ses-1/func/sub-0026194_ses-1_task-rest_run-1_bold.nii.gz",
+            "prov:Location": "/datasets.datalad.org/corr/RawDataBIDS/IPCAS_4",
+            "prov:wasGeneratedBy": {
+                "@id": "niiri:d000d912-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d0c7d5c6-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "AcquisitionObject",
+                "prov:Entity"
+            ],
+            "crypto:sha512": "9e1a8af450f386c7626db472039b7d65d26906c87cd26f4adfe08774b3f4f22beed46c91e2319af79c2837d61c5af51ea316d3b50d91e3663bdc656f78633018",
+            "dicom:AcquisitionMatrix": "250x250",
+            "dicom:EchoTime": "0.003136",
+            "dicom:FlipAngle": "8",
+            "dicom:InversionTime": "0.45",
+            "dicom:MagneticFieldStrength": "3T",
+            "dicom:PixelBandwidth": 31.25,
+            "dicom:ReceiveCoilName": "8 Chan",
+            "dicom:RepetitionTime": 8.068,
+            "nidm:PhaseEncodingDirection": "j-",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:T1Weighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Anatomical"
+            },
+            "filename": "/sub-0026196/ses-1/anat/sub-0026196_ses-1_run-1_T1w.nii.gz",
+            "prov:Location": "/datasets.datalad.org/corr/RawDataBIDS/IPCAS_4",
+            "prov:wasGeneratedBy": {
+                "@id": "niiri:d0c7ccc0-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d133d9ba-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "Acquisition",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:d1226b6c-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d3ac9164-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Entity",
+                "AcquisitionObject"
+            ],
+            "crypto:sha512": "1f4fbbc81f0defbce4d420145688008089be7a60a09b085078b0a3743324b2459e7cf69bc6c1ebeecdf91c3f4fb6f9e94daef181f4bee1da07c8193081d83de0",
+            "dicom:AcquisitionMatrix": "250x250",
+            "dicom:EchoTime": "0.003136",
+            "dicom:FlipAngle": "8",
+            "dicom:InversionTime": "0.45",
+            "dicom:MagneticFieldStrength": "3T",
+            "dicom:PixelBandwidth": 31.25,
+            "dicom:ReceiveCoilName": "8 Chan",
+            "dicom:RepetitionTime": 8.068,
+            "nidm:PhaseEncodingDirection": "j-",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:T1Weighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Anatomical"
+            },
+            "filename": "/sub-0026203/ses-1/anat/sub-0026203_ses-1_run-1_T1w.nii.gz",
+            "prov:Location": "/datasets.datalad.org/corr/RawDataBIDS/IPCAS_4",
+            "prov:wasGeneratedBy": {
+                "@id": "niiri:d3ac89d0-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d5f6398e-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Acquisition"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:d5b2bcea-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d0f0a546-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Entity",
+                "AcquisitionObject"
+            ],
+            "crypto:sha512": "fc539de48d4cc919f115c5ae0abe11a8c366b87b375c76e0c2af23daf59fce07586f361cb8fb3826d6ed011cd3836cadbde7712b76b36ce2779311d9c23af619",
+            "dicom:AcquisitionMatrix": "64x64",
+            "dicom:EchoTime": 0.03,
+            "dicom:FlipAngle": {
+                "@type": "xsd:int",
+                "@value": "90"
+            },
+            "dicom:PixelBandwidth": 250.0,
+            "dicom:ReceiveCoilName": "8 Chan",
+            "dicom:RepetitionTime": 2.0,
+            "dicom:ScanOptions": "FS",
+            "AcquisitionObject": {
+                "@type": "xsd:int",
+                "@value": "2"
+            },
+            "nidm:PhaseEncodingDirection": "j-",
+            "nidm:SliceTiming": "0.0,1027.03,54.05,1081.08,108.11,1135.14,162.16,1189.19,216.22,1243.24,270.27,1297.3,324.32,1351.35,378.38,1405.41,432.43,1459.46,486.49,1513.51,540.54,1567.57,594.59,1621.62,648.65,1675.68,702.7,1729.73,756.76,1783.78,810.81,1837.84,864.86,1891.89,918.92,1945.95,972.97",
+            "Task": "rest",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:FlowWeighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Functional"
+            },
+            "filename": "/sub-0026196/ses-1/func/sub-0026196_ses-1_task-rest_run-2_bold.nii.gz",
+            "prov:Location": "/datasets.datalad.org/corr/RawDataBIDS/IPCAS_4",
+            "prov:wasGeneratedBy": {
+                "@id": "niiri:d0f09e66-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:ce91053e-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "Session",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:c8e9ea10-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:ce083ac4-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Entity",
+                "AcquisitionObject",
+                "assessment-instrument"
+            ],
+            "bids:handedness": "#",
+            "prov:wasGeneratedBy": {
+                "@id": "niiri:ce0837cc-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:c8e9ea10-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "Project",
+                "prov:Activity"
+            ],
+            "title": "Consortium for Reliability and Reproducibility (CoRR) IPCAS_4 Site",
+            "Identifier": "1.0.1",
+            "prov:Location": "/datasets.datalad.org/corr/RawDataBIDS/IPCAS_4"
+        },
+        {
+            "@id": "niiri:cf26eda6-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "AcquisitionObject",
+                "prov:Entity"
+            ],
+            "crypto:sha512": "c722576b88ee2e8a6ced5d4151167ab2ec790fb12ef145ec7d33da7317c28d0db249e034407250873422a0ea8d13b8670e592115c5071f0741203e6386471634",
+            "dicom:AcquisitionMatrix": "250x250",
+            "dicom:EchoTime": "0.003136",
+            "dicom:FlipAngle": "8",
+            "dicom:InversionTime": "0.45",
+            "dicom:MagneticFieldStrength": "3T",
+            "dicom:PixelBandwidth": 31.25,
+            "dicom:ReceiveCoilName": "8 Chan",
+            "dicom:RepetitionTime": 8.068,
+            "nidm:PhaseEncodingDirection": "j-",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:T1Weighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Anatomical"
+            },
+            "filename": "/sub-0026192/ses-1/anat/sub-0026192_ses-1_run-1_T1w.nii.gz",
+            "prov:Location": "/datasets.datalad.org/corr/RawDataBIDS/IPCAS_4",
+            "prov:wasGeneratedBy": {
+                "@id": "niiri:cf26e57c-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:ce07def8-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Entity",
+                "assessment-instrument",
+                "AcquisitionObject"
+            ],
+            "bids:handedness": "#",
+            "prov:wasGeneratedBy": {
+                "@id": "niiri:ce07daf2-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d640e4b6-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "AcquisitionObject",
+                "prov:Entity"
+            ],
+            "crypto:sha512": "02bce91e0feb81974431126afd442ba23dfafad53ce9f677989a5d5785a903e5d6a3eaebcd479a9b8f2442e26eecfc56dbd147e7b99a893209048a4678a45381",
+            "dicom:AcquisitionMatrix": "64x64",
+            "dicom:EchoTime": 0.03,
+            "dicom:FlipAngle": {
+                "@type": "xsd:int",
+                "@value": "90"
+            },
+            "dicom:PixelBandwidth": 250.0,
+            "dicom:ReceiveCoilName": "8 Chan",
+            "dicom:RepetitionTime": 2.0,
+            "dicom:ScanOptions": "FS",
+            "AcquisitionObject": {
+                "@type": "xsd:int",
+                "@value": "1"
+            },
+            "nidm:PhaseEncodingDirection": "j-",
+            "nidm:SliceTiming": "0.0,1027.03,54.05,1081.08,108.11,1135.14,162.16,1189.19,216.22,1243.24,270.27,1297.3,324.32,1351.35,378.38,1405.41,432.43,1459.46,486.49,1513.51,540.54,1567.57,594.59,1621.62,648.65,1675.68,702.7,1729.73,756.76,1783.78,810.81,1837.84,864.86,1891.89,918.92,1945.95,972.97",
+            "Task": "rest",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:FlowWeighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Functional"
+            },
+            "filename": "/sub-0026209/ses-1/func/sub-0026209_ses-1_task-rest_run-1_bold.nii.gz",
+            "prov:Location": "/datasets.datalad.org/corr/RawDataBIDS/IPCAS_4",
+            "prov:wasGeneratedBy": {
+                "@id": "niiri:d640dca0-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d5c4c70a-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Entity",
+                "AcquisitionObject"
+            ],
+            "crypto:sha512": "7a3bd9b4815103537c839776fb0face7aae4d89a2dd8754a76f82458fddfbf81190b9315188c36ae053044bac539c6edc08b002d3557b1a87b0855b5b91403f8",
+            "dicom:AcquisitionMatrix": "250x250",
+            "dicom:EchoTime": "0.003136",
+            "dicom:FlipAngle": "8",
+            "dicom:InversionTime": "0.45",
+            "dicom:MagneticFieldStrength": "3T",
+            "dicom:PixelBandwidth": 31.25,
+            "dicom:ReceiveCoilName": "8 Chan",
+            "dicom:RepetitionTime": 8.068,
+            "nidm:PhaseEncodingDirection": "j-",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:T1Weighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Anatomical"
+            },
+            "filename": "/sub-0026208/ses-1/anat/sub-0026208_ses-1_run-1_T1w.nii.gz",
+            "prov:Location": "/datasets.datalad.org/corr/RawDataBIDS/IPCAS_4",
+            "prov:wasGeneratedBy": {
+                "@id": "niiri:d5c4bf08-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:ce0895aa-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "AcquisitionObject",
+                "assessment-instrument",
+                "prov:Entity"
+            ],
+            "bids:handedness": "#",
+            "prov:wasGeneratedBy": {
+                "@id": "niiri:ce089212-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d59ee26a-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "Session",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:c8e9ea10-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d000d912-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "Acquisition",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:cfe765b8-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:ce08eece-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Session"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:c8e9ea10-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d0d1fe7a-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "Acquisition",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:d0b650ee-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:ce070906-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Session"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:c8e9ea10-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d4f770a2-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "AcquisitionObject",
+                "prov:Entity"
+            ],
+            "crypto:sha512": "737bc865351a7610e240e909629e82cca1b1d6457e2923454cf428f1abb455b995cb79a69d9db1f96c99291599eaa5a71fd4e129e6473d986b6fa4a7d5a3342d",
+            "dicom:AcquisitionMatrix": "64x64",
+            "dicom:EchoTime": 0.03,
+            "dicom:FlipAngle": {
+                "@type": "xsd:int",
+                "@value": "90"
+            },
+            "dicom:PixelBandwidth": 250.0,
+            "dicom:ReceiveCoilName": "8 Chan",
+            "dicom:RepetitionTime": 2.0,
+            "dicom:ScanOptions": "FS",
+            "AcquisitionObject": {
+                "@type": "xsd:int",
+                "@value": "1"
+            },
+            "nidm:PhaseEncodingDirection": "j-",
+            "nidm:SliceTiming": "0.0,1027.03,54.05,1081.08,108.11,1135.14,162.16,1189.19,216.22,1243.24,270.27,1297.3,324.32,1351.35,378.38,1405.41,432.43,1459.46,486.49,1513.51,540.54,1567.57,594.59,1621.62,648.65,1675.68,702.7,1729.73,756.76,1783.78,810.81,1837.84,864.86,1891.89,918.92,1945.95,972.97",
+            "Task": "rest",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:FlowWeighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Functional"
+            },
+            "filename": "/sub-0026206/ses-1/func/sub-0026206_ses-1_task-rest_run-1_bold.nii.gz",
+            "prov:Location": "/datasets.datalad.org/corr/RawDataBIDS/IPCAS_4",
+            "prov:wasGeneratedBy": {
+                "@id": "niiri:d4f768c8-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d4860df4-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Acquisition"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:d474537a-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d561b8c2-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Acquisition"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:d5464fa6-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d22b6b30-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "AcquisitionObject",
+                "prov:Entity"
+            ],
+            "crypto:sha512": "e29c5cbf9e1c78999cccad955e82d04a8e1bbe4603e45f6139fa10a99d6683b6cf5b324cbda7702c53ec2c2f7c4376c1665dc28517bd38db8ad06ade07daeee8",
+            "dicom:AcquisitionMatrix": "64x64",
+            "dicom:EchoTime": 0.03,
+            "dicom:FlipAngle": {
+                "@type": "xsd:int",
+                "@value": "90"
+            },
+            "dicom:PixelBandwidth": 250.0,
+            "dicom:ReceiveCoilName": "8 Chan",
+            "dicom:RepetitionTime": 2.0,
+            "dicom:ScanOptions": "FS",
+            "AcquisitionObject": {
+                "@type": "xsd:int",
+                "@value": "2"
+            },
+            "nidm:PhaseEncodingDirection": "j-",
+            "nidm:SliceTiming": "0.0,1027.03,54.05,1081.08,108.11,1135.14,162.16,1189.19,216.22,1243.24,270.27,1297.3,324.32,1351.35,378.38,1405.41,432.43,1459.46,486.49,1513.51,540.54,1567.57,594.59,1621.62,648.65,1675.68,702.7,1729.73,756.76,1783.78,810.81,1837.84,864.86,1891.89,918.92,1945.95,972.97",
+            "Task": "rest",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:FlowWeighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Functional"
+            },
+            "filename": "/sub-0026199/ses-1/func/sub-0026199_ses-1_task-rest_run-2_bold.nii.gz",
+            "prov:Location": "/datasets.datalad.org/corr/RawDataBIDS/IPCAS_4",
+            "prov:wasGeneratedBy": {
+                "@id": "niiri:d22b6482-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:ce08d236-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "Acquisition",
+                "prov:Activity",
+                "instrument-based-assessment"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:ce08cd86-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:cf99ac42-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Entity",
+                "AcquisitionObject"
+            ],
+            "crypto:sha512": "ef3e1f0891db3cea6b057130a31ef85859b170f446c23c01611775efdf8d19d5d22028ca5a6cddc0afde944a30e5e7961c0675004762398588b0ba5e5fa30fed",
+            "dicom:AcquisitionMatrix": "64x64",
+            "dicom:EchoTime": 0.03,
+            "dicom:FlipAngle": {
+                "@type": "xsd:int",
+                "@value": "90"
+            },
+            "dicom:PixelBandwidth": 250.0,
+            "dicom:ReceiveCoilName": "8 Chan",
+            "dicom:RepetitionTime": 2.0,
+            "dicom:ScanOptions": "FS",
+            "AcquisitionObject": {
+                "@type": "xsd:int",
+                "@value": "1"
+            },
+            "nidm:PhaseEncodingDirection": "j-",
+            "nidm:SliceTiming": "0.0,1027.03,54.05,1081.08,108.11,1135.14,162.16,1189.19,216.22,1243.24,270.27,1297.3,324.32,1351.35,378.38,1405.41,432.43,1459.46,486.49,1513.51,540.54,1567.57,594.59,1621.62,648.65,1675.68,702.7,1729.73,756.76,1783.78,810.81,1837.84,864.86,1891.89,918.92,1945.95,972.97",
+            "Task": "rest",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:FlowWeighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Functional"
+            },
+            "filename": "/sub-0026193/ses-1/func/sub-0026193_ses-1_task-rest_run-1_bold.nii.gz",
+            "prov:Location": "/datasets.datalad.org/corr/RawDataBIDS/IPCAS_4",
+            "prov:wasGeneratedBy": {
+                "@id": "niiri:cf99a45e-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d406c576-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "Session",
+                "prov:Activity"
+            ],
+            "bids:session_number": "1",
+            "dct:isPartOf": {
+                "@id": "niiri:c8e9ea10-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:ce091606-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "AcquisitionObject",
+                "prov:Entity",
+                "assessment-instrument"
+            ],
+            "bids:handedness": "#",
+            "prov:wasGeneratedBy": {
+                "@id": "niiri:ce091296-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d4ee1804-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Entity",
+                "AcquisitionObject"
+            ],
+            "crypto:sha512": "44d83bcba0fb860fb12318a1f105b8879bc0c16f20819fb301a1784fc56c74350296f0737aca5d8e2b33ed64be3b05774c9011815308835cb1496c0d2e7d6172",
+            "dicom:AcquisitionMatrix": "250x250",
+            "dicom:EchoTime": "0.003136",
+            "dicom:FlipAngle": "8",
+            "dicom:InversionTime": "0.45",
+            "dicom:MagneticFieldStrength": "3T",
+            "dicom:PixelBandwidth": 31.25,
+            "dicom:ReceiveCoilName": "8 Chan",
+            "dicom:RepetitionTime": 8.068,
+            "nidm:PhaseEncodingDirection": "j-",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:T1Weighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Anatomical"
+            },
+            "filename": "/sub-0026206/ses-1/anat/sub-0026206_ses-1_run-1_T1w.nii.gz",
+            "prov:Location": "/datasets.datalad.org/corr/RawDataBIDS/IPCAS_4",
+            "prov:wasGeneratedBy": {
+                "@id": "niiri:d4ee0f44-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:ce07ff46-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "AcquisitionObject",
+                "prov:Entity",
+                "assessment-instrument"
+            ],
+            "bids:handedness": "#",
+            "prov:wasGeneratedBy": {
+                "@id": "niiri:ce07fbb8-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:ce07b810-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Session"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:c8e9ea10-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d65daad8-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Acquisition"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:d626c5e0-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d561c150-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "AcquisitionObject",
+                "prov:Entity"
+            ],
+            "crypto:sha512": "e2ecec43a17430d0f6b03ca5be8cfa23dd55f0f1a237de6c33c2c757709c906864e3ce614622f0dd12419f70972e87ce71250d1c492227abd8342983bc267fff",
+            "dicom:AcquisitionMatrix": "64x64",
+            "dicom:EchoTime": 0.03,
+            "dicom:FlipAngle": {
+                "@type": "xsd:int",
+                "@value": "90"
+            },
+            "dicom:PixelBandwidth": 250.0,
+            "dicom:ReceiveCoilName": "8 Chan",
+            "dicom:RepetitionTime": 2.0,
+            "dicom:ScanOptions": "FS",
+            "AcquisitionObject": {
+                "@type": "xsd:int",
+                "@value": "1"
+            },
+            "nidm:PhaseEncodingDirection": "j-",
+            "nidm:SliceTiming": "0.0,1027.03,54.05,1081.08,108.11,1135.14,162.16,1189.19,216.22,1243.24,270.27,1297.3,324.32,1351.35,378.38,1405.41,432.43,1459.46,486.49,1513.51,540.54,1567.57,594.59,1621.62,648.65,1675.68,702.7,1729.73,756.76,1783.78,810.81,1837.84,864.86,1891.89,918.92,1945.95,972.97",
+            "Task": "rest",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:FlowWeighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Functional"
+            },
+            "filename": "/sub-0026207/ses-1/func/sub-0026207_ses-1_task-rest_run-1_bold.nii.gz",
+            "prov:Location": "/datasets.datalad.org/corr/RawDataBIDS/IPCAS_4",
+            "prov:wasGeneratedBy": {
+                "@id": "niiri:d561b8c2-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:ce07daf2-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "instrument-based-assessment",
+                "Acquisition"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:ce07d6f6-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d19da304-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Acquisition"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:d18c1170-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:cee59180-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Acquisition"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:cea61c3a-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:ce0857c0-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "AcquisitionObject",
+                "assessment-instrument",
+                "prov:Entity"
+            ],
+            "bids:handedness": "#",
+            "prov:wasGeneratedBy": {
+                "@id": "niiri:ce085400-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:ce06cb3a-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "Acquisition",
+                "prov:Activity",
+                "instrument-based-assessment"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:ce06c644-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d01e1db0-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Acquisition"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:cfe765b8-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:cff7c5a2-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "Acquisition",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:cfe765b8-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:ce07bf90-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Entity",
+                "assessment-instrument",
+                "AcquisitionObject"
+            ],
+            "bids:handedness": "#",
+            "prov:wasGeneratedBy": {
+                "@id": "niiri:ce07bb8a-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:cee59874-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "AcquisitionObject",
+                "prov:Entity"
+            ],
+            "crypto:sha512": "0e0969f54c66b0ea88e7424b4aeebd5176ad41e869a9b3befbef93e41d549ef03051f7198c886e2a8fdb147ce69600d4a58124ba95160687b8d16edcb1a6daea",
+            "dicom:AcquisitionMatrix": "64x64",
+            "dicom:EchoTime": 0.03,
+            "dicom:FlipAngle": {
+                "@type": "xsd:int",
+                "@value": "90"
+            },
+            "dicom:PixelBandwidth": 250.0,
+            "dicom:ReceiveCoilName": "8 Chan",
+            "dicom:RepetitionTime": 2.0,
+            "dicom:ScanOptions": "FS",
+            "AcquisitionObject": {
+                "@type": "xsd:int",
+                "@value": "2"
+            },
+            "nidm:PhaseEncodingDirection": "j-",
+            "nidm:SliceTiming": "0.0,1027.03,54.05,1081.08,108.11,1135.14,162.16,1189.19,216.22,1243.24,270.27,1297.3,324.32,1351.35,378.38,1405.41,432.43,1459.46,486.49,1513.51,540.54,1567.57,594.59,1621.62,648.65,1675.68,702.7,1729.73,756.76,1783.78,810.81,1837.84,864.86,1891.89,918.92,1945.95,972.97",
+            "Task": "rest",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:FlowWeighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Functional"
+            },
+            "filename": "/sub-0026191/ses-1/func/sub-0026191_ses-1_task-rest_run-2_bold.nii.gz",
+            "prov:Location": "/datasets.datalad.org/corr/RawDataBIDS/IPCAS_4",
+            "prov:wasGeneratedBy": {
+                "@id": "niiri:cee59180-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d341af0c-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "AcquisitionObject",
+                "prov:Entity"
+            ],
+            "crypto:sha512": "4ca0b6d7d13e87106deac0866958416f3ec52defd5498d0413632b1bce476618a62c7f97d1f105e92531972a908f41ea75e96cf6580173afb0e6c615e5853b52",
+            "dicom:AcquisitionMatrix": "250x250",
+            "dicom:EchoTime": "0.003136",
+            "dicom:FlipAngle": "8",
+            "dicom:InversionTime": "0.45",
+            "dicom:MagneticFieldStrength": "3T",
+            "dicom:PixelBandwidth": 31.25,
+            "dicom:ReceiveCoilName": "8 Chan",
+            "dicom:RepetitionTime": 8.068,
+            "nidm:PhaseEncodingDirection": "j-",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:T1Weighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Anatomical"
+            },
+            "filename": "/sub-0026202/ses-1/anat/sub-0026202_ses-1_run-1_T1w.nii.gz",
+            "prov:Location": "/datasets.datalad.org/corr/RawDataBIDS/IPCAS_4",
+            "prov:wasGeneratedBy": {
+                "@id": "niiri:d341a700-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:ce074a4c-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Entity",
+                "AcquisitionObject",
+                "assessment-instrument"
+            ],
+            "bids:handedness": "#",
+            "prov:wasGeneratedBy": {
+                "@id": "niiri:ce074768-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d1c40652-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Entity",
+                "AcquisitionObject"
+            ],
+            "crypto:sha512": "40dc47f80f6ae727dcab5c583f65440528656716141702a0a2f26ef28899e64625d0587e6c22ecc2a3d299649cb35f8c7f5d5588830fdc7a580cc1364b8f0866",
+            "dicom:AcquisitionMatrix": "64x64",
+            "dicom:EchoTime": 0.03,
+            "dicom:FlipAngle": {
+                "@type": "xsd:int",
+                "@value": "90"
+            },
+            "dicom:PixelBandwidth": 250.0,
+            "dicom:ReceiveCoilName": "8 Chan",
+            "dicom:RepetitionTime": 2.0,
+            "dicom:ScanOptions": "FS",
+            "AcquisitionObject": {
+                "@type": "xsd:int",
+                "@value": "2"
+            },
+            "nidm:PhaseEncodingDirection": "j-",
+            "nidm:SliceTiming": "0.0,1027.03,54.05,1081.08,108.11,1135.14,162.16,1189.19,216.22,1243.24,270.27,1297.3,324.32,1351.35,378.38,1405.41,432.43,1459.46,486.49,1513.51,540.54,1567.57,594.59,1621.62,648.65,1675.68,702.7,1729.73,756.76,1783.78,810.81,1837.84,864.86,1891.89,918.92,1945.95,972.97",
+            "Task": "rest",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:FlowWeighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Functional"
+            },
+            "filename": "/sub-0026198/ses-1/func/sub-0026198_ses-1_task-rest_run-2_bold.nii.gz",
+            "prov:Location": "/datasets.datalad.org/corr/RawDataBIDS/IPCAS_4",
+            "prov:wasGeneratedBy": {
+                "@id": "niiri:d1c3ffc2-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d5b2bcea-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Session"
+            ],
+            "bids:session_number": "1",
+            "dct:isPartOf": {
+                "@id": "niiri:c8e9ea10-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d4ee0f44-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "Acquisition",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:d4dce322-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d1226b6c-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Session"
+            ],
+            "bids:session_number": "1",
+            "dct:isPartOf": {
+                "@id": "niiri:c8e9ea10-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:ce078304-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Acquisition",
+                "instrument-based-assessment"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:ce078016-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d532bab8-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Session"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:c8e9ea10-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d0c7ccc0-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "Acquisition",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:d0b650ee-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d6138d9a-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Session"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:c8e9ea10-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:cea61c3a-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Session"
+            ],
+            "bids:session_number": "1",
+            "dct:isPartOf": {
+                "@id": "niiri:c8e9ea10-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d13d409a-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Acquisition"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:d1226b6c-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d31d0ad0-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Session"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:c8e9ea10-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:ce4b177c-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Acquisition"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:ce39eb78-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d0b650ee-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Session"
+            ],
+            "bids:session_number": "1",
+            "dct:isPartOf": {
+                "@id": "niiri:c8e9ea10-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d06993b2-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Acquisition"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:d04e4850-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d474537a-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Session"
+            ],
+            "bids:session_number": "1",
+            "dct:isPartOf": {
+                "@id": "niiri:c8e9ea10-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:ce072c10-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "instrument-based-assessment",
+                "Acquisition"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:ce072954-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d1789fd2-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "Session",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:c8e9ea10-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d36a0678-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Acquisition"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:d3301698-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:ce08162a-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "Session",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:c8e9ea10-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d2df0ac8-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Acquisition"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:d2c34fcc-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:ce07a19a-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Entity",
+                "assessment-instrument",
+                "AcquisitionObject"
+            ],
+            "bids:handedness": "#",
+            "prov:wasGeneratedBy": {
+                "@id": "niiri:ce079eac-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:cf4db468-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "Acquisition",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:cf159ea2-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d2c34fcc-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Session"
+            ],
+            "bids:session_number": "1",
+            "dct:isPartOf": {
+                "@id": "niiri:c8e9ea10-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:cf302646-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "AcquisitionObject",
+                "prov:Entity"
+            ],
+            "crypto:sha512": "d7a07ded8c67f552f607314cdfad64f1c01e901586a4389c6d6254b3c6fc30bfe3d5133362fc33a5ad013142b1d8be926781b2d7da4439a1e931bd13a86953e2",
+            "dicom:AcquisitionMatrix": "64x64",
+            "dicom:EchoTime": 0.03,
+            "dicom:FlipAngle": {
+                "@type": "xsd:int",
+                "@value": "90"
+            },
+            "dicom:PixelBandwidth": 250.0,
+            "dicom:ReceiveCoilName": "8 Chan",
+            "dicom:RepetitionTime": 2.0,
+            "dicom:ScanOptions": "FS",
+            "AcquisitionObject": {
+                "@type": "xsd:int",
+                "@value": "1"
+            },
+            "nidm:PhaseEncodingDirection": "j-",
+            "nidm:SliceTiming": "0.0,1027.03,54.05,1081.08,108.11,1135.14,162.16,1189.19,216.22,1243.24,270.27,1297.3,324.32,1351.35,378.38,1405.41,432.43,1459.46,486.49,1513.51,540.54,1567.57,594.59,1621.62,648.65,1675.68,702.7,1729.73,756.76,1783.78,810.81,1837.84,864.86,1891.89,918.92,1945.95,972.97",
+            "Task": "rest",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:FlowWeighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Functional"
+            },
+            "filename": "/sub-0026192/ses-1/func/sub-0026192_ses-1_task-rest_run-1_bold.nii.gz",
+            "prov:Location": "/datasets.datalad.org/corr/RawDataBIDS/IPCAS_4",
+            "prov:wasGeneratedBy": {
+                "@id": "niiri:cf301e1c-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d42241ac-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Acquisition"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:d406c576-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:ce545b0c-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Acquisition"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:ce39eb78-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:ce7326e0-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "prov:Activity",
+                "Acquisition"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:ce39eb78-3310-11ea-842e-003ee1ce9545"
+            }
+        },
+        {
+            "@id": "niiri:d5800f48-3310-11ea-842e-003ee1ce9545",
+            "@type": [
+                "Acquisition",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:d5464fa6-3310-11ea-842e-003ee1ce9545"
+            }
+        }
+    ]
+}
