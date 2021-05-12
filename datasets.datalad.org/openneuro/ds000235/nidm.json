@@ -1,0 +1,601 @@
+{
+    "@context": {
+        "@version": 1.1,
+        "records": {
+            "@container": "@type",
+            "@id": "@graph"
+        },
+        "nidm": "http://purl.org/nidash/nidm#",
+        "niiri": "http://iri.nidash.org/",
+        "afni": "http://purl.org/nidash/afni#",
+        "spm": "http://purl.org/nidash/spm#",
+        "fsl": "http://purl.org/nidash/fsl#",
+        "freesurfer": "https://surfer.nmr.mgh.harvard.edu/",
+        "ants": "http://stnava.github.io/ANTs/",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "crypto": "http://id.loc.gov/vocabulary/preservation/cryptographicHashFunctions#",
+        "dct": "http://purl.org/dc/terms/",
+        "obo": "http://purl.obolibrary.org/obo/",
+        "nfo": "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#",
+        "dc": "http://purl.org/dc/elements/1.1/",
+        "nlx": "http://uri.neuinfo.org/nif/nifstd/",
+        "scr": "http://scicrunch.org/resolver/",
+        "foaf": "http://xmlns.com/foaf/0.1/",
+        "vc": "http://www.w3.org/2006/vcard/ns#",
+        "dicom": "http://neurolex.org/wiki/Category:DICOM_term/",
+        "dctypes": "http://purl.org/dc/dcmitype/",
+        "ncit": "http://ncitt.ncit.nih.gov/",
+        "dcat": "http://www.w3.org/ns/dcat#",
+        "birnlex": "http://bioontology.org/projects/ontologies/birnlex/",
+        "ndar": "https://ndar.nih.gov/api/datadictionary/v2/dataelement/",
+        "ncicb": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#",
+        "sio": "http://semanticscience.org/ontology/sio.owl#",
+        "bids": "http://bids.neuroimaging.io/",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "onli": "http://neurolog.unice.fr/ontoneurolog/v3.0/instrument.owl#",
+        "pato": "http://purl.obolibrary.org/obo/pato#",
+        "datalad": "http://datasets.datalad.org/",
+        "ilx": "http://uri.interlex.org/base/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "prov": "http://www.w3.org/ns/prov#",
+        "agent": {
+            "@type": "@id",
+            "@id": "prov:agent"
+        },
+        "entity": {
+            "@type": "@id",
+            "@id": "prov:entity"
+        },
+        "activity": {
+            "@type": "@id",
+            "@id": "prov:activity"
+        },
+        "hadPlan": {
+            "@type": "@id",
+            "@id": "prov:hadPlan"
+        },
+        "hadRole": {
+            "@type": "@id",
+            "@id": "prov:hadRole"
+        },
+        "wasAttributedTo": {
+            "@type": "@id",
+            "@id": "prov:wasAttributedTo"
+        },
+        "association": {
+            "@type": "@id",
+            "@id": "prov:qualifiedAssociation"
+        },
+        "usage": {
+            "@type": "@id",
+            "@id": "prov:qualifiedUsage"
+        },
+        "generation": {
+            "@type": "@id",
+            "@id": "prov:qualifiedGeneration"
+        },
+        "startedAtTime": {
+            "@type": "xsd:dateTime",
+            "@id": "prov:startedAtTime"
+        },
+        "endedAtTime": {
+            "@type": "xsd:dateTime",
+            "@id": "prov:endedAtTime"
+        },
+        "Project": "http://purl.org/nidash/nidm#Project",
+        "Identifier": "http://semanticscience.org/ontology/sio.owl#Identifier",
+        "title": "http://purl.org/dc/dcmitype/title",
+        "description": "http://purl.org/dc/terms/description",
+        "license": "http://purl.org/dc/terms/license",
+        "URL": "http://semanticscience.org/ontology/sio.owl#URL",
+        "creator": "http://www.w3.org/ns/dcat#creator",
+        "author": "http://www.w3.org/ns/dcat#author",
+        "Session": "http://purl.org/nidash/nidm#Session",
+        "Acquisition": "http://purl.org/nidash/nidm#Acquisition",
+        "hadAcquisitionModality": "http://purl.org/nidash/nidm#hadAcquisitionModality",
+        "instrument-based-assessment": "http://neurolog.unice.fr/ontoneurolog/v3.0/instrument.owl#instrument-based-assessment",
+        "AcquisitionObject": "http://purl.org/nidash/nidm#AcquisitionObject",
+        "DemographicsInstrument": "http://purl.org/nidash/nidm#DemographicsInstrument",
+        "assessment-instrument": "http://neurolog.unice.fr/ontoneurolog/v3.0/instrument.owl#assessment-instrument",
+        "filename": "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#filename",
+        "file": "http://semanticscience.org/ontology/sio.owl#file",
+        "birnlex_2152": "http://bioontology.org/projects/ontologies/birnlex/birnlex_2152",
+        "birnlex_2199": "http://bioontology.org/projects/ontologies/birnlex/birnlex_2199",
+        "Subject": "http://semanticscience.org/ontology/sio.owl#Subject",
+        "Age": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Age",
+        "gender": "https://ndar.nih.gov/api/datadictionary/v2/dataelement/gender",
+        "PhenotypicSex": "http://purl.obolibrary.org/obo/pato#PhenotypicSex",
+        "handedness": "http://purl.obolibrary.org/obo/handedness",
+        "race": "http://semanticscience.org/ontology/sio.owl#race",
+        "ethnicity": "http://semanticscience.org/ontology/sio.owl#ethnicity",
+        "Diagnosis": "http://ncitt.ncit.nih.gov/Diagnosis",
+        "familyName": "http://xmlns.com/foaf/0.1/familyName",
+        "givenName": "http://xmlns.com/foaf/0.1/givenName",
+        "src_subject_id": "https://ndar.nih.gov/api/datadictionary/v2/dataelement/src_subject_id",
+        "hadImageContrastType": "http://purl.org/nidash/nidm#hadImageContrastType",
+        "hadImageUsageType": "http://purl.org/nidash/nidm#hadImageUsageType",
+        "MagneticResonanceImaging": "http://purl.org/nidash/nidm#MagneticResonanceImaging",
+        "Anatomical": "http://purl.org/nidash/nidm#Anatomical",
+        "Structural": "http://purl.org/nidash/nidm#Structural",
+        "Functional": "http://purl.org/nidash/nidm#Functional",
+        "DiffusionWeighted": "http://purl.org/nidash/nidm#DiffusionWeighted",
+        "b-value": "http://purl.org/nidash/nidm#b-value",
+        "b-vector": "http://purl.org/nidash/nidm#b-vector",
+        "Task": "http://purl.org/nidash/nidm#Task",
+        "T1Weighted": "http://purl.org/nidash/nidm#T1Weighted",
+        "T2Weighted": "http://purl.org/nidash/nidm#T2Weighted",
+        "T2StarWeighted": "http://purl.org/nidash/nidm#T2StarWeighted",
+        "DiffusionTensor": "http://purl.org/nidash/nidm#DiffusionTensor",
+        "FlowWeighted": "http://purl.org/nidash/nidm#FlowWeighted",
+        "StimulusResponseFile": "http://purl.org/nidash/nidm#StimulusResponseFile",
+        "xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "xml": "http://www.w3.org/XML/1998/namespace",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "http://purl.org/nidash/nidm#prefix": "http://purl.org/nidash/nidm#uri",
+        "http://www.w3.org/ns/prov#prefix": "http://www.w3.org/ns/prov#uri"
+    },
+    "@graph": [
+        {
+            "@id": "niiri:e7d3b518-3be8-11eb-a27a-1094bbf2086c",
+            "@type": [
+                "Session",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:c5e84ce6-3be8-11eb-a27a-1094bbf2086c"
+            }
+        },
+        {
+            "@id": "niiri:f7d21eb0-3be8-11eb-a27a-1094bbf2086c",
+            "@type": [
+                "Session",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:c5e84ce6-3be8-11eb-a27a-1094bbf2086c"
+            }
+        },
+        {
+            "@id": "niiri:a7d2e200-3be8-11eb-a27a-1094bbf2086c",
+            "@type": [
+                "prov:Activity",
+                "Acquisition",
+                "instrument-based-assessment"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:b7d2d800-3be8-11eb-a27a-1094bbf2086c"
+            },
+            "association": "_:ub2bL117C31"
+        },
+        {
+            "@id": "_:ub2bL117C31",
+            "@type": "prov:Association",
+            "agent": "niiri:d7d2ecdc-3be8-11eb-a27a-1094bbf2086c",
+            "hadRole": "sio:Subject"
+        },
+        {
+            "@id": "niiri:a7d3c4e0-3be8-11eb-a27a-1094bbf2086c",
+            "@type": [
+                "prov:Person",
+                "prov:Agent"
+            ],
+            "src_subject_id": "sub-04"
+        },
+        {
+            "@id": "niiri:a841588e-3be8-11eb-a27a-1094bbf2086c",
+            "@type": [
+                "Acquisition",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:c83e425c-3be8-11eb-a27a-1094bbf2086c"
+            },
+            "association": "_:ub2bL136C31"
+        },
+        {
+            "@id": "_:ub2bL136C31",
+            "@type": "prov:Association",
+            "agent": "niiri:c7d36220-3be8-11eb-a27a-1094bbf2086c",
+            "hadRole": "sio:Subject"
+        },
+        {
+            "@id": "niiri:a8657502-3be8-11eb-a27a-1094bbf2086c",
+            "@type": [
+                "prov:Activity",
+                "Session"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:c5e84ce6-3be8-11eb-a27a-1094bbf2086c"
+            }
+        },
+        {
+            "@id": "niiri:e7d2e714-3be8-11eb-a27a-1094bbf2086c",
+            "@type": [
+                "AcquisitionObject",
+                "prov:Entity",
+                "assessment-instrument"
+            ],
+            "niiri:age_3gfjlt9": "30",
+            "niiri:sex_2sf85at": "F",
+            "filename": "participants.tsv",
+            "prov:Location": "file://Volumes/Research/datasets.datalad.org/openneuro/ds000235/participants.tsv",
+            "prov:wasGeneratedBy": {
+                "@id": "niiri:a7d2e200-3be8-11eb-a27a-1094bbf2086c"
+            },
+            "prov:wasInfluencedBy": {
+                "@id": "niiri:d7d31a7c-3be8-11eb-a27a-1094bbf2086c"
+            }
+        },
+        {
+            "@id": "niiri:b7d2301c-3be8-11eb-a27a-1094bbf2086c",
+            "@type": [
+                "instrument-based-assessment",
+                "Acquisition",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:f7d21eb0-3be8-11eb-a27a-1094bbf2086c"
+            },
+            "association": "_:ub2bL148C31"
+        },
+        {
+            "@id": "_:ub2bL148C31",
+            "@type": "prov:Association",
+            "agent": "niiri:f7d23f80-3be8-11eb-a27a-1094bbf2086c",
+            "hadRole": "sio:Subject"
+        },
+        {
+            "@id": "niiri:f7d23f80-3be8-11eb-a27a-1094bbf2086c",
+            "@type": [
+                "prov:Agent",
+                "prov:Person"
+            ],
+            "src_subject_id": "sub-01"
+        },
+        {
+            "@id": "niiri:d7d3bbbc-3be8-11eb-a27a-1094bbf2086c",
+            "@type": [
+                "instrument-based-assessment",
+                "Acquisition",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:e7d3b518-3be8-11eb-a27a-1094bbf2086c"
+            },
+            "association": "_:ub2bL179C31"
+        },
+        {
+            "@id": "_:ub2bL179C31",
+            "@type": "prov:Association",
+            "agent": "niiri:a7d3c4e0-3be8-11eb-a27a-1094bbf2086c",
+            "hadRole": "sio:Subject"
+        },
+        {
+            "@id": "niiri:a7d3c026-3be8-11eb-a27a-1094bbf2086c",
+            "@type": [
+                "assessment-instrument",
+                "prov:Entity",
+                "AcquisitionObject"
+            ],
+            "niiri:age_3gfjlt9": "21",
+            "niiri:sex_2sf85at": "F",
+            "filename": "participants.tsv",
+            "prov:Location": "file://Volumes/Research/datasets.datalad.org/openneuro/ds000235/participants.tsv",
+            "prov:wasGeneratedBy": {
+                "@id": "niiri:d7d3bbbc-3be8-11eb-a27a-1094bbf2086c"
+            },
+            "prov:wasInfluencedBy": {
+                "@id": "niiri:c7d3e330-3be8-11eb-a27a-1094bbf2086c"
+            }
+        },
+        {
+            "@id": "niiri:a7d356f4-3be8-11eb-a27a-1094bbf2086c",
+            "@type": [
+                "prov:Activity",
+                "Acquisition",
+                "instrument-based-assessment"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:c7d34b96-3be8-11eb-a27a-1094bbf2086c"
+            },
+            "association": "_:ub2bL125C31"
+        },
+        {
+            "@id": "_:ub2bL125C31",
+            "@type": "prov:Association",
+            "agent": "niiri:c7d36220-3be8-11eb-a27a-1094bbf2086c",
+            "hadRole": "sio:Subject"
+        },
+        {
+            "@id": "niiri:c5e84ce6-3be8-11eb-a27a-1094bbf2086c",
+            "@type": [
+                "Project",
+                "prov:Activity"
+            ],
+            "title": "Whole-brain background-suppressed pCASL MRI with 1D-accelerated 3D RARE Stack-Of-Spirals Readout- Dataset 2",
+            "license": "CC0",
+            "Identifier": "1.0.0rc1",
+            "author": "Marta VidorretaZe WangYulin V. ChangMaria A. Fernandez-SearaJohn A. Detre",
+            "prov:Location": "file://Volumes/Research/datasets.datalad.org/openneuro/ds000235"
+        },
+        {
+            "@id": "niiri:b7d2d800-3be8-11eb-a27a-1094bbf2086c",
+            "@type": [
+                "Session",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:c5e84ce6-3be8-11eb-a27a-1094bbf2086c"
+            }
+        },
+        {
+            "@id": "niiri:c83e425c-3be8-11eb-a27a-1094bbf2086c",
+            "@type": [
+                "prov:Activity",
+                "Session"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:c5e84ce6-3be8-11eb-a27a-1094bbf2086c"
+            }
+        },
+        {
+            "@id": "niiri:b7d35c12-3be8-11eb-a27a-1094bbf2086c",
+            "@type": [
+                "prov:Entity",
+                "AcquisitionObject",
+                "assessment-instrument"
+            ],
+            "niiri:age_3gfjlt9": "65",
+            "niiri:sex_2sf85at": "M",
+            "filename": "participants.tsv",
+            "prov:Location": "file://Volumes/Research/datasets.datalad.org/openneuro/ds000235/participants.tsv",
+            "prov:wasGeneratedBy": {
+                "@id": "niiri:a7d356f4-3be8-11eb-a27a-1094bbf2086c"
+            },
+            "prov:wasInfluencedBy": {
+                "@id": "niiri:b7d38926-3be8-11eb-a27a-1094bbf2086c"
+            }
+        },
+        {
+            "@id": "niiri:sex_2sf85at",
+            "@type": [
+                "nidm:DataElement",
+                "prov:Entity"
+            ],
+            "description": "",
+            "nidm:isAbout": {
+                "@type": "xsd:anyURI",
+                "@value": "http://uri.interlex.org/ilx_0112866"
+            },
+            "nidm:source_variable": "sex",
+            "nidm:valueType": {
+                "@type": "xsd:anyURI",
+                "@value": "http://www.w3.org/2001/XMLSchema#string"
+            },
+            "ilx:ilx_0739289": "NIDM",
+            "rdfs:label": ""
+        },
+        {
+            "@id": "niiri:c7d34b96-3be8-11eb-a27a-1094bbf2086c",
+            "@type": [
+                "prov:Activity",
+                "Session"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:c5e84ce6-3be8-11eb-a27a-1094bbf2086c"
+            }
+        },
+        {
+            "@id": "niiri:e7dc77fc-3be8-11eb-a27a-1094bbf2086c",
+            "@type": [
+                "Acquisition",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:b7d8aece-3be8-11eb-a27a-1094bbf2086c"
+            },
+            "association": "_:ub2bL197C31"
+        },
+        {
+            "@id": "_:ub2bL197C31",
+            "@type": "prov:Association",
+            "agent": "niiri:f7d23f80-3be8-11eb-a27a-1094bbf2086c",
+            "hadRole": "sio:Subject"
+        },
+        {
+            "@id": "niiri:a819c576-3be8-11eb-a27a-1094bbf2086c",
+            "@type": [
+                "AcquisitionObject",
+                "prov:Entity"
+            ],
+            "crypto:sha512": "a15746960002562ca020eabb1c9b565b251f0aebaf8f047cda7daa112c5069ceb950179a66637c9ef1471a6ec4353ad1cc790479f2417da2dd9a4727b27cd433",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:T1Weighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Anatomical"
+            },
+            "filename": "/sub-02/anat/sub-02_T1w.nii.gz",
+            "prov:Location": "file://Volumes/Research/datasets.datalad.org/openneuro/ds000235/sub-02/anat/sub-02_T1w.nii.gz",
+            "prov:wasGeneratedBy": {
+                "@id": "niiri:b819817e-3be8-11eb-a27a-1094bbf2086c"
+            }
+        },
+        {
+            "@id": "niiri:age_3gfjlt9",
+            "@type": [
+                "nidm:DataElement",
+                "prov:Entity"
+            ],
+            "description": "",
+            "nidm:isAbout": {
+                "@type": "xsd:anyURI",
+                "@value": "http://uri.interlex.org/ilx_0100400"
+            },
+            "nidm:source_variable": "age",
+            "nidm:valueType": {
+                "@type": "xsd:anyURI",
+                "@value": "http://www.w3.org/2001/XMLSchema#integer"
+            },
+            "ilx:ilx_0739289": "NIDM",
+            "rdfs:label": ""
+        },
+        {
+            "@id": "niiri:b819817e-3be8-11eb-a27a-1094bbf2086c",
+            "@type": [
+                "Acquisition",
+                "prov:Activity"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:a815825e-3be8-11eb-a27a-1094bbf2086c"
+            },
+            "association": "_:ub2bL163C31"
+        },
+        {
+            "@id": "_:ub2bL163C31",
+            "@type": "prov:Association",
+            "agent": "niiri:d7d2ecdc-3be8-11eb-a27a-1094bbf2086c",
+            "hadRole": "sio:Subject"
+        },
+        {
+            "@id": "niiri:d8695898-3be8-11eb-a27a-1094bbf2086c",
+            "@type": [
+                "prov:Activity",
+                "Acquisition"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:a8657502-3be8-11eb-a27a-1094bbf2086c"
+            },
+            "association": "_:ub2bL186C31"
+        },
+        {
+            "@id": "_:ub2bL186C31",
+            "@type": "prov:Association",
+            "agent": "niiri:a7d3c4e0-3be8-11eb-a27a-1094bbf2086c",
+            "hadRole": "sio:Subject"
+        },
+        {
+            "@id": "niiri:a815825e-3be8-11eb-a27a-1094bbf2086c",
+            "@type": [
+                "prov:Activity",
+                "Session"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:c5e84ce6-3be8-11eb-a27a-1094bbf2086c"
+            }
+        },
+        {
+            "@id": "niiri:c7d36220-3be8-11eb-a27a-1094bbf2086c",
+            "@type": [
+                "prov:Person",
+                "prov:Agent"
+            ],
+            "src_subject_id": "sub-03"
+        },
+        {
+            "@id": "niiri:b7d8aece-3be8-11eb-a27a-1094bbf2086c",
+            "@type": [
+                "prov:Activity",
+                "Session"
+            ],
+            "dct:isPartOf": {
+                "@id": "niiri:c5e84ce6-3be8-11eb-a27a-1094bbf2086c"
+            }
+        },
+        {
+            "@id": "niiri:a841b19e-3be8-11eb-a27a-1094bbf2086c",
+            "@type": [
+                "AcquisitionObject",
+                "prov:Entity"
+            ],
+            "crypto:sha512": "2816cfdc8bc0f569398a168a5ada3b8a1c9278860926a7c1e00c6dcc28664211e1bffb91e61381c72ffdd7be99f36177b294953dd4ab9c1ff10a0d0bb48a1cf0",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:T1Weighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Anatomical"
+            },
+            "filename": "/sub-03/anat/sub-03_T1w.nii.gz",
+            "prov:Location": "file://Volumes/Research/datasets.datalad.org/openneuro/ds000235/sub-03/anat/sub-03_T1w.nii.gz",
+            "prov:wasGeneratedBy": {
+                "@id": "niiri:a841588e-3be8-11eb-a27a-1094bbf2086c"
+            }
+        },
+        {
+            "@id": "niiri:b7dc8a62-3be8-11eb-a27a-1094bbf2086c",
+            "@type": [
+                "AcquisitionObject",
+                "prov:Entity"
+            ],
+            "crypto:sha512": "68608974a4ef3d87d9eab07393998b517a6ce53f2a547abcd2bda4236ac77736c2fae1ffb0b2aa9aa1aa90e4c8fb727cb482110fa9a441ae7c8bf74b3f0739b1",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:T1Weighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Anatomical"
+            },
+            "filename": "/sub-01/anat/sub-01_T1w.nii.gz",
+            "prov:Location": "file://Volumes/Research/datasets.datalad.org/openneuro/ds000235/sub-01/anat/sub-01_T1w.nii.gz",
+            "prov:wasGeneratedBy": {
+                "@id": "niiri:e7dc77fc-3be8-11eb-a27a-1094bbf2086c"
+            }
+        },
+        {
+            "@id": "niiri:d7d2ecdc-3be8-11eb-a27a-1094bbf2086c",
+            "@type": [
+                "prov:Agent",
+                "prov:Person"
+            ],
+            "src_subject_id": "sub-02"
+        },
+        {
+            "@id": "niiri:c869bf4a-3be8-11eb-a27a-1094bbf2086c",
+            "@type": [
+                "AcquisitionObject",
+                "prov:Entity"
+            ],
+            "crypto:sha512": "9fdfdd6fa1aeede3f294187fbf2b63405bfffcdb3b8f54d96a6ba540ab2adf28c6890ca6d2adb29c4fdc3b9e669f40d940e7b3d326befb45cb559a58def4e59f",
+            "hadAcquisitionModality": {
+                "@id": "nidm:MagneticResonanceImaging"
+            },
+            "hadImageContrastType": {
+                "@id": "nidm:T1Weighted"
+            },
+            "hadImageUsageType": {
+                "@id": "nidm:Anatomical"
+            },
+            "filename": "/sub-04/anat/sub-04_T1w.nii.gz",
+            "prov:Location": "file://Volumes/Research/datasets.datalad.org/openneuro/ds000235/sub-04/anat/sub-04_T1w.nii.gz",
+            "prov:wasGeneratedBy": {
+                "@id": "niiri:d8695898-3be8-11eb-a27a-1094bbf2086c"
+            }
+        },
+        {
+            "@id": "niiri:a7d23756-3be8-11eb-a27a-1094bbf2086c",
+            "@type": [
+                "AcquisitionObject",
+                "prov:Entity",
+                "assessment-instrument"
+            ],
+            "niiri:age_3gfjlt9": "56",
+            "niiri:sex_2sf85at": "M",
+            "filename": "participants.tsv",
+            "prov:Location": "file://Volumes/Research/datasets.datalad.org/openneuro/ds000235/participants.tsv",
+            "prov:wasGeneratedBy": {
+                "@id": "niiri:b7d2301c-3be8-11eb-a27a-1094bbf2086c"
+            },
+            "prov:wasInfluencedBy": {
+                "@id": "niiri:b7d27f22-3be8-11eb-a27a-1094bbf2086c"
+            }
+        }
+    ]
+}
