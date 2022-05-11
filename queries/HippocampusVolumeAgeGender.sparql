@@ -12,10 +12,12 @@ prefix ants: <http://stnava.github.io/ANTs/>
 prefix dct: <http://purl.org/dc/terms/>
 prefix dctypes: <http://purl.org/dc/dcmitype/>
 prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
-
 PREFIX ncicb: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-select distinct ?ID ?Age ?Gender ?tool ?softwareLabel ?federatedLabel ?laterality ?volume
+PREFIX ilx: <http://uri.interlex.org/> .
+
+
+select distinct ?ID ?Gender ?Age ?tool ?softwareLabel ?federatedLabel ?laterality ?volume
 where {
  	        ?tool_act a prov:Activity ;
 		            prov:qualifiedAssociation [prov:agent [nidm:NIDM_0000164 ?tool]] .
@@ -29,22 +31,23 @@ where {
 					 nidm:datumType <http://uri.interlex.org/base/ilx_0738276> .
 				OPTIONAL {?measure nidm:isAbout ?federatedLabel }.
 				OPTIONAL {?measure nidm:hasLaterality ?laterality }.
-  			?as_activity prov:qualifiedAssociation [prov:agent ?agent] ; 
-					dct:isPartOf/dct:isPartOf [dctypes:title ?study] .
-			?agent ndar:src_subject_id ?ID .
+  			?as_activity prov:qualifiedAssociation [prov:agent [ndar:src_subject_id ?ID]] . 
+			
 				
 			
 			# find age data element uuid
-			{?age_measure a nidm:DataElement ;
-					nidm:isAbout <http://uri.interlex.org/base/ilx_0100400> .
+			{?age_measure a nidm:PersonalDataElement ;
+					nidm:isAbout ilx:ilx_0100400 ;
+                    nidm:sourceVariable "AGE_AT_SCAN" .
 			}
 			# find sex data element uuid
-			{?sex_measure a nidm:DataElement ;
+			{?sex_measure a nidm:PersonalDataElement ;
 					nidm:isAbout <http://uri.interlex.org/base/ilx_0101292> .
 			}
   			?as_entity prov:wasGeneratedBy ?as_activity ;
-	        	?age_measure ?Age;
-	        	?sex_measure ?GenderCoded ;
+	        	?age_measure ?Age ;
+	        	?sex_measure ?GenderCoded .
+                
           	bind(IF((?GenderCoded ="1" || ?GenderCoded ="Male"^^xsd:string), "Male"^^xsd:string,"Female"^^xsd:string) as ?Gender) .
 			FILTER (?federatedLabel = <http://purl.obolibrary.org/obo/UBERON_0001954>)
 }
