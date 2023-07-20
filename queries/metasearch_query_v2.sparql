@@ -17,7 +17,7 @@ prefix xsd: <http://www.w3.org/2001/XMLSchema#>
 prefix ilx: <http://uri.interlex.org/>
 prefix dicom: <http://neurolex.org/wiki/Category:DICOM_term/>
 
-select distinct ?project_title ?ID ?age ?sex ?dx3 ?field_strength ?manufacturer ?image_type ?contrast_type ?task ?location
+select distinct ?project_title ?ID ?age ?sex ?dx4 ?field_strength2 ?manufacturer ?image_type ?contrast_type ?task ?location
 where {
             
 
@@ -73,7 +73,9 @@ where {
 			BIND(IF((?GenderCoded="1" || ?GenderCoded ="Male"^^xsd:string), "Male"^^xsd:string,"Female"^^xsd:string) as ?sex) .
 			BIND(IF((?dx="1" && strStarts(?project_title,"ABIDE")), "Autism", ?dx) as ?dx2) .
 			BIND(IF((?dx2="2" && strStarts(?project_title,"ABIDE")), "Control", ?dx2) as ?dx3) .
-			#BIND(IF((?dx3="Typically Developing Children" && strStarts(?project_title,"Typically Developing Children")), "Control", ?dx3) as ?dx4) .
+			BIND(IF((?field_strength=3), "3T", ?field_strength) as ?field_strength2) .
+
+			BIND(IF((?dx3="Typically Developing Children" && strStarts(?project_title,"Typically Developing Children")), "Control", ?dx3) as ?dx4) .
 
 
 			
@@ -93,6 +95,6 @@ where {
             
 
 				
-} order by ?ID
+} order by ?field_strength2
 
 LIMIT 50000
