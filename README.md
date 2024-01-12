@@ -4,7 +4,7 @@
 
 1. start blazegraph
 
- `docker run --name blazegraph --rm -d -p 8889:8080 lyrasis/blazegraph:2.1.5`
+ `docker run --name blazegraph --rm -d -p 8889:8080 islandora/blazegraph:3.1.1`
 
 2. to upload all the turtle files, from the root of this repo do:
 
