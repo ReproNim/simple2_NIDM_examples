@@ -10,9 +10,13 @@ find "$PWD" -name "*.ttl" \
     | xargs '-I{}' sh -c './upload.sh '{}' || exit 255'
 
 # 3,4. Run the query
-
-curl -X POST "${GRAPHDB_API_URL}" --data-binary '@queries/simple2_query.sparql' -H "Content-Type: application/sparql-query" >| queries/simple2_query_output.csv
+output=queries/simple2_query_output.csv
+/usr/bin/time curl -X POST "${GRAPHDB_API_URL}" --data-binary '@queries/simple2_query.sparql' -H 'Accept: text/csv' -H "Content-Type: application/sparql-query" >| "$output"
 
 # introspect differences
-git diff 
+if git diff "$output" | grep -q .; then
+    echo "FAIL: there were differences in $output"
+    exit 1
+fi
+    
 
