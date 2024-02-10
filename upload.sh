@@ -3,7 +3,7 @@ set -u
 
 for attempt in {1..5}; do
     echo "Uploading #$attempt: $1"
-    curl -X POST -H 'Content-Type: text/turtle' --data-binary "@$1"  http://localhost:8889/bigdata/sparql
+    curl --silent -X POST -H 'Content-Type: text/turtle' --data-binary "@$1"  http://localhost:8889/bigdata/sparql
     ex="$?"
     case "$ex" in
         0) break;;
