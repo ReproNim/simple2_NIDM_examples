@@ -5,9 +5,13 @@ set -o pipefail
 
 
 # 2. to upload all the turtle files, from the root of this repo do:
-# We need to trick xargs to exit as soon as first command to fail.
+#    Using GNU parallel to expedite it a little
 find "$PWD" -name "*.ttl" \
-    | xargs '-I{}' sh -c './upload.sh '{}' || exit 255'
+    | parallel --halt now,fail=1 --jobs 4 --cf --bar './upload.sh {}'
+
+# Serial way
+# We need to trick xargs to exit as soon as first command to fail.
+#    | xargs '-I{}' sh -c './upload.sh '{}' || exit 255'
 
 # 3,4. Run the query
 output=queries/simple2_query_output.csv
