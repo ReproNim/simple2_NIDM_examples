@@ -11,7 +11,7 @@ find "$PWD" -name "*.ttl" \
 
 # 3,4. Run the query
 output=queries/simple2_query_output.csv
-/usr/bin/time curl -X POST "${GRAPHDB_API_URL}" --data-binary '@queries/simple2_query.sparql' -H 'Accept: text/csv' -H "Content-Type: application/sparql-query" >| "$output"
+/usr/bin/time curl --silent -X POST "${GRAPHDB_API_URL}" --data-binary '@queries/simple2_query.sparql' -H 'Accept: text/csv' -H "Content-Type: application/sparql-query" >| "$output"
 
 # introspect differences
 if git diff "$output" | grep -q .; then
