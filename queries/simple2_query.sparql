@@ -6,7 +6,7 @@ prefix nidm: <http://purl.org/nidash/nidm#>
 prefix onli: <http://neurolog.unice.fr/ontoneurolog/v3.0/instrument.owl#>
 prefix freesurfer: <https://surfer.nmr.mgh.harvard.edu/>
 prefix dx: <http://ncitt.ncit.nih.gov/Diagnosis>
-prefix ants: <http://stnava.github.io/ANTs/> 
+prefix ants: <http://stnava.github.io/ANTs/>
 prefix dct: <http://purl.org/dc/terms/>
 prefix dctypes: <http://purl.org/dc/dcmitype/>
 prefix ncicb: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#>
@@ -15,66 +15,60 @@ prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 prefix uberon: <http://purl.obolibrary.org/obo/UBERON_>
 prefix xsd: <http://www.w3.org/2001/XMLSchema#>
 prefix ilx: <http://uri.interlex.org/>
+prefix ilxb: <http://uri.interlex.org/base/>
 
 select distinct ?study ?ID ?Age ?dx ?Gender ?FIQ ?PIQ ?VIQ 	?tool ?softwareLabel ?federatedLabel ?laterality ?volume
 where {
-            ?measure a/rdfs:subClassOf nidm:DataElement;
-                 rdfs:label ?softwareLabel;
-                 nidm:measureOf <http://uri.interlex.org/base/ilx_0112559> ;
-                 nidm:datumType <http://uri.interlex.org/base/ilx_0738276> .
-            OPTIONAL {?measure nidm:isAbout ?federatedLabel }.
-            OPTIONAL {?measure nidm:hasLaterality ?laterality }.
+  ?measure a/rdfs:subClassOf nidm:DataElement;
+           rdfs:label ?softwareLabel;
+           nidm:measureOf ilxb:ilx_0112559 ;
+  nidm:datumType ilxb:ilx_0738276 .
+  OPTIONAL {?measure nidm:isAbout ?federatedLabel }.
+  OPTIONAL {?measure nidm:hasLaterality ?laterality }.
 
-            ?tool_entity a prov:Entity;
-                ?measure ?volume .
+  ?tool_entity a prov:Entity;
+               ?measure ?volume .
 
-            ?tool_act a prov:Activity ;
-                    prov:qualifiedAssociation [prov:agent [nidm:NIDM_0000164 ?tool]] ;
-                    prov:qualifiedAssociation [prov:agent [ndar:src_subject_id ?ID]] .
-            ?tool_entity prov:wasGeneratedBy ?tool_act .
-			
-			?as_activity prov:qualifiedAssociation [prov:agent [ndar:src_subject_id ?ID]] .
-				
-			
-			# find age data element uuid
-			{?age_measure a nidm:PersonalDataElement ;
-				nidm:isAbout ilx:ilx_0100400 .
-					
-			}
-			# find sex data element uuid
-			{?sex_measure a nidm:PersonalDataElement ;
-					nidm:isAbout <http://uri.interlex.org/base/ilx_0101292> .
-			}
-			# find diagnosis data element uuid
-			{?DX_measure a nidm:PersonalDataElement ;
-					nidm:isAbout ncit:Diagnosis .
-			
-			}
-			# find fiq data element uuid
-  			{?FIQ_measure a nidm:PersonalDataElement ;
-					nidm:isAbout <http://uri.interlex.org/base/ilx_0739365> .
-			}
-			# find piq data element uuid
-			{?PIQ_measure a nidm:PersonalDataElement ;
-					nidm:isAbout <http://uri.interlex.org/base/ilx_0739363> .
-			}
-			# find viq data element uuid
-			{?VIQ_measure a nidm:PersonalDataElement ;
-					nidm:isAbout <http://uri.interlex.org/base/ilx_0739359> .
-			}
-			
-  			?as_entity prov:wasGeneratedBy ?as_activity ;
-	        	?age_measure ?Age;
-	        	?sex_measure ?GenderCoded ;
-                ?FIQ_measure ?FIQ ;
-                ?PIQ_measure  ?PIQ ;
-                ?VIQ_measure ?VIQ ;
-            	?DX_measure ?dx .
-			
-			bind(IF((?GenderCoded ="1" || ?GenderCoded ="Male"^^xsd:string), "Male"^^xsd:string,"Female"^^xsd:string) as ?Gender) .
-			
-            
-					
-				
-} order by ?study
+  ?tool_act a prov:Activity ;
+  prov:qualifiedAssociation [prov:agent [nidm:NIDM_0000164 ?tool]] ;
+  prov:qualifiedAssociation [prov:agent [ndar:src_subject_id ?ID]] .
+  ?tool_entity prov:wasGeneratedBy ?tool_act .
 
+  ?as_activity prov:qualifiedAssociation [prov:agent [ndar:src_subject_id ?ID]] .
+
+  # find age data element uuid
+  {?age_measure a nidm:PersonalDataElement ;
+	nidm:isAbout ilx:ilx_0100400 .
+  }
+  # find sex data element uuid
+  {?sex_measure a nidm:PersonalDataElement ;
+	nidm:isAbout ilxb:ilx_0101292 .
+  }
+  # find diagnosis data element uuid
+  {?DX_measure a nidm:PersonalDataElement ;
+	nidm:isAbout ncit:Diagnosis .
+  }
+  # find fiq data element uuid
+  {?FIQ_measure a nidm:PersonalDataElement ;
+	nidm:isAbout ilxb:ilx_0739365 .
+  }
+  # find piq data element uuid
+  {?PIQ_measure a nidm:PersonalDataElement ;
+	nidm:isAbout ilxb:ilx_0739363 .
+  }
+  # find viq data element uuid
+  {?VIQ_measure a nidm:PersonalDataElement ;
+	nidm:isAbout ilxb:ilx_0739359 .
+  }
+
+  ?as_entity prov:wasGeneratedBy ?as_activity ;
+  ?age_measure ?Age;
+  ?sex_measure ?GenderCoded ;
+  ?FIQ_measure ?FIQ ;
+  ?PIQ_measure  ?PIQ ;
+  ?VIQ_measure ?VIQ ;
+  ?DX_measure ?dx .
+
+  bind(IF((?GenderCoded ="1" || ?GenderCoded ="Male"^^xsd:string), "Male"^^xsd:string,"Female"^^xsd:string) as ?Gender) .
+
+} order by ?study ?ID ?softwareLabel ?laterality ?softwareLabel ?volume
