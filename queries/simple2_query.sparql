@@ -15,13 +15,14 @@ prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 prefix uberon: <http://purl.obolibrary.org/obo/UBERON_>
 prefix xsd: <http://www.w3.org/2001/XMLSchema#>
 prefix ilx: <http://uri.interlex.org/>
+prefix ilxb: <http://uri.interlex.org/base/>
 
 select distinct ?study ?ID ?Age ?dx ?Gender ?FIQ ?PIQ ?VIQ 	?tool ?softwareLabel ?federatedLabel ?laterality ?volume
 where {
             ?measure a/rdfs:subClassOf nidm:DataElement;
                  rdfs:label ?softwareLabel;
-                 nidm:measureOf <http://uri.interlex.org/base/ilx_0112559> ;
-                 nidm:datumType <http://uri.interlex.org/base/ilx_0738276> .
+                 nidm:measureOf ilxb:ilx_0112559 ;
+                 nidm:datumType ilxb:ilx_0738276 .
             OPTIONAL {?measure nidm:isAbout ?federatedLabel }.
             OPTIONAL {?measure nidm:hasLaterality ?laterality }.
 
@@ -43,7 +44,7 @@ where {
 			}
 			# find sex data element uuid
 			{?sex_measure a nidm:PersonalDataElement ;
-					nidm:isAbout <http://uri.interlex.org/base/ilx_0101292> .
+					nidm:isAbout ilxb:ilx_0101292 .
 			}
 			# find diagnosis data element uuid
 			{?DX_measure a nidm:PersonalDataElement ;
@@ -52,15 +53,15 @@ where {
 			}
 			# find fiq data element uuid
   			{?FIQ_measure a nidm:PersonalDataElement ;
-					nidm:isAbout <http://uri.interlex.org/base/ilx_0739365> .
+					nidm:isAbout ilxb:ilx_0739365 .
 			}
 			# find piq data element uuid
 			{?PIQ_measure a nidm:PersonalDataElement ;
-					nidm:isAbout <http://uri.interlex.org/base/ilx_0739363> .
+					nidm:isAbout ilxb:ilx_0739363 .
 			}
 			# find viq data element uuid
 			{?VIQ_measure a nidm:PersonalDataElement ;
-					nidm:isAbout <http://uri.interlex.org/base/ilx_0739359> .
+					nidm:isAbout ilxb:ilx_0739359 .
 			}
 			
   			?as_entity prov:wasGeneratedBy ?as_activity ;
