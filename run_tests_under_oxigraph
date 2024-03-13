@@ -1,0 +1,36 @@
+#!/bin/bash
+
+set -eu
+set -o pipefail
+
+if [ $# -lt 1 ]; then
+    echo "ERROR: provide tests to run under the oxigraph server"
+    exit 1
+fi
+
+### To use oxigraph for running queries and saving to CSV file
+
+# 1. start oxigraph and configure it to be stopped when we exit from the script
+
+# Create
+OXIDATA=$(mktemp -d ${TMPDIR:-/tmp}/oxi-XXXXXXX)
+echo "Data folder: $OXIDATA"
+docker run --name oxigraph -v $OXIDATA:/data --rm -d -p 7878:7878 ghcr.io/oxigraph/oxigraph serve --location /data --bind 0.0.0.0:7878
+
+export GRAPHDB_URL=http://localhost:7878 # store?default
+export GRAPHDB_API_URL="$GRAPHDB_URL/query"
+
+trap "docker stop oxigraph; rm -rf '$OXIDATA'" SIGINT SIGHUP SIGABRT EXIT
+
+echo "Waiting for oxigraph to start"
+# This is probably not sufficient -- JS frontend
+while ! curl --silent "$GRAPHDB_URL/" | grep 'Oxigraph server'; do
+    :
+done
+
+sleep 2;  # sleep a little more for server to come up, no other means so far were sufficient
+
+for f in "$@"; do
+    echo "Running test $f"
+    time "$f"
+done
