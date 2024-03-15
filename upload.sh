@@ -8,7 +8,7 @@ for attempt in {1..5}; do
 		ttl) ct=text/turtle;;
 		*) ct=text;; # fail it
 	esac
-    curl --silent -X POST -H "Content-Type: $ct" --data-binary "@$1"  ${GRAPHDB_API_URL:-http://localhost:8889/bigdata/sparql}
+    curl --silent -X POST -H "Content-Type: $ct" --data-binary "@$1"  ${GRAPHDB_UPLOAD_URL:-http://localhost:8889/bigdata/sparql}
     ex="$?"
     case "$ex" in
         0) break;;

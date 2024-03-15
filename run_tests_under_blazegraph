@@ -14,8 +14,8 @@ fi
 
 docker run --name blazegraph --rm -d -p 8889:8080 islandora/blazegraph:3.1.1
 export GRAPHDB_URL=http://localhost:8889/bigdata
-export GRAPHDB_API_URL="$GRAPHDB_URL/sparql"
-export GRAPHDB_QUERY_URL="$GRAPHDB_API_URL"
+export GRAPHDB_UPLOAD_URL="$GRAPHDB_URL/sparql"
+export GRAPHDB_QUERY_URL="$GRAPHDB_UPLOAD_URL"
 
 trap "docker stop blazegraph" SIGINT SIGHUP SIGABRT EXIT
 

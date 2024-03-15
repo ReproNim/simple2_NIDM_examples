@@ -16,7 +16,7 @@ docker run --name graphdb --rm -d -p 8889:7200 ontotext/graphdb:10.3.1
 export GRAPHDB_DB_NAME=testplace
 export GRAPHDB_URL=http://localhost:8889/
 export GRAPHDB_QUERY_URL="${GRAPHDB_URL}/repositories/${GRAPHDB_DB_NAME}"
-export GRAPHDB_API_URL="${GRAPHDB_QUERY_URL}/statements"
+export GRAPHDB_UPLOAD_URL="${GRAPHDB_QUERY_URL}/statements"
 
 trap "docker stop graphdb" SIGINT SIGHUP SIGABRT EXIT
 
