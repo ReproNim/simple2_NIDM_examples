@@ -1,7 +1,7 @@
 #!/bin/bash
 
 set -eu
-# set -o pipefail
+set -o pipefail
 
 
 # 2. to upload all the turtle files, from the root of this repo do:
