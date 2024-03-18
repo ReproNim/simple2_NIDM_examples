@@ -18,8 +18,8 @@ echo "Data folder: $OXIDATA"
 docker run --name oxigraph -v $OXIDATA:/data --rm -d -p 7878:7878 ghcr.io/oxigraph/oxigraph serve --location /data --bind 0.0.0.0:7878
 
 export GRAPHDB_URL=http://localhost:7878 # store?default
-export GRAPHDB_UPLOAD_URL="$GRAPHDB_URL/query"
-export GRAPHDB_QUERY_URL="$GRAPHDB_UPLOAD_URL"
+export GRAPHDB_UPLOAD_URL="$GRAPHDB_URL/store?default"
+export GRAPHDB_QUERY_URL="$GRAPHDB_URL/query"
 
 trap "docker stop oxigraph; rm -rf '$OXIDATA'" SIGINT SIGHUP SIGABRT EXIT
 
