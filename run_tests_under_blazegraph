@@ -1,0 +1,32 @@
+#!/bin/bash
+
+set -eu
+set -o pipefail
+
+if [ $# -lt 1 ]; then
+    echo "ERROR: provide tests to run under the blazegraph server"
+    exit 1
+fi
+
+### To use blazegraph for running queries and saving to CSV file
+
+# 1. start blazegraph and configure it to be stopped when we exit from the script
+
+docker run --name blazegraph --rm -d -p 8889:8080 islandora/blazegraph:3.1.1
+export GRAPHDB_URL=http://localhost:8889/bigdata
+export GRAPHDB_UPLOAD_URL="$GRAPHDB_URL/sparql"
+export GRAPHDB_QUERY_URL="$GRAPHDB_UPLOAD_URL"
+
+trap "docker stop blazegraph" SIGINT SIGHUP SIGABRT EXIT
+
+echo "Waiting for blazegraph to start"
+while ! curl --silent "$GRAPHDB_URL/" | grep 'Input a SPARQL query'; do
+    :
+done
+
+sleep 2;  # sleep a little more for server to come up, no other means so far were sufficient
+
+for f in "$@"; do
+    echo "Running test $f"
+    time "$f"
+done
