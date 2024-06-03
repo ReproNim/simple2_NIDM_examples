@@ -1,0 +1,37 @@
+prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix prov: <http://www.w3.org/ns/prov#>
+prefix ndar: <https://ndar.nih.gov/api/datadictionary/v2/dataelement/>
+prefix nidm: <http://purl.org/nidash/nidm#>
+prefix fs: <https://surfer.nmr.mgh.harvard.edu/>
+prefix dct: <http://purl.org/dc/terms/>
+prefix dctypes: <http://purl.org/dc/dcmitype/>
+prefix ilx: <http://uri.interlex.org/>
+
+select distinct ?ID ?Sex ?Age
+where {
+                       
+    ?tool_act a prov:Activity ;
+        prov:qualifiedAssociation [prov:agent [ndar:src_subject_id ?ID]] .
+    ?as_activity prov:qualifiedAssociation [prov:agent ?agent] ; 
+        dct:isPartOf/dct:isPartOf [dctypes:title ?study] .
+    ?agent ndar:src_subject_id ?ID .
+
+    # find sex data element uuid
+    {?sex_measure a nidm:PersonalDataElement ;
+        nidm:isAbout <http://uri.interlex.org/base/ilx_0101292> . #Biological sex
+        #nidm:isAbout <http://id.nlm.nih.gov/mesh/2018/M0446358> . #Genetic sex
+    }
+
+    # find age data element uuid
+    {?age_measure a nidm:PersonalDataElement ;
+        nidm:isAbout ilx:ilx_0100400 .     
+    }
+
+    ?as_entity prov:wasGeneratedBy ?as_activity ;
+        ?sex_measure ?SexCoded ;
+        ?age_measure ?Age.    
+    bind(IF((?SexCoded ="M" || ?SexCoded ="Male"^^xsd:string), "Male"^^xsd:string,"Female"^^xsd:string) as ?Sex) .
+#filter (?Sex = "Male"^^xsd:string) .
+}
+ORDER BY ?ID
