@@ -19,9 +19,9 @@ prefix ilx: <http://uri.interlex.org/>
 select distinct ?study ?ID ?Age ?dx ?Gender ?FIQ ?PIQ ?VIQ 	?tool ?softwareLabel ?federatedLabel ?laterality ?volume
 where {
             ?measure a/rdfs:subClassOf nidm:DataElement;
-                 rdfs:label ?softwareLabel;
-                 nidm:measureOf <http://uri.interlex.org/base/ilx_0112559> ;
-                 nidm:datumType <http://uri.interlex.org/base/ilx_0738276> .
+                rdfs:label ?softwareLabel;
+                nidm:measureOf <http://uri.interlex.org/base/ilx_0112559> ;
+                nidm:datumType <http://uri.interlex.org/base/ilx_0738276> .
             OPTIONAL {?measure nidm:isAbout ?federatedLabel }.
             OPTIONAL {?measure nidm:hasLaterality ?laterality }.
 
@@ -35,7 +35,6 @@ where {
 			
 			?as_activity prov:qualifiedAssociation [prov:agent [ndar:src_subject_id ?ID]] .
 				
-			
 			# find age data element uuid
 			{?age_measure a nidm:PersonalDataElement ;
 				nidm:isAbout ilx:ilx_0100400 .
