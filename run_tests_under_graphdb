@@ -1,0 +1,44 @@
+#!/bin/bash
+
+set -eu
+set -o pipefail
+
+if [ $# -lt 1 ]; then
+    echo "ERROR: provide tests to run under the graphDB server"
+    exit 1
+fi
+
+### To use graphDB for running queries and saving to CSV file
+
+# 1. start graphDB and configure it to be stopped when we exit from the script
+
+docker run --name graphdb --rm -d -p 8889:7200 ontotext/graphdb:10.3.1
+export GRAPHDB_DB_NAME=testplace
+export GRAPHDB_URL=http://localhost:8889/
+export GRAPHDB_QUERY_URL="${GRAPHDB_URL}/repositories/${GRAPHDB_DB_NAME}"
+export GRAPHDB_UPLOAD_URL="${GRAPHDB_QUERY_URL}/statements"
+
+trap "docker stop graphdb" SIGINT SIGHUP SIGABRT EXIT
+
+echo "Waiting for graphDB to start"
+while ! curl --silent "$GRAPHDB_URL/rest/repositories" | grep '\[\]'; do
+    :
+done
+
+sleep 2;  # sleep a little more for server to come up, no other means so far were sufficient
+
+echo "GraphDB now needs to be set up"
+
+echo "Making a new database called testplace at $GRAPHDB_URL/repositories/testplace"
+curl -X PUT $GRAPHDB_URL/repositories/testplace --data-binary "@data-config.ttl" -H "Content-Type: application/x-turtle"
+
+while ! curl --silent "$GRAPHDB_URL/rest/repositories" | grep 'testplace'; do
+    :
+done
+
+echo "I am happily done and content with the world"
+
+for f in "$@"; do
+    echo "Running test $f"
+    time "$f"
+done
