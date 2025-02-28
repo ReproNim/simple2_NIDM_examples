@@ -1,4 +1,5 @@
 @prefix ants: <http://stnava.github.io/ANTs/> .
+@prefix bids: <http://bids.neuroimaging.io/> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix fs: <https://surfer.nmr.mgh.harvard.edu/> .
 @prefix fsl: <http://purl.org/nidash/fsl#> .
@@ -6,10 +7,7 @@
 @prefix nidm: <http://purl.org/nidash/nidm#> .
 @prefix niiri: <http://iri.nidash.org/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sio: <http://semanticscience.org/ontology/sio.owl#> .
-@prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 niiri:ad73e102-6fb9-11ea-bc4f-003ee1ce9545 a nidm:ANTSStatsCollection,
@@ -1226,6 +1224,10 @@ niiri:c2d24d60-6fb9-11ea-8d2c-003ee1ce9545 a nidm:ANTSStatsCollection,
     ants:ants_000295 "989.0"^^xsd:float ;
     ants:ants_000298 "5936.0"^^xsd:float ;
     prov:wasGeneratedBy niiri:f3303e0c-6fb9-11ea-8d2c-003ee1ce9545 .
+
+niiri:c40ff834-f603-11ef-b623-acde48001122 a bids:Dataset,
+        prov:Collection,
+        prov:Entity .
 
 niiri:c4fde710-72b4-11ea-98b2-003ee1ce9545 a nidm:FSLStatsCollection,
         prov:Entity ;
@@ -3026,11 +3028,11 @@ niiri:cb10fdea-6ee0-11ea-9b10-003ee1ce9545 a prov:Activity ;
 niiri:cc461b00-72b4-11ea-bea7-003ee1ce9545 a prov:Activity ;
     dct:description "FSL FAST/FIRST segmentation statistics" ;
     prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:f2ea1b86-6edf-11ea-b9b2-003ee1ce9545 ;
-            prov:hadRole sio:Subject ],
-        [ a prov:Association ;
             prov:agent niiri:c5538f94-72b4-11ea-98b2-003ee1ce9545 ;
-            prov:hadRole nidm:NIDM_0000164 ] .
+            prov:hadRole nidm:NIDM_0000164 ],
+        [ a prov:Association ;
+            prov:agent niiri:f2ea1b86-6edf-11ea-b9b2-003ee1ce9545 ;
+            prov:hadRole sio:Subject ] .
 
 niiri:cc63e09c-6ee0-11ea-9026-003ee1ce9545 a prov:Activity ;
     dct:description "Freesurfer segmentation statistics" ;

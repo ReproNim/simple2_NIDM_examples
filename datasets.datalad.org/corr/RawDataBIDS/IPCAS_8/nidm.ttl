@@ -1,4 +1,5 @@
 @prefix ants: <http://stnava.github.io/ANTs/> .
+@prefix bids: <http://bids.neuroimaging.io/> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix fs: <https://surfer.nmr.mgh.harvard.edu/> .
 @prefix fsl: <http://purl.org/nidash/fsl#> .
@@ -6,10 +7,7 @@
 @prefix nidm: <http://purl.org/nidash/nidm#> .
 @prefix niiri: <http://iri.nidash.org/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sio: <http://semanticscience.org/ontology/sio.owl#> .
-@prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 niiri:a0756e0a-6fd7-11ea-8da6-003ee1ce9545 a nidm:ANTSStatsCollection,
@@ -5420,6 +5418,10 @@ niiri:f818f8c6-6f8a-11ea-9d9b-003ee1ce9545 a nidm:FSStatsCollection,
     fs:fs_003578 "120.0"^^xsd:float ;
     fs:fs_003579 "106.0"^^xsd:float .
 
+niiri:f88386a8-f603-11ef-beab-acde48001122 a bids:Dataset,
+        prov:Collection,
+        prov:Entity .
+
 niiri:fa80440e-6fd6-11ea-b409-003ee1ce9545 a nidm:ANTSStatsCollection,
         prov:Entity ;
     ants:ants_000001 "0.823523"^^xsd:float ;
@@ -6420,11 +6422,11 @@ niiri:a92f735c-72da-11ea-99d1-003ee1ce9545 a prov:Activity ;
 niiri:a9c3d654-6fd7-11ea-bae6-003ee1ce9545 a prov:Activity ;
     dct:description "ANTS segmentation statistics" ;
     prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:f6dfed9a-6fd6-11ea-bc48-003ee1ce9545 ;
-            prov:hadRole nidm:NIDM_0000164 ],
-        [ a prov:Association ;
             prov:agent niiri:a9e6412a-6f8a-11ea-b35f-003ee1ce9545 ;
-            prov:hadRole sio:Subject ] .
+            prov:hadRole sio:Subject ],
+        [ a prov:Association ;
+            prov:agent niiri:f6dfed9a-6fd6-11ea-bc48-003ee1ce9545 ;
+            prov:hadRole nidm:NIDM_0000164 ] .
 
 niiri:a9e49b1a-6f8a-11ea-9d9b-003ee1ce9545 a prov:Activity ;
     dct:description "Freesurfer segmentation statistics" ;

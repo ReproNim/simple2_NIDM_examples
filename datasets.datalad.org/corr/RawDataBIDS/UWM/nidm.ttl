@@ -1,4 +1,5 @@
 @prefix ants: <http://stnava.github.io/ANTs/> .
+@prefix bids: <http://bids.neuroimaging.io/> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix fs: <https://surfer.nmr.mgh.harvard.edu/> .
 @prefix fsl: <http://purl.org/nidash/fsl#> .
@@ -6,10 +7,7 @@
 @prefix nidm: <http://purl.org/nidash/nidm#> .
 @prefix niiri: <http://iri.nidash.org/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sio: <http://semanticscience.org/ontology/sio.owl#> .
-@prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 niiri:a1ac7782-6fb1-11ea-9228-003ee1ce9545 a nidm:FSStatsCollection,
@@ -6098,6 +6096,10 @@ niiri:cb7c7180-6fb0-11ea-8158-003ee1ce9545 a nidm:FSStatsCollection,
     fs:fs_003577 "18.0"^^xsd:float ;
     fs:fs_003578 "118.0"^^xsd:float ;
     fs:fs_003579 "100.0"^^xsd:float .
+
+niiri:ccbe4728-f604-11ef-8f19-acde48001122 a bids:Dataset,
+        prov:Collection,
+        prov:Entity .
 
 niiri:cce04e60-72ae-11ea-a3f7-003ee1ce9545 a nidm:ANTSStatsCollection,
         prov:Entity ;
@@ -12295,11 +12297,11 @@ niiri:a4f04da8-6fb1-11ea-ba42-003ee1ce9545 a prov:Activity ;
 niiri:a5ff3268-7440-11ea-a114-003ee1ce9545 a prov:Activity ;
     dct:description "FSL FAST/FIRST segmentation statistics" ;
     prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:cd16831a-7440-11ea-90ca-003ee1ce9545 ;
-            prov:hadRole nidm:NIDM_0000164 ],
-        [ a prov:Association ;
             prov:agent niiri:c6dbd076-6fb0-11ea-9578-003ee1ce9545 ;
-            prov:hadRole sio:Subject ] .
+            prov:hadRole sio:Subject ],
+        [ a prov:Association ;
+            prov:agent niiri:cd16831a-7440-11ea-90ca-003ee1ce9545 ;
+            prov:hadRole nidm:NIDM_0000164 ] .
 
 niiri:a87731e8-6fb0-11ea-a53e-003ee1ce9545 a prov:Activity ;
     dct:description "Freesurfer segmentation statistics" ;
@@ -13100,11 +13102,11 @@ niiri:de3e6d7c-7440-11ea-b3ad-003ee1ce9545 a prov:Activity ;
 niiri:dece6562-72ae-11ea-bb62-003ee1ce9545 a prov:Activity ;
     dct:description "ANTS segmentation statistics" ;
     prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:b588874e-72ae-11ea-a7b7-003ee1ce9545 ;
-            prov:hadRole nidm:NIDM_0000164 ],
-        [ a prov:Association ;
             prov:agent niiri:fcee2466-6fb0-11ea-a438-003ee1ce9545 ;
-            prov:hadRole sio:Subject ] .
+            prov:hadRole sio:Subject ],
+        [ a prov:Association ;
+            prov:agent niiri:b588874e-72ae-11ea-a7b7-003ee1ce9545 ;
+            prov:hadRole nidm:NIDM_0000164 ] .
 
 niiri:df10a9e4-72ae-11ea-a811-003ee1ce9545 a prov:Activity ;
     dct:description "ANTS segmentation statistics" ;

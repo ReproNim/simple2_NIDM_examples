@@ -1,4 +1,5 @@
 @prefix ants: <http://stnava.github.io/ANTs/> .
+@prefix bids: <http://bids.neuroimaging.io/> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix fs: <https://surfer.nmr.mgh.harvard.edu/> .
 @prefix fsl: <http://purl.org/nidash/fsl#> .
@@ -6,10 +7,7 @@
 @prefix nidm: <http://purl.org/nidash/nidm#> .
 @prefix niiri: <http://iri.nidash.org/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sio: <http://semanticscience.org/ontology/sio.owl#> .
-@prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 niiri:a51f364e-72da-11ea-b75f-003ee1ce9545 a nidm:FSLStatsCollection,
@@ -987,6 +985,10 @@ niiri:f0c4de54-6f89-11ea-a221-003ee1ce9545 a nidm:FSStatsCollection,
     fs:fs_003578 "133.0"^^xsd:float ;
     fs:fs_003579 "100.0"^^xsd:float .
 
+niiri:f4c53430-f603-11ef-a1d9-acde48001122 a bids:Dataset,
+        prov:Collection,
+        prov:Entity .
+
 niiri:a958e560-6f89-11ea-bb59-003ee1ce9545 a prov:Activity ;
     dct:description "Freesurfer segmentation statistics" ;
     prov:qualifiedAssociation [ a prov:Association ;
@@ -1076,11 +1078,11 @@ niiri:d53fe484-72da-11ea-b75f-003ee1ce9545 a prov:Activity ;
 niiri:d75957b4-72da-11ea-be8a-003ee1ce9545 a prov:Activity ;
     dct:description "FSL FAST/FIRST segmentation statistics" ;
     prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:ba604ffc-6f89-11ea-bb59-003ee1ce9545 ;
-            prov:hadRole sio:Subject ],
-        [ a prov:Association ;
             prov:agent niiri:b53fea56-72da-11ea-b75f-003ee1ce9545 ;
-            prov:hadRole nidm:NIDM_0000164 ] .
+            prov:hadRole nidm:NIDM_0000164 ],
+        [ a prov:Association ;
+            prov:agent niiri:ba604ffc-6f89-11ea-bb59-003ee1ce9545 ;
+            prov:hadRole sio:Subject ] .
 
 niiri:dd9f3b00-6fd6-11ea-8d7c-003ee1ce9545 a prov:Activity ;
     dct:description "ANTS segmentation statistics" ;

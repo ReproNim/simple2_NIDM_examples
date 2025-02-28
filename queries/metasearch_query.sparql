@@ -1,0 +1,87 @@
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix prov: <http://www.w3.org/ns/prov#>
+prefix ndar: <https://ndar.nih.gov/api/datadictionary/v2/dataelement/>
+prefix fsl: <http://purl.org/nidash/fsl#>
+prefix nidm: <http://purl.org/nidash/nidm#>
+prefix onli: <http://neurolog.unice.fr/ontoneurolog/v3.0/instrument.owl#>
+prefix freesurfer: <https://surfer.nmr.mgh.harvard.edu/>
+prefix dx: <http://ncitt.ncit.nih.gov/Diagnosis>
+prefix ants: <http://stnava.github.io/ANTs/> 
+prefix dct: <http://purl.org/dc/terms/>
+prefix dctypes: <http://purl.org/dc/dcmitype/>
+prefix ncicb: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#>
+prefix ncit: <http://ncitt.ncit.nih.gov/>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix uberon: <http://purl.obolibrary.org/obo/UBERON_>
+prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+prefix ilx: <http://uri.interlex.org/>
+prefix dicom: <http://neurolex.org/wiki/Category:DICOM_term/>
+
+select distinct ?project_title ?ID ?age ?sex ?dx ?field_strength ?manufacturer ?image_type ?contrast_type ?task
+where {
+            
+
+            ?scan_act a prov:Activity ;
+                    prov:qualifiedAssociation [prov:agent [ndar:src_subject_id ?ID]] .
+            
+
+
+            ?scan_entity prov:wasGeneratedBy ?scan_act ;
+					nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+                    nidm:hadImageUsageType ?image_type_long     ;
+                    nidm:hadImageContrastType ?contrast ;
+                    dicom:MagneticFieldStrength ?field_strength ;
+                    dicom:Manufacturer ?manufacturer .
+            
+
+			OPTIONAL {?scan_entity nidm:Task ?task } .
+
+			
+			?scan_act dct:isPartOf/dct:isPartOf ?project .
+			?project dctypes:title ?project_title .
+             
+			
+			?as_activity prov:qualifiedAssociation [prov:agent [ndar:src_subject_id ?ID]] .
+   
+			
+				
+			
+			# find age data element uuid
+			{?age_measure a nidm:PersonalDataElement ;
+				nidm:isAbout ilx:ilx_0100400 .
+					
+			}
+			# find sex data element uuid
+			{?sex_measure a nidm:PersonalDataElement ;
+					nidm:isAbout <http://uri.interlex.org/base/ilx_0101292> .
+			}
+			# find diagnosis data element uuid
+			{?DX_measure a nidm:PersonalDataElement ;
+					nidm:isAbout ncit:Diagnosis .
+			
+			}		
+  			?as_entity prov:wasGeneratedBy ?as_activity ;
+	        	?age_measure ?age;
+	        	?sex_measure ?GenderCoded .
+            	
+			OPTIONAL {?as_entity ?DX_measure ?dx } .
+			
+			BIND(IF((?GenderCoded ="1" || ?GenderCoded ="Male"^^xsd:string), "Male"^^xsd:string,"Female"^^xsd:string) as ?sex) .
+			BIND(IF((?image_type_long = nidm:Anatomical),"Structural"^^xsd:string, "Functional"^^xsd:string) as ?image_type) .
+			BIND (
+				COALESCE (
+					IF(?contrast = nidm:T1Weighted,"T1-weighted"^^xsd:string,1/0),
+					IF(?contrast = nidm:FlowWeighted,"Flow-weighted"^^xsd:string,1/0),
+					IF(?contrast = nidm:DiffusionWeighted,"Diffusion"^^xsd:string,1/0),
+					"Unknown"
+				) as ?contrast_type
+			) 
+			#bind(IF((?contrast = nidm:T1Weighted),"T1-weighted"^^xsd:string, "Flow-weighted") as ?contrast_type) .
+			
+
+            
+
+				
+} order by ?project_title
+
+LIMIT 50000

@@ -1,39 +1,19 @@
-@prefix afni: <http://purl.org/nidash/afni#> .
-@prefix ants: <http://stnava.github.io/ANTs/> .
 @prefix bids: <http://bids.neuroimaging.io/> .
-@prefix birnlex: <http://bioontology.org/projects/ontologies/birnlex/> .
 @prefix crypto: <http://id.loc.gov/vocabulary/preservation/cryptographicHashFunctions#> .
-@prefix datalad: <http://datasets.datalad.org/> .
-@prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix dctypes: <http://purl.org/dc/dcmitype/> .
-@prefix dicom: <http://neurolex.org/wiki/Category:DICOM_term/> .
 @prefix edam: <https://bioportal.bioontology.org/ontologies/EDAM> .
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix freesurfer: <https://surfer.nmr.mgh.harvard.edu/> .
-@prefix fsl: <http://purl.org/nidash/fsl#> .
 @prefix ilx: <http://uri.interlex.org/> .
-@prefix ncicb: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#> .
-@prefix ncit: <http://ncitt.ncit.nih.gov/> .
 @prefix ndar: <https://ndar.nih.gov/api/datadictionary/v2/dataelement/> .
 @prefix nfo: <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#> .
 @prefix nidm: <http://purl.org/nidash/nidm#> .
 @prefix niiri: <http://iri.nidash.org/> .
-@prefix nlx: <http://uri.neuinfo.org/nif/nifstd/> .
-@prefix ns1: <https://bioportal.bioontology.org/ontologies/> .
 @prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix onli: <http://neurolog.unice.fr/ontoneurolog/v3.0/instrument.owl#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix pato: <http://purl.obolibrary.org/obo/pato#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix scr: <http://scicrunch.org/resolver/> .
 @prefix sio: <http://semanticscience.org/ontology/sio.owl#> .
-@prefix spm: <http://purl.org/nidash/spm#> .
-@prefix vc: <http://www.w3.org/2006/vcard/ns#> .
-@prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 niiri:age_18e6s9j a nidm:PersonalDataElement,
@@ -45,6 +25,20 @@ niiri:age_18e6s9j a nidm:PersonalDataElement,
     nidm:valueType <xsd:float> ;
     ilx:ilx_0739289 "NIDM" .
 
+niiri:b981c678-f602-11ef-bd34-acde48001122 a bids:Dataset,
+        prov:Collection,
+        prov:Entity ;
+    obo:IAO_0000324 "please  acknowledge its authors (Jonathan Cote, Jean-Pierre R. Falet, Veronica Tarka , Zaida-Escila Martinez-Moreno and Etienne de Villers-Sidani) and cite the mapping  technique publication (under review)." ;
+    obo:IAO_0000623 "This work was funded in part by grants from the Natural Sciences and Engineering Research Council of Canada (NSERC), the Centre for Research on Brain, Language and Music (CRBLM), and the Reseau quebecois de recherche sur le vieillissement (RQRV)." ;
+    dct:license "CC0" ;
+    sio:Identifier "1.2.0" ;
+    dcat:author "Jonathan CoteEtienne de Villers-Sidani" ;
+    prov:Location <file://Volumes/Research/datasets.datalad.org/openneuro/ds003082> ;
+    prov:hadMember niiri:e25b1c44-f254-11eb-bba1-1094bbf2086c,
+        niiri:e25baa74-f254-11eb-bba1-1094bbf2086c,
+        niiri:e2b2b760-f254-11eb-bba1-1094bbf2086c ;
+    edam:data_1188 "10.18112/openneuro.ds003082.v1.0.0" .
+
 niiri:dominant_hand_1l6cfn0 a nidm:PersonalDataElement,
         prov:Entity ;
     rdfs:label "dominant_hand" ;
@@ -54,42 +48,10 @@ niiri:dominant_hand_1l6cfn0 a nidm:PersonalDataElement,
     nidm:valueType <xsd:string> ;
     ilx:ilx_0739289 "NIDM" .
 
-niiri:e25b1c44-f254-11eb-bba1-1094bbf2086c a onli:assessment-instrument,
-        nidm:AcquisitionObject,
-        prov:Entity ;
-    niiri:age_18e6s9j "n/a"^^xsd:string ;
-    niiri:dominant_hand_1l6cfn0 "n/a"^^xsd:string ;
-    niiri:sex_3u91tkp "n/a"^^xsd:string ;
-    nfo:filename "participants.tsv"^^xsd:string ;
-    prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds003082/participants.tsv"^^xsd:string ;
-    prov:wasGeneratedBy niiri:e25b165e-f254-11eb-bba1-1094bbf2086c ;
-    prov:wasInfluencedBy niiri:e25b563c-f254-11eb-bba1-1094bbf2086c .
-
-niiri:e25baa74-f254-11eb-bba1-1094bbf2086c a onli:assessment-instrument,
-        nidm:AcquisitionObject,
-        prov:Entity ;
-    niiri:age_18e6s9j "23"^^xsd:string ;
-    niiri:dominant_hand_1l6cfn0 "Right"^^xsd:string ;
-    niiri:sex_3u91tkp "Female"^^xsd:string ;
-    nfo:filename "participants.tsv"^^xsd:string ;
-    prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds003082/participants.tsv"^^xsd:string ;
-    prov:wasGeneratedBy niiri:e25ba588-f254-11eb-bba1-1094bbf2086c ;
-    prov:wasInfluencedBy niiri:e25be372-f254-11eb-bba1-1094bbf2086c .
-
 niiri:e2a4d474-f254-11eb-bba1-1094bbf2086c a nidm:Session,
         prov:Activity ;
     bids:session_number "0001"^^xsd:string ;
     dct:isPartOf niiri:cadfeb1c-f254-11eb-bba1-1094bbf2086c .
-
-niiri:e2b2b760-f254-11eb-bba1-1094bbf2086c a nidm:AcquisitionObject,
-        prov:Entity ;
-    crypto:sha512 "fb1cbf1990a334751c9f7ac49da89eeccbf2250225bfb3f525fea493da0d1e803c7026c57b71e638853dce1cdaf70b2164ddad6a1aa1142ff703fdb5abb0fa09"^^xsd:string ;
-    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
-    nidm:hadImageContrastType nidm:T1Weighted ;
-    nidm:hadImageUsageType nidm:Anatomical ;
-    nfo:filename "/sub-0001/anat/sub-0001_T1w.nii.gz"^^xsd:string ;
-    prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds003082/sub-0001/anat/sub-0001_T1w.nii.gz"^^xsd:string ;
-    prov:wasGeneratedBy niiri:e2b27f5c-f254-11eb-bba1-1094bbf2086c .
 
 niiri:e3b6b8aa-f254-11eb-bba1-1094bbf2086c a nidm:Session,
         prov:Activity ;
@@ -113,6 +75,17 @@ niiri:e25b07a4-f254-11eb-bba1-1094bbf2086c a nidm:Session,
         prov:Activity ;
     dct:isPartOf niiri:cadfeb1c-f254-11eb-bba1-1094bbf2086c .
 
+niiri:e25b1c44-f254-11eb-bba1-1094bbf2086c a onli:assessment-instrument,
+        nidm:AcquisitionObject,
+        prov:Entity ;
+    niiri:age_18e6s9j "n/a"^^xsd:string ;
+    niiri:dominant_hand_1l6cfn0 "n/a"^^xsd:string ;
+    niiri:sex_3u91tkp "n/a"^^xsd:string ;
+    nfo:filename "participants.tsv"^^xsd:string ;
+    prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds003082/participants.tsv"^^xsd:string ;
+    prov:wasGeneratedBy niiri:e25b165e-f254-11eb-bba1-1094bbf2086c ;
+    prov:wasInfluencedBy niiri:e25b563c-f254-11eb-bba1-1094bbf2086c .
+
 niiri:e25b23b0-f254-11eb-bba1-1094bbf2086c a prov:Agent,
         prov:Person ;
     ndar:src_subject_id "sub-emptyroom"^^xsd:string .
@@ -126,6 +99,17 @@ niiri:e25b563c-f254-11eb-bba1-1094bbf2086c a bids:sidecar_file,
 niiri:e25b9c28-f254-11eb-bba1-1094bbf2086c a nidm:Session,
         prov:Activity ;
     dct:isPartOf niiri:cadfeb1c-f254-11eb-bba1-1094bbf2086c .
+
+niiri:e25baa74-f254-11eb-bba1-1094bbf2086c a onli:assessment-instrument,
+        nidm:AcquisitionObject,
+        prov:Entity ;
+    niiri:age_18e6s9j "23"^^xsd:string ;
+    niiri:dominant_hand_1l6cfn0 "Right"^^xsd:string ;
+    niiri:sex_3u91tkp "Female"^^xsd:string ;
+    nfo:filename "participants.tsv"^^xsd:string ;
+    prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds003082/participants.tsv"^^xsd:string ;
+    prov:wasGeneratedBy niiri:e25ba588-f254-11eb-bba1-1094bbf2086c ;
+    prov:wasInfluencedBy niiri:e25be372-f254-11eb-bba1-1094bbf2086c .
 
 niiri:e25be372-f254-11eb-bba1-1094bbf2086c a bids:sidecar_file,
         prov:Entity ;
@@ -143,6 +127,16 @@ niiri:e2b27f5c-f254-11eb-bba1-1094bbf2086c a nidm:Acquisition,
     prov:qualifiedAssociation [ a prov:Association ;
             prov:agent niiri:e25bb046-f254-11eb-bba1-1094bbf2086c ;
             prov:hadRole sio:Subject ] .
+
+niiri:e2b2b760-f254-11eb-bba1-1094bbf2086c a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "fb1cbf1990a334751c9f7ac49da89eeccbf2250225bfb3f525fea493da0d1e803c7026c57b71e638853dce1cdaf70b2164ddad6a1aa1142ff703fdb5abb0fa09"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:T1Weighted ;
+    nidm:hadImageUsageType nidm:Anatomical ;
+    nfo:filename "/sub-0001/anat/sub-0001_T1w.nii.gz"^^xsd:string ;
+    prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds003082/sub-0001/anat/sub-0001_T1w.nii.gz"^^xsd:string ;
+    prov:wasGeneratedBy niiri:e2b27f5c-f254-11eb-bba1-1094bbf2086c .
 
 ilx:ilx_0100400 a prov:Entity ;
     rdfs:label "age" .
@@ -177,12 +171,5 @@ nidm:PersonalDataElement rdfs:subClassOf nidm:DataElement .
 
 niiri:cadfeb1c-f254-11eb-bba1-1094bbf2086c a nidm:Project,
         prov:Activity ;
-    obo:IAO_0000324 "please  acknowledge its authors (Jonathan Cote, Jean-Pierre R. Falet, Veronica Tarka , Zaida-Escila Martinez-Moreno and Etienne de Villers-Sidani) and cite the mapping  technique publication (under review)."^^xsd:string ;
-    obo:IAO_0000623 "This work was funded in part by grants from the Natural Sciences and Engineering Research Council of Canada (NSERC), the Centre for Research on Brain, Language and Music (CRBLM), and the Reseau quebecois de recherche sur le vieillissement (RQRV)."^^xsd:string ;
-    dctypes:title "Auditory Cortex Mapping Dataset"^^xsd:string ;
-    dct:license "CC0"^^xsd:string ;
-    sio:Identifier "1.2.0"^^xsd:string ;
-    dcat:author "Jonathan CoteEtienne de Villers-Sidani"^^xsd:string ;
-    prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds003082"^^xsd:string ;
-    ns1:EDAMdata_1188 "10.18112/openneuro.ds003082.v1.0.0"^^xsd:string .
+    dctypes:title "Auditory Cortex Mapping Dataset"^^xsd:string .
 

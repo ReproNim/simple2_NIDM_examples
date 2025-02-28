@@ -1,4 +1,5 @@
 @prefix ants: <http://stnava.github.io/ANTs/> .
+@prefix bids: <http://bids.neuroimaging.io/> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix fs: <https://surfer.nmr.mgh.harvard.edu/> .
 @prefix fsl: <http://purl.org/nidash/fsl#> .
@@ -6,10 +7,7 @@
 @prefix nidm: <http://purl.org/nidash/nidm#> .
 @prefix niiri: <http://iri.nidash.org/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sio: <http://semanticscience.org/ontology/sio.owl#> .
-@prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 niiri:a0271bb8-72dd-11ea-8033-003ee1ce9545 a nidm:FSLStatsCollection,
@@ -46379,6 +46377,10 @@ niiri:fb9d55e4-6fda-11ea-a2c7-003ee1ce9545 a nidm:ANTSStatsCollection,
     ants:ants_000298 "7749.0"^^xsd:float ;
     prov:wasGeneratedBy niiri:a07b1790-6fdb-11ea-a2c7-003ee1ce9545 .
 
+niiri:fbb55fb8-f603-11ef-b5d5-acde48001122 a bids:Dataset,
+        prov:Collection,
+        prov:Entity .
+
 niiri:fbe48e7c-6fd7-11ea-a64b-003ee1ce9545 a nidm:ANTSStatsCollection,
         prov:Entity ;
     ants:ants_000001 "0.781752"^^xsd:float ;
@@ -48792,11 +48794,11 @@ niiri:a13a57a2-72de-11ea-ac58-003ee1ce9545 a prov:Activity ;
 niiri:a1b080fc-6f8e-11ea-baf8-003ee1ce9545 a prov:Activity ;
     dct:description "Freesurfer segmentation statistics" ;
     prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:e627dff4-6f8a-11ea-8ca4-003ee1ce9545 ;
-            prov:hadRole nidm:NIDM_0000164 ],
-        [ a prov:Association ;
             prov:agent niiri:a2af4cd6-6f8e-11ea-baf8-003ee1ce9545 ;
-            prov:hadRole sio:Subject ] ;
+            prov:hadRole sio:Subject ],
+        [ a prov:Association ;
+            prov:agent niiri:e627dff4-6f8a-11ea-8ca4-003ee1ce9545 ;
+            prov:hadRole nidm:NIDM_0000164 ] ;
     fs:ColorTable "/opt/freesurfer-6.0.0-min/ASegStatsLUT.txt" ;
     fs:ColorTableTimeStamp "2017/01/18 22:00:02" ;
     fs:ExcludeSegId "0 2 3 41 42" ;
@@ -49572,11 +49574,11 @@ niiri:b02a9834-72dc-11ea-9153-003ee1ce9545 a prov:Activity ;
 niiri:b0732856-6f8b-11ea-bd8d-003ee1ce9545 a prov:Activity ;
     dct:description "Freesurfer segmentation statistics" ;
     prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:e627dff4-6f8a-11ea-8ca4-003ee1ce9545 ;
-            prov:hadRole nidm:NIDM_0000164 ],
-        [ a prov:Association ;
             prov:agent niiri:e17a3884-6f8b-11ea-bd8d-003ee1ce9545 ;
-            prov:hadRole sio:Subject ] ;
+            prov:hadRole sio:Subject ],
+        [ a prov:Association ;
+            prov:agent niiri:e627dff4-6f8a-11ea-8ca4-003ee1ce9545 ;
+            prov:hadRole nidm:NIDM_0000164 ] ;
     fs:ColorTable "/opt/freesurfer-6.0.0-min/ASegStatsLUT.txt" ;
     fs:ColorTableTimeStamp "2017/01/18 22:00:02" ;
     fs:ExcludeSegId "0 2 3 41 42" ;
