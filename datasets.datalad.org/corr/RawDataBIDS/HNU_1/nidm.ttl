@@ -1,5 +1,4 @@
 @prefix ants: <http://stnava.github.io/ANTs/> .
-@prefix bids: <http://bids.neuroimaging.io/> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix fs: <https://surfer.nmr.mgh.harvard.edu/> .
 @prefix fsl: <http://purl.org/nidash/fsl#> .
@@ -12648,10 +12647,6 @@ niiri:f2719062-6fd6-11ea-ae34-003ee1ce9545 a nidm:ANTSStatsCollection,
     ants:ants_000298 "5370.552569568157"^^xsd:float ;
     prov:wasGeneratedBy niiri:d401c122-6fd6-11ea-ae34-003ee1ce9545 .
 
-niiri:f2c75dfc-f603-11ef-8466-acde48001122 a bids:Dataset,
-        prov:Collection,
-        prov:Entity .
-
 niiri:f3e33b2a-6fd6-11ea-8a4b-003ee1ce9545 a nidm:ANTSStatsCollection,
         prov:Entity ;
     ants:ants_000001 "0.836274"^^xsd:float ;
@@ -14650,152 +14645,158 @@ niiri:ff2d414c-6fd5-11ea-8258-003ee1ce9545 a nidm:ANTSStatsCollection,
     prov:wasGeneratedBy niiri:e09f5f38-6fd6-11ea-8258-003ee1ce9545 .
 
 niiri:a0a3688c-6f88-11ea-a1c0-003ee1ce9545 a prov:Activity ;
-    dct:description "Freesurfer segmentation statistics" ;
+    dct:description "Freesurfer segmentation statistics"^^xsd:string ;
+    dct:isPartOf niiri:d153320c-f87b-11ef-823b-acde48001122 ;
     prov:qualifiedAssociation [ a prov:Association ;
             prov:agent niiri:c0a3ad92-6f88-11ea-a1c0-003ee1ce9545 ;
             prov:hadRole sio:Subject ],
         [ a prov:Association ;
             prov:agent niiri:e0a39f46-6f88-11ea-a1c0-003ee1ce9545 ;
             prov:hadRole nidm:NIDM_0000164 ] ;
-    fs:ColorTable "/opt/freesurfer-6.0.0-min/ASegStatsLUT.txt" ;
-    fs:ColorTableTimeStamp "2017/01/18 22:00:02" ;
-    fs:ExcludeSegId "0 2 3 41 42" ;
-    fs:Excluding "Cortical Gray and White Matter" ;
-    fs:InVolFile "mri/norm.mgz" ;
-    fs:InVolFileTimeStamp "2019/01/06 06:33:05" ;
-    fs:InVolFrame "0" ;
-    fs:NRows "45" ;
-    fs:NTableCols "10" ;
-    fs:PVVolFile "mri/norm.mgz" ;
-    fs:PVVolFileTimeStamp "2019/01/06 06:33:05" ;
-    fs:SUBJECTS_DIR "/working/derivatives/mindboggle/freesurfer_subjects" ;
-    fs:SegVolFile "mri/aseg.mgz" ;
-    fs:SegVolFileTimeStamp "2019/01/06 16:19:36" ;
-    fs:Title "Segmentation Statistics" ;
-    fs:VoxelVolume_mm3 "1" ;
-    fs:anatomy_type "volume" ;
-    fs:cmdline "mri_segstats --seg mri/aseg.mgz --sum stats/aseg.stats --pv mri/norm.mgz --empty --brainmask mri/brainmask.mgz --brain-vol-from-seg --excludeid 0 --excl-ctxgmwm --supratent --subcortgray --in mri/norm.mgz --in-intensity-name norm --in-intensity-units MR --etiv --surf-wm-vol --surf-ctx-vol --totalgray --euler --ctab /opt/freesurfer-6.0.0-min/ASegStatsLUT.txt --subject sub-0025445" ;
-    fs:cvs_version "$Id: mri_segstats.c,v 1.121 2016/05/31 17:27:11 greve Exp $" ;
-    fs:generating_program "mri_segstats" ;
-    fs:hostname "ip-172-31-11-66" ;
-    fs:machine "x86_64" ;
-    fs:subjectname "sub-0025445" ;
-    fs:sysname "Linux" ;
-    fs:user "root" .
+    fs:ColorTable "/opt/freesurfer-6.0.0-min/ASegStatsLUT.txt"^^xsd:string ;
+    fs:ColorTableTimeStamp "2017/01/18 22:00:02"^^xsd:string ;
+    fs:ExcludeSegId "0 2 3 41 42"^^xsd:string ;
+    fs:Excluding "Cortical Gray and White Matter"^^xsd:string ;
+    fs:InVolFile "mri/norm.mgz"^^xsd:string ;
+    fs:InVolFileTimeStamp "2019/01/06 06:33:05"^^xsd:string ;
+    fs:InVolFrame "0"^^xsd:string ;
+    fs:NRows "45"^^xsd:string ;
+    fs:NTableCols "10"^^xsd:string ;
+    fs:PVVolFile "mri/norm.mgz"^^xsd:string ;
+    fs:PVVolFileTimeStamp "2019/01/06 06:33:05"^^xsd:string ;
+    fs:SUBJECTS_DIR "/working/derivatives/mindboggle/freesurfer_subjects"^^xsd:string ;
+    fs:SegVolFile "mri/aseg.mgz"^^xsd:string ;
+    fs:SegVolFileTimeStamp "2019/01/06 16:19:36"^^xsd:string ;
+    fs:Title "Segmentation Statistics"^^xsd:string ;
+    fs:VoxelVolume_mm3 "1"^^xsd:string ;
+    fs:anatomy_type "volume"^^xsd:string ;
+    fs:cmdline "mri_segstats --seg mri/aseg.mgz --sum stats/aseg.stats --pv mri/norm.mgz --empty --brainmask mri/brainmask.mgz --brain-vol-from-seg --excludeid 0 --excl-ctxgmwm --supratent --subcortgray --in mri/norm.mgz --in-intensity-name norm --in-intensity-units MR --etiv --surf-wm-vol --surf-ctx-vol --totalgray --euler --ctab /opt/freesurfer-6.0.0-min/ASegStatsLUT.txt --subject sub-0025445"^^xsd:string ;
+    fs:cvs_version "$Id: mri_segstats.c,v 1.121 2016/05/31 17:27:11 greve Exp $"^^xsd:string ;
+    fs:generating_program "mri_segstats"^^xsd:string ;
+    fs:hostname "ip-172-31-11-66"^^xsd:string ;
+    fs:machine "x86_64"^^xsd:string ;
+    fs:subjectname "sub-0025445"^^xsd:string ;
+    fs:sysname "Linux"^^xsd:string ;
+    fs:user "root"^^xsd:string .
 
 niiri:a175e26a-72d9-11ea-84b8-003ee1ce9545 a prov:Activity ;
-    dct:description "FSL FAST/FIRST segmentation statistics" ;
+    dct:description "FSL FAST/FIRST segmentation statistics"^^xsd:string ;
+    dct:isPartOf niiri:d153320c-f87b-11ef-823b-acde48001122 ;
     prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:a5b2253c-6f88-11ea-891e-003ee1ce9545 ;
-            prov:hadRole sio:Subject ],
-        [ a prov:Association ;
             prov:agent niiri:ea8810dc-72d9-11ea-8bf6-003ee1ce9545 ;
-            prov:hadRole nidm:NIDM_0000164 ] .
+            prov:hadRole nidm:NIDM_0000164 ],
+        [ a prov:Association ;
+            prov:agent niiri:a5b2253c-6f88-11ea-891e-003ee1ce9545 ;
+            prov:hadRole sio:Subject ] .
 
 niiri:a1b6f51c-6f88-11ea-aa8e-003ee1ce9545 a prov:Activity ;
-    dct:description "Freesurfer segmentation statistics" ;
+    dct:description "Freesurfer segmentation statistics"^^xsd:string ;
+    dct:isPartOf niiri:d153320c-f87b-11ef-823b-acde48001122 ;
     prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:f2c2e326-6f88-11ea-aa8e-003ee1ce9545 ;
-            prov:hadRole sio:Subject ],
-        [ a prov:Association ;
             prov:agent niiri:e0a39f46-6f88-11ea-a1c0-003ee1ce9545 ;
-            prov:hadRole nidm:NIDM_0000164 ] ;
-    fs:ColorTable "/opt/freesurfer-6.0.0-min/ASegStatsLUT.txt" ;
-    fs:ColorTableTimeStamp "2017/01/18 22:00:02" ;
-    fs:ExcludeSegId "0 2 3 41 42" ;
-    fs:Excluding "Cortical Gray and White Matter" ;
-    fs:InVolFile "mri/norm.mgz" ;
-    fs:InVolFileTimeStamp "2019/01/06 06:28:29" ;
-    fs:InVolFrame "0" ;
-    fs:NRows "45" ;
-    fs:NTableCols "10" ;
-    fs:PVVolFile "mri/norm.mgz" ;
-    fs:PVVolFileTimeStamp "2019/01/06 06:28:29" ;
-    fs:SUBJECTS_DIR "/working/derivatives/mindboggle/freesurfer_subjects" ;
-    fs:SegVolFile "mri/aseg.mgz" ;
-    fs:SegVolFileTimeStamp "2019/01/06 16:08:30" ;
-    fs:Title "Segmentation Statistics" ;
-    fs:VoxelVolume_mm3 "1" ;
-    fs:anatomy_type "volume" ;
-    fs:cmdline "mri_segstats --seg mri/aseg.mgz --sum stats/aseg.stats --pv mri/norm.mgz --empty --brainmask mri/brainmask.mgz --brain-vol-from-seg --excludeid 0 --excl-ctxgmwm --supratent --subcortgray --in mri/norm.mgz --in-intensity-name norm --in-intensity-units MR --etiv --surf-wm-vol --surf-ctx-vol --totalgray --euler --ctab /opt/freesurfer-6.0.0-min/ASegStatsLUT.txt --subject sub-0025456" ;
-    fs:cvs_version "$Id: mri_segstats.c,v 1.121 2016/05/31 17:27:11 greve Exp $" ;
-    fs:generating_program "mri_segstats" ;
-    fs:hostname "ip-172-31-8-245" ;
-    fs:machine "x86_64" ;
-    fs:subjectname "sub-0025456" ;
-    fs:sysname "Linux" ;
-    fs:user "root" .
+            prov:hadRole nidm:NIDM_0000164 ],
+        [ a prov:Association ;
+            prov:agent niiri:f2c2e326-6f88-11ea-aa8e-003ee1ce9545 ;
+            prov:hadRole sio:Subject ] ;
+    fs:ColorTable "/opt/freesurfer-6.0.0-min/ASegStatsLUT.txt"^^xsd:string ;
+    fs:ColorTableTimeStamp "2017/01/18 22:00:02"^^xsd:string ;
+    fs:ExcludeSegId "0 2 3 41 42"^^xsd:string ;
+    fs:Excluding "Cortical Gray and White Matter"^^xsd:string ;
+    fs:InVolFile "mri/norm.mgz"^^xsd:string ;
+    fs:InVolFileTimeStamp "2019/01/06 06:28:29"^^xsd:string ;
+    fs:InVolFrame "0"^^xsd:string ;
+    fs:NRows "45"^^xsd:string ;
+    fs:NTableCols "10"^^xsd:string ;
+    fs:PVVolFile "mri/norm.mgz"^^xsd:string ;
+    fs:PVVolFileTimeStamp "2019/01/06 06:28:29"^^xsd:string ;
+    fs:SUBJECTS_DIR "/working/derivatives/mindboggle/freesurfer_subjects"^^xsd:string ;
+    fs:SegVolFile "mri/aseg.mgz"^^xsd:string ;
+    fs:SegVolFileTimeStamp "2019/01/06 16:08:30"^^xsd:string ;
+    fs:Title "Segmentation Statistics"^^xsd:string ;
+    fs:VoxelVolume_mm3 "1"^^xsd:string ;
+    fs:anatomy_type "volume"^^xsd:string ;
+    fs:cmdline "mri_segstats --seg mri/aseg.mgz --sum stats/aseg.stats --pv mri/norm.mgz --empty --brainmask mri/brainmask.mgz --brain-vol-from-seg --excludeid 0 --excl-ctxgmwm --supratent --subcortgray --in mri/norm.mgz --in-intensity-name norm --in-intensity-units MR --etiv --surf-wm-vol --surf-ctx-vol --totalgray --euler --ctab /opt/freesurfer-6.0.0-min/ASegStatsLUT.txt --subject sub-0025456"^^xsd:string ;
+    fs:cvs_version "$Id: mri_segstats.c,v 1.121 2016/05/31 17:27:11 greve Exp $"^^xsd:string ;
+    fs:generating_program "mri_segstats"^^xsd:string ;
+    fs:hostname "ip-172-31-8-245"^^xsd:string ;
+    fs:machine "x86_64"^^xsd:string ;
+    fs:subjectname "sub-0025456"^^xsd:string ;
+    fs:sysname "Linux"^^xsd:string ;
+    fs:user "root"^^xsd:string .
 
 niiri:a2d7a4e8-6f88-11ea-b5b0-003ee1ce9545 a prov:Activity ;
-    dct:description "Freesurfer segmentation statistics" ;
+    dct:description "Freesurfer segmentation statistics"^^xsd:string ;
+    dct:isPartOf niiri:d153320c-f87b-11ef-823b-acde48001122 ;
     prov:qualifiedAssociation [ a prov:Association ;
             prov:agent niiri:e0a39f46-6f88-11ea-a1c0-003ee1ce9545 ;
             prov:hadRole nidm:NIDM_0000164 ],
         [ a prov:Association ;
             prov:agent niiri:a3e20338-6f88-11ea-b5b0-003ee1ce9545 ;
             prov:hadRole sio:Subject ] ;
-    fs:ColorTable "/opt/freesurfer-6.0.0-min/ASegStatsLUT.txt" ;
-    fs:ColorTableTimeStamp "2017/01/18 22:00:02" ;
-    fs:ExcludeSegId "0 2 3 41 42" ;
-    fs:Excluding "Cortical Gray and White Matter" ;
-    fs:InVolFile "mri/norm.mgz" ;
-    fs:InVolFileTimeStamp "2019/01/06 06:31:01" ;
-    fs:InVolFrame "0" ;
-    fs:NRows "45" ;
-    fs:NTableCols "10" ;
-    fs:PVVolFile "mri/norm.mgz" ;
-    fs:PVVolFileTimeStamp "2019/01/06 06:31:01" ;
-    fs:SUBJECTS_DIR "/working/derivatives/mindboggle/freesurfer_subjects" ;
-    fs:SegVolFile "mri/aseg.mgz" ;
-    fs:SegVolFileTimeStamp "2019/01/06 15:55:00" ;
-    fs:Title "Segmentation Statistics" ;
-    fs:VoxelVolume_mm3 "1" ;
-    fs:anatomy_type "volume" ;
-    fs:cmdline "mri_segstats --seg mri/aseg.mgz --sum stats/aseg.stats --pv mri/norm.mgz --empty --brainmask mri/brainmask.mgz --brain-vol-from-seg --excludeid 0 --excl-ctxgmwm --supratent --subcortgray --in mri/norm.mgz --in-intensity-name norm --in-intensity-units MR --etiv --surf-wm-vol --surf-ctx-vol --totalgray --euler --ctab /opt/freesurfer-6.0.0-min/ASegStatsLUT.txt --subject sub-0025440" ;
-    fs:cvs_version "$Id: mri_segstats.c,v 1.121 2016/05/31 17:27:11 greve Exp $" ;
-    fs:generating_program "mri_segstats" ;
-    fs:hostname "ip-172-31-15-227" ;
-    fs:machine "x86_64" ;
-    fs:subjectname "sub-0025440" ;
-    fs:sysname "Linux" ;
-    fs:user "root" .
+    fs:ColorTable "/opt/freesurfer-6.0.0-min/ASegStatsLUT.txt"^^xsd:string ;
+    fs:ColorTableTimeStamp "2017/01/18 22:00:02"^^xsd:string ;
+    fs:ExcludeSegId "0 2 3 41 42"^^xsd:string ;
+    fs:Excluding "Cortical Gray and White Matter"^^xsd:string ;
+    fs:InVolFile "mri/norm.mgz"^^xsd:string ;
+    fs:InVolFileTimeStamp "2019/01/06 06:31:01"^^xsd:string ;
+    fs:InVolFrame "0"^^xsd:string ;
+    fs:NRows "45"^^xsd:string ;
+    fs:NTableCols "10"^^xsd:string ;
+    fs:PVVolFile "mri/norm.mgz"^^xsd:string ;
+    fs:PVVolFileTimeStamp "2019/01/06 06:31:01"^^xsd:string ;
+    fs:SUBJECTS_DIR "/working/derivatives/mindboggle/freesurfer_subjects"^^xsd:string ;
+    fs:SegVolFile "mri/aseg.mgz"^^xsd:string ;
+    fs:SegVolFileTimeStamp "2019/01/06 15:55:00"^^xsd:string ;
+    fs:Title "Segmentation Statistics"^^xsd:string ;
+    fs:VoxelVolume_mm3 "1"^^xsd:string ;
+    fs:anatomy_type "volume"^^xsd:string ;
+    fs:cmdline "mri_segstats --seg mri/aseg.mgz --sum stats/aseg.stats --pv mri/norm.mgz --empty --brainmask mri/brainmask.mgz --brain-vol-from-seg --excludeid 0 --excl-ctxgmwm --supratent --subcortgray --in mri/norm.mgz --in-intensity-name norm --in-intensity-units MR --etiv --surf-wm-vol --surf-ctx-vol --totalgray --euler --ctab /opt/freesurfer-6.0.0-min/ASegStatsLUT.txt --subject sub-0025440"^^xsd:string ;
+    fs:cvs_version "$Id: mri_segstats.c,v 1.121 2016/05/31 17:27:11 greve Exp $"^^xsd:string ;
+    fs:generating_program "mri_segstats"^^xsd:string ;
+    fs:hostname "ip-172-31-15-227"^^xsd:string ;
+    fs:machine "x86_64"^^xsd:string ;
+    fs:subjectname "sub-0025440"^^xsd:string ;
+    fs:sysname "Linux"^^xsd:string ;
+    fs:user "root"^^xsd:string .
 
 niiri:a391994e-6f88-11ea-af87-003ee1ce9545 a prov:Activity ;
-    dct:description "Freesurfer segmentation statistics" ;
+    dct:description "Freesurfer segmentation statistics"^^xsd:string ;
+    dct:isPartOf niiri:d153320c-f87b-11ef-823b-acde48001122 ;
     prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:e0a39f46-6f88-11ea-a1c0-003ee1ce9545 ;
-            prov:hadRole nidm:NIDM_0000164 ],
-        [ a prov:Association ;
             prov:agent niiri:f492a694-6f88-11ea-af87-003ee1ce9545 ;
-            prov:hadRole sio:Subject ] ;
-    fs:ColorTable "/opt/freesurfer-6.0.0-min/ASegStatsLUT.txt" ;
-    fs:ColorTableTimeStamp "2017/01/18 22:00:02" ;
-    fs:ExcludeSegId "0 2 3 41 42" ;
-    fs:Excluding "Cortical Gray and White Matter" ;
-    fs:InVolFile "mri/norm.mgz" ;
-    fs:InVolFileTimeStamp "2019/01/11 15:05:54" ;
-    fs:InVolFrame "0" ;
-    fs:NRows "45" ;
-    fs:NTableCols "10" ;
-    fs:PVVolFile "mri/norm.mgz" ;
-    fs:PVVolFileTimeStamp "2019/01/11 15:05:54" ;
-    fs:SUBJECTS_DIR "/working/derivatives/mindboggle/freesurfer_subjects" ;
-    fs:SegVolFile "mri/aseg.mgz" ;
-    fs:SegVolFileTimeStamp "2019/01/11 22:41:12" ;
-    fs:Title "Segmentation Statistics" ;
-    fs:VoxelVolume_mm3 "1" ;
-    fs:anatomy_type "volume" ;
-    fs:cmdline "mri_segstats --seg mri/aseg.mgz --sum stats/aseg.stats --pv mri/norm.mgz --empty --brainmask mri/brainmask.mgz --brain-vol-from-seg --excludeid 0 --excl-ctxgmwm --supratent --subcortgray --in mri/norm.mgz --in-intensity-name norm --in-intensity-units MR --etiv --surf-wm-vol --surf-ctx-vol --totalgray --euler --ctab /opt/freesurfer-6.0.0-min/ASegStatsLUT.txt --subject sub-0025435" ;
-    fs:cvs_version "$Id: mri_segstats.c,v 1.121 2016/05/31 17:27:11 greve Exp $" ;
-    fs:generating_program "mri_segstats" ;
-    fs:hostname "ip-172-31-19-122" ;
-    fs:machine "x86_64" ;
-    fs:subjectname "sub-0025435" ;
-    fs:sysname "Linux" ;
-    fs:user "root" .
+            prov:hadRole sio:Subject ],
+        [ a prov:Association ;
+            prov:agent niiri:e0a39f46-6f88-11ea-a1c0-003ee1ce9545 ;
+            prov:hadRole nidm:NIDM_0000164 ] ;
+    fs:ColorTable "/opt/freesurfer-6.0.0-min/ASegStatsLUT.txt"^^xsd:string ;
+    fs:ColorTableTimeStamp "2017/01/18 22:00:02"^^xsd:string ;
+    fs:ExcludeSegId "0 2 3 41 42"^^xsd:string ;
+    fs:Excluding "Cortical Gray and White Matter"^^xsd:string ;
+    fs:InVolFile "mri/norm.mgz"^^xsd:string ;
+    fs:InVolFileTimeStamp "2019/01/11 15:05:54"^^xsd:string ;
+    fs:InVolFrame "0"^^xsd:string ;
+    fs:NRows "45"^^xsd:string ;
+    fs:NTableCols "10"^^xsd:string ;
+    fs:PVVolFile "mri/norm.mgz"^^xsd:string ;
+    fs:PVVolFileTimeStamp "2019/01/11 15:05:54"^^xsd:string ;
+    fs:SUBJECTS_DIR "/working/derivatives/mindboggle/freesurfer_subjects"^^xsd:string ;
+    fs:SegVolFile "mri/aseg.mgz"^^xsd:string ;
+    fs:SegVolFileTimeStamp "2019/01/11 22:41:12"^^xsd:string ;
+    fs:Title "Segmentation Statistics"^^xsd:string ;
+    fs:VoxelVolume_mm3 "1"^^xsd:string ;
+    fs:anatomy_type "volume"^^xsd:string ;
+    fs:cmdline "mri_segstats --seg mri/aseg.mgz --sum stats/aseg.stats --pv mri/norm.mgz --empty --brainmask mri/brainmask.mgz --brain-vol-from-seg --excludeid 0 --excl-ctxgmwm --supratent --subcortgray --in mri/norm.mgz --in-intensity-name norm --in-intensity-units MR --etiv --surf-wm-vol --surf-ctx-vol --totalgray --euler --ctab /opt/freesurfer-6.0.0-min/ASegStatsLUT.txt --subject sub-0025435"^^xsd:string ;
+    fs:cvs_version "$Id: mri_segstats.c,v 1.121 2016/05/31 17:27:11 greve Exp $"^^xsd:string ;
+    fs:generating_program "mri_segstats"^^xsd:string ;
+    fs:hostname "ip-172-31-19-122"^^xsd:string ;
+    fs:machine "x86_64"^^xsd:string ;
+    fs:subjectname "sub-0025435"^^xsd:string ;
+    fs:sysname "Linux"^^xsd:string ;
+    fs:user "root"^^xsd:string .
 
 niiri:a3eb5c36-72d9-11ea-afea-003ee1ce9545 a prov:Activity ;
-    dct:description "FSL FAST/FIRST segmentation statistics" ;
+    dct:description "FSL FAST/FIRST segmentation statistics"^^xsd:string ;
+    dct:isPartOf niiri:d153320c-f87b-11ef-823b-acde48001122 ;
     prov:qualifiedAssociation [ a prov:Association ;
             prov:agent niiri:d3bf03c4-6f88-11ea-b24c-003ee1ce9545 ;
             prov:hadRole sio:Subject ],
@@ -14804,25 +14805,28 @@ niiri:a3eb5c36-72d9-11ea-afea-003ee1ce9545 a prov:Activity ;
             prov:hadRole nidm:NIDM_0000164 ] .
 
 niiri:a48492a4-6fd5-11ea-ae57-003ee1ce9545 a prov:Activity ;
-    dct:description "ANTS segmentation statistics" ;
+    dct:description "ANTS segmentation statistics"^^xsd:string ;
+    dct:isPartOf niiri:d153320c-f87b-11ef-823b-acde48001122 ;
     prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:c0a3ad92-6f88-11ea-a1c0-003ee1ce9545 ;
-            prov:hadRole sio:Subject ],
-        [ a prov:Association ;
             prov:agent niiri:a4849970-6fd5-11ea-ae57-003ee1ce9545 ;
-            prov:hadRole nidm:NIDM_0000164 ] .
+            prov:hadRole nidm:NIDM_0000164 ],
+        [ a prov:Association ;
+            prov:agent niiri:c0a3ad92-6f88-11ea-a1c0-003ee1ce9545 ;
+            prov:hadRole sio:Subject ] .
 
 niiri:a7393dc2-6fd6-11ea-bf17-003ee1ce9545 a prov:Activity ;
-    dct:description "ANTS segmentation statistics" ;
+    dct:description "ANTS segmentation statistics"^^xsd:string ;
+    dct:isPartOf niiri:d153320c-f87b-11ef-823b-acde48001122 ;
     prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:b5224bf8-6f88-11ea-8668-003ee1ce9545 ;
-            prov:hadRole sio:Subject ],
-        [ a prov:Association ;
             prov:agent niiri:a4849970-6fd5-11ea-ae57-003ee1ce9545 ;
-            prov:hadRole nidm:NIDM_0000164 ] .
+            prov:hadRole nidm:NIDM_0000164 ],
+        [ a prov:Association ;
+            prov:agent niiri:b5224bf8-6f88-11ea-8668-003ee1ce9545 ;
+            prov:hadRole sio:Subject ] .
 
 niiri:a8896166-72d9-11ea-978e-003ee1ce9545 a prov:Activity ;
-    dct:description "FSL FAST/FIRST segmentation statistics" ;
+    dct:description "FSL FAST/FIRST segmentation statistics"^^xsd:string ;
+    dct:isPartOf niiri:d153320c-f87b-11ef-823b-acde48001122 ;
     prov:qualifiedAssociation [ a prov:Association ;
             prov:agent niiri:ea8810dc-72d9-11ea-8bf6-003ee1ce9545 ;
             prov:hadRole nidm:NIDM_0000164 ],
@@ -14831,50 +14835,53 @@ niiri:a8896166-72d9-11ea-978e-003ee1ce9545 a prov:Activity ;
             prov:hadRole sio:Subject ] .
 
 niiri:aa009e08-6fd5-11ea-ba9b-003ee1ce9545 a prov:Activity ;
-    dct:description "ANTS segmentation statistics" ;
+    dct:description "ANTS segmentation statistics"^^xsd:string ;
+    dct:isPartOf niiri:d153320c-f87b-11ef-823b-acde48001122 ;
     prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:a4849970-6fd5-11ea-ae57-003ee1ce9545 ;
-            prov:hadRole nidm:NIDM_0000164 ],
-        [ a prov:Association ;
             prov:agent niiri:d8b87bde-6f88-11ea-973b-003ee1ce9545 ;
-            prov:hadRole sio:Subject ] .
+            prov:hadRole sio:Subject ],
+        [ a prov:Association ;
+            prov:agent niiri:a4849970-6fd5-11ea-ae57-003ee1ce9545 ;
+            prov:hadRole nidm:NIDM_0000164 ] .
 
 niiri:ab7a0d7a-6f88-11ea-893a-003ee1ce9545 a prov:Activity ;
-    dct:description "Freesurfer segmentation statistics" ;
+    dct:description "Freesurfer segmentation statistics"^^xsd:string ;
+    dct:isPartOf niiri:d153320c-f87b-11ef-823b-acde48001122 ;
     prov:qualifiedAssociation [ a prov:Association ;
             prov:agent niiri:ac861236-6f88-11ea-893a-003ee1ce9545 ;
             prov:hadRole sio:Subject ],
         [ a prov:Association ;
             prov:agent niiri:e0a39f46-6f88-11ea-a1c0-003ee1ce9545 ;
             prov:hadRole nidm:NIDM_0000164 ] ;
-    fs:ColorTable "/opt/freesurfer-6.0.0-min/ASegStatsLUT.txt" ;
-    fs:ColorTableTimeStamp "2017/01/18 22:00:02" ;
-    fs:ExcludeSegId "0 2 3 41 42" ;
-    fs:Excluding "Cortical Gray and White Matter" ;
-    fs:InVolFile "mri/norm.mgz" ;
-    fs:InVolFileTimeStamp "2019/01/11 14:59:44" ;
-    fs:InVolFrame "0" ;
-    fs:NRows "45" ;
-    fs:NTableCols "10" ;
-    fs:PVVolFile "mri/norm.mgz" ;
-    fs:PVVolFileTimeStamp "2019/01/11 14:59:44" ;
-    fs:SUBJECTS_DIR "/working/derivatives/mindboggle/freesurfer_subjects" ;
-    fs:SegVolFile "mri/aseg.mgz" ;
-    fs:SegVolFileTimeStamp "2019/01/11 23:30:43" ;
-    fs:Title "Segmentation Statistics" ;
-    fs:VoxelVolume_mm3 "1" ;
-    fs:anatomy_type "volume" ;
-    fs:cmdline "mri_segstats --seg mri/aseg.mgz --sum stats/aseg.stats --pv mri/norm.mgz --empty --brainmask mri/brainmask.mgz --brain-vol-from-seg --excludeid 0 --excl-ctxgmwm --supratent --subcortgray --in mri/norm.mgz --in-intensity-name norm --in-intensity-units MR --etiv --surf-wm-vol --surf-ctx-vol --totalgray --euler --ctab /opt/freesurfer-6.0.0-min/ASegStatsLUT.txt --subject sub-0025453" ;
-    fs:cvs_version "$Id: mri_segstats.c,v 1.121 2016/05/31 17:27:11 greve Exp $" ;
-    fs:generating_program "mri_segstats" ;
-    fs:hostname "ip-172-31-30-47" ;
-    fs:machine "x86_64" ;
-    fs:subjectname "sub-0025453" ;
-    fs:sysname "Linux" ;
-    fs:user "root" .
+    fs:ColorTable "/opt/freesurfer-6.0.0-min/ASegStatsLUT.txt"^^xsd:string ;
+    fs:ColorTableTimeStamp "2017/01/18 22:00:02"^^xsd:string ;
+    fs:ExcludeSegId "0 2 3 41 42"^^xsd:string ;
+    fs:Excluding "Cortical Gray and White Matter"^^xsd:string ;
+    fs:InVolFile "mri/norm.mgz"^^xsd:string ;
+    fs:InVolFileTimeStamp "2019/01/11 14:59:44"^^xsd:string ;
+    fs:InVolFrame "0"^^xsd:string ;
+    fs:NRows "45"^^xsd:string ;
+    fs:NTableCols "10"^^xsd:string ;
+    fs:PVVolFile "mri/norm.mgz"^^xsd:string ;
+    fs:PVVolFileTimeStamp "2019/01/11 14:59:44"^^xsd:string ;
+    fs:SUBJECTS_DIR "/working/derivatives/mindboggle/freesurfer_subjects"^^xsd:string ;
+    fs:SegVolFile "mri/aseg.mgz"^^xsd:string ;
+    fs:SegVolFileTimeStamp "2019/01/11 23:30:43"^^xsd:string ;
+    fs:Title "Segmentation Statistics"^^xsd:string ;
+    fs:VoxelVolume_mm3 "1"^^xsd:string ;
+    fs:anatomy_type "volume"^^xsd:string ;
+    fs:cmdline "mri_segstats --seg mri/aseg.mgz --sum stats/aseg.stats --pv mri/norm.mgz --empty --brainmask mri/brainmask.mgz --brain-vol-from-seg --excludeid 0 --excl-ctxgmwm --supratent --subcortgray --in mri/norm.mgz --in-intensity-name norm --in-intensity-units MR --etiv --surf-wm-vol --surf-ctx-vol --totalgray --euler --ctab /opt/freesurfer-6.0.0-min/ASegStatsLUT.txt --subject sub-0025453"^^xsd:string ;
+    fs:cvs_version "$Id: mri_segstats.c,v 1.121 2016/05/31 17:27:11 greve Exp $"^^xsd:string ;
+    fs:generating_program "mri_segstats"^^xsd:string ;
+    fs:hostname "ip-172-31-30-47"^^xsd:string ;
+    fs:machine "x86_64"^^xsd:string ;
+    fs:subjectname "sub-0025453"^^xsd:string ;
+    fs:sysname "Linux"^^xsd:string ;
+    fs:user "root"^^xsd:string .
 
 niiri:ad312294-72d9-11ea-a783-003ee1ce9545 a prov:Activity ;
-    dct:description "FSL FAST/FIRST segmentation statistics" ;
+    dct:description "FSL FAST/FIRST segmentation statistics"^^xsd:string ;
+    dct:isPartOf niiri:d153320c-f87b-11ef-823b-acde48001122 ;
     prov:qualifiedAssociation [ a prov:Association ;
             prov:agent niiri:ea8810dc-72d9-11ea-8bf6-003ee1ce9545 ;
             prov:hadRole nidm:NIDM_0000164 ],
@@ -14883,7 +14890,8 @@ niiri:ad312294-72d9-11ea-a783-003ee1ce9545 a prov:Activity ;
             prov:hadRole sio:Subject ] .
 
 niiri:ae3dfc42-6fd6-11ea-a7e3-003ee1ce9545 a prov:Activity ;
-    dct:description "ANTS segmentation statistics" ;
+    dct:description "ANTS segmentation statistics"^^xsd:string ;
+    dct:isPartOf niiri:d153320c-f87b-11ef-823b-acde48001122 ;
     prov:qualifiedAssociation [ a prov:Association ;
             prov:agent niiri:a4849970-6fd5-11ea-ae57-003ee1ce9545 ;
             prov:hadRole nidm:NIDM_0000164 ],
@@ -14892,7 +14900,8 @@ niiri:ae3dfc42-6fd6-11ea-a7e3-003ee1ce9545 a prov:Activity ;
             prov:hadRole sio:Subject ] .
 
 niiri:af1077ca-72d9-11ea-8818-003ee1ce9545 a prov:Activity ;
-    dct:description "FSL FAST/FIRST segmentation statistics" ;
+    dct:description "FSL FAST/FIRST segmentation statistics"^^xsd:string ;
+    dct:isPartOf niiri:d153320c-f87b-11ef-823b-acde48001122 ;
     prov:qualifiedAssociation [ a prov:Association ;
             prov:agent niiri:ea8810dc-72d9-11ea-8bf6-003ee1ce9545 ;
             prov:hadRole nidm:NIDM_0000164 ],
@@ -14901,59 +14910,63 @@ niiri:af1077ca-72d9-11ea-8818-003ee1ce9545 a prov:Activity ;
             prov:hadRole sio:Subject ] .
 
 niiri:af2f0fcc-6fd5-11ea-a4be-003ee1ce9545 a prov:Activity ;
-    dct:description "ANTS segmentation statistics" ;
+    dct:description "ANTS segmentation statistics"^^xsd:string ;
+    dct:isPartOf niiri:d153320c-f87b-11ef-823b-acde48001122 ;
     prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:dfd49ec0-6f88-11ea-a031-003ee1ce9545 ;
-            prov:hadRole sio:Subject ],
-        [ a prov:Association ;
             prov:agent niiri:a4849970-6fd5-11ea-ae57-003ee1ce9545 ;
-            prov:hadRole nidm:NIDM_0000164 ] .
-
-niiri:b1e1435a-72d9-11ea-b2f5-003ee1ce9545 a prov:Activity ;
-    dct:description "FSL FAST/FIRST segmentation statistics" ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:ea8810dc-72d9-11ea-8bf6-003ee1ce9545 ;
             prov:hadRole nidm:NIDM_0000164 ],
         [ a prov:Association ;
-            prov:agent niiri:aae8f3a2-6f88-11ea-bff2-003ee1ce9545 ;
+            prov:agent niiri:dfd49ec0-6f88-11ea-a031-003ee1ce9545 ;
             prov:hadRole sio:Subject ] .
 
+niiri:b1e1435a-72d9-11ea-b2f5-003ee1ce9545 a prov:Activity ;
+    dct:description "FSL FAST/FIRST segmentation statistics"^^xsd:string ;
+    dct:isPartOf niiri:d153320c-f87b-11ef-823b-acde48001122 ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:aae8f3a2-6f88-11ea-bff2-003ee1ce9545 ;
+            prov:hadRole sio:Subject ],
+        [ a prov:Association ;
+            prov:agent niiri:ea8810dc-72d9-11ea-8bf6-003ee1ce9545 ;
+            prov:hadRole nidm:NIDM_0000164 ] .
+
 niiri:b227e976-6f88-11ea-bd97-003ee1ce9545 a prov:Activity ;
-    dct:description "Freesurfer segmentation statistics" ;
+    dct:description "Freesurfer segmentation statistics"^^xsd:string ;
+    dct:isPartOf niiri:d153320c-f87b-11ef-823b-acde48001122 ;
     prov:qualifiedAssociation [ a prov:Association ;
             prov:agent niiri:b32c811a-6f88-11ea-bd97-003ee1ce9545 ;
             prov:hadRole sio:Subject ],
         [ a prov:Association ;
             prov:agent niiri:e0a39f46-6f88-11ea-a1c0-003ee1ce9545 ;
             prov:hadRole nidm:NIDM_0000164 ] ;
-    fs:ColorTable "/opt/freesurfer-6.0.0-min/ASegStatsLUT.txt" ;
-    fs:ColorTableTimeStamp "2017/01/18 22:00:02" ;
-    fs:ExcludeSegId "0 2 3 41 42" ;
-    fs:Excluding "Cortical Gray and White Matter" ;
-    fs:InVolFile "mri/norm.mgz" ;
-    fs:InVolFileTimeStamp "2019/01/06 06:34:24" ;
-    fs:InVolFrame "0" ;
-    fs:NRows "45" ;
-    fs:NTableCols "10" ;
-    fs:PVVolFile "mri/norm.mgz" ;
-    fs:PVVolFileTimeStamp "2019/01/06 06:34:24" ;
-    fs:SUBJECTS_DIR "/working/derivatives/mindboggle/freesurfer_subjects" ;
-    fs:SegVolFile "mri/aseg.mgz" ;
-    fs:SegVolFileTimeStamp "2019/01/06 15:28:44" ;
-    fs:Title "Segmentation Statistics" ;
-    fs:VoxelVolume_mm3 "1" ;
-    fs:anatomy_type "volume" ;
-    fs:cmdline "mri_segstats --seg mri/aseg.mgz --sum stats/aseg.stats --pv mri/norm.mgz --empty --brainmask mri/brainmask.mgz --brain-vol-from-seg --excludeid 0 --excl-ctxgmwm --supratent --subcortgray --in mri/norm.mgz --in-intensity-name norm --in-intensity-units MR --etiv --surf-wm-vol --surf-ctx-vol --totalgray --euler --ctab /opt/freesurfer-6.0.0-min/ASegStatsLUT.txt --subject sub-0025434" ;
-    fs:cvs_version "$Id: mri_segstats.c,v 1.121 2016/05/31 17:27:11 greve Exp $" ;
-    fs:generating_program "mri_segstats" ;
-    fs:hostname "ip-172-31-1-27" ;
-    fs:machine "x86_64" ;
-    fs:subjectname "sub-0025434" ;
-    fs:sysname "Linux" ;
-    fs:user "root" .
+    fs:ColorTable "/opt/freesurfer-6.0.0-min/ASegStatsLUT.txt"^^xsd:string ;
+    fs:ColorTableTimeStamp "2017/01/18 22:00:02"^^xsd:string ;
+    fs:ExcludeSegId "0 2 3 41 42"^^xsd:string ;
+    fs:Excluding "Cortical Gray and White Matter"^^xsd:string ;
+    fs:InVolFile "mri/norm.mgz"^^xsd:string ;
+    fs:InVolFileTimeStamp "2019/01/06 06:34:24"^^xsd:string ;
+    fs:InVolFrame "0"^^xsd:string ;
+    fs:NRows "45"^^xsd:string ;
+    fs:NTableCols "10"^^xsd:string ;
+    fs:PVVolFile "mri/norm.mgz"^^xsd:string ;
+    fs:PVVolFileTimeStamp "2019/01/06 06:34:24"^^xsd:string ;
+    fs:SUBJECTS_DIR "/working/derivatives/mindboggle/freesurfer_subjects"^^xsd:string ;
+    fs:SegVolFile "mri/aseg.mgz"^^xsd:string ;
+    fs:SegVolFileTimeStamp "2019/01/06 15:28:44"^^xsd:string ;
+    fs:Title "Segmentation Statistics"^^xsd:string ;
+    fs:VoxelVolume_mm3 "1"^^xsd:string ;
+    fs:anatomy_type "volume"^^xsd:string ;
+    fs:cmdline "mri_segstats --seg mri/aseg.mgz --sum stats/aseg.stats --pv mri/norm.mgz --empty --brainmask mri/brainmask.mgz --brain-vol-from-seg --excludeid 0 --excl-ctxgmwm --supratent --subcortgray --in mri/norm.mgz --in-intensity-name norm --in-intensity-units MR --etiv --surf-wm-vol --surf-ctx-vol --totalgray --euler --ctab /opt/freesurfer-6.0.0-min/ASegStatsLUT.txt --subject sub-0025434"^^xsd:string ;
+    fs:cvs_version "$Id: mri_segstats.c,v 1.121 2016/05/31 17:27:11 greve Exp $"^^xsd:string ;
+    fs:generating_program "mri_segstats"^^xsd:string ;
+    fs:hostname "ip-172-31-1-27"^^xsd:string ;
+    fs:machine "x86_64"^^xsd:string ;
+    fs:subjectname "sub-0025434"^^xsd:string ;
+    fs:sysname "Linux"^^xsd:string ;
+    fs:user "root"^^xsd:string .
 
 niiri:b2b27d08-6fd6-11ea-8b0e-003ee1ce9545 a prov:Activity ;
-    dct:description "ANTS segmentation statistics" ;
+    dct:description "ANTS segmentation statistics"^^xsd:string ;
+    dct:isPartOf niiri:d153320c-f87b-11ef-823b-acde48001122 ;
     prov:qualifiedAssociation [ a prov:Association ;
             prov:agent niiri:c66e79f4-6f88-11ea-954f-003ee1ce9545 ;
             prov:hadRole sio:Subject ],
@@ -14962,50 +14975,53 @@ niiri:b2b27d08-6fd6-11ea-8b0e-003ee1ce9545 a prov:Activity ;
             prov:hadRole nidm:NIDM_0000164 ] .
 
 niiri:b41c3354-6f88-11ea-8668-003ee1ce9545 a prov:Activity ;
-    dct:description "Freesurfer segmentation statistics" ;
+    dct:description "Freesurfer segmentation statistics"^^xsd:string ;
+    dct:isPartOf niiri:d153320c-f87b-11ef-823b-acde48001122 ;
     prov:qualifiedAssociation [ a prov:Association ;
             prov:agent niiri:b5224bf8-6f88-11ea-8668-003ee1ce9545 ;
             prov:hadRole sio:Subject ],
         [ a prov:Association ;
             prov:agent niiri:e0a39f46-6f88-11ea-a1c0-003ee1ce9545 ;
             prov:hadRole nidm:NIDM_0000164 ] ;
-    fs:ColorTable "/opt/freesurfer-6.0.0-min/ASegStatsLUT.txt" ;
-    fs:ColorTableTimeStamp "2017/01/18 22:00:02" ;
-    fs:ExcludeSegId "0 2 3 41 42" ;
-    fs:Excluding "Cortical Gray and White Matter" ;
-    fs:InVolFile "mri/norm.mgz" ;
-    fs:InVolFileTimeStamp "2019/01/06 06:32:41" ;
-    fs:InVolFrame "0" ;
-    fs:NRows "45" ;
-    fs:NTableCols "10" ;
-    fs:PVVolFile "mri/norm.mgz" ;
-    fs:PVVolFileTimeStamp "2019/01/06 06:32:41" ;
-    fs:SUBJECTS_DIR "/working/derivatives/mindboggle/freesurfer_subjects" ;
-    fs:SegVolFile "mri/aseg.mgz" ;
-    fs:SegVolFileTimeStamp "2019/01/06 16:22:04" ;
-    fs:Title "Segmentation Statistics" ;
-    fs:VoxelVolume_mm3 "1" ;
-    fs:anatomy_type "volume" ;
-    fs:cmdline "mri_segstats --seg mri/aseg.mgz --sum stats/aseg.stats --pv mri/norm.mgz --empty --brainmask mri/brainmask.mgz --brain-vol-from-seg --excludeid 0 --excl-ctxgmwm --supratent --subcortgray --in mri/norm.mgz --in-intensity-name norm --in-intensity-units MR --etiv --surf-wm-vol --surf-ctx-vol --totalgray --euler --ctab /opt/freesurfer-6.0.0-min/ASegStatsLUT.txt --subject sub-0025454" ;
-    fs:cvs_version "$Id: mri_segstats.c,v 1.121 2016/05/31 17:27:11 greve Exp $" ;
-    fs:generating_program "mri_segstats" ;
-    fs:hostname "ip-172-31-10-84" ;
-    fs:machine "x86_64" ;
-    fs:subjectname "sub-0025454" ;
-    fs:sysname "Linux" ;
-    fs:user "root" .
+    fs:ColorTable "/opt/freesurfer-6.0.0-min/ASegStatsLUT.txt"^^xsd:string ;
+    fs:ColorTableTimeStamp "2017/01/18 22:00:02"^^xsd:string ;
+    fs:ExcludeSegId "0 2 3 41 42"^^xsd:string ;
+    fs:Excluding "Cortical Gray and White Matter"^^xsd:string ;
+    fs:InVolFile "mri/norm.mgz"^^xsd:string ;
+    fs:InVolFileTimeStamp "2019/01/06 06:32:41"^^xsd:string ;
+    fs:InVolFrame "0"^^xsd:string ;
+    fs:NRows "45"^^xsd:string ;
+    fs:NTableCols "10"^^xsd:string ;
+    fs:PVVolFile "mri/norm.mgz"^^xsd:string ;
+    fs:PVVolFileTimeStamp "2019/01/06 06:32:41"^^xsd:string ;
+    fs:SUBJECTS_DIR "/working/derivatives/mindboggle/freesurfer_subjects"^^xsd:string ;
+    fs:SegVolFile "mri/aseg.mgz"^^xsd:string ;
+    fs:SegVolFileTimeStamp "2019/01/06 16:22:04"^^xsd:string ;
+    fs:Title "Segmentation Statistics"^^xsd:string ;
+    fs:VoxelVolume_mm3 "1"^^xsd:string ;
+    fs:anatomy_type "volume"^^xsd:string ;
+    fs:cmdline "mri_segstats --seg mri/aseg.mgz --sum stats/aseg.stats --pv mri/norm.mgz --empty --brainmask mri/brainmask.mgz --brain-vol-from-seg --excludeid 0 --excl-ctxgmwm --supratent --subcortgray --in mri/norm.mgz --in-intensity-name norm --in-intensity-units MR --etiv --surf-wm-vol --surf-ctx-vol --totalgray --euler --ctab /opt/freesurfer-6.0.0-min/ASegStatsLUT.txt --subject sub-0025454"^^xsd:string ;
+    fs:cvs_version "$Id: mri_segstats.c,v 1.121 2016/05/31 17:27:11 greve Exp $"^^xsd:string ;
+    fs:generating_program "mri_segstats"^^xsd:string ;
+    fs:hostname "ip-172-31-10-84"^^xsd:string ;
+    fs:machine "x86_64"^^xsd:string ;
+    fs:subjectname "sub-0025454"^^xsd:string ;
+    fs:sysname "Linux"^^xsd:string ;
+    fs:user "root"^^xsd:string .
 
 niiri:b46e1140-6fd5-11ea-952e-003ee1ce9545 a prov:Activity ;
-    dct:description "ANTS segmentation statistics" ;
+    dct:description "ANTS segmentation statistics"^^xsd:string ;
+    dct:isPartOf niiri:d153320c-f87b-11ef-823b-acde48001122 ;
     prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:e6f7899c-6f88-11ea-a39d-003ee1ce9545 ;
-            prov:hadRole sio:Subject ],
-        [ a prov:Association ;
             prov:agent niiri:a4849970-6fd5-11ea-ae57-003ee1ce9545 ;
-            prov:hadRole nidm:NIDM_0000164 ] .
+            prov:hadRole nidm:NIDM_0000164 ],
+        [ a prov:Association ;
+            prov:agent niiri:e6f7899c-6f88-11ea-a39d-003ee1ce9545 ;
+            prov:hadRole sio:Subject ] .
 
 niiri:b689d7d2-72d9-11ea-b7e5-003ee1ce9545 a prov:Activity ;
-    dct:description "FSL FAST/FIRST segmentation statistics" ;
+    dct:description "FSL FAST/FIRST segmentation statistics"^^xsd:string ;
+    dct:isPartOf niiri:d153320c-f87b-11ef-823b-acde48001122 ;
     prov:qualifiedAssociation [ a prov:Association ;
             prov:agent niiri:f2c2e326-6f88-11ea-aa8e-003ee1ce9545 ;
             prov:hadRole sio:Subject ],
@@ -15014,102 +15030,108 @@ niiri:b689d7d2-72d9-11ea-b7e5-003ee1ce9545 a prov:Activity ;
             prov:hadRole nidm:NIDM_0000164 ] .
 
 niiri:b7b3fe7a-6f88-11ea-973b-003ee1ce9545 a prov:Activity ;
-    dct:description "Freesurfer segmentation statistics" ;
+    dct:description "Freesurfer segmentation statistics"^^xsd:string ;
+    dct:isPartOf niiri:d153320c-f87b-11ef-823b-acde48001122 ;
     prov:qualifiedAssociation [ a prov:Association ;
             prov:agent niiri:e0a39f46-6f88-11ea-a1c0-003ee1ce9545 ;
             prov:hadRole nidm:NIDM_0000164 ],
         [ a prov:Association ;
             prov:agent niiri:d8b87bde-6f88-11ea-973b-003ee1ce9545 ;
             prov:hadRole sio:Subject ] ;
-    fs:ColorTable "/opt/freesurfer-6.0.0-min/ASegStatsLUT.txt" ;
-    fs:ColorTableTimeStamp "2017/01/18 22:00:02" ;
-    fs:ExcludeSegId "0 2 3 41 42" ;
-    fs:Excluding "Cortical Gray and White Matter" ;
-    fs:InVolFile "mri/norm.mgz" ;
-    fs:InVolFileTimeStamp "2019/01/06 06:29:06" ;
-    fs:InVolFrame "0" ;
-    fs:NRows "45" ;
-    fs:NTableCols "10" ;
-    fs:PVVolFile "mri/norm.mgz" ;
-    fs:PVVolFileTimeStamp "2019/01/06 06:29:06" ;
-    fs:SUBJECTS_DIR "/working/derivatives/mindboggle/freesurfer_subjects" ;
-    fs:SegVolFile "mri/aseg.mgz" ;
-    fs:SegVolFileTimeStamp "2019/01/06 14:34:49" ;
-    fs:Title "Segmentation Statistics" ;
-    fs:VoxelVolume_mm3 "1" ;
-    fs:anatomy_type "volume" ;
-    fs:cmdline "mri_segstats --seg mri/aseg.mgz --sum stats/aseg.stats --pv mri/norm.mgz --empty --brainmask mri/brainmask.mgz --brain-vol-from-seg --excludeid 0 --excl-ctxgmwm --supratent --subcortgray --in mri/norm.mgz --in-intensity-name norm --in-intensity-units MR --etiv --surf-wm-vol --surf-ctx-vol --totalgray --euler --ctab /opt/freesurfer-6.0.0-min/ASegStatsLUT.txt --subject sub-0025442" ;
-    fs:cvs_version "$Id: mri_segstats.c,v 1.121 2016/05/31 17:27:11 greve Exp $" ;
-    fs:generating_program "mri_segstats" ;
-    fs:hostname "ip-172-31-11-96" ;
-    fs:machine "x86_64" ;
-    fs:subjectname "sub-0025442" ;
-    fs:sysname "Linux" ;
-    fs:user "root" .
+    fs:ColorTable "/opt/freesurfer-6.0.0-min/ASegStatsLUT.txt"^^xsd:string ;
+    fs:ColorTableTimeStamp "2017/01/18 22:00:02"^^xsd:string ;
+    fs:ExcludeSegId "0 2 3 41 42"^^xsd:string ;
+    fs:Excluding "Cortical Gray and White Matter"^^xsd:string ;
+    fs:InVolFile "mri/norm.mgz"^^xsd:string ;
+    fs:InVolFileTimeStamp "2019/01/06 06:29:06"^^xsd:string ;
+    fs:InVolFrame "0"^^xsd:string ;
+    fs:NRows "45"^^xsd:string ;
+    fs:NTableCols "10"^^xsd:string ;
+    fs:PVVolFile "mri/norm.mgz"^^xsd:string ;
+    fs:PVVolFileTimeStamp "2019/01/06 06:29:06"^^xsd:string ;
+    fs:SUBJECTS_DIR "/working/derivatives/mindboggle/freesurfer_subjects"^^xsd:string ;
+    fs:SegVolFile "mri/aseg.mgz"^^xsd:string ;
+    fs:SegVolFileTimeStamp "2019/01/06 14:34:49"^^xsd:string ;
+    fs:Title "Segmentation Statistics"^^xsd:string ;
+    fs:VoxelVolume_mm3 "1"^^xsd:string ;
+    fs:anatomy_type "volume"^^xsd:string ;
+    fs:cmdline "mri_segstats --seg mri/aseg.mgz --sum stats/aseg.stats --pv mri/norm.mgz --empty --brainmask mri/brainmask.mgz --brain-vol-from-seg --excludeid 0 --excl-ctxgmwm --supratent --subcortgray --in mri/norm.mgz --in-intensity-name norm --in-intensity-units MR --etiv --surf-wm-vol --surf-ctx-vol --totalgray --euler --ctab /opt/freesurfer-6.0.0-min/ASegStatsLUT.txt --subject sub-0025442"^^xsd:string ;
+    fs:cvs_version "$Id: mri_segstats.c,v 1.121 2016/05/31 17:27:11 greve Exp $"^^xsd:string ;
+    fs:generating_program "mri_segstats"^^xsd:string ;
+    fs:hostname "ip-172-31-11-96"^^xsd:string ;
+    fs:machine "x86_64"^^xsd:string ;
+    fs:subjectname "sub-0025442"^^xsd:string ;
+    fs:sysname "Linux"^^xsd:string ;
+    fs:user "root"^^xsd:string .
 
 niiri:b9b73f1a-6f88-11ea-8cd8-003ee1ce9545 a prov:Activity ;
-    dct:description "Freesurfer segmentation statistics" ;
+    dct:description "Freesurfer segmentation statistics"^^xsd:string ;
+    dct:isPartOf niiri:d153320c-f87b-11ef-823b-acde48001122 ;
     prov:qualifiedAssociation [ a prov:Association ;
             prov:agent niiri:babd0b4c-6f88-11ea-8cd8-003ee1ce9545 ;
             prov:hadRole sio:Subject ],
         [ a prov:Association ;
             prov:agent niiri:e0a39f46-6f88-11ea-a1c0-003ee1ce9545 ;
             prov:hadRole nidm:NIDM_0000164 ] ;
-    fs:ColorTable "/opt/freesurfer-6.0.0-min/ASegStatsLUT.txt" ;
-    fs:ColorTableTimeStamp "2017/01/18 22:00:02" ;
-    fs:ExcludeSegId "0 2 3 41 42" ;
-    fs:Excluding "Cortical Gray and White Matter" ;
-    fs:InVolFile "mri/norm.mgz" ;
-    fs:InVolFileTimeStamp "2019/01/06 06:28:24" ;
-    fs:InVolFrame "0" ;
-    fs:NRows "45" ;
-    fs:NTableCols "10" ;
-    fs:PVVolFile "mri/norm.mgz" ;
-    fs:PVVolFileTimeStamp "2019/01/06 06:28:24" ;
-    fs:SUBJECTS_DIR "/working/derivatives/mindboggle/freesurfer_subjects" ;
-    fs:SegVolFile "mri/aseg.mgz" ;
-    fs:SegVolFileTimeStamp "2019/01/06 15:50:20" ;
-    fs:Title "Segmentation Statistics" ;
-    fs:VoxelVolume_mm3 "1" ;
-    fs:anatomy_type "volume" ;
-    fs:cmdline "mri_segstats --seg mri/aseg.mgz --sum stats/aseg.stats --pv mri/norm.mgz --empty --brainmask mri/brainmask.mgz --brain-vol-from-seg --excludeid 0 --excl-ctxgmwm --supratent --subcortgray --in mri/norm.mgz --in-intensity-name norm --in-intensity-units MR --etiv --surf-wm-vol --surf-ctx-vol --totalgray --euler --ctab /opt/freesurfer-6.0.0-min/ASegStatsLUT.txt --subject sub-0025441" ;
-    fs:cvs_version "$Id: mri_segstats.c,v 1.121 2016/05/31 17:27:11 greve Exp $" ;
-    fs:generating_program "mri_segstats" ;
-    fs:hostname "ip-172-31-13-26" ;
-    fs:machine "x86_64" ;
-    fs:subjectname "sub-0025441" ;
-    fs:sysname "Linux" ;
-    fs:user "root" .
+    fs:ColorTable "/opt/freesurfer-6.0.0-min/ASegStatsLUT.txt"^^xsd:string ;
+    fs:ColorTableTimeStamp "2017/01/18 22:00:02"^^xsd:string ;
+    fs:ExcludeSegId "0 2 3 41 42"^^xsd:string ;
+    fs:Excluding "Cortical Gray and White Matter"^^xsd:string ;
+    fs:InVolFile "mri/norm.mgz"^^xsd:string ;
+    fs:InVolFileTimeStamp "2019/01/06 06:28:24"^^xsd:string ;
+    fs:InVolFrame "0"^^xsd:string ;
+    fs:NRows "45"^^xsd:string ;
+    fs:NTableCols "10"^^xsd:string ;
+    fs:PVVolFile "mri/norm.mgz"^^xsd:string ;
+    fs:PVVolFileTimeStamp "2019/01/06 06:28:24"^^xsd:string ;
+    fs:SUBJECTS_DIR "/working/derivatives/mindboggle/freesurfer_subjects"^^xsd:string ;
+    fs:SegVolFile "mri/aseg.mgz"^^xsd:string ;
+    fs:SegVolFileTimeStamp "2019/01/06 15:50:20"^^xsd:string ;
+    fs:Title "Segmentation Statistics"^^xsd:string ;
+    fs:VoxelVolume_mm3 "1"^^xsd:string ;
+    fs:anatomy_type "volume"^^xsd:string ;
+    fs:cmdline "mri_segstats --seg mri/aseg.mgz --sum stats/aseg.stats --pv mri/norm.mgz --empty --brainmask mri/brainmask.mgz --brain-vol-from-seg --excludeid 0 --excl-ctxgmwm --supratent --subcortgray --in mri/norm.mgz --in-intensity-name norm --in-intensity-units MR --etiv --surf-wm-vol --surf-ctx-vol --totalgray --euler --ctab /opt/freesurfer-6.0.0-min/ASegStatsLUT.txt --subject sub-0025441"^^xsd:string ;
+    fs:cvs_version "$Id: mri_segstats.c,v 1.121 2016/05/31 17:27:11 greve Exp $"^^xsd:string ;
+    fs:generating_program "mri_segstats"^^xsd:string ;
+    fs:hostname "ip-172-31-13-26"^^xsd:string ;
+    fs:machine "x86_64"^^xsd:string ;
+    fs:subjectname "sub-0025441"^^xsd:string ;
+    fs:sysname "Linux"^^xsd:string ;
+    fs:user "root"^^xsd:string .
 
 niiri:b9c64eb4-6fd5-11ea-9e6b-003ee1ce9545 a prov:Activity ;
-    dct:description "ANTS segmentation statistics" ;
+    dct:description "ANTS segmentation statistics"^^xsd:string ;
+    dct:isPartOf niiri:d153320c-f87b-11ef-823b-acde48001122 ;
     prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:be43b5cc-6f88-11ea-9fb4-003ee1ce9545 ;
-            prov:hadRole sio:Subject ],
-        [ a prov:Association ;
             prov:agent niiri:a4849970-6fd5-11ea-ae57-003ee1ce9545 ;
-            prov:hadRole nidm:NIDM_0000164 ] .
-
-niiri:b9d0adac-6fd6-11ea-82ce-003ee1ce9545 a prov:Activity ;
-    dct:description "ANTS segmentation statistics" ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:e94c491a-6f88-11ea-9c79-003ee1ce9545 ;
-            prov:hadRole sio:Subject ],
-        [ a prov:Association ;
-            prov:agent niiri:a4849970-6fd5-11ea-ae57-003ee1ce9545 ;
-            prov:hadRole nidm:NIDM_0000164 ] .
-
-niiri:ba88097a-72d9-11ea-8bf6-003ee1ce9545 a prov:Activity ;
-    dct:description "FSL FAST/FIRST segmentation statistics" ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:ea8810dc-72d9-11ea-8bf6-003ee1ce9545 ;
             prov:hadRole nidm:NIDM_0000164 ],
         [ a prov:Association ;
-            prov:agent niiri:c0a3ad92-6f88-11ea-a1c0-003ee1ce9545 ;
+            prov:agent niiri:be43b5cc-6f88-11ea-9fb4-003ee1ce9545 ;
             prov:hadRole sio:Subject ] .
 
+niiri:b9d0adac-6fd6-11ea-82ce-003ee1ce9545 a prov:Activity ;
+    dct:description "ANTS segmentation statistics"^^xsd:string ;
+    dct:isPartOf niiri:d153320c-f87b-11ef-823b-acde48001122 ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:a4849970-6fd5-11ea-ae57-003ee1ce9545 ;
+            prov:hadRole nidm:NIDM_0000164 ],
+        [ a prov:Association ;
+            prov:agent niiri:e94c491a-6f88-11ea-9c79-003ee1ce9545 ;
+            prov:hadRole sio:Subject ] .
+
+niiri:ba88097a-72d9-11ea-8bf6-003ee1ce9545 a prov:Activity ;
+    dct:description "FSL FAST/FIRST segmentation statistics"^^xsd:string ;
+    dct:isPartOf niiri:d153320c-f87b-11ef-823b-acde48001122 ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:c0a3ad92-6f88-11ea-a1c0-003ee1ce9545 ;
+            prov:hadRole sio:Subject ],
+        [ a prov:Association ;
+            prov:agent niiri:ea8810dc-72d9-11ea-8bf6-003ee1ce9545 ;
+            prov:hadRole nidm:NIDM_0000164 ] .
+
 niiri:bb2f8002-72d9-11ea-bdb8-003ee1ce9545 a prov:Activity ;
-    dct:description "FSL FAST/FIRST segmentation statistics" ;
+    dct:description "FSL FAST/FIRST segmentation statistics"^^xsd:string ;
+    dct:isPartOf niiri:d153320c-f87b-11ef-823b-acde48001122 ;
     prov:qualifiedAssociation [ a prov:Association ;
             prov:agent niiri:babd0b4c-6f88-11ea-8cd8-003ee1ce9545 ;
             prov:hadRole sio:Subject ],
@@ -15118,41 +15140,43 @@ niiri:bb2f8002-72d9-11ea-bdb8-003ee1ce9545 a prov:Activity ;
             prov:hadRole nidm:NIDM_0000164 ] .
 
 niiri:bcbfa8b0-6f88-11ea-894c-003ee1ce9545 a prov:Activity ;
-    dct:description "Freesurfer segmentation statistics" ;
+    dct:description "Freesurfer segmentation statistics"^^xsd:string ;
+    dct:isPartOf niiri:d153320c-f87b-11ef-823b-acde48001122 ;
     prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:e0a39f46-6f88-11ea-a1c0-003ee1ce9545 ;
-            prov:hadRole nidm:NIDM_0000164 ],
-        [ a prov:Association ;
             prov:agent niiri:bdc44766-6f88-11ea-894c-003ee1ce9545 ;
-            prov:hadRole sio:Subject ] ;
-    fs:ColorTable "/opt/freesurfer-6.0.0-min/ASegStatsLUT.txt" ;
-    fs:ColorTableTimeStamp "2017/01/18 22:00:02" ;
-    fs:ExcludeSegId "0 2 3 41 42" ;
-    fs:Excluding "Cortical Gray and White Matter" ;
-    fs:InVolFile "mri/norm.mgz" ;
-    fs:InVolFileTimeStamp "2019/01/11 15:04:10" ;
-    fs:InVolFrame "0" ;
-    fs:NRows "45" ;
-    fs:NTableCols "10" ;
-    fs:PVVolFile "mri/norm.mgz" ;
-    fs:PVVolFileTimeStamp "2019/01/11 15:04:10" ;
-    fs:SUBJECTS_DIR "/working/derivatives/mindboggle/freesurfer_subjects" ;
-    fs:SegVolFile "mri/aseg.mgz" ;
-    fs:SegVolFileTimeStamp "2019/01/11 23:48:29" ;
-    fs:Title "Segmentation Statistics" ;
-    fs:VoxelVolume_mm3 "1" ;
-    fs:anatomy_type "volume" ;
-    fs:cmdline "mri_segstats --seg mri/aseg.mgz --sum stats/aseg.stats --pv mri/norm.mgz --empty --brainmask mri/brainmask.mgz --brain-vol-from-seg --excludeid 0 --excl-ctxgmwm --supratent --subcortgray --in mri/norm.mgz --in-intensity-name norm --in-intensity-units MR --etiv --surf-wm-vol --surf-ctx-vol --totalgray --euler --ctab /opt/freesurfer-6.0.0-min/ASegStatsLUT.txt --subject sub-0025438" ;
-    fs:cvs_version "$Id: mri_segstats.c,v 1.121 2016/05/31 17:27:11 greve Exp $" ;
-    fs:generating_program "mri_segstats" ;
-    fs:hostname "ip-172-31-29-230" ;
-    fs:machine "x86_64" ;
-    fs:subjectname "sub-0025438" ;
-    fs:sysname "Linux" ;
-    fs:user "root" .
+            prov:hadRole sio:Subject ],
+        [ a prov:Association ;
+            prov:agent niiri:e0a39f46-6f88-11ea-a1c0-003ee1ce9545 ;
+            prov:hadRole nidm:NIDM_0000164 ] ;
+    fs:ColorTable "/opt/freesurfer-6.0.0-min/ASegStatsLUT.txt"^^xsd:string ;
+    fs:ColorTableTimeStamp "2017/01/18 22:00:02"^^xsd:string ;
+    fs:ExcludeSegId "0 2 3 41 42"^^xsd:string ;
+    fs:Excluding "Cortical Gray and White Matter"^^xsd:string ;
+    fs:InVolFile "mri/norm.mgz"^^xsd:string ;
+    fs:InVolFileTimeStamp "2019/01/11 15:04:10"^^xsd:string ;
+    fs:InVolFrame "0"^^xsd:string ;
+    fs:NRows "45"^^xsd:string ;
+    fs:NTableCols "10"^^xsd:string ;
+    fs:PVVolFile "mri/norm.mgz"^^xsd:string ;
+    fs:PVVolFileTimeStamp "2019/01/11 15:04:10"^^xsd:string ;
+    fs:SUBJECTS_DIR "/working/derivatives/mindboggle/freesurfer_subjects"^^xsd:string ;
+    fs:SegVolFile "mri/aseg.mgz"^^xsd:string ;
+    fs:SegVolFileTimeStamp "2019/01/11 23:48:29"^^xsd:string ;
+    fs:Title "Segmentation Statistics"^^xsd:string ;
+    fs:VoxelVolume_mm3 "1"^^xsd:string ;
+    fs:anatomy_type "volume"^^xsd:string ;
+    fs:cmdline "mri_segstats --seg mri/aseg.mgz --sum stats/aseg.stats --pv mri/norm.mgz --empty --brainmask mri/brainmask.mgz --brain-vol-from-seg --excludeid 0 --excl-ctxgmwm --supratent --subcortgray --in mri/norm.mgz --in-intensity-name norm --in-intensity-units MR --etiv --surf-wm-vol --surf-ctx-vol --totalgray --euler --ctab /opt/freesurfer-6.0.0-min/ASegStatsLUT.txt --subject sub-0025438"^^xsd:string ;
+    fs:cvs_version "$Id: mri_segstats.c,v 1.121 2016/05/31 17:27:11 greve Exp $"^^xsd:string ;
+    fs:generating_program "mri_segstats"^^xsd:string ;
+    fs:hostname "ip-172-31-29-230"^^xsd:string ;
+    fs:machine "x86_64"^^xsd:string ;
+    fs:subjectname "sub-0025438"^^xsd:string ;
+    fs:sysname "Linux"^^xsd:string ;
+    fs:user "root"^^xsd:string .
 
 niiri:bf193c64-6fd5-11ea-97c0-003ee1ce9545 a prov:Activity ;
-    dct:description "ANTS segmentation statistics" ;
+    dct:description "ANTS segmentation statistics"^^xsd:string ;
+    dct:isPartOf niiri:d153320c-f87b-11ef-823b-acde48001122 ;
     prov:qualifiedAssociation [ a prov:Association ;
             prov:agent niiri:a5b2253c-6f88-11ea-891e-003ee1ce9545 ;
             prov:hadRole sio:Subject ],
@@ -15161,16 +15185,18 @@ niiri:bf193c64-6fd5-11ea-97c0-003ee1ce9545 a prov:Activity ;
             prov:hadRole nidm:NIDM_0000164 ] .
 
 niiri:bf9d83c2-6fd6-11ea-882a-003ee1ce9545 a prov:Activity ;
-    dct:description "ANTS segmentation statistics" ;
+    dct:description "ANTS segmentation statistics"^^xsd:string ;
+    dct:isPartOf niiri:d153320c-f87b-11ef-823b-acde48001122 ;
     prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:f256e4b6-6f88-11ea-b5ad-003ee1ce9545 ;
-            prov:hadRole sio:Subject ],
-        [ a prov:Association ;
             prov:agent niiri:a4849970-6fd5-11ea-ae57-003ee1ce9545 ;
-            prov:hadRole nidm:NIDM_0000164 ] .
+            prov:hadRole nidm:NIDM_0000164 ],
+        [ a prov:Association ;
+            prov:agent niiri:f256e4b6-6f88-11ea-b5ad-003ee1ce9545 ;
+            prov:hadRole sio:Subject ] .
 
 niiri:bfe47558-72d9-11ea-9632-003ee1ce9545 a prov:Activity ;
-    dct:description "FSL FAST/FIRST segmentation statistics" ;
+    dct:description "FSL FAST/FIRST segmentation statistics"^^xsd:string ;
+    dct:isPartOf niiri:d153320c-f87b-11ef-823b-acde48001122 ;
     prov:qualifiedAssociation [ a prov:Association ;
             prov:agent niiri:ea8810dc-72d9-11ea-8bf6-003ee1ce9545 ;
             prov:hadRole nidm:NIDM_0000164 ],
@@ -15179,41 +15205,43 @@ niiri:bfe47558-72d9-11ea-9632-003ee1ce9545 a prov:Activity ;
             prov:hadRole sio:Subject ] .
 
 niiri:c1bb3c0c-6f88-11ea-836c-003ee1ce9545 a prov:Activity ;
-    dct:description "Freesurfer segmentation statistics" ;
+    dct:description "Freesurfer segmentation statistics"^^xsd:string ;
+    dct:isPartOf niiri:d153320c-f87b-11ef-823b-acde48001122 ;
     prov:qualifiedAssociation [ a prov:Association ;
             prov:agent niiri:e0a39f46-6f88-11ea-a1c0-003ee1ce9545 ;
             prov:hadRole nidm:NIDM_0000164 ],
         [ a prov:Association ;
             prov:agent niiri:c2bdb9e0-6f88-11ea-836c-003ee1ce9545 ;
             prov:hadRole sio:Subject ] ;
-    fs:ColorTable "/opt/freesurfer-6.0.0-min/ASegStatsLUT.txt" ;
-    fs:ColorTableTimeStamp "2017/01/18 22:00:02" ;
-    fs:ExcludeSegId "0 2 3 41 42" ;
-    fs:Excluding "Cortical Gray and White Matter" ;
-    fs:InVolFile "mri/norm.mgz" ;
-    fs:InVolFileTimeStamp "2019/01/06 06:28:57" ;
-    fs:InVolFrame "0" ;
-    fs:NRows "45" ;
-    fs:NTableCols "10" ;
-    fs:PVVolFile "mri/norm.mgz" ;
-    fs:PVVolFileTimeStamp "2019/01/06 06:28:57" ;
-    fs:SUBJECTS_DIR "/working/derivatives/mindboggle/freesurfer_subjects" ;
-    fs:SegVolFile "mri/aseg.mgz" ;
-    fs:SegVolFileTimeStamp "2019/01/06 15:07:30" ;
-    fs:Title "Segmentation Statistics" ;
-    fs:VoxelVolume_mm3 "1" ;
-    fs:anatomy_type "volume" ;
-    fs:cmdline "mri_segstats --seg mri/aseg.mgz --sum stats/aseg.stats --pv mri/norm.mgz --empty --brainmask mri/brainmask.mgz --brain-vol-from-seg --excludeid 0 --excl-ctxgmwm --supratent --subcortgray --in mri/norm.mgz --in-intensity-name norm --in-intensity-units MR --etiv --surf-wm-vol --surf-ctx-vol --totalgray --euler --ctab /opt/freesurfer-6.0.0-min/ASegStatsLUT.txt --subject sub-0025446" ;
-    fs:cvs_version "$Id: mri_segstats.c,v 1.121 2016/05/31 17:27:11 greve Exp $" ;
-    fs:generating_program "mri_segstats" ;
-    fs:hostname "ip-172-31-14-197" ;
-    fs:machine "x86_64" ;
-    fs:subjectname "sub-0025446" ;
-    fs:sysname "Linux" ;
-    fs:user "root" .
+    fs:ColorTable "/opt/freesurfer-6.0.0-min/ASegStatsLUT.txt"^^xsd:string ;
+    fs:ColorTableTimeStamp "2017/01/18 22:00:02"^^xsd:string ;
+    fs:ExcludeSegId "0 2 3 41 42"^^xsd:string ;
+    fs:Excluding "Cortical Gray and White Matter"^^xsd:string ;
+    fs:InVolFile "mri/norm.mgz"^^xsd:string ;
+    fs:InVolFileTimeStamp "2019/01/06 06:28:57"^^xsd:string ;
+    fs:InVolFrame "0"^^xsd:string ;
+    fs:NRows "45"^^xsd:string ;
+    fs:NTableCols "10"^^xsd:string ;
+    fs:PVVolFile "mri/norm.mgz"^^xsd:string ;
+    fs:PVVolFileTimeStamp "2019/01/06 06:28:57"^^xsd:string ;
+    fs:SUBJECTS_DIR "/working/derivatives/mindboggle/freesurfer_subjects"^^xsd:string ;
+    fs:SegVolFile "mri/aseg.mgz"^^xsd:string ;
+    fs:SegVolFileTimeStamp "2019/01/06 15:07:30"^^xsd:string ;
+    fs:Title "Segmentation Statistics"^^xsd:string ;
+    fs:VoxelVolume_mm3 "1"^^xsd:string ;
+    fs:anatomy_type "volume"^^xsd:string ;
+    fs:cmdline "mri_segstats --seg mri/aseg.mgz --sum stats/aseg.stats --pv mri/norm.mgz --empty --brainmask mri/brainmask.mgz --brain-vol-from-seg --excludeid 0 --excl-ctxgmwm --supratent --subcortgray --in mri/norm.mgz --in-intensity-name norm --in-intensity-units MR --etiv --surf-wm-vol --surf-ctx-vol --totalgray --euler --ctab /opt/freesurfer-6.0.0-min/ASegStatsLUT.txt --subject sub-0025446"^^xsd:string ;
+    fs:cvs_version "$Id: mri_segstats.c,v 1.121 2016/05/31 17:27:11 greve Exp $"^^xsd:string ;
+    fs:generating_program "mri_segstats"^^xsd:string ;
+    fs:hostname "ip-172-31-14-197"^^xsd:string ;
+    fs:machine "x86_64"^^xsd:string ;
+    fs:subjectname "sub-0025446"^^xsd:string ;
+    fs:sysname "Linux"^^xsd:string ;
+    fs:user "root"^^xsd:string .
 
 niiri:c20dacba-72da-11ea-8811-003ee1ce9545 a prov:Activity ;
-    dct:description "FSL FAST/FIRST segmentation statistics" ;
+    dct:description "FSL FAST/FIRST segmentation statistics"^^xsd:string ;
+    dct:isPartOf niiri:d153320c-f87b-11ef-823b-acde48001122 ;
     prov:qualifiedAssociation [ a prov:Association ;
             prov:agent niiri:fb6a9e9e-6f88-11ea-9a19-003ee1ce9545 ;
             prov:hadRole sio:Subject ],
@@ -15222,68 +15250,73 @@ niiri:c20dacba-72da-11ea-8811-003ee1ce9545 a prov:Activity ;
             prov:hadRole nidm:NIDM_0000164 ] .
 
 niiri:c4720916-6fd5-11ea-852a-003ee1ce9545 a prov:Activity ;
-    dct:description "ANTS segmentation statistics" ;
+    dct:description "ANTS segmentation statistics"^^xsd:string ;
+    dct:isPartOf niiri:d153320c-f87b-11ef-823b-acde48001122 ;
     prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:bd268ac4-6f88-11ea-a6f0-003ee1ce9545 ;
-            prov:hadRole sio:Subject ],
-        [ a prov:Association ;
             prov:agent niiri:a4849970-6fd5-11ea-ae57-003ee1ce9545 ;
-            prov:hadRole nidm:NIDM_0000164 ] .
-
-niiri:c497a64c-72d9-11ea-a318-003ee1ce9545 a prov:Activity ;
-    dct:description "FSL FAST/FIRST segmentation statistics" ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:ea8810dc-72d9-11ea-8bf6-003ee1ce9545 ;
             prov:hadRole nidm:NIDM_0000164 ],
         [ a prov:Association ;
-            prov:agent niiri:faf492f0-6f88-11ea-82c1-003ee1ce9545 ;
+            prov:agent niiri:bd268ac4-6f88-11ea-a6f0-003ee1ce9545 ;
             prov:hadRole sio:Subject ] .
 
+niiri:c497a64c-72d9-11ea-a318-003ee1ce9545 a prov:Activity ;
+    dct:description "FSL FAST/FIRST segmentation statistics"^^xsd:string ;
+    dct:isPartOf niiri:d153320c-f87b-11ef-823b-acde48001122 ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:faf492f0-6f88-11ea-82c1-003ee1ce9545 ;
+            prov:hadRole sio:Subject ],
+        [ a prov:Association ;
+            prov:agent niiri:ea8810dc-72d9-11ea-8bf6-003ee1ce9545 ;
+            prov:hadRole nidm:NIDM_0000164 ] .
+
 niiri:c567b6f6-6f88-11ea-954f-003ee1ce9545 a prov:Activity ;
-    dct:description "Freesurfer segmentation statistics" ;
+    dct:description "Freesurfer segmentation statistics"^^xsd:string ;
+    dct:isPartOf niiri:d153320c-f87b-11ef-823b-acde48001122 ;
     prov:qualifiedAssociation [ a prov:Association ;
             prov:agent niiri:c66e79f4-6f88-11ea-954f-003ee1ce9545 ;
             prov:hadRole sio:Subject ],
         [ a prov:Association ;
             prov:agent niiri:e0a39f46-6f88-11ea-a1c0-003ee1ce9545 ;
             prov:hadRole nidm:NIDM_0000164 ] ;
-    fs:ColorTable "/opt/freesurfer-6.0.0-min/ASegStatsLUT.txt" ;
-    fs:ColorTableTimeStamp "2017/01/18 22:00:02" ;
-    fs:ExcludeSegId "0 2 3 41 42" ;
-    fs:Excluding "Cortical Gray and White Matter" ;
-    fs:InVolFile "mri/norm.mgz" ;
-    fs:InVolFileTimeStamp "2019/01/06 06:27:09" ;
-    fs:InVolFrame "0" ;
-    fs:NRows "45" ;
-    fs:NTableCols "10" ;
-    fs:PVVolFile "mri/norm.mgz" ;
-    fs:PVVolFileTimeStamp "2019/01/06 06:27:09" ;
-    fs:SUBJECTS_DIR "/working/derivatives/mindboggle/freesurfer_subjects" ;
-    fs:SegVolFile "mri/aseg.mgz" ;
-    fs:SegVolFileTimeStamp "2019/01/06 14:12:09" ;
-    fs:Title "Segmentation Statistics" ;
-    fs:VoxelVolume_mm3 "1" ;
-    fs:anatomy_type "volume" ;
-    fs:cmdline "mri_segstats --seg mri/aseg.mgz --sum stats/aseg.stats --pv mri/norm.mgz --empty --brainmask mri/brainmask.mgz --brain-vol-from-seg --excludeid 0 --excl-ctxgmwm --supratent --subcortgray --in mri/norm.mgz --in-intensity-name norm --in-intensity-units MR --etiv --surf-wm-vol --surf-ctx-vol --totalgray --euler --ctab /opt/freesurfer-6.0.0-min/ASegStatsLUT.txt --subject sub-0025431" ;
-    fs:cvs_version "$Id: mri_segstats.c,v 1.121 2016/05/31 17:27:11 greve Exp $" ;
-    fs:generating_program "mri_segstats" ;
-    fs:hostname "ip-172-31-7-222" ;
-    fs:machine "x86_64" ;
-    fs:subjectname "sub-0025431" ;
-    fs:sysname "Linux" ;
-    fs:user "root" .
+    fs:ColorTable "/opt/freesurfer-6.0.0-min/ASegStatsLUT.txt"^^xsd:string ;
+    fs:ColorTableTimeStamp "2017/01/18 22:00:02"^^xsd:string ;
+    fs:ExcludeSegId "0 2 3 41 42"^^xsd:string ;
+    fs:Excluding "Cortical Gray and White Matter"^^xsd:string ;
+    fs:InVolFile "mri/norm.mgz"^^xsd:string ;
+    fs:InVolFileTimeStamp "2019/01/06 06:27:09"^^xsd:string ;
+    fs:InVolFrame "0"^^xsd:string ;
+    fs:NRows "45"^^xsd:string ;
+    fs:NTableCols "10"^^xsd:string ;
+    fs:PVVolFile "mri/norm.mgz"^^xsd:string ;
+    fs:PVVolFileTimeStamp "2019/01/06 06:27:09"^^xsd:string ;
+    fs:SUBJECTS_DIR "/working/derivatives/mindboggle/freesurfer_subjects"^^xsd:string ;
+    fs:SegVolFile "mri/aseg.mgz"^^xsd:string ;
+    fs:SegVolFileTimeStamp "2019/01/06 14:12:09"^^xsd:string ;
+    fs:Title "Segmentation Statistics"^^xsd:string ;
+    fs:VoxelVolume_mm3 "1"^^xsd:string ;
+    fs:anatomy_type "volume"^^xsd:string ;
+    fs:cmdline "mri_segstats --seg mri/aseg.mgz --sum stats/aseg.stats --pv mri/norm.mgz --empty --brainmask mri/brainmask.mgz --brain-vol-from-seg --excludeid 0 --excl-ctxgmwm --supratent --subcortgray --in mri/norm.mgz --in-intensity-name norm --in-intensity-units MR --etiv --surf-wm-vol --surf-ctx-vol --totalgray --euler --ctab /opt/freesurfer-6.0.0-min/ASegStatsLUT.txt --subject sub-0025431"^^xsd:string ;
+    fs:cvs_version "$Id: mri_segstats.c,v 1.121 2016/05/31 17:27:11 greve Exp $"^^xsd:string ;
+    fs:generating_program "mri_segstats"^^xsd:string ;
+    fs:hostname "ip-172-31-7-222"^^xsd:string ;
+    fs:machine "x86_64"^^xsd:string ;
+    fs:subjectname "sub-0025431"^^xsd:string ;
+    fs:sysname "Linux"^^xsd:string ;
+    fs:user "root"^^xsd:string .
 
 niiri:c58b3504-6fd6-11ea-8a4b-003ee1ce9545 a prov:Activity ;
-    dct:description "ANTS segmentation statistics" ;
+    dct:description "ANTS segmentation statistics"^^xsd:string ;
+    dct:isPartOf niiri:d153320c-f87b-11ef-823b-acde48001122 ;
     prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:fb6a9e9e-6f88-11ea-9a19-003ee1ce9545 ;
-            prov:hadRole sio:Subject ],
-        [ a prov:Association ;
             prov:agent niiri:a4849970-6fd5-11ea-ae57-003ee1ce9545 ;
-            prov:hadRole nidm:NIDM_0000164 ] .
+            prov:hadRole nidm:NIDM_0000164 ],
+        [ a prov:Association ;
+            prov:agent niiri:fb6a9e9e-6f88-11ea-9a19-003ee1ce9545 ;
+            prov:hadRole sio:Subject ] .
 
 niiri:c9571f00-72d9-11ea-897b-003ee1ce9545 a prov:Activity ;
-    dct:description "FSL FAST/FIRST segmentation statistics" ;
+    dct:description "FSL FAST/FIRST segmentation statistics"^^xsd:string ;
+    dct:isPartOf niiri:d153320c-f87b-11ef-823b-acde48001122 ;
     prov:qualifiedAssociation [ a prov:Association ;
             prov:agent niiri:ea8810dc-72d9-11ea-8bf6-003ee1ce9545 ;
             prov:hadRole nidm:NIDM_0000164 ],
@@ -15292,127 +15325,133 @@ niiri:c9571f00-72d9-11ea-897b-003ee1ce9545 a prov:Activity ;
             prov:hadRole sio:Subject ] .
 
 niiri:c9ca891a-6fd5-11ea-a166-003ee1ce9545 a prov:Activity ;
-    dct:description "ANTS segmentation statistics" ;
+    dct:description "ANTS segmentation statistics"^^xsd:string ;
+    dct:isPartOf niiri:d153320c-f87b-11ef-823b-acde48001122 ;
     prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:a4849970-6fd5-11ea-ae57-003ee1ce9545 ;
-            prov:hadRole nidm:NIDM_0000164 ],
-        [ a prov:Association ;
             prov:agent niiri:f492a694-6f88-11ea-af87-003ee1ce9545 ;
-            prov:hadRole sio:Subject ] .
+            prov:hadRole sio:Subject ],
+        [ a prov:Association ;
+            prov:agent niiri:a4849970-6fd5-11ea-ae57-003ee1ce9545 ;
+            prov:hadRole nidm:NIDM_0000164 ] .
 
 niiri:c9ea7b2c-6f88-11ea-82c1-003ee1ce9545 a prov:Activity ;
-    dct:description "Freesurfer segmentation statistics" ;
+    dct:description "Freesurfer segmentation statistics"^^xsd:string ;
+    dct:isPartOf niiri:d153320c-f87b-11ef-823b-acde48001122 ;
     prov:qualifiedAssociation [ a prov:Association ;
             prov:agent niiri:faf492f0-6f88-11ea-82c1-003ee1ce9545 ;
             prov:hadRole sio:Subject ],
         [ a prov:Association ;
             prov:agent niiri:e0a39f46-6f88-11ea-a1c0-003ee1ce9545 ;
             prov:hadRole nidm:NIDM_0000164 ] ;
-    fs:ColorTable "/opt/freesurfer-6.0.0-min/ASegStatsLUT.txt" ;
-    fs:ColorTableTimeStamp "2017/01/18 22:00:02" ;
-    fs:ExcludeSegId "0 2 3 41 42" ;
-    fs:Excluding "Cortical Gray and White Matter" ;
-    fs:InVolFile "mri/norm.mgz" ;
-    fs:InVolFileTimeStamp "2019/01/06 06:31:02" ;
-    fs:InVolFrame "0" ;
-    fs:NRows "45" ;
-    fs:NTableCols "10" ;
-    fs:PVVolFile "mri/norm.mgz" ;
-    fs:PVVolFileTimeStamp "2019/01/06 06:31:02" ;
-    fs:SUBJECTS_DIR "/working/derivatives/mindboggle/freesurfer_subjects" ;
-    fs:SegVolFile "mri/aseg.mgz" ;
-    fs:SegVolFileTimeStamp "2019/01/06 16:32:55" ;
-    fs:Title "Segmentation Statistics" ;
-    fs:VoxelVolume_mm3 "1" ;
-    fs:anatomy_type "volume" ;
-    fs:cmdline "mri_segstats --seg mri/aseg.mgz --sum stats/aseg.stats --pv mri/norm.mgz --empty --brainmask mri/brainmask.mgz --brain-vol-from-seg --excludeid 0 --excl-ctxgmwm --supratent --subcortgray --in mri/norm.mgz --in-intensity-name norm --in-intensity-units MR --etiv --surf-wm-vol --surf-ctx-vol --totalgray --euler --ctab /opt/freesurfer-6.0.0-min/ASegStatsLUT.txt --subject sub-0025448" ;
-    fs:cvs_version "$Id: mri_segstats.c,v 1.121 2016/05/31 17:27:11 greve Exp $" ;
-    fs:generating_program "mri_segstats" ;
-    fs:hostname "ip-172-31-14-233" ;
-    fs:machine "x86_64" ;
-    fs:subjectname "sub-0025448" ;
-    fs:sysname "Linux" ;
-    fs:user "root" .
+    fs:ColorTable "/opt/freesurfer-6.0.0-min/ASegStatsLUT.txt"^^xsd:string ;
+    fs:ColorTableTimeStamp "2017/01/18 22:00:02"^^xsd:string ;
+    fs:ExcludeSegId "0 2 3 41 42"^^xsd:string ;
+    fs:Excluding "Cortical Gray and White Matter"^^xsd:string ;
+    fs:InVolFile "mri/norm.mgz"^^xsd:string ;
+    fs:InVolFileTimeStamp "2019/01/06 06:31:02"^^xsd:string ;
+    fs:InVolFrame "0"^^xsd:string ;
+    fs:NRows "45"^^xsd:string ;
+    fs:NTableCols "10"^^xsd:string ;
+    fs:PVVolFile "mri/norm.mgz"^^xsd:string ;
+    fs:PVVolFileTimeStamp "2019/01/06 06:31:02"^^xsd:string ;
+    fs:SUBJECTS_DIR "/working/derivatives/mindboggle/freesurfer_subjects"^^xsd:string ;
+    fs:SegVolFile "mri/aseg.mgz"^^xsd:string ;
+    fs:SegVolFileTimeStamp "2019/01/06 16:32:55"^^xsd:string ;
+    fs:Title "Segmentation Statistics"^^xsd:string ;
+    fs:VoxelVolume_mm3 "1"^^xsd:string ;
+    fs:anatomy_type "volume"^^xsd:string ;
+    fs:cmdline "mri_segstats --seg mri/aseg.mgz --sum stats/aseg.stats --pv mri/norm.mgz --empty --brainmask mri/brainmask.mgz --brain-vol-from-seg --excludeid 0 --excl-ctxgmwm --supratent --subcortgray --in mri/norm.mgz --in-intensity-name norm --in-intensity-units MR --etiv --surf-wm-vol --surf-ctx-vol --totalgray --euler --ctab /opt/freesurfer-6.0.0-min/ASegStatsLUT.txt --subject sub-0025448"^^xsd:string ;
+    fs:cvs_version "$Id: mri_segstats.c,v 1.121 2016/05/31 17:27:11 greve Exp $"^^xsd:string ;
+    fs:generating_program "mri_segstats"^^xsd:string ;
+    fs:hostname "ip-172-31-14-233"^^xsd:string ;
+    fs:machine "x86_64"^^xsd:string ;
+    fs:subjectname "sub-0025448"^^xsd:string ;
+    fs:sysname "Linux"^^xsd:string ;
+    fs:user "root"^^xsd:string .
 
 niiri:cb1a96ca-6f88-11ea-aeb1-003ee1ce9545 a prov:Activity ;
-    dct:description "Freesurfer segmentation statistics" ;
+    dct:description "Freesurfer segmentation statistics"^^xsd:string ;
+    dct:isPartOf niiri:d153320c-f87b-11ef-823b-acde48001122 ;
     prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:bc1da5f8-6f88-11ea-aeb1-003ee1ce9545 ;
-            prov:hadRole sio:Subject ],
-        [ a prov:Association ;
             prov:agent niiri:e0a39f46-6f88-11ea-a1c0-003ee1ce9545 ;
-            prov:hadRole nidm:NIDM_0000164 ] ;
-    fs:ColorTable "/opt/freesurfer-6.0.0-min/ASegStatsLUT.txt" ;
-    fs:ColorTableTimeStamp "2017/01/18 22:00:02" ;
-    fs:ExcludeSegId "0 2 3 41 42" ;
-    fs:Excluding "Cortical Gray and White Matter" ;
-    fs:InVolFile "mri/norm.mgz" ;
-    fs:InVolFileTimeStamp "2019/01/06 06:26:36" ;
-    fs:InVolFrame "0" ;
-    fs:NRows "45" ;
-    fs:NTableCols "10" ;
-    fs:PVVolFile "mri/norm.mgz" ;
-    fs:PVVolFileTimeStamp "2019/01/06 06:26:36" ;
-    fs:SUBJECTS_DIR "/working/derivatives/mindboggle/freesurfer_subjects" ;
-    fs:SegVolFile "mri/aseg.mgz" ;
-    fs:SegVolFileTimeStamp "2019/01/06 16:35:08" ;
-    fs:Title "Segmentation Statistics" ;
-    fs:VoxelVolume_mm3 "1" ;
-    fs:anatomy_type "volume" ;
-    fs:cmdline "mri_segstats --seg mri/aseg.mgz --sum stats/aseg.stats --pv mri/norm.mgz --empty --brainmask mri/brainmask.mgz --brain-vol-from-seg --excludeid 0 --excl-ctxgmwm --supratent --subcortgray --in mri/norm.mgz --in-intensity-name norm --in-intensity-units MR --etiv --surf-wm-vol --surf-ctx-vol --totalgray --euler --ctab /opt/freesurfer-6.0.0-min/ASegStatsLUT.txt --subject sub-0025432" ;
-    fs:cvs_version "$Id: mri_segstats.c,v 1.121 2016/05/31 17:27:11 greve Exp $" ;
-    fs:generating_program "mri_segstats" ;
-    fs:hostname "ip-172-31-15-75" ;
-    fs:machine "x86_64" ;
-    fs:subjectname "sub-0025432" ;
-    fs:sysname "Linux" ;
-    fs:user "root" .
-
-niiri:cbef9402-6fd6-11ea-a39e-003ee1ce9545 a prov:Activity ;
-    dct:description "ANTS segmentation statistics" ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:a4849970-6fd5-11ea-ae57-003ee1ce9545 ;
             prov:hadRole nidm:NIDM_0000164 ],
         [ a prov:Association ;
-            prov:agent niiri:a3e20338-6f88-11ea-b5b0-003ee1ce9545 ;
-            prov:hadRole sio:Subject ] .
+            prov:agent niiri:bc1da5f8-6f88-11ea-aeb1-003ee1ce9545 ;
+            prov:hadRole sio:Subject ] ;
+    fs:ColorTable "/opt/freesurfer-6.0.0-min/ASegStatsLUT.txt"^^xsd:string ;
+    fs:ColorTableTimeStamp "2017/01/18 22:00:02"^^xsd:string ;
+    fs:ExcludeSegId "0 2 3 41 42"^^xsd:string ;
+    fs:Excluding "Cortical Gray and White Matter"^^xsd:string ;
+    fs:InVolFile "mri/norm.mgz"^^xsd:string ;
+    fs:InVolFileTimeStamp "2019/01/06 06:26:36"^^xsd:string ;
+    fs:InVolFrame "0"^^xsd:string ;
+    fs:NRows "45"^^xsd:string ;
+    fs:NTableCols "10"^^xsd:string ;
+    fs:PVVolFile "mri/norm.mgz"^^xsd:string ;
+    fs:PVVolFileTimeStamp "2019/01/06 06:26:36"^^xsd:string ;
+    fs:SUBJECTS_DIR "/working/derivatives/mindboggle/freesurfer_subjects"^^xsd:string ;
+    fs:SegVolFile "mri/aseg.mgz"^^xsd:string ;
+    fs:SegVolFileTimeStamp "2019/01/06 16:35:08"^^xsd:string ;
+    fs:Title "Segmentation Statistics"^^xsd:string ;
+    fs:VoxelVolume_mm3 "1"^^xsd:string ;
+    fs:anatomy_type "volume"^^xsd:string ;
+    fs:cmdline "mri_segstats --seg mri/aseg.mgz --sum stats/aseg.stats --pv mri/norm.mgz --empty --brainmask mri/brainmask.mgz --brain-vol-from-seg --excludeid 0 --excl-ctxgmwm --supratent --subcortgray --in mri/norm.mgz --in-intensity-name norm --in-intensity-units MR --etiv --surf-wm-vol --surf-ctx-vol --totalgray --euler --ctab /opt/freesurfer-6.0.0-min/ASegStatsLUT.txt --subject sub-0025432"^^xsd:string ;
+    fs:cvs_version "$Id: mri_segstats.c,v 1.121 2016/05/31 17:27:11 greve Exp $"^^xsd:string ;
+    fs:generating_program "mri_segstats"^^xsd:string ;
+    fs:hostname "ip-172-31-15-75"^^xsd:string ;
+    fs:machine "x86_64"^^xsd:string ;
+    fs:subjectname "sub-0025432"^^xsd:string ;
+    fs:sysname "Linux"^^xsd:string ;
+    fs:user "root"^^xsd:string .
 
-niiri:cd3a2918-6f88-11ea-9fb4-003ee1ce9545 a prov:Activity ;
-    dct:description "Freesurfer segmentation statistics" ;
+niiri:cbef9402-6fd6-11ea-a39e-003ee1ce9545 a prov:Activity ;
+    dct:description "ANTS segmentation statistics"^^xsd:string ;
+    dct:isPartOf niiri:d153320c-f87b-11ef-823b-acde48001122 ;
     prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:be43b5cc-6f88-11ea-9fb4-003ee1ce9545 ;
+            prov:agent niiri:a3e20338-6f88-11ea-b5b0-003ee1ce9545 ;
             prov:hadRole sio:Subject ],
         [ a prov:Association ;
+            prov:agent niiri:a4849970-6fd5-11ea-ae57-003ee1ce9545 ;
+            prov:hadRole nidm:NIDM_0000164 ] .
+
+niiri:cd3a2918-6f88-11ea-9fb4-003ee1ce9545 a prov:Activity ;
+    dct:description "Freesurfer segmentation statistics"^^xsd:string ;
+    dct:isPartOf niiri:d153320c-f87b-11ef-823b-acde48001122 ;
+    prov:qualifiedAssociation [ a prov:Association ;
             prov:agent niiri:e0a39f46-6f88-11ea-a1c0-003ee1ce9545 ;
-            prov:hadRole nidm:NIDM_0000164 ] ;
-    fs:ColorTable "/opt/freesurfer-6.0.0-min/ASegStatsLUT.txt" ;
-    fs:ColorTableTimeStamp "2017/01/18 22:00:02" ;
-    fs:ExcludeSegId "0 2 3 41 42" ;
-    fs:Excluding "Cortical Gray and White Matter" ;
-    fs:InVolFile "mri/norm.mgz" ;
-    fs:InVolFileTimeStamp "2019/01/06 06:32:13" ;
-    fs:InVolFrame "0" ;
-    fs:NRows "45" ;
-    fs:NTableCols "10" ;
-    fs:PVVolFile "mri/norm.mgz" ;
-    fs:PVVolFileTimeStamp "2019/01/06 06:32:13" ;
-    fs:SUBJECTS_DIR "/working/derivatives/mindboggle/freesurfer_subjects" ;
-    fs:SegVolFile "mri/aseg.mgz" ;
-    fs:SegVolFileTimeStamp "2019/01/06 18:17:28" ;
-    fs:Title "Segmentation Statistics" ;
-    fs:VoxelVolume_mm3 "1" ;
-    fs:anatomy_type "volume" ;
-    fs:cmdline "mri_segstats --seg mri/aseg.mgz --sum stats/aseg.stats --pv mri/norm.mgz --empty --brainmask mri/brainmask.mgz --brain-vol-from-seg --excludeid 0 --excl-ctxgmwm --supratent --subcortgray --in mri/norm.mgz --in-intensity-name norm --in-intensity-units MR --etiv --surf-wm-vol --surf-ctx-vol --totalgray --euler --ctab /opt/freesurfer-6.0.0-min/ASegStatsLUT.txt --subject sub-0025443" ;
-    fs:cvs_version "$Id: mri_segstats.c,v 1.121 2016/05/31 17:27:11 greve Exp $" ;
-    fs:generating_program "mri_segstats" ;
-    fs:hostname "ip-172-31-4-239" ;
-    fs:machine "x86_64" ;
-    fs:subjectname "sub-0025443" ;
-    fs:sysname "Linux" ;
-    fs:user "root" .
+            prov:hadRole nidm:NIDM_0000164 ],
+        [ a prov:Association ;
+            prov:agent niiri:be43b5cc-6f88-11ea-9fb4-003ee1ce9545 ;
+            prov:hadRole sio:Subject ] ;
+    fs:ColorTable "/opt/freesurfer-6.0.0-min/ASegStatsLUT.txt"^^xsd:string ;
+    fs:ColorTableTimeStamp "2017/01/18 22:00:02"^^xsd:string ;
+    fs:ExcludeSegId "0 2 3 41 42"^^xsd:string ;
+    fs:Excluding "Cortical Gray and White Matter"^^xsd:string ;
+    fs:InVolFile "mri/norm.mgz"^^xsd:string ;
+    fs:InVolFileTimeStamp "2019/01/06 06:32:13"^^xsd:string ;
+    fs:InVolFrame "0"^^xsd:string ;
+    fs:NRows "45"^^xsd:string ;
+    fs:NTableCols "10"^^xsd:string ;
+    fs:PVVolFile "mri/norm.mgz"^^xsd:string ;
+    fs:PVVolFileTimeStamp "2019/01/06 06:32:13"^^xsd:string ;
+    fs:SUBJECTS_DIR "/working/derivatives/mindboggle/freesurfer_subjects"^^xsd:string ;
+    fs:SegVolFile "mri/aseg.mgz"^^xsd:string ;
+    fs:SegVolFileTimeStamp "2019/01/06 18:17:28"^^xsd:string ;
+    fs:Title "Segmentation Statistics"^^xsd:string ;
+    fs:VoxelVolume_mm3 "1"^^xsd:string ;
+    fs:anatomy_type "volume"^^xsd:string ;
+    fs:cmdline "mri_segstats --seg mri/aseg.mgz --sum stats/aseg.stats --pv mri/norm.mgz --empty --brainmask mri/brainmask.mgz --brain-vol-from-seg --excludeid 0 --excl-ctxgmwm --supratent --subcortgray --in mri/norm.mgz --in-intensity-name norm --in-intensity-units MR --etiv --surf-wm-vol --surf-ctx-vol --totalgray --euler --ctab /opt/freesurfer-6.0.0-min/ASegStatsLUT.txt --subject sub-0025443"^^xsd:string ;
+    fs:cvs_version "$Id: mri_segstats.c,v 1.121 2016/05/31 17:27:11 greve Exp $"^^xsd:string ;
+    fs:generating_program "mri_segstats"^^xsd:string ;
+    fs:hostname "ip-172-31-4-239"^^xsd:string ;
+    fs:machine "x86_64"^^xsd:string ;
+    fs:subjectname "sub-0025443"^^xsd:string ;
+    fs:sysname "Linux"^^xsd:string ;
+    fs:user "root"^^xsd:string .
 
 niiri:ce10f3ae-72d9-11ea-88b4-003ee1ce9545 a prov:Activity ;
-    dct:description "FSL FAST/FIRST segmentation statistics" ;
+    dct:description "FSL FAST/FIRST segmentation statistics"^^xsd:string ;
+    dct:isPartOf niiri:d153320c-f87b-11ef-823b-acde48001122 ;
     prov:qualifiedAssociation [ a prov:Association ;
             prov:agent niiri:fb664250-6f88-11ea-8213-003ee1ce9545 ;
             prov:hadRole sio:Subject ],
@@ -15421,59 +15460,63 @@ niiri:ce10f3ae-72d9-11ea-88b4-003ee1ce9545 a prov:Activity ;
             prov:hadRole nidm:NIDM_0000164 ] .
 
 niiri:ce357e80-6f88-11ea-93a1-003ee1ce9545 a prov:Activity ;
-    dct:description "Freesurfer segmentation statistics" ;
+    dct:description "Freesurfer segmentation statistics"^^xsd:string ;
+    dct:isPartOf niiri:d153320c-f87b-11ef-823b-acde48001122 ;
     prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:e0a39f46-6f88-11ea-a1c0-003ee1ce9545 ;
-            prov:hadRole nidm:NIDM_0000164 ],
-        [ a prov:Association ;
             prov:agent niiri:cf36483c-6f88-11ea-93a1-003ee1ce9545 ;
-            prov:hadRole sio:Subject ] ;
-    fs:ColorTable "/opt/freesurfer-6.0.0-min/ASegStatsLUT.txt" ;
-    fs:ColorTableTimeStamp "2017/01/18 22:00:02" ;
-    fs:ExcludeSegId "0 2 3 41 42" ;
-    fs:Excluding "Cortical Gray and White Matter" ;
-    fs:InVolFile "mri/norm.mgz" ;
-    fs:InVolFileTimeStamp "2019/01/11 15:05:43" ;
-    fs:InVolFrame "0" ;
-    fs:NRows "45" ;
-    fs:NTableCols "10" ;
-    fs:PVVolFile "mri/norm.mgz" ;
-    fs:PVVolFileTimeStamp "2019/01/11 15:05:43" ;
-    fs:SUBJECTS_DIR "/working/derivatives/mindboggle/freesurfer_subjects" ;
-    fs:SegVolFile "mri/aseg.mgz" ;
-    fs:SegVolFileTimeStamp "2019/01/12 00:41:46" ;
-    fs:Title "Segmentation Statistics" ;
-    fs:VoxelVolume_mm3 "1" ;
-    fs:anatomy_type "volume" ;
-    fs:cmdline "mri_segstats --seg mri/aseg.mgz --sum stats/aseg.stats --pv mri/norm.mgz --empty --brainmask mri/brainmask.mgz --brain-vol-from-seg --excludeid 0 --excl-ctxgmwm --supratent --subcortgray --in mri/norm.mgz --in-intensity-name norm --in-intensity-units MR --etiv --surf-wm-vol --surf-ctx-vol --totalgray --euler --ctab /opt/freesurfer-6.0.0-min/ASegStatsLUT.txt --subject sub-0025436" ;
-    fs:cvs_version "$Id: mri_segstats.c,v 1.121 2016/05/31 17:27:11 greve Exp $" ;
-    fs:generating_program "mri_segstats" ;
-    fs:hostname "ip-172-31-27-31" ;
-    fs:machine "x86_64" ;
-    fs:subjectname "sub-0025436" ;
-    fs:sysname "Linux" ;
-    fs:user "root" .
-
-niiri:cf226338-6fd5-11ea-87d9-003ee1ce9545 a prov:Activity ;
-    dct:description "ANTS segmentation statistics" ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:a4849970-6fd5-11ea-ae57-003ee1ce9545 ;
-            prov:hadRole nidm:NIDM_0000164 ],
-        [ a prov:Association ;
-            prov:agent niiri:bc1da5f8-6f88-11ea-aeb1-003ee1ce9545 ;
-            prov:hadRole sio:Subject ] .
-
-niiri:d2cc82fa-72d9-11ea-a8cb-003ee1ce9545 a prov:Activity ;
-    dct:description "FSL FAST/FIRST segmentation statistics" ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:a3e20338-6f88-11ea-b5b0-003ee1ce9545 ;
             prov:hadRole sio:Subject ],
         [ a prov:Association ;
-            prov:agent niiri:ea8810dc-72d9-11ea-8bf6-003ee1ce9545 ;
+            prov:agent niiri:e0a39f46-6f88-11ea-a1c0-003ee1ce9545 ;
+            prov:hadRole nidm:NIDM_0000164 ] ;
+    fs:ColorTable "/opt/freesurfer-6.0.0-min/ASegStatsLUT.txt"^^xsd:string ;
+    fs:ColorTableTimeStamp "2017/01/18 22:00:02"^^xsd:string ;
+    fs:ExcludeSegId "0 2 3 41 42"^^xsd:string ;
+    fs:Excluding "Cortical Gray and White Matter"^^xsd:string ;
+    fs:InVolFile "mri/norm.mgz"^^xsd:string ;
+    fs:InVolFileTimeStamp "2019/01/11 15:05:43"^^xsd:string ;
+    fs:InVolFrame "0"^^xsd:string ;
+    fs:NRows "45"^^xsd:string ;
+    fs:NTableCols "10"^^xsd:string ;
+    fs:PVVolFile "mri/norm.mgz"^^xsd:string ;
+    fs:PVVolFileTimeStamp "2019/01/11 15:05:43"^^xsd:string ;
+    fs:SUBJECTS_DIR "/working/derivatives/mindboggle/freesurfer_subjects"^^xsd:string ;
+    fs:SegVolFile "mri/aseg.mgz"^^xsd:string ;
+    fs:SegVolFileTimeStamp "2019/01/12 00:41:46"^^xsd:string ;
+    fs:Title "Segmentation Statistics"^^xsd:string ;
+    fs:VoxelVolume_mm3 "1"^^xsd:string ;
+    fs:anatomy_type "volume"^^xsd:string ;
+    fs:cmdline "mri_segstats --seg mri/aseg.mgz --sum stats/aseg.stats --pv mri/norm.mgz --empty --brainmask mri/brainmask.mgz --brain-vol-from-seg --excludeid 0 --excl-ctxgmwm --supratent --subcortgray --in mri/norm.mgz --in-intensity-name norm --in-intensity-units MR --etiv --surf-wm-vol --surf-ctx-vol --totalgray --euler --ctab /opt/freesurfer-6.0.0-min/ASegStatsLUT.txt --subject sub-0025436"^^xsd:string ;
+    fs:cvs_version "$Id: mri_segstats.c,v 1.121 2016/05/31 17:27:11 greve Exp $"^^xsd:string ;
+    fs:generating_program "mri_segstats"^^xsd:string ;
+    fs:hostname "ip-172-31-27-31"^^xsd:string ;
+    fs:machine "x86_64"^^xsd:string ;
+    fs:subjectname "sub-0025436"^^xsd:string ;
+    fs:sysname "Linux"^^xsd:string ;
+    fs:user "root"^^xsd:string .
+
+niiri:cf226338-6fd5-11ea-87d9-003ee1ce9545 a prov:Activity ;
+    dct:description "ANTS segmentation statistics"^^xsd:string ;
+    dct:isPartOf niiri:d153320c-f87b-11ef-823b-acde48001122 ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:bc1da5f8-6f88-11ea-aeb1-003ee1ce9545 ;
+            prov:hadRole sio:Subject ],
+        [ a prov:Association ;
+            prov:agent niiri:a4849970-6fd5-11ea-ae57-003ee1ce9545 ;
             prov:hadRole nidm:NIDM_0000164 ] .
 
+niiri:d2cc82fa-72d9-11ea-a8cb-003ee1ce9545 a prov:Activity ;
+    dct:description "FSL FAST/FIRST segmentation statistics"^^xsd:string ;
+    dct:isPartOf niiri:d153320c-f87b-11ef-823b-acde48001122 ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:ea8810dc-72d9-11ea-8bf6-003ee1ce9545 ;
+            prov:hadRole nidm:NIDM_0000164 ],
+        [ a prov:Association ;
+            prov:agent niiri:a3e20338-6f88-11ea-b5b0-003ee1ce9545 ;
+            prov:hadRole sio:Subject ] .
+
 niiri:d401c122-6fd6-11ea-ae34-003ee1ce9545 a prov:Activity ;
-    dct:description "ANTS segmentation statistics" ;
+    dct:description "ANTS segmentation statistics"^^xsd:string ;
+    dct:isPartOf niiri:d153320c-f87b-11ef-823b-acde48001122 ;
     prov:qualifiedAssociation [ a prov:Association ;
             prov:agent niiri:a4849970-6fd5-11ea-ae57-003ee1ce9545 ;
             prov:hadRole nidm:NIDM_0000164 ],
@@ -15482,145 +15525,153 @@ niiri:d401c122-6fd6-11ea-ae34-003ee1ce9545 a prov:Activity ;
             prov:hadRole sio:Subject ] .
 
 niiri:d4858602-6fd5-11ea-8ecf-003ee1ce9545 a prov:Activity ;
-    dct:description "ANTS segmentation statistics" ;
+    dct:description "ANTS segmentation statistics"^^xsd:string ;
+    dct:isPartOf niiri:d153320c-f87b-11ef-823b-acde48001122 ;
     prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:d3bf03c4-6f88-11ea-b24c-003ee1ce9545 ;
-            prov:hadRole sio:Subject ],
-        [ a prov:Association ;
             prov:agent niiri:a4849970-6fd5-11ea-ae57-003ee1ce9545 ;
-            prov:hadRole nidm:NIDM_0000164 ] .
-
-niiri:d5f5ef70-6f88-11ea-a39d-003ee1ce9545 a prov:Activity ;
-    dct:description "Freesurfer segmentation statistics" ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:e0a39f46-6f88-11ea-a1c0-003ee1ce9545 ;
             prov:hadRole nidm:NIDM_0000164 ],
         [ a prov:Association ;
+            prov:agent niiri:d3bf03c4-6f88-11ea-b24c-003ee1ce9545 ;
+            prov:hadRole sio:Subject ] .
+
+niiri:d5f5ef70-6f88-11ea-a39d-003ee1ce9545 a prov:Activity ;
+    dct:description "Freesurfer segmentation statistics"^^xsd:string ;
+    dct:isPartOf niiri:d153320c-f87b-11ef-823b-acde48001122 ;
+    prov:qualifiedAssociation [ a prov:Association ;
             prov:agent niiri:e6f7899c-6f88-11ea-a39d-003ee1ce9545 ;
-            prov:hadRole sio:Subject ] ;
-    fs:ColorTable "/opt/freesurfer-6.0.0-min/ASegStatsLUT.txt" ;
-    fs:ColorTableTimeStamp "2017/01/18 22:00:02" ;
-    fs:ExcludeSegId "0 2 3 41 42" ;
-    fs:Excluding "Cortical Gray and White Matter" ;
-    fs:InVolFile "mri/norm.mgz" ;
-    fs:InVolFileTimeStamp "2019/01/06 06:30:26" ;
-    fs:InVolFrame "0" ;
-    fs:NRows "45" ;
-    fs:NTableCols "10" ;
-    fs:PVVolFile "mri/norm.mgz" ;
-    fs:PVVolFileTimeStamp "2019/01/06 06:30:26" ;
-    fs:SUBJECTS_DIR "/working/derivatives/mindboggle/freesurfer_subjects" ;
-    fs:SegVolFile "mri/aseg.mgz" ;
-    fs:SegVolFileTimeStamp "2019/01/06 14:50:33" ;
-    fs:Title "Segmentation Statistics" ;
-    fs:VoxelVolume_mm3 "1" ;
-    fs:anatomy_type "volume" ;
-    fs:cmdline "mri_segstats --seg mri/aseg.mgz --sum stats/aseg.stats --pv mri/norm.mgz --empty --brainmask mri/brainmask.mgz --brain-vol-from-seg --excludeid 0 --excl-ctxgmwm --supratent --subcortgray --in mri/norm.mgz --in-intensity-name norm --in-intensity-units MR --etiv --surf-wm-vol --surf-ctx-vol --totalgray --euler --ctab /opt/freesurfer-6.0.0-min/ASegStatsLUT.txt --subject sub-0025429" ;
-    fs:cvs_version "$Id: mri_segstats.c,v 1.121 2016/05/31 17:27:11 greve Exp $" ;
-    fs:generating_program "mri_segstats" ;
-    fs:hostname "ip-172-31-10-225" ;
-    fs:machine "x86_64" ;
-    fs:subjectname "sub-0025429" ;
-    fs:sysname "Linux" ;
-    fs:user "root" .
+            prov:hadRole sio:Subject ],
+        [ a prov:Association ;
+            prov:agent niiri:e0a39f46-6f88-11ea-a1c0-003ee1ce9545 ;
+            prov:hadRole nidm:NIDM_0000164 ] ;
+    fs:ColorTable "/opt/freesurfer-6.0.0-min/ASegStatsLUT.txt"^^xsd:string ;
+    fs:ColorTableTimeStamp "2017/01/18 22:00:02"^^xsd:string ;
+    fs:ExcludeSegId "0 2 3 41 42"^^xsd:string ;
+    fs:Excluding "Cortical Gray and White Matter"^^xsd:string ;
+    fs:InVolFile "mri/norm.mgz"^^xsd:string ;
+    fs:InVolFileTimeStamp "2019/01/06 06:30:26"^^xsd:string ;
+    fs:InVolFrame "0"^^xsd:string ;
+    fs:NRows "45"^^xsd:string ;
+    fs:NTableCols "10"^^xsd:string ;
+    fs:PVVolFile "mri/norm.mgz"^^xsd:string ;
+    fs:PVVolFileTimeStamp "2019/01/06 06:30:26"^^xsd:string ;
+    fs:SUBJECTS_DIR "/working/derivatives/mindboggle/freesurfer_subjects"^^xsd:string ;
+    fs:SegVolFile "mri/aseg.mgz"^^xsd:string ;
+    fs:SegVolFileTimeStamp "2019/01/06 14:50:33"^^xsd:string ;
+    fs:Title "Segmentation Statistics"^^xsd:string ;
+    fs:VoxelVolume_mm3 "1"^^xsd:string ;
+    fs:anatomy_type "volume"^^xsd:string ;
+    fs:cmdline "mri_segstats --seg mri/aseg.mgz --sum stats/aseg.stats --pv mri/norm.mgz --empty --brainmask mri/brainmask.mgz --brain-vol-from-seg --excludeid 0 --excl-ctxgmwm --supratent --subcortgray --in mri/norm.mgz --in-intensity-name norm --in-intensity-units MR --etiv --surf-wm-vol --surf-ctx-vol --totalgray --euler --ctab /opt/freesurfer-6.0.0-min/ASegStatsLUT.txt --subject sub-0025429"^^xsd:string ;
+    fs:cvs_version "$Id: mri_segstats.c,v 1.121 2016/05/31 17:27:11 greve Exp $"^^xsd:string ;
+    fs:generating_program "mri_segstats"^^xsd:string ;
+    fs:hostname "ip-172-31-10-225"^^xsd:string ;
+    fs:machine "x86_64"^^xsd:string ;
+    fs:subjectname "sub-0025429"^^xsd:string ;
+    fs:sysname "Linux"^^xsd:string ;
+    fs:user "root"^^xsd:string .
 
 niiri:d6e311f0-6f88-11ea-916c-003ee1ce9545 a prov:Activity ;
-    dct:description "Freesurfer segmentation statistics" ;
+    dct:description "Freesurfer segmentation statistics"^^xsd:string ;
+    dct:isPartOf niiri:d153320c-f87b-11ef-823b-acde48001122 ;
     prov:qualifiedAssociation [ a prov:Association ;
             prov:agent niiri:e0a39f46-6f88-11ea-a1c0-003ee1ce9545 ;
             prov:hadRole nidm:NIDM_0000164 ],
         [ a prov:Association ;
             prov:agent niiri:d7e2a8ea-6f88-11ea-916c-003ee1ce9545 ;
             prov:hadRole sio:Subject ] ;
-    fs:ColorTable "/opt/freesurfer-6.0.0-min/ASegStatsLUT.txt" ;
-    fs:ColorTableTimeStamp "2017/01/18 22:00:02" ;
-    fs:ExcludeSegId "0 2 3 41 42" ;
-    fs:Excluding "Cortical Gray and White Matter" ;
-    fs:InVolFile "mri/norm.mgz" ;
-    fs:InVolFileTimeStamp "2019/01/11 15:01:50" ;
-    fs:InVolFrame "0" ;
-    fs:NRows "45" ;
-    fs:NTableCols "10" ;
-    fs:PVVolFile "mri/norm.mgz" ;
-    fs:PVVolFileTimeStamp "2019/01/11 15:01:50" ;
-    fs:SUBJECTS_DIR "/working/derivatives/mindboggle/freesurfer_subjects" ;
-    fs:SegVolFile "mri/aseg.mgz" ;
-    fs:SegVolFileTimeStamp "2019/01/11 23:40:27" ;
-    fs:Title "Segmentation Statistics" ;
-    fs:VoxelVolume_mm3 "1" ;
-    fs:anatomy_type "volume" ;
-    fs:cmdline "mri_segstats --seg mri/aseg.mgz --sum stats/aseg.stats --pv mri/norm.mgz --empty --brainmask mri/brainmask.mgz --brain-vol-from-seg --excludeid 0 --excl-ctxgmwm --supratent --subcortgray --in mri/norm.mgz --in-intensity-name norm --in-intensity-units MR --etiv --surf-wm-vol --surf-ctx-vol --totalgray --euler --ctab /opt/freesurfer-6.0.0-min/ASegStatsLUT.txt --subject sub-0025455" ;
-    fs:cvs_version "$Id: mri_segstats.c,v 1.121 2016/05/31 17:27:11 greve Exp $" ;
-    fs:generating_program "mri_segstats" ;
-    fs:hostname "ip-172-31-23-87" ;
-    fs:machine "x86_64" ;
-    fs:subjectname "sub-0025455" ;
-    fs:sysname "Linux" ;
-    fs:user "root" .
+    fs:ColorTable "/opt/freesurfer-6.0.0-min/ASegStatsLUT.txt"^^xsd:string ;
+    fs:ColorTableTimeStamp "2017/01/18 22:00:02"^^xsd:string ;
+    fs:ExcludeSegId "0 2 3 41 42"^^xsd:string ;
+    fs:Excluding "Cortical Gray and White Matter"^^xsd:string ;
+    fs:InVolFile "mri/norm.mgz"^^xsd:string ;
+    fs:InVolFileTimeStamp "2019/01/11 15:01:50"^^xsd:string ;
+    fs:InVolFrame "0"^^xsd:string ;
+    fs:NRows "45"^^xsd:string ;
+    fs:NTableCols "10"^^xsd:string ;
+    fs:PVVolFile "mri/norm.mgz"^^xsd:string ;
+    fs:PVVolFileTimeStamp "2019/01/11 15:01:50"^^xsd:string ;
+    fs:SUBJECTS_DIR "/working/derivatives/mindboggle/freesurfer_subjects"^^xsd:string ;
+    fs:SegVolFile "mri/aseg.mgz"^^xsd:string ;
+    fs:SegVolFileTimeStamp "2019/01/11 23:40:27"^^xsd:string ;
+    fs:Title "Segmentation Statistics"^^xsd:string ;
+    fs:VoxelVolume_mm3 "1"^^xsd:string ;
+    fs:anatomy_type "volume"^^xsd:string ;
+    fs:cmdline "mri_segstats --seg mri/aseg.mgz --sum stats/aseg.stats --pv mri/norm.mgz --empty --brainmask mri/brainmask.mgz --brain-vol-from-seg --excludeid 0 --excl-ctxgmwm --supratent --subcortgray --in mri/norm.mgz --in-intensity-name norm --in-intensity-units MR --etiv --surf-wm-vol --surf-ctx-vol --totalgray --euler --ctab /opt/freesurfer-6.0.0-min/ASegStatsLUT.txt --subject sub-0025455"^^xsd:string ;
+    fs:cvs_version "$Id: mri_segstats.c,v 1.121 2016/05/31 17:27:11 greve Exp $"^^xsd:string ;
+    fs:generating_program "mri_segstats"^^xsd:string ;
+    fs:hostname "ip-172-31-23-87"^^xsd:string ;
+    fs:machine "x86_64"^^xsd:string ;
+    fs:subjectname "sub-0025455"^^xsd:string ;
+    fs:sysname "Linux"^^xsd:string ;
+    fs:user "root"^^xsd:string .
 
 niiri:d7849526-72d9-11ea-be4f-003ee1ce9545 a prov:Activity ;
-    dct:description "FSL FAST/FIRST segmentation statistics" ;
+    dct:description "FSL FAST/FIRST segmentation statistics"^^xsd:string ;
+    dct:isPartOf niiri:d153320c-f87b-11ef-823b-acde48001122 ;
     prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:ea8810dc-72d9-11ea-8bf6-003ee1ce9545 ;
+            prov:hadRole nidm:NIDM_0000164 ],
+        [ a prov:Association ;
             prov:agent niiri:ac861236-6f88-11ea-893a-003ee1ce9545 ;
+            prov:hadRole sio:Subject ] .
+
+niiri:da093092-6fd5-11ea-aca7-003ee1ce9545 a prov:Activity ;
+    dct:description "ANTS segmentation statistics"^^xsd:string ;
+    dct:isPartOf niiri:d153320c-f87b-11ef-823b-acde48001122 ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:db79a236-6f88-11ea-9627-003ee1ce9545 ;
+            prov:hadRole sio:Subject ],
+        [ a prov:Association ;
+            prov:agent niiri:a4849970-6fd5-11ea-ae57-003ee1ce9545 ;
+            prov:hadRole nidm:NIDM_0000164 ] .
+
+niiri:da5f9cda-6f88-11ea-8213-003ee1ce9545 a prov:Activity ;
+    dct:description "Freesurfer segmentation statistics"^^xsd:string ;
+    dct:isPartOf niiri:d153320c-f87b-11ef-823b-acde48001122 ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:fb664250-6f88-11ea-8213-003ee1ce9545 ;
+            prov:hadRole sio:Subject ],
+        [ a prov:Association ;
+            prov:agent niiri:e0a39f46-6f88-11ea-a1c0-003ee1ce9545 ;
+            prov:hadRole nidm:NIDM_0000164 ] ;
+    fs:ColorTable "/opt/freesurfer-6.0.0-min/ASegStatsLUT.txt"^^xsd:string ;
+    fs:ColorTableTimeStamp "2017/01/18 22:00:02"^^xsd:string ;
+    fs:ExcludeSegId "0 2 3 41 42"^^xsd:string ;
+    fs:Excluding "Cortical Gray and White Matter"^^xsd:string ;
+    fs:InVolFile "mri/norm.mgz"^^xsd:string ;
+    fs:InVolFileTimeStamp "2019/01/11 15:01:38"^^xsd:string ;
+    fs:InVolFrame "0"^^xsd:string ;
+    fs:NRows "45"^^xsd:string ;
+    fs:NTableCols "10"^^xsd:string ;
+    fs:PVVolFile "mri/norm.mgz"^^xsd:string ;
+    fs:PVVolFileTimeStamp "2019/01/11 15:01:38"^^xsd:string ;
+    fs:SUBJECTS_DIR "/working/derivatives/mindboggle/freesurfer_subjects"^^xsd:string ;
+    fs:SegVolFile "mri/aseg.mgz"^^xsd:string ;
+    fs:SegVolFileTimeStamp "2019/01/12 02:18:47"^^xsd:string ;
+    fs:Title "Segmentation Statistics"^^xsd:string ;
+    fs:VoxelVolume_mm3 "1"^^xsd:string ;
+    fs:anatomy_type "volume"^^xsd:string ;
+    fs:cmdline "mri_segstats --seg mri/aseg.mgz --sum stats/aseg.stats --pv mri/norm.mgz --empty --brainmask mri/brainmask.mgz --brain-vol-from-seg --excludeid 0 --excl-ctxgmwm --supratent --subcortgray --in mri/norm.mgz --in-intensity-name norm --in-intensity-units MR --etiv --surf-wm-vol --surf-ctx-vol --totalgray --euler --ctab /opt/freesurfer-6.0.0-min/ASegStatsLUT.txt --subject sub-0025447"^^xsd:string ;
+    fs:cvs_version "$Id: mri_segstats.c,v 1.121 2016/05/31 17:27:11 greve Exp $"^^xsd:string ;
+    fs:generating_program "mri_segstats"^^xsd:string ;
+    fs:hostname "ip-172-31-23-29"^^xsd:string ;
+    fs:machine "x86_64"^^xsd:string ;
+    fs:subjectname "sub-0025447"^^xsd:string ;
+    fs:sysname "Linux"^^xsd:string ;
+    fs:user "root"^^xsd:string .
+
+niiri:dc33e0c2-72d9-11ea-8fc7-003ee1ce9545 a prov:Activity ;
+    dct:description "FSL FAST/FIRST segmentation statistics"^^xsd:string ;
+    dct:isPartOf niiri:d153320c-f87b-11ef-823b-acde48001122 ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:b5224bf8-6f88-11ea-8668-003ee1ce9545 ;
             prov:hadRole sio:Subject ],
         [ a prov:Association ;
             prov:agent niiri:ea8810dc-72d9-11ea-8bf6-003ee1ce9545 ;
             prov:hadRole nidm:NIDM_0000164 ] .
 
-niiri:da093092-6fd5-11ea-aca7-003ee1ce9545 a prov:Activity ;
-    dct:description "ANTS segmentation statistics" ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:a4849970-6fd5-11ea-ae57-003ee1ce9545 ;
-            prov:hadRole nidm:NIDM_0000164 ],
-        [ a prov:Association ;
-            prov:agent niiri:db79a236-6f88-11ea-9627-003ee1ce9545 ;
-            prov:hadRole sio:Subject ] .
-
-niiri:da5f9cda-6f88-11ea-8213-003ee1ce9545 a prov:Activity ;
-    dct:description "Freesurfer segmentation statistics" ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:e0a39f46-6f88-11ea-a1c0-003ee1ce9545 ;
-            prov:hadRole nidm:NIDM_0000164 ],
-        [ a prov:Association ;
-            prov:agent niiri:fb664250-6f88-11ea-8213-003ee1ce9545 ;
-            prov:hadRole sio:Subject ] ;
-    fs:ColorTable "/opt/freesurfer-6.0.0-min/ASegStatsLUT.txt" ;
-    fs:ColorTableTimeStamp "2017/01/18 22:00:02" ;
-    fs:ExcludeSegId "0 2 3 41 42" ;
-    fs:Excluding "Cortical Gray and White Matter" ;
-    fs:InVolFile "mri/norm.mgz" ;
-    fs:InVolFileTimeStamp "2019/01/11 15:01:38" ;
-    fs:InVolFrame "0" ;
-    fs:NRows "45" ;
-    fs:NTableCols "10" ;
-    fs:PVVolFile "mri/norm.mgz" ;
-    fs:PVVolFileTimeStamp "2019/01/11 15:01:38" ;
-    fs:SUBJECTS_DIR "/working/derivatives/mindboggle/freesurfer_subjects" ;
-    fs:SegVolFile "mri/aseg.mgz" ;
-    fs:SegVolFileTimeStamp "2019/01/12 02:18:47" ;
-    fs:Title "Segmentation Statistics" ;
-    fs:VoxelVolume_mm3 "1" ;
-    fs:anatomy_type "volume" ;
-    fs:cmdline "mri_segstats --seg mri/aseg.mgz --sum stats/aseg.stats --pv mri/norm.mgz --empty --brainmask mri/brainmask.mgz --brain-vol-from-seg --excludeid 0 --excl-ctxgmwm --supratent --subcortgray --in mri/norm.mgz --in-intensity-name norm --in-intensity-units MR --etiv --surf-wm-vol --surf-ctx-vol --totalgray --euler --ctab /opt/freesurfer-6.0.0-min/ASegStatsLUT.txt --subject sub-0025447" ;
-    fs:cvs_version "$Id: mri_segstats.c,v 1.121 2016/05/31 17:27:11 greve Exp $" ;
-    fs:generating_program "mri_segstats" ;
-    fs:hostname "ip-172-31-23-29" ;
-    fs:machine "x86_64" ;
-    fs:subjectname "sub-0025447" ;
-    fs:sysname "Linux" ;
-    fs:user "root" .
-
-niiri:dc33e0c2-72d9-11ea-8fc7-003ee1ce9545 a prov:Activity ;
-    dct:description "FSL FAST/FIRST segmentation statistics" ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:ea8810dc-72d9-11ea-8bf6-003ee1ce9545 ;
-            prov:hadRole nidm:NIDM_0000164 ],
-        [ a prov:Association ;
-            prov:agent niiri:b5224bf8-6f88-11ea-8668-003ee1ce9545 ;
-            prov:hadRole sio:Subject ] .
-
 niiri:df7bdf3e-6fd5-11ea-b0f7-003ee1ce9545 a prov:Activity ;
-    dct:description "ANTS segmentation statistics" ;
+    dct:description "ANTS segmentation statistics"^^xsd:string ;
+    dct:isPartOf niiri:d153320c-f87b-11ef-823b-acde48001122 ;
     prov:qualifiedAssociation [ a prov:Association ;
             prov:agent niiri:a4849970-6fd5-11ea-ae57-003ee1ce9545 ;
             prov:hadRole nidm:NIDM_0000164 ],
@@ -15629,59 +15680,63 @@ niiri:df7bdf3e-6fd5-11ea-b0f7-003ee1ce9545 a prov:Activity ;
             prov:hadRole sio:Subject ] .
 
 niiri:df7eae28-6f88-11ea-add9-003ee1ce9545 a prov:Activity ;
-    dct:description "Freesurfer segmentation statistics" ;
+    dct:description "Freesurfer segmentation statistics"^^xsd:string ;
+    dct:isPartOf niiri:d153320c-f87b-11ef-823b-acde48001122 ;
     prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:e07f6a1a-6f88-11ea-add9-003ee1ce9545 ;
-            prov:hadRole sio:Subject ],
-        [ a prov:Association ;
             prov:agent niiri:e0a39f46-6f88-11ea-a1c0-003ee1ce9545 ;
-            prov:hadRole nidm:NIDM_0000164 ] ;
-    fs:ColorTable "/opt/freesurfer-6.0.0-min/ASegStatsLUT.txt" ;
-    fs:ColorTableTimeStamp "2017/01/18 22:00:02" ;
-    fs:ExcludeSegId "0 2 3 41 42" ;
-    fs:Excluding "Cortical Gray and White Matter" ;
-    fs:InVolFile "mri/norm.mgz" ;
-    fs:InVolFileTimeStamp "2019/01/06 06:27:11" ;
-    fs:InVolFrame "0" ;
-    fs:NRows "45" ;
-    fs:NTableCols "10" ;
-    fs:PVVolFile "mri/norm.mgz" ;
-    fs:PVVolFileTimeStamp "2019/01/06 06:27:11" ;
-    fs:SUBJECTS_DIR "/working/derivatives/mindboggle/freesurfer_subjects" ;
-    fs:SegVolFile "mri/aseg.mgz" ;
-    fs:SegVolFileTimeStamp "2019/01/06 16:26:40" ;
-    fs:Title "Segmentation Statistics" ;
-    fs:VoxelVolume_mm3 "1" ;
-    fs:anatomy_type "volume" ;
-    fs:cmdline "mri_segstats --seg mri/aseg.mgz --sum stats/aseg.stats --pv mri/norm.mgz --empty --brainmask mri/brainmask.mgz --brain-vol-from-seg --excludeid 0 --excl-ctxgmwm --supratent --subcortgray --in mri/norm.mgz --in-intensity-name norm --in-intensity-units MR --etiv --surf-wm-vol --surf-ctx-vol --totalgray --euler --ctab /opt/freesurfer-6.0.0-min/ASegStatsLUT.txt --subject sub-0025452" ;
-    fs:cvs_version "$Id: mri_segstats.c,v 1.121 2016/05/31 17:27:11 greve Exp $" ;
-    fs:generating_program "mri_segstats" ;
-    fs:hostname "ip-172-31-15-208" ;
-    fs:machine "x86_64" ;
-    fs:subjectname "sub-0025452" ;
-    fs:sysname "Linux" ;
-    fs:user "root" .
+            prov:hadRole nidm:NIDM_0000164 ],
+        [ a prov:Association ;
+            prov:agent niiri:e07f6a1a-6f88-11ea-add9-003ee1ce9545 ;
+            prov:hadRole sio:Subject ] ;
+    fs:ColorTable "/opt/freesurfer-6.0.0-min/ASegStatsLUT.txt"^^xsd:string ;
+    fs:ColorTableTimeStamp "2017/01/18 22:00:02"^^xsd:string ;
+    fs:ExcludeSegId "0 2 3 41 42"^^xsd:string ;
+    fs:Excluding "Cortical Gray and White Matter"^^xsd:string ;
+    fs:InVolFile "mri/norm.mgz"^^xsd:string ;
+    fs:InVolFileTimeStamp "2019/01/06 06:27:11"^^xsd:string ;
+    fs:InVolFrame "0"^^xsd:string ;
+    fs:NRows "45"^^xsd:string ;
+    fs:NTableCols "10"^^xsd:string ;
+    fs:PVVolFile "mri/norm.mgz"^^xsd:string ;
+    fs:PVVolFileTimeStamp "2019/01/06 06:27:11"^^xsd:string ;
+    fs:SUBJECTS_DIR "/working/derivatives/mindboggle/freesurfer_subjects"^^xsd:string ;
+    fs:SegVolFile "mri/aseg.mgz"^^xsd:string ;
+    fs:SegVolFileTimeStamp "2019/01/06 16:26:40"^^xsd:string ;
+    fs:Title "Segmentation Statistics"^^xsd:string ;
+    fs:VoxelVolume_mm3 "1"^^xsd:string ;
+    fs:anatomy_type "volume"^^xsd:string ;
+    fs:cmdline "mri_segstats --seg mri/aseg.mgz --sum stats/aseg.stats --pv mri/norm.mgz --empty --brainmask mri/brainmask.mgz --brain-vol-from-seg --excludeid 0 --excl-ctxgmwm --supratent --subcortgray --in mri/norm.mgz --in-intensity-name norm --in-intensity-units MR --etiv --surf-wm-vol --surf-ctx-vol --totalgray --euler --ctab /opt/freesurfer-6.0.0-min/ASegStatsLUT.txt --subject sub-0025452"^^xsd:string ;
+    fs:cvs_version "$Id: mri_segstats.c,v 1.121 2016/05/31 17:27:11 greve Exp $"^^xsd:string ;
+    fs:generating_program "mri_segstats"^^xsd:string ;
+    fs:hostname "ip-172-31-15-208"^^xsd:string ;
+    fs:machine "x86_64"^^xsd:string ;
+    fs:subjectname "sub-0025452"^^xsd:string ;
+    fs:sysname "Linux"^^xsd:string ;
+    fs:user "root"^^xsd:string .
 
 niiri:e09f5f38-6fd6-11ea-8258-003ee1ce9545 a prov:Activity ;
-    dct:description "ANTS segmentation statistics" ;
+    dct:description "ANTS segmentation statistics"^^xsd:string ;
+    dct:isPartOf niiri:d153320c-f87b-11ef-823b-acde48001122 ;
     prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:a4849970-6fd5-11ea-ae57-003ee1ce9545 ;
-            prov:hadRole nidm:NIDM_0000164 ],
-        [ a prov:Association ;
             prov:agent niiri:b32bdce4-6f88-11ea-a4b8-003ee1ce9545 ;
-            prov:hadRole sio:Subject ] .
+            prov:hadRole sio:Subject ],
+        [ a prov:Association ;
+            prov:agent niiri:a4849970-6fd5-11ea-ae57-003ee1ce9545 ;
+            prov:hadRole nidm:NIDM_0000164 ] .
 
 niiri:e0e1c684-72d9-11ea-9a2b-003ee1ce9545 a prov:Activity ;
-    dct:description "FSL FAST/FIRST segmentation statistics" ;
+    dct:description "FSL FAST/FIRST segmentation statistics"^^xsd:string ;
+    dct:isPartOf niiri:d153320c-f87b-11ef-823b-acde48001122 ;
     prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:ea8810dc-72d9-11ea-8bf6-003ee1ce9545 ;
-            prov:hadRole nidm:NIDM_0000164 ],
-        [ a prov:Association ;
             prov:agent niiri:bdc44766-6f88-11ea-894c-003ee1ce9545 ;
-            prov:hadRole sio:Subject ] .
+            prov:hadRole sio:Subject ],
+        [ a prov:Association ;
+            prov:agent niiri:ea8810dc-72d9-11ea-8bf6-003ee1ce9545 ;
+            prov:hadRole nidm:NIDM_0000164 ] .
 
 niiri:e1907944-6fd6-11ea-b161-003ee1ce9545 a prov:Activity ;
-    dct:description "ANTS segmentation statistics" ;
+    dct:description "ANTS segmentation statistics"^^xsd:string ;
+    dct:isPartOf niiri:d153320c-f87b-11ef-823b-acde48001122 ;
     prov:qualifiedAssociation [ a prov:Association ;
             prov:agent niiri:a4849970-6fd5-11ea-ae57-003ee1ce9545 ;
             prov:hadRole nidm:NIDM_0000164 ],
@@ -15690,16 +15745,18 @@ niiri:e1907944-6fd6-11ea-b161-003ee1ce9545 a prov:Activity ;
             prov:hadRole sio:Subject ] .
 
 niiri:e4ea1cb0-6fd5-11ea-896d-003ee1ce9545 a prov:Activity ;
-    dct:description "ANTS segmentation statistics" ;
+    dct:description "ANTS segmentation statistics"^^xsd:string ;
+    dct:isPartOf niiri:d153320c-f87b-11ef-823b-acde48001122 ;
     prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:aae8f3a2-6f88-11ea-bff2-003ee1ce9545 ;
-            prov:hadRole sio:Subject ],
-        [ a prov:Association ;
             prov:agent niiri:a4849970-6fd5-11ea-ae57-003ee1ce9545 ;
-            prov:hadRole nidm:NIDM_0000164 ] .
+            prov:hadRole nidm:NIDM_0000164 ],
+        [ a prov:Association ;
+            prov:agent niiri:aae8f3a2-6f88-11ea-bff2-003ee1ce9545 ;
+            prov:hadRole sio:Subject ] .
 
 niiri:e5990eb2-72d9-11ea-a4dc-003ee1ce9545 a prov:Activity ;
-    dct:description "FSL FAST/FIRST segmentation statistics" ;
+    dct:description "FSL FAST/FIRST segmentation statistics"^^xsd:string ;
+    dct:isPartOf niiri:d153320c-f87b-11ef-823b-acde48001122 ;
     prov:qualifiedAssociation [ a prov:Association ;
             prov:agent niiri:ea8810dc-72d9-11ea-8bf6-003ee1ce9545 ;
             prov:hadRole nidm:NIDM_0000164 ],
@@ -15708,50 +15765,53 @@ niiri:e5990eb2-72d9-11ea-a4dc-003ee1ce9545 a prov:Activity ;
             prov:hadRole sio:Subject ] .
 
 niiri:e61771ee-72d9-11ea-b945-003ee1ce9545 a prov:Activity ;
-    dct:description "FSL FAST/FIRST segmentation statistics" ;
+    dct:description "FSL FAST/FIRST segmentation statistics"^^xsd:string ;
+    dct:isPartOf niiri:d153320c-f87b-11ef-823b-acde48001122 ;
     prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:bd268ac4-6f88-11ea-a6f0-003ee1ce9545 ;
-            prov:hadRole sio:Subject ],
-        [ a prov:Association ;
             prov:agent niiri:ea8810dc-72d9-11ea-8bf6-003ee1ce9545 ;
-            prov:hadRole nidm:NIDM_0000164 ] .
+            prov:hadRole nidm:NIDM_0000164 ],
+        [ a prov:Association ;
+            prov:agent niiri:bd268ac4-6f88-11ea-a6f0-003ee1ce9545 ;
+            prov:hadRole sio:Subject ] .
 
 niiri:e84165be-6f88-11ea-9c79-003ee1ce9545 a prov:Activity ;
-    dct:description "Freesurfer segmentation statistics" ;
+    dct:description "Freesurfer segmentation statistics"^^xsd:string ;
+    dct:isPartOf niiri:d153320c-f87b-11ef-823b-acde48001122 ;
     prov:qualifiedAssociation [ a prov:Association ;
             prov:agent niiri:e0a39f46-6f88-11ea-a1c0-003ee1ce9545 ;
             prov:hadRole nidm:NIDM_0000164 ],
         [ a prov:Association ;
             prov:agent niiri:e94c491a-6f88-11ea-9c79-003ee1ce9545 ;
             prov:hadRole sio:Subject ] ;
-    fs:ColorTable "/opt/freesurfer-6.0.0-min/ASegStatsLUT.txt" ;
-    fs:ColorTableTimeStamp "2017/01/18 22:00:02" ;
-    fs:ExcludeSegId "0 2 3 41 42" ;
-    fs:Excluding "Cortical Gray and White Matter" ;
-    fs:InVolFile "mri/norm.mgz" ;
-    fs:InVolFileTimeStamp "2019/01/06 06:35:18" ;
-    fs:InVolFrame "0" ;
-    fs:NRows "45" ;
-    fs:NTableCols "10" ;
-    fs:PVVolFile "mri/norm.mgz" ;
-    fs:PVVolFileTimeStamp "2019/01/06 06:35:18" ;
-    fs:SUBJECTS_DIR "/working/derivatives/mindboggle/freesurfer_subjects" ;
-    fs:SegVolFile "mri/aseg.mgz" ;
-    fs:SegVolFileTimeStamp "2019/01/06 17:07:39" ;
-    fs:Title "Segmentation Statistics" ;
-    fs:VoxelVolume_mm3 "1" ;
-    fs:anatomy_type "volume" ;
-    fs:cmdline "mri_segstats --seg mri/aseg.mgz --sum stats/aseg.stats --pv mri/norm.mgz --empty --brainmask mri/brainmask.mgz --brain-vol-from-seg --excludeid 0 --excl-ctxgmwm --supratent --subcortgray --in mri/norm.mgz --in-intensity-name norm --in-intensity-units MR --etiv --surf-wm-vol --surf-ctx-vol --totalgray --euler --ctab /opt/freesurfer-6.0.0-min/ASegStatsLUT.txt --subject sub-0025437" ;
-    fs:cvs_version "$Id: mri_segstats.c,v 1.121 2016/05/31 17:27:11 greve Exp $" ;
-    fs:generating_program "mri_segstats" ;
-    fs:hostname "ip-172-31-15-127" ;
-    fs:machine "x86_64" ;
-    fs:subjectname "sub-0025437" ;
-    fs:sysname "Linux" ;
-    fs:user "root" .
+    fs:ColorTable "/opt/freesurfer-6.0.0-min/ASegStatsLUT.txt"^^xsd:string ;
+    fs:ColorTableTimeStamp "2017/01/18 22:00:02"^^xsd:string ;
+    fs:ExcludeSegId "0 2 3 41 42"^^xsd:string ;
+    fs:Excluding "Cortical Gray and White Matter"^^xsd:string ;
+    fs:InVolFile "mri/norm.mgz"^^xsd:string ;
+    fs:InVolFileTimeStamp "2019/01/06 06:35:18"^^xsd:string ;
+    fs:InVolFrame "0"^^xsd:string ;
+    fs:NRows "45"^^xsd:string ;
+    fs:NTableCols "10"^^xsd:string ;
+    fs:PVVolFile "mri/norm.mgz"^^xsd:string ;
+    fs:PVVolFileTimeStamp "2019/01/06 06:35:18"^^xsd:string ;
+    fs:SUBJECTS_DIR "/working/derivatives/mindboggle/freesurfer_subjects"^^xsd:string ;
+    fs:SegVolFile "mri/aseg.mgz"^^xsd:string ;
+    fs:SegVolFileTimeStamp "2019/01/06 17:07:39"^^xsd:string ;
+    fs:Title "Segmentation Statistics"^^xsd:string ;
+    fs:VoxelVolume_mm3 "1"^^xsd:string ;
+    fs:anatomy_type "volume"^^xsd:string ;
+    fs:cmdline "mri_segstats --seg mri/aseg.mgz --sum stats/aseg.stats --pv mri/norm.mgz --empty --brainmask mri/brainmask.mgz --brain-vol-from-seg --excludeid 0 --excl-ctxgmwm --supratent --subcortgray --in mri/norm.mgz --in-intensity-name norm --in-intensity-units MR --etiv --surf-wm-vol --surf-ctx-vol --totalgray --euler --ctab /opt/freesurfer-6.0.0-min/ASegStatsLUT.txt --subject sub-0025437"^^xsd:string ;
+    fs:cvs_version "$Id: mri_segstats.c,v 1.121 2016/05/31 17:27:11 greve Exp $"^^xsd:string ;
+    fs:generating_program "mri_segstats"^^xsd:string ;
+    fs:hostname "ip-172-31-15-127"^^xsd:string ;
+    fs:machine "x86_64"^^xsd:string ;
+    fs:subjectname "sub-0025437"^^xsd:string ;
+    fs:sysname "Linux"^^xsd:string ;
+    fs:user "root"^^xsd:string .
 
 niiri:e849a78a-72d9-11ea-bdbe-003ee1ce9545 a prov:Activity ;
-    dct:description "FSL FAST/FIRST segmentation statistics" ;
+    dct:description "FSL FAST/FIRST segmentation statistics"^^xsd:string ;
+    dct:isPartOf niiri:d153320c-f87b-11ef-823b-acde48001122 ;
     prov:qualifiedAssociation [ a prov:Association ;
             prov:agent niiri:e6f7899c-6f88-11ea-a39d-003ee1ce9545 ;
             prov:hadRole sio:Subject ],
@@ -15760,50 +15820,53 @@ niiri:e849a78a-72d9-11ea-bdbe-003ee1ce9545 a prov:Activity ;
             prov:hadRole nidm:NIDM_0000164 ] .
 
 niiri:e870c056-6fd6-11ea-b859-003ee1ce9545 a prov:Activity ;
-    dct:description "ANTS segmentation statistics" ;
+    dct:description "ANTS segmentation statistics"^^xsd:string ;
+    dct:isPartOf niiri:d153320c-f87b-11ef-823b-acde48001122 ;
     prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:cf36483c-6f88-11ea-93a1-003ee1ce9545 ;
-            prov:hadRole sio:Subject ],
-        [ a prov:Association ;
             prov:agent niiri:a4849970-6fd5-11ea-ae57-003ee1ce9545 ;
-            prov:hadRole nidm:NIDM_0000164 ] .
-
-niiri:e9e4c328-6f88-11ea-bff2-003ee1ce9545 a prov:Activity ;
-    dct:description "Freesurfer segmentation statistics" ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:e0a39f46-6f88-11ea-a1c0-003ee1ce9545 ;
             prov:hadRole nidm:NIDM_0000164 ],
         [ a prov:Association ;
+            prov:agent niiri:cf36483c-6f88-11ea-93a1-003ee1ce9545 ;
+            prov:hadRole sio:Subject ] .
+
+niiri:e9e4c328-6f88-11ea-bff2-003ee1ce9545 a prov:Activity ;
+    dct:description "Freesurfer segmentation statistics"^^xsd:string ;
+    dct:isPartOf niiri:d153320c-f87b-11ef-823b-acde48001122 ;
+    prov:qualifiedAssociation [ a prov:Association ;
             prov:agent niiri:aae8f3a2-6f88-11ea-bff2-003ee1ce9545 ;
-            prov:hadRole sio:Subject ] ;
-    fs:ColorTable "/opt/freesurfer-6.0.0-min/ASegStatsLUT.txt" ;
-    fs:ColorTableTimeStamp "2017/01/18 22:00:02" ;
-    fs:ExcludeSegId "0 2 3 41 42" ;
-    fs:Excluding "Cortical Gray and White Matter" ;
-    fs:InVolFile "mri/norm.mgz" ;
-    fs:InVolFileTimeStamp "2019/01/11 15:06:01" ;
-    fs:InVolFrame "0" ;
-    fs:NRows "45" ;
-    fs:NTableCols "10" ;
-    fs:PVVolFile "mri/norm.mgz" ;
-    fs:PVVolFileTimeStamp "2019/01/11 15:06:01" ;
-    fs:SUBJECTS_DIR "/working/derivatives/mindboggle/freesurfer_subjects" ;
-    fs:SegVolFile "mri/aseg.mgz" ;
-    fs:SegVolFileTimeStamp "2019/01/12 00:42:05" ;
-    fs:Title "Segmentation Statistics" ;
-    fs:VoxelVolume_mm3 "1" ;
-    fs:anatomy_type "volume" ;
-    fs:cmdline "mri_segstats --seg mri/aseg.mgz --sum stats/aseg.stats --pv mri/norm.mgz --empty --brainmask mri/brainmask.mgz --brain-vol-from-seg --excludeid 0 --excl-ctxgmwm --supratent --subcortgray --in mri/norm.mgz --in-intensity-name norm --in-intensity-units MR --etiv --surf-wm-vol --surf-ctx-vol --totalgray --euler --ctab /opt/freesurfer-6.0.0-min/ASegStatsLUT.txt --subject sub-0025451" ;
-    fs:cvs_version "$Id: mri_segstats.c,v 1.121 2016/05/31 17:27:11 greve Exp $" ;
-    fs:generating_program "mri_segstats" ;
-    fs:hostname "ip-172-31-23-186" ;
-    fs:machine "x86_64" ;
-    fs:subjectname "sub-0025451" ;
-    fs:sysname "Linux" ;
-    fs:user "root" .
+            prov:hadRole sio:Subject ],
+        [ a prov:Association ;
+            prov:agent niiri:e0a39f46-6f88-11ea-a1c0-003ee1ce9545 ;
+            prov:hadRole nidm:NIDM_0000164 ] ;
+    fs:ColorTable "/opt/freesurfer-6.0.0-min/ASegStatsLUT.txt"^^xsd:string ;
+    fs:ColorTableTimeStamp "2017/01/18 22:00:02"^^xsd:string ;
+    fs:ExcludeSegId "0 2 3 41 42"^^xsd:string ;
+    fs:Excluding "Cortical Gray and White Matter"^^xsd:string ;
+    fs:InVolFile "mri/norm.mgz"^^xsd:string ;
+    fs:InVolFileTimeStamp "2019/01/11 15:06:01"^^xsd:string ;
+    fs:InVolFrame "0"^^xsd:string ;
+    fs:NRows "45"^^xsd:string ;
+    fs:NTableCols "10"^^xsd:string ;
+    fs:PVVolFile "mri/norm.mgz"^^xsd:string ;
+    fs:PVVolFileTimeStamp "2019/01/11 15:06:01"^^xsd:string ;
+    fs:SUBJECTS_DIR "/working/derivatives/mindboggle/freesurfer_subjects"^^xsd:string ;
+    fs:SegVolFile "mri/aseg.mgz"^^xsd:string ;
+    fs:SegVolFileTimeStamp "2019/01/12 00:42:05"^^xsd:string ;
+    fs:Title "Segmentation Statistics"^^xsd:string ;
+    fs:VoxelVolume_mm3 "1"^^xsd:string ;
+    fs:anatomy_type "volume"^^xsd:string ;
+    fs:cmdline "mri_segstats --seg mri/aseg.mgz --sum stats/aseg.stats --pv mri/norm.mgz --empty --brainmask mri/brainmask.mgz --brain-vol-from-seg --excludeid 0 --excl-ctxgmwm --supratent --subcortgray --in mri/norm.mgz --in-intensity-name norm --in-intensity-units MR --etiv --surf-wm-vol --surf-ctx-vol --totalgray --euler --ctab /opt/freesurfer-6.0.0-min/ASegStatsLUT.txt --subject sub-0025451"^^xsd:string ;
+    fs:cvs_version "$Id: mri_segstats.c,v 1.121 2016/05/31 17:27:11 greve Exp $"^^xsd:string ;
+    fs:generating_program "mri_segstats"^^xsd:string ;
+    fs:hostname "ip-172-31-23-186"^^xsd:string ;
+    fs:machine "x86_64"^^xsd:string ;
+    fs:subjectname "sub-0025451"^^xsd:string ;
+    fs:sysname "Linux"^^xsd:string ;
+    fs:user "root"^^xsd:string .
 
 niiri:ea505ad2-72d9-11ea-8798-003ee1ce9545 a prov:Activity ;
-    dct:description "FSL FAST/FIRST segmentation statistics" ;
+    dct:description "FSL FAST/FIRST segmentation statistics"^^xsd:string ;
+    dct:isPartOf niiri:d153320c-f87b-11ef-823b-acde48001122 ;
     prov:qualifiedAssociation [ a prov:Association ;
             prov:agent niiri:ea8810dc-72d9-11ea-8bf6-003ee1ce9545 ;
             prov:hadRole nidm:NIDM_0000164 ],
@@ -15812,93 +15875,98 @@ niiri:ea505ad2-72d9-11ea-8798-003ee1ce9545 a prov:Activity ;
             prov:hadRole sio:Subject ] .
 
 niiri:ea591912-6fd5-11ea-a93d-003ee1ce9545 a prov:Activity ;
-    dct:description "ANTS segmentation statistics" ;
+    dct:description "ANTS segmentation statistics"^^xsd:string ;
+    dct:isPartOf niiri:d153320c-f87b-11ef-823b-acde48001122 ;
     prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:a4849970-6fd5-11ea-ae57-003ee1ce9545 ;
+            prov:hadRole nidm:NIDM_0000164 ],
+        [ a prov:Association ;
             prov:agent niiri:f2c2e326-6f88-11ea-aa8e-003ee1ce9545 ;
+            prov:hadRole sio:Subject ] .
+
+niiri:ec225266-6f88-11ea-a6f0-003ee1ce9545 a prov:Activity ;
+    dct:description "Freesurfer segmentation statistics"^^xsd:string ;
+    dct:isPartOf niiri:d153320c-f87b-11ef-823b-acde48001122 ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:bd268ac4-6f88-11ea-a6f0-003ee1ce9545 ;
+            prov:hadRole sio:Subject ],
+        [ a prov:Association ;
+            prov:agent niiri:e0a39f46-6f88-11ea-a1c0-003ee1ce9545 ;
+            prov:hadRole nidm:NIDM_0000164 ] ;
+    fs:ColorTable "/opt/freesurfer-6.0.0-min/ASegStatsLUT.txt"^^xsd:string ;
+    fs:ColorTableTimeStamp "2017/01/18 22:00:02"^^xsd:string ;
+    fs:ExcludeSegId "0 2 3 41 42"^^xsd:string ;
+    fs:Excluding "Cortical Gray and White Matter"^^xsd:string ;
+    fs:InVolFile "mri/norm.mgz"^^xsd:string ;
+    fs:InVolFileTimeStamp "2019/01/06 06:29:42"^^xsd:string ;
+    fs:InVolFrame "0"^^xsd:string ;
+    fs:NRows "45"^^xsd:string ;
+    fs:NTableCols "10"^^xsd:string ;
+    fs:PVVolFile "mri/norm.mgz"^^xsd:string ;
+    fs:PVVolFileTimeStamp "2019/01/06 06:29:42"^^xsd:string ;
+    fs:SUBJECTS_DIR "/working/derivatives/mindboggle/freesurfer_subjects"^^xsd:string ;
+    fs:SegVolFile "mri/aseg.mgz"^^xsd:string ;
+    fs:SegVolFileTimeStamp "2019/01/06 14:02:11"^^xsd:string ;
+    fs:Title "Segmentation Statistics"^^xsd:string ;
+    fs:VoxelVolume_mm3 "1"^^xsd:string ;
+    fs:anatomy_type "volume"^^xsd:string ;
+    fs:cmdline "mri_segstats --seg mri/aseg.mgz --sum stats/aseg.stats --pv mri/norm.mgz --empty --brainmask mri/brainmask.mgz --brain-vol-from-seg --excludeid 0 --excl-ctxgmwm --supratent --subcortgray --in mri/norm.mgz --in-intensity-name norm --in-intensity-units MR --etiv --surf-wm-vol --surf-ctx-vol --totalgray --euler --ctab /opt/freesurfer-6.0.0-min/ASegStatsLUT.txt --subject sub-0025428"^^xsd:string ;
+    fs:cvs_version "$Id: mri_segstats.c,v 1.121 2016/05/31 17:27:11 greve Exp $"^^xsd:string ;
+    fs:generating_program "mri_segstats"^^xsd:string ;
+    fs:hostname "ip-172-31-5-154"^^xsd:string ;
+    fs:machine "x86_64"^^xsd:string ;
+    fs:subjectname "sub-0025428"^^xsd:string ;
+    fs:sysname "Linux"^^xsd:string ;
+    fs:user "root"^^xsd:string .
+
+niiri:ecee1ada-6fd6-11ea-8d3b-003ee1ce9545 a prov:Activity ;
+    dct:description "ANTS segmentation statistics"^^xsd:string ;
+    dct:isPartOf niiri:d153320c-f87b-11ef-823b-acde48001122 ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:bdc44766-6f88-11ea-894c-003ee1ce9545 ;
             prov:hadRole sio:Subject ],
         [ a prov:Association ;
             prov:agent niiri:a4849970-6fd5-11ea-ae57-003ee1ce9545 ;
             prov:hadRole nidm:NIDM_0000164 ] .
 
-niiri:ec225266-6f88-11ea-a6f0-003ee1ce9545 a prov:Activity ;
-    dct:description "Freesurfer segmentation statistics" ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:e0a39f46-6f88-11ea-a1c0-003ee1ce9545 ;
-            prov:hadRole nidm:NIDM_0000164 ],
-        [ a prov:Association ;
-            prov:agent niiri:bd268ac4-6f88-11ea-a6f0-003ee1ce9545 ;
-            prov:hadRole sio:Subject ] ;
-    fs:ColorTable "/opt/freesurfer-6.0.0-min/ASegStatsLUT.txt" ;
-    fs:ColorTableTimeStamp "2017/01/18 22:00:02" ;
-    fs:ExcludeSegId "0 2 3 41 42" ;
-    fs:Excluding "Cortical Gray and White Matter" ;
-    fs:InVolFile "mri/norm.mgz" ;
-    fs:InVolFileTimeStamp "2019/01/06 06:29:42" ;
-    fs:InVolFrame "0" ;
-    fs:NRows "45" ;
-    fs:NTableCols "10" ;
-    fs:PVVolFile "mri/norm.mgz" ;
-    fs:PVVolFileTimeStamp "2019/01/06 06:29:42" ;
-    fs:SUBJECTS_DIR "/working/derivatives/mindboggle/freesurfer_subjects" ;
-    fs:SegVolFile "mri/aseg.mgz" ;
-    fs:SegVolFileTimeStamp "2019/01/06 14:02:11" ;
-    fs:Title "Segmentation Statistics" ;
-    fs:VoxelVolume_mm3 "1" ;
-    fs:anatomy_type "volume" ;
-    fs:cmdline "mri_segstats --seg mri/aseg.mgz --sum stats/aseg.stats --pv mri/norm.mgz --empty --brainmask mri/brainmask.mgz --brain-vol-from-seg --excludeid 0 --excl-ctxgmwm --supratent --subcortgray --in mri/norm.mgz --in-intensity-name norm --in-intensity-units MR --etiv --surf-wm-vol --surf-ctx-vol --totalgray --euler --ctab /opt/freesurfer-6.0.0-min/ASegStatsLUT.txt --subject sub-0025428" ;
-    fs:cvs_version "$Id: mri_segstats.c,v 1.121 2016/05/31 17:27:11 greve Exp $" ;
-    fs:generating_program "mri_segstats" ;
-    fs:hostname "ip-172-31-5-154" ;
-    fs:machine "x86_64" ;
-    fs:subjectname "sub-0025428" ;
-    fs:sysname "Linux" ;
-    fs:user "root" .
-
-niiri:ecee1ada-6fd6-11ea-8d3b-003ee1ce9545 a prov:Activity ;
-    dct:description "ANTS segmentation statistics" ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:a4849970-6fd5-11ea-ae57-003ee1ce9545 ;
-            prov:hadRole nidm:NIDM_0000164 ],
-        [ a prov:Association ;
-            prov:agent niiri:bdc44766-6f88-11ea-894c-003ee1ce9545 ;
-            prov:hadRole sio:Subject ] .
-
 niiri:eed1de7a-6f88-11ea-a031-003ee1ce9545 a prov:Activity ;
-    dct:description "Freesurfer segmentation statistics" ;
+    dct:description "Freesurfer segmentation statistics"^^xsd:string ;
+    dct:isPartOf niiri:d153320c-f87b-11ef-823b-acde48001122 ;
     prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:dfd49ec0-6f88-11ea-a031-003ee1ce9545 ;
-            prov:hadRole sio:Subject ],
-        [ a prov:Association ;
             prov:agent niiri:e0a39f46-6f88-11ea-a1c0-003ee1ce9545 ;
-            prov:hadRole nidm:NIDM_0000164 ] ;
-    fs:ColorTable "/opt/freesurfer-6.0.0-min/ASegStatsLUT.txt" ;
-    fs:ColorTableTimeStamp "2017/01/18 22:00:02" ;
-    fs:ExcludeSegId "0 2 3 41 42" ;
-    fs:Excluding "Cortical Gray and White Matter" ;
-    fs:InVolFile "mri/norm.mgz" ;
-    fs:InVolFileTimeStamp "2019/01/06 06:26:37" ;
-    fs:InVolFrame "0" ;
-    fs:NRows "45" ;
-    fs:NTableCols "10" ;
-    fs:PVVolFile "mri/norm.mgz" ;
-    fs:PVVolFileTimeStamp "2019/01/06 06:26:37" ;
-    fs:SUBJECTS_DIR "/working/derivatives/mindboggle/freesurfer_subjects" ;
-    fs:SegVolFile "mri/aseg.mgz" ;
-    fs:SegVolFileTimeStamp "2019/01/06 15:09:47" ;
-    fs:Title "Segmentation Statistics" ;
-    fs:VoxelVolume_mm3 "1" ;
-    fs:anatomy_type "volume" ;
-    fs:cmdline "mri_segstats --seg mri/aseg.mgz --sum stats/aseg.stats --pv mri/norm.mgz --empty --brainmask mri/brainmask.mgz --brain-vol-from-seg --excludeid 0 --excl-ctxgmwm --supratent --subcortgray --in mri/norm.mgz --in-intensity-name norm --in-intensity-units MR --etiv --surf-wm-vol --surf-ctx-vol --totalgray --euler --ctab /opt/freesurfer-6.0.0-min/ASegStatsLUT.txt --subject sub-0025427" ;
-    fs:cvs_version "$Id: mri_segstats.c,v 1.121 2016/05/31 17:27:11 greve Exp $" ;
-    fs:generating_program "mri_segstats" ;
-    fs:hostname "ip-172-31-11-24" ;
-    fs:machine "x86_64" ;
-    fs:subjectname "sub-0025427" ;
-    fs:sysname "Linux" ;
-    fs:user "root" .
+            prov:hadRole nidm:NIDM_0000164 ],
+        [ a prov:Association ;
+            prov:agent niiri:dfd49ec0-6f88-11ea-a031-003ee1ce9545 ;
+            prov:hadRole sio:Subject ] ;
+    fs:ColorTable "/opt/freesurfer-6.0.0-min/ASegStatsLUT.txt"^^xsd:string ;
+    fs:ColorTableTimeStamp "2017/01/18 22:00:02"^^xsd:string ;
+    fs:ExcludeSegId "0 2 3 41 42"^^xsd:string ;
+    fs:Excluding "Cortical Gray and White Matter"^^xsd:string ;
+    fs:InVolFile "mri/norm.mgz"^^xsd:string ;
+    fs:InVolFileTimeStamp "2019/01/06 06:26:37"^^xsd:string ;
+    fs:InVolFrame "0"^^xsd:string ;
+    fs:NRows "45"^^xsd:string ;
+    fs:NTableCols "10"^^xsd:string ;
+    fs:PVVolFile "mri/norm.mgz"^^xsd:string ;
+    fs:PVVolFileTimeStamp "2019/01/06 06:26:37"^^xsd:string ;
+    fs:SUBJECTS_DIR "/working/derivatives/mindboggle/freesurfer_subjects"^^xsd:string ;
+    fs:SegVolFile "mri/aseg.mgz"^^xsd:string ;
+    fs:SegVolFileTimeStamp "2019/01/06 15:09:47"^^xsd:string ;
+    fs:Title "Segmentation Statistics"^^xsd:string ;
+    fs:VoxelVolume_mm3 "1"^^xsd:string ;
+    fs:anatomy_type "volume"^^xsd:string ;
+    fs:cmdline "mri_segstats --seg mri/aseg.mgz --sum stats/aseg.stats --pv mri/norm.mgz --empty --brainmask mri/brainmask.mgz --brain-vol-from-seg --excludeid 0 --excl-ctxgmwm --supratent --subcortgray --in mri/norm.mgz --in-intensity-name norm --in-intensity-units MR --etiv --surf-wm-vol --surf-ctx-vol --totalgray --euler --ctab /opt/freesurfer-6.0.0-min/ASegStatsLUT.txt --subject sub-0025427"^^xsd:string ;
+    fs:cvs_version "$Id: mri_segstats.c,v 1.121 2016/05/31 17:27:11 greve Exp $"^^xsd:string ;
+    fs:generating_program "mri_segstats"^^xsd:string ;
+    fs:hostname "ip-172-31-11-24"^^xsd:string ;
+    fs:machine "x86_64"^^xsd:string ;
+    fs:subjectname "sub-0025427"^^xsd:string ;
+    fs:sysname "Linux"^^xsd:string ;
+    fs:user "root"^^xsd:string .
 
 niiri:ef21ea4e-72d9-11ea-8776-003ee1ce9545 a prov:Activity ;
-    dct:description "FSL FAST/FIRST segmentation statistics" ;
+    dct:description "FSL FAST/FIRST segmentation statistics"^^xsd:string ;
+    dct:isPartOf niiri:d153320c-f87b-11ef-823b-acde48001122 ;
     prov:qualifiedAssociation [ a prov:Association ;
             prov:agent niiri:ea8810dc-72d9-11ea-8bf6-003ee1ce9545 ;
             prov:hadRole nidm:NIDM_0000164 ],
@@ -15907,16 +15975,18 @@ niiri:ef21ea4e-72d9-11ea-8776-003ee1ce9545 a prov:Activity ;
             prov:hadRole sio:Subject ] .
 
 niiri:ef4ed1a8-72d9-11ea-8728-003ee1ce9545 a prov:Activity ;
-    dct:description "FSL FAST/FIRST segmentation statistics" ;
+    dct:description "FSL FAST/FIRST segmentation statistics"^^xsd:string ;
+    dct:isPartOf niiri:d153320c-f87b-11ef-823b-acde48001122 ;
     prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:ea8810dc-72d9-11ea-8bf6-003ee1ce9545 ;
-            prov:hadRole nidm:NIDM_0000164 ],
-        [ a prov:Association ;
             prov:agent niiri:bc1da5f8-6f88-11ea-aeb1-003ee1ce9545 ;
-            prov:hadRole sio:Subject ] .
+            prov:hadRole sio:Subject ],
+        [ a prov:Association ;
+            prov:agent niiri:ea8810dc-72d9-11ea-8bf6-003ee1ce9545 ;
+            prov:hadRole nidm:NIDM_0000164 ] .
 
 niiri:efee59fa-6fd5-11ea-847b-003ee1ce9545 a prov:Activity ;
-    dct:description "ANTS segmentation statistics" ;
+    dct:description "ANTS segmentation statistics"^^xsd:string ;
+    dct:isPartOf niiri:d153320c-f87b-11ef-823b-acde48001122 ;
     prov:qualifiedAssociation [ a prov:Association ;
             prov:agent niiri:babd0b4c-6f88-11ea-8cd8-003ee1ce9545 ;
             prov:hadRole sio:Subject ],
@@ -15925,161 +15995,168 @@ niiri:efee59fa-6fd5-11ea-847b-003ee1ce9545 a prov:Activity ;
             prov:hadRole nidm:NIDM_0000164 ] .
 
 niiri:f14b172c-6f88-11ea-b5ad-003ee1ce9545 a prov:Activity ;
-    dct:description "Freesurfer segmentation statistics" ;
+    dct:description "Freesurfer segmentation statistics"^^xsd:string ;
+    dct:isPartOf niiri:d153320c-f87b-11ef-823b-acde48001122 ;
     prov:qualifiedAssociation [ a prov:Association ;
             prov:agent niiri:f256e4b6-6f88-11ea-b5ad-003ee1ce9545 ;
             prov:hadRole sio:Subject ],
         [ a prov:Association ;
             prov:agent niiri:e0a39f46-6f88-11ea-a1c0-003ee1ce9545 ;
             prov:hadRole nidm:NIDM_0000164 ] ;
-    fs:ColorTable "/opt/freesurfer-6.0.0-min/ASegStatsLUT.txt" ;
-    fs:ColorTableTimeStamp "2017/01/18 22:00:02" ;
-    fs:ExcludeSegId "0 2 3 41 42" ;
-    fs:Excluding "Cortical Gray and White Matter" ;
-    fs:InVolFile "mri/norm.mgz" ;
-    fs:InVolFileTimeStamp "2019/01/06 06:28:25" ;
-    fs:InVolFrame "0" ;
-    fs:NRows "45" ;
-    fs:NTableCols "10" ;
-    fs:PVVolFile "mri/norm.mgz" ;
-    fs:PVVolFileTimeStamp "2019/01/06 06:28:25" ;
-    fs:SUBJECTS_DIR "/working/derivatives/mindboggle/freesurfer_subjects" ;
-    fs:SegVolFile "mri/aseg.mgz" ;
-    fs:SegVolFileTimeStamp "2019/01/06 14:36:50" ;
-    fs:Title "Segmentation Statistics" ;
-    fs:VoxelVolume_mm3 "1" ;
-    fs:anatomy_type "volume" ;
-    fs:cmdline "mri_segstats --seg mri/aseg.mgz --sum stats/aseg.stats --pv mri/norm.mgz --empty --brainmask mri/brainmask.mgz --brain-vol-from-seg --excludeid 0 --excl-ctxgmwm --supratent --subcortgray --in mri/norm.mgz --in-intensity-name norm --in-intensity-units MR --etiv --surf-wm-vol --surf-ctx-vol --totalgray --euler --ctab /opt/freesurfer-6.0.0-min/ASegStatsLUT.txt --subject sub-0025430" ;
-    fs:cvs_version "$Id: mri_segstats.c,v 1.121 2016/05/31 17:27:11 greve Exp $" ;
-    fs:generating_program "mri_segstats" ;
-    fs:hostname "ip-172-31-13-242" ;
-    fs:machine "x86_64" ;
-    fs:subjectname "sub-0025430" ;
-    fs:sysname "Linux" ;
-    fs:user "root" .
+    fs:ColorTable "/opt/freesurfer-6.0.0-min/ASegStatsLUT.txt"^^xsd:string ;
+    fs:ColorTableTimeStamp "2017/01/18 22:00:02"^^xsd:string ;
+    fs:ExcludeSegId "0 2 3 41 42"^^xsd:string ;
+    fs:Excluding "Cortical Gray and White Matter"^^xsd:string ;
+    fs:InVolFile "mri/norm.mgz"^^xsd:string ;
+    fs:InVolFileTimeStamp "2019/01/06 06:28:25"^^xsd:string ;
+    fs:InVolFrame "0"^^xsd:string ;
+    fs:NRows "45"^^xsd:string ;
+    fs:NTableCols "10"^^xsd:string ;
+    fs:PVVolFile "mri/norm.mgz"^^xsd:string ;
+    fs:PVVolFileTimeStamp "2019/01/06 06:28:25"^^xsd:string ;
+    fs:SUBJECTS_DIR "/working/derivatives/mindboggle/freesurfer_subjects"^^xsd:string ;
+    fs:SegVolFile "mri/aseg.mgz"^^xsd:string ;
+    fs:SegVolFileTimeStamp "2019/01/06 14:36:50"^^xsd:string ;
+    fs:Title "Segmentation Statistics"^^xsd:string ;
+    fs:VoxelVolume_mm3 "1"^^xsd:string ;
+    fs:anatomy_type "volume"^^xsd:string ;
+    fs:cmdline "mri_segstats --seg mri/aseg.mgz --sum stats/aseg.stats --pv mri/norm.mgz --empty --brainmask mri/brainmask.mgz --brain-vol-from-seg --excludeid 0 --excl-ctxgmwm --supratent --subcortgray --in mri/norm.mgz --in-intensity-name norm --in-intensity-units MR --etiv --surf-wm-vol --surf-ctx-vol --totalgray --euler --ctab /opt/freesurfer-6.0.0-min/ASegStatsLUT.txt --subject sub-0025430"^^xsd:string ;
+    fs:cvs_version "$Id: mri_segstats.c,v 1.121 2016/05/31 17:27:11 greve Exp $"^^xsd:string ;
+    fs:generating_program "mri_segstats"^^xsd:string ;
+    fs:hostname "ip-172-31-13-242"^^xsd:string ;
+    fs:machine "x86_64"^^xsd:string ;
+    fs:subjectname "sub-0025430"^^xsd:string ;
+    fs:sysname "Linux"^^xsd:string ;
+    fs:user "root"^^xsd:string .
 
 niiri:f2286f2e-6f88-11ea-a4b8-003ee1ce9545 a prov:Activity ;
-    dct:description "Freesurfer segmentation statistics" ;
+    dct:description "Freesurfer segmentation statistics"^^xsd:string ;
+    dct:isPartOf niiri:d153320c-f87b-11ef-823b-acde48001122 ;
     prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:b32bdce4-6f88-11ea-a4b8-003ee1ce9545 ;
-            prov:hadRole sio:Subject ],
-        [ a prov:Association ;
             prov:agent niiri:e0a39f46-6f88-11ea-a1c0-003ee1ce9545 ;
-            prov:hadRole nidm:NIDM_0000164 ] ;
-    fs:ColorTable "/opt/freesurfer-6.0.0-min/ASegStatsLUT.txt" ;
-    fs:ColorTableTimeStamp "2017/01/18 22:00:02" ;
-    fs:ExcludeSegId "0 2 3 41 42" ;
-    fs:Excluding "Cortical Gray and White Matter" ;
-    fs:InVolFile "mri/norm.mgz" ;
-    fs:InVolFileTimeStamp "2019/01/11 15:03:18" ;
-    fs:InVolFrame "0" ;
-    fs:NRows "45" ;
-    fs:NTableCols "10" ;
-    fs:PVVolFile "mri/norm.mgz" ;
-    fs:PVVolFileTimeStamp "2019/01/11 15:03:18" ;
-    fs:SUBJECTS_DIR "/working/derivatives/mindboggle/freesurfer_subjects" ;
-    fs:SegVolFile "mri/aseg.mgz" ;
-    fs:SegVolFileTimeStamp "2019/01/12 01:16:15" ;
-    fs:Title "Segmentation Statistics" ;
-    fs:VoxelVolume_mm3 "1" ;
-    fs:anatomy_type "volume" ;
-    fs:cmdline "mri_segstats --seg mri/aseg.mgz --sum stats/aseg.stats --pv mri/norm.mgz --empty --brainmask mri/brainmask.mgz --brain-vol-from-seg --excludeid 0 --excl-ctxgmwm --supratent --subcortgray --in mri/norm.mgz --in-intensity-name norm --in-intensity-units MR --etiv --surf-wm-vol --surf-ctx-vol --totalgray --euler --ctab /opt/freesurfer-6.0.0-min/ASegStatsLUT.txt --subject sub-0025449" ;
-    fs:cvs_version "$Id: mri_segstats.c,v 1.121 2016/05/31 17:27:11 greve Exp $" ;
-    fs:generating_program "mri_segstats" ;
-    fs:hostname "ip-172-31-18-207" ;
-    fs:machine "x86_64" ;
-    fs:subjectname "sub-0025449" ;
-    fs:sysname "Linux" ;
-    fs:user "root" .
+            prov:hadRole nidm:NIDM_0000164 ],
+        [ a prov:Association ;
+            prov:agent niiri:b32bdce4-6f88-11ea-a4b8-003ee1ce9545 ;
+            prov:hadRole sio:Subject ] ;
+    fs:ColorTable "/opt/freesurfer-6.0.0-min/ASegStatsLUT.txt"^^xsd:string ;
+    fs:ColorTableTimeStamp "2017/01/18 22:00:02"^^xsd:string ;
+    fs:ExcludeSegId "0 2 3 41 42"^^xsd:string ;
+    fs:Excluding "Cortical Gray and White Matter"^^xsd:string ;
+    fs:InVolFile "mri/norm.mgz"^^xsd:string ;
+    fs:InVolFileTimeStamp "2019/01/11 15:03:18"^^xsd:string ;
+    fs:InVolFrame "0"^^xsd:string ;
+    fs:NRows "45"^^xsd:string ;
+    fs:NTableCols "10"^^xsd:string ;
+    fs:PVVolFile "mri/norm.mgz"^^xsd:string ;
+    fs:PVVolFileTimeStamp "2019/01/11 15:03:18"^^xsd:string ;
+    fs:SUBJECTS_DIR "/working/derivatives/mindboggle/freesurfer_subjects"^^xsd:string ;
+    fs:SegVolFile "mri/aseg.mgz"^^xsd:string ;
+    fs:SegVolFileTimeStamp "2019/01/12 01:16:15"^^xsd:string ;
+    fs:Title "Segmentation Statistics"^^xsd:string ;
+    fs:VoxelVolume_mm3 "1"^^xsd:string ;
+    fs:anatomy_type "volume"^^xsd:string ;
+    fs:cmdline "mri_segstats --seg mri/aseg.mgz --sum stats/aseg.stats --pv mri/norm.mgz --empty --brainmask mri/brainmask.mgz --brain-vol-from-seg --excludeid 0 --excl-ctxgmwm --supratent --subcortgray --in mri/norm.mgz --in-intensity-name norm --in-intensity-units MR --etiv --surf-wm-vol --surf-ctx-vol --totalgray --euler --ctab /opt/freesurfer-6.0.0-min/ASegStatsLUT.txt --subject sub-0025449"^^xsd:string ;
+    fs:cvs_version "$Id: mri_segstats.c,v 1.121 2016/05/31 17:27:11 greve Exp $"^^xsd:string ;
+    fs:generating_program "mri_segstats"^^xsd:string ;
+    fs:hostname "ip-172-31-18-207"^^xsd:string ;
+    fs:machine "x86_64"^^xsd:string ;
+    fs:subjectname "sub-0025449"^^xsd:string ;
+    fs:sysname "Linux"^^xsd:string ;
+    fs:user "root"^^xsd:string .
 
 niiri:f2b57c9c-6f88-11ea-b24c-003ee1ce9545 a prov:Activity ;
-    dct:description "Freesurfer segmentation statistics" ;
+    dct:description "Freesurfer segmentation statistics"^^xsd:string ;
+    dct:isPartOf niiri:d153320c-f87b-11ef-823b-acde48001122 ;
     prov:qualifiedAssociation [ a prov:Association ;
             prov:agent niiri:e0a39f46-6f88-11ea-a1c0-003ee1ce9545 ;
             prov:hadRole nidm:NIDM_0000164 ],
         [ a prov:Association ;
             prov:agent niiri:d3bf03c4-6f88-11ea-b24c-003ee1ce9545 ;
             prov:hadRole sio:Subject ] ;
-    fs:ColorTable "/opt/freesurfer-6.0.0-min/ASegStatsLUT.txt" ;
-    fs:ColorTableTimeStamp "2017/01/18 22:00:02" ;
-    fs:ExcludeSegId "0 2 3 41 42" ;
-    fs:Excluding "Cortical Gray and White Matter" ;
-    fs:InVolFile "mri/norm.mgz" ;
-    fs:InVolFileTimeStamp "2019/01/06 06:31:48" ;
-    fs:InVolFrame "0" ;
-    fs:NRows "45" ;
-    fs:NTableCols "10" ;
-    fs:PVVolFile "mri/norm.mgz" ;
-    fs:PVVolFileTimeStamp "2019/01/06 06:31:48" ;
-    fs:SUBJECTS_DIR "/working/derivatives/mindboggle/freesurfer_subjects" ;
-    fs:SegVolFile "mri/aseg.mgz" ;
-    fs:SegVolFileTimeStamp "2019/01/06 14:29:05" ;
-    fs:Title "Segmentation Statistics" ;
-    fs:VoxelVolume_mm3 "1" ;
-    fs:anatomy_type "volume" ;
-    fs:cmdline "mri_segstats --seg mri/aseg.mgz --sum stats/aseg.stats --pv mri/norm.mgz --empty --brainmask mri/brainmask.mgz --brain-vol-from-seg --excludeid 0 --excl-ctxgmwm --supratent --subcortgray --in mri/norm.mgz --in-intensity-name norm --in-intensity-units MR --etiv --surf-wm-vol --surf-ctx-vol --totalgray --euler --ctab /opt/freesurfer-6.0.0-min/ASegStatsLUT.txt --subject sub-0025450" ;
-    fs:cvs_version "$Id: mri_segstats.c,v 1.121 2016/05/31 17:27:11 greve Exp $" ;
-    fs:generating_program "mri_segstats" ;
-    fs:hostname "ip-172-31-9-129" ;
-    fs:machine "x86_64" ;
-    fs:subjectname "sub-0025450" ;
-    fs:sysname "Linux" ;
-    fs:user "root" .
+    fs:ColorTable "/opt/freesurfer-6.0.0-min/ASegStatsLUT.txt"^^xsd:string ;
+    fs:ColorTableTimeStamp "2017/01/18 22:00:02"^^xsd:string ;
+    fs:ExcludeSegId "0 2 3 41 42"^^xsd:string ;
+    fs:Excluding "Cortical Gray and White Matter"^^xsd:string ;
+    fs:InVolFile "mri/norm.mgz"^^xsd:string ;
+    fs:InVolFileTimeStamp "2019/01/06 06:31:48"^^xsd:string ;
+    fs:InVolFrame "0"^^xsd:string ;
+    fs:NRows "45"^^xsd:string ;
+    fs:NTableCols "10"^^xsd:string ;
+    fs:PVVolFile "mri/norm.mgz"^^xsd:string ;
+    fs:PVVolFileTimeStamp "2019/01/06 06:31:48"^^xsd:string ;
+    fs:SUBJECTS_DIR "/working/derivatives/mindboggle/freesurfer_subjects"^^xsd:string ;
+    fs:SegVolFile "mri/aseg.mgz"^^xsd:string ;
+    fs:SegVolFileTimeStamp "2019/01/06 14:29:05"^^xsd:string ;
+    fs:Title "Segmentation Statistics"^^xsd:string ;
+    fs:VoxelVolume_mm3 "1"^^xsd:string ;
+    fs:anatomy_type "volume"^^xsd:string ;
+    fs:cmdline "mri_segstats --seg mri/aseg.mgz --sum stats/aseg.stats --pv mri/norm.mgz --empty --brainmask mri/brainmask.mgz --brain-vol-from-seg --excludeid 0 --excl-ctxgmwm --supratent --subcortgray --in mri/norm.mgz --in-intensity-name norm --in-intensity-units MR --etiv --surf-wm-vol --surf-ctx-vol --totalgray --euler --ctab /opt/freesurfer-6.0.0-min/ASegStatsLUT.txt --subject sub-0025450"^^xsd:string ;
+    fs:cvs_version "$Id: mri_segstats.c,v 1.121 2016/05/31 17:27:11 greve Exp $"^^xsd:string ;
+    fs:generating_program "mri_segstats"^^xsd:string ;
+    fs:hostname "ip-172-31-9-129"^^xsd:string ;
+    fs:machine "x86_64"^^xsd:string ;
+    fs:subjectname "sub-0025450"^^xsd:string ;
+    fs:sysname "Linux"^^xsd:string ;
+    fs:user "root"^^xsd:string .
 
 niiri:f3aa4752-72d9-11ea-a86a-003ee1ce9545 a prov:Activity ;
-    dct:description "FSL FAST/FIRST segmentation statistics" ;
+    dct:description "FSL FAST/FIRST segmentation statistics"^^xsd:string ;
+    dct:isPartOf niiri:d153320c-f87b-11ef-823b-acde48001122 ;
     prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:ea8810dc-72d9-11ea-8bf6-003ee1ce9545 ;
-            prov:hadRole nidm:NIDM_0000164 ],
-        [ a prov:Association ;
             prov:agent niiri:dfd49ec0-6f88-11ea-a031-003ee1ce9545 ;
-            prov:hadRole sio:Subject ] .
+            prov:hadRole sio:Subject ],
+        [ a prov:Association ;
+            prov:agent niiri:ea8810dc-72d9-11ea-8bf6-003ee1ce9545 ;
+            prov:hadRole nidm:NIDM_0000164 ] .
 
 niiri:f3e505f2-72d9-11ea-b249-003ee1ce9545 a prov:Activity ;
-    dct:description "FSL FAST/FIRST segmentation statistics" ;
+    dct:description "FSL FAST/FIRST segmentation statistics"^^xsd:string ;
+    dct:isPartOf niiri:d153320c-f87b-11ef-823b-acde48001122 ;
     prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:ea8810dc-72d9-11ea-8bf6-003ee1ce9545 ;
-            prov:hadRole nidm:NIDM_0000164 ],
-        [ a prov:Association ;
             prov:agent niiri:e07f6a1a-6f88-11ea-add9-003ee1ce9545 ;
-            prov:hadRole sio:Subject ] .
+            prov:hadRole sio:Subject ],
+        [ a prov:Association ;
+            prov:agent niiri:ea8810dc-72d9-11ea-8bf6-003ee1ce9545 ;
+            prov:hadRole nidm:NIDM_0000164 ] .
 
 niiri:f4a63994-6f88-11ea-891e-003ee1ce9545 a prov:Activity ;
-    dct:description "Freesurfer segmentation statistics" ;
+    dct:description "Freesurfer segmentation statistics"^^xsd:string ;
+    dct:isPartOf niiri:d153320c-f87b-11ef-823b-acde48001122 ;
     prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:e0a39f46-6f88-11ea-a1c0-003ee1ce9545 ;
-            prov:hadRole nidm:NIDM_0000164 ],
-        [ a prov:Association ;
             prov:agent niiri:a5b2253c-6f88-11ea-891e-003ee1ce9545 ;
-            prov:hadRole sio:Subject ] ;
-    fs:ColorTable "/opt/freesurfer-6.0.0-min/ASegStatsLUT.txt" ;
-    fs:ColorTableTimeStamp "2017/01/18 22:00:02" ;
-    fs:ExcludeSegId "0 2 3 41 42" ;
-    fs:Excluding "Cortical Gray and White Matter" ;
-    fs:InVolFile "mri/norm.mgz" ;
-    fs:InVolFileTimeStamp "2019/01/11 15:05:58" ;
-    fs:InVolFrame "0" ;
-    fs:NRows "45" ;
-    fs:NTableCols "10" ;
-    fs:PVVolFile "mri/norm.mgz" ;
-    fs:PVVolFileTimeStamp "2019/01/11 15:05:58" ;
-    fs:SUBJECTS_DIR "/working/derivatives/mindboggle/freesurfer_subjects" ;
-    fs:SegVolFile "mri/aseg.mgz" ;
-    fs:SegVolFileTimeStamp "2019/01/11 23:24:20" ;
-    fs:Title "Segmentation Statistics" ;
-    fs:VoxelVolume_mm3 "1" ;
-    fs:anatomy_type "volume" ;
-    fs:cmdline "mri_segstats --seg mri/aseg.mgz --sum stats/aseg.stats --pv mri/norm.mgz --empty --brainmask mri/brainmask.mgz --brain-vol-from-seg --excludeid 0 --excl-ctxgmwm --supratent --subcortgray --in mri/norm.mgz --in-intensity-name norm --in-intensity-units MR --etiv --surf-wm-vol --surf-ctx-vol --totalgray --euler --ctab /opt/freesurfer-6.0.0-min/ASegStatsLUT.txt --subject sub-0025444" ;
-    fs:cvs_version "$Id: mri_segstats.c,v 1.121 2016/05/31 17:27:11 greve Exp $" ;
-    fs:generating_program "mri_segstats" ;
-    fs:hostname "ip-172-31-29-200" ;
-    fs:machine "x86_64" ;
-    fs:subjectname "sub-0025444" ;
-    fs:sysname "Linux" ;
-    fs:user "root" .
+            prov:hadRole sio:Subject ],
+        [ a prov:Association ;
+            prov:agent niiri:e0a39f46-6f88-11ea-a1c0-003ee1ce9545 ;
+            prov:hadRole nidm:NIDM_0000164 ] ;
+    fs:ColorTable "/opt/freesurfer-6.0.0-min/ASegStatsLUT.txt"^^xsd:string ;
+    fs:ColorTableTimeStamp "2017/01/18 22:00:02"^^xsd:string ;
+    fs:ExcludeSegId "0 2 3 41 42"^^xsd:string ;
+    fs:Excluding "Cortical Gray and White Matter"^^xsd:string ;
+    fs:InVolFile "mri/norm.mgz"^^xsd:string ;
+    fs:InVolFileTimeStamp "2019/01/11 15:05:58"^^xsd:string ;
+    fs:InVolFrame "0"^^xsd:string ;
+    fs:NRows "45"^^xsd:string ;
+    fs:NTableCols "10"^^xsd:string ;
+    fs:PVVolFile "mri/norm.mgz"^^xsd:string ;
+    fs:PVVolFileTimeStamp "2019/01/11 15:05:58"^^xsd:string ;
+    fs:SUBJECTS_DIR "/working/derivatives/mindboggle/freesurfer_subjects"^^xsd:string ;
+    fs:SegVolFile "mri/aseg.mgz"^^xsd:string ;
+    fs:SegVolFileTimeStamp "2019/01/11 23:24:20"^^xsd:string ;
+    fs:Title "Segmentation Statistics"^^xsd:string ;
+    fs:VoxelVolume_mm3 "1"^^xsd:string ;
+    fs:anatomy_type "volume"^^xsd:string ;
+    fs:cmdline "mri_segstats --seg mri/aseg.mgz --sum stats/aseg.stats --pv mri/norm.mgz --empty --brainmask mri/brainmask.mgz --brain-vol-from-seg --excludeid 0 --excl-ctxgmwm --supratent --subcortgray --in mri/norm.mgz --in-intensity-name norm --in-intensity-units MR --etiv --surf-wm-vol --surf-ctx-vol --totalgray --euler --ctab /opt/freesurfer-6.0.0-min/ASegStatsLUT.txt --subject sub-0025444"^^xsd:string ;
+    fs:cvs_version "$Id: mri_segstats.c,v 1.121 2016/05/31 17:27:11 greve Exp $"^^xsd:string ;
+    fs:generating_program "mri_segstats"^^xsd:string ;
+    fs:hostname "ip-172-31-29-200"^^xsd:string ;
+    fs:machine "x86_64"^^xsd:string ;
+    fs:subjectname "sub-0025444"^^xsd:string ;
+    fs:sysname "Linux"^^xsd:string ;
+    fs:user "root"^^xsd:string .
 
 niiri:f5770eee-6fd5-11ea-bfa7-003ee1ce9545 a prov:Activity ;
-    dct:description "ANTS segmentation statistics" ;
+    dct:description "ANTS segmentation statistics"^^xsd:string ;
+    dct:isPartOf niiri:d153320c-f87b-11ef-823b-acde48001122 ;
     prov:qualifiedAssociation [ a prov:Association ;
             prov:agent niiri:a4849970-6fd5-11ea-ae57-003ee1ce9545 ;
             prov:hadRole nidm:NIDM_0000164 ],
@@ -16088,16 +16165,18 @@ niiri:f5770eee-6fd5-11ea-bfa7-003ee1ce9545 a prov:Activity ;
             prov:hadRole sio:Subject ] .
 
 niiri:f642dd98-6fd6-11ea-a203-003ee1ce9545 a prov:Activity ;
-    dct:description "ANTS segmentation statistics" ;
+    dct:description "ANTS segmentation statistics"^^xsd:string ;
+    dct:isPartOf niiri:d153320c-f87b-11ef-823b-acde48001122 ;
     prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:a4849970-6fd5-11ea-ae57-003ee1ce9545 ;
-            prov:hadRole nidm:NIDM_0000164 ],
-        [ a prov:Association ;
             prov:agent niiri:fb664250-6f88-11ea-8213-003ee1ce9545 ;
-            prov:hadRole sio:Subject ] .
+            prov:hadRole sio:Subject ],
+        [ a prov:Association ;
+            prov:agent niiri:a4849970-6fd5-11ea-ae57-003ee1ce9545 ;
+            prov:hadRole nidm:NIDM_0000164 ] .
 
 niiri:f89b8c60-72d9-11ea-99a3-003ee1ce9545 a prov:Activity ;
-    dct:description "FSL FAST/FIRST segmentation statistics" ;
+    dct:description "FSL FAST/FIRST segmentation statistics"^^xsd:string ;
+    dct:isPartOf niiri:d153320c-f87b-11ef-823b-acde48001122 ;
     prov:qualifiedAssociation [ a prov:Association ;
             prov:agent niiri:e94c491a-6f88-11ea-9c79-003ee1ce9545 ;
             prov:hadRole sio:Subject ],
@@ -16106,102 +16185,108 @@ niiri:f89b8c60-72d9-11ea-99a3-003ee1ce9545 a prov:Activity ;
             prov:hadRole nidm:NIDM_0000164 ] .
 
 niiri:fa6817b0-6f88-11ea-9a19-003ee1ce9545 a prov:Activity ;
-    dct:description "Freesurfer segmentation statistics" ;
+    dct:description "Freesurfer segmentation statistics"^^xsd:string ;
+    dct:isPartOf niiri:d153320c-f87b-11ef-823b-acde48001122 ;
     prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:fb6a9e9e-6f88-11ea-9a19-003ee1ce9545 ;
-            prov:hadRole sio:Subject ],
-        [ a prov:Association ;
             prov:agent niiri:e0a39f46-6f88-11ea-a1c0-003ee1ce9545 ;
-            prov:hadRole nidm:NIDM_0000164 ] ;
-    fs:ColorTable "/opt/freesurfer-6.0.0-min/ASegStatsLUT.txt" ;
-    fs:ColorTableTimeStamp "2017/01/18 22:00:02" ;
-    fs:ExcludeSegId "0 2 3 41 42" ;
-    fs:Excluding "Cortical Gray and White Matter" ;
-    fs:InVolFile "mri/norm.mgz" ;
-    fs:InVolFileTimeStamp "2019/01/11 15:07:32" ;
-    fs:InVolFrame "0" ;
-    fs:NRows "45" ;
-    fs:NTableCols "10" ;
-    fs:PVVolFile "mri/norm.mgz" ;
-    fs:PVVolFileTimeStamp "2019/01/11 15:07:32" ;
-    fs:SUBJECTS_DIR "/working/derivatives/mindboggle/freesurfer_subjects" ;
-    fs:SegVolFile "mri/aseg.mgz" ;
-    fs:SegVolFileTimeStamp "2019/01/11 23:31:30" ;
-    fs:Title "Segmentation Statistics" ;
-    fs:VoxelVolume_mm3 "1" ;
-    fs:anatomy_type "volume" ;
-    fs:cmdline "mri_segstats --seg mri/aseg.mgz --sum stats/aseg.stats --pv mri/norm.mgz --empty --brainmask mri/brainmask.mgz --brain-vol-from-seg --excludeid 0 --excl-ctxgmwm --supratent --subcortgray --in mri/norm.mgz --in-intensity-name norm --in-intensity-units MR --etiv --surf-wm-vol --surf-ctx-vol --totalgray --euler --ctab /opt/freesurfer-6.0.0-min/ASegStatsLUT.txt --subject sub-0025439" ;
-    fs:cvs_version "$Id: mri_segstats.c,v 1.121 2016/05/31 17:27:11 greve Exp $" ;
-    fs:generating_program "mri_segstats" ;
-    fs:hostname "ip-172-31-18-150" ;
-    fs:machine "x86_64" ;
-    fs:subjectname "sub-0025439" ;
-    fs:sysname "Linux" ;
-    fs:user "root" .
+            prov:hadRole nidm:NIDM_0000164 ],
+        [ a prov:Association ;
+            prov:agent niiri:fb6a9e9e-6f88-11ea-9a19-003ee1ce9545 ;
+            prov:hadRole sio:Subject ] ;
+    fs:ColorTable "/opt/freesurfer-6.0.0-min/ASegStatsLUT.txt"^^xsd:string ;
+    fs:ColorTableTimeStamp "2017/01/18 22:00:02"^^xsd:string ;
+    fs:ExcludeSegId "0 2 3 41 42"^^xsd:string ;
+    fs:Excluding "Cortical Gray and White Matter"^^xsd:string ;
+    fs:InVolFile "mri/norm.mgz"^^xsd:string ;
+    fs:InVolFileTimeStamp "2019/01/11 15:07:32"^^xsd:string ;
+    fs:InVolFrame "0"^^xsd:string ;
+    fs:NRows "45"^^xsd:string ;
+    fs:NTableCols "10"^^xsd:string ;
+    fs:PVVolFile "mri/norm.mgz"^^xsd:string ;
+    fs:PVVolFileTimeStamp "2019/01/11 15:07:32"^^xsd:string ;
+    fs:SUBJECTS_DIR "/working/derivatives/mindboggle/freesurfer_subjects"^^xsd:string ;
+    fs:SegVolFile "mri/aseg.mgz"^^xsd:string ;
+    fs:SegVolFileTimeStamp "2019/01/11 23:31:30"^^xsd:string ;
+    fs:Title "Segmentation Statistics"^^xsd:string ;
+    fs:VoxelVolume_mm3 "1"^^xsd:string ;
+    fs:anatomy_type "volume"^^xsd:string ;
+    fs:cmdline "mri_segstats --seg mri/aseg.mgz --sum stats/aseg.stats --pv mri/norm.mgz --empty --brainmask mri/brainmask.mgz --brain-vol-from-seg --excludeid 0 --excl-ctxgmwm --supratent --subcortgray --in mri/norm.mgz --in-intensity-name norm --in-intensity-units MR --etiv --surf-wm-vol --surf-ctx-vol --totalgray --euler --ctab /opt/freesurfer-6.0.0-min/ASegStatsLUT.txt --subject sub-0025439"^^xsd:string ;
+    fs:cvs_version "$Id: mri_segstats.c,v 1.121 2016/05/31 17:27:11 greve Exp $"^^xsd:string ;
+    fs:generating_program "mri_segstats"^^xsd:string ;
+    fs:hostname "ip-172-31-18-150"^^xsd:string ;
+    fs:machine "x86_64"^^xsd:string ;
+    fs:subjectname "sub-0025439"^^xsd:string ;
+    fs:sysname "Linux"^^xsd:string ;
+    fs:user "root"^^xsd:string .
 
 niiri:fa76fbb8-6f88-11ea-9627-003ee1ce9545 a prov:Activity ;
-    dct:description "Freesurfer segmentation statistics" ;
+    dct:description "Freesurfer segmentation statistics"^^xsd:string ;
+    dct:isPartOf niiri:d153320c-f87b-11ef-823b-acde48001122 ;
     prov:qualifiedAssociation [ a prov:Association ;
             prov:agent niiri:e0a39f46-6f88-11ea-a1c0-003ee1ce9545 ;
             prov:hadRole nidm:NIDM_0000164 ],
         [ a prov:Association ;
             prov:agent niiri:db79a236-6f88-11ea-9627-003ee1ce9545 ;
             prov:hadRole sio:Subject ] ;
-    fs:ColorTable "/opt/freesurfer-6.0.0-min/ASegStatsLUT.txt" ;
-    fs:ColorTableTimeStamp "2017/01/18 22:00:02" ;
-    fs:ExcludeSegId "0 2 3 41 42" ;
-    fs:Excluding "Cortical Gray and White Matter" ;
-    fs:InVolFile "mri/norm.mgz" ;
-    fs:InVolFileTimeStamp "2019/01/06 06:29:22" ;
-    fs:InVolFrame "0" ;
-    fs:NRows "45" ;
-    fs:NTableCols "10" ;
-    fs:PVVolFile "mri/norm.mgz" ;
-    fs:PVVolFileTimeStamp "2019/01/06 06:29:22" ;
-    fs:SUBJECTS_DIR "/working/derivatives/mindboggle/freesurfer_subjects" ;
-    fs:SegVolFile "mri/aseg.mgz" ;
-    fs:SegVolFileTimeStamp "2019/01/06 16:05:27" ;
-    fs:Title "Segmentation Statistics" ;
-    fs:VoxelVolume_mm3 "1" ;
-    fs:anatomy_type "volume" ;
-    fs:cmdline "mri_segstats --seg mri/aseg.mgz --sum stats/aseg.stats --pv mri/norm.mgz --empty --brainmask mri/brainmask.mgz --brain-vol-from-seg --excludeid 0 --excl-ctxgmwm --supratent --subcortgray --in mri/norm.mgz --in-intensity-name norm --in-intensity-units MR --etiv --surf-wm-vol --surf-ctx-vol --totalgray --euler --ctab /opt/freesurfer-6.0.0-min/ASegStatsLUT.txt --subject sub-0025433" ;
-    fs:cvs_version "$Id: mri_segstats.c,v 1.121 2016/05/31 17:27:11 greve Exp $" ;
-    fs:generating_program "mri_segstats" ;
-    fs:hostname "ip-172-31-13-98" ;
-    fs:machine "x86_64" ;
-    fs:subjectname "sub-0025433" ;
-    fs:sysname "Linux" ;
-    fs:user "root" .
+    fs:ColorTable "/opt/freesurfer-6.0.0-min/ASegStatsLUT.txt"^^xsd:string ;
+    fs:ColorTableTimeStamp "2017/01/18 22:00:02"^^xsd:string ;
+    fs:ExcludeSegId "0 2 3 41 42"^^xsd:string ;
+    fs:Excluding "Cortical Gray and White Matter"^^xsd:string ;
+    fs:InVolFile "mri/norm.mgz"^^xsd:string ;
+    fs:InVolFileTimeStamp "2019/01/06 06:29:22"^^xsd:string ;
+    fs:InVolFrame "0"^^xsd:string ;
+    fs:NRows "45"^^xsd:string ;
+    fs:NTableCols "10"^^xsd:string ;
+    fs:PVVolFile "mri/norm.mgz"^^xsd:string ;
+    fs:PVVolFileTimeStamp "2019/01/06 06:29:22"^^xsd:string ;
+    fs:SUBJECTS_DIR "/working/derivatives/mindboggle/freesurfer_subjects"^^xsd:string ;
+    fs:SegVolFile "mri/aseg.mgz"^^xsd:string ;
+    fs:SegVolFileTimeStamp "2019/01/06 16:05:27"^^xsd:string ;
+    fs:Title "Segmentation Statistics"^^xsd:string ;
+    fs:VoxelVolume_mm3 "1"^^xsd:string ;
+    fs:anatomy_type "volume"^^xsd:string ;
+    fs:cmdline "mri_segstats --seg mri/aseg.mgz --sum stats/aseg.stats --pv mri/norm.mgz --empty --brainmask mri/brainmask.mgz --brain-vol-from-seg --excludeid 0 --excl-ctxgmwm --supratent --subcortgray --in mri/norm.mgz --in-intensity-name norm --in-intensity-units MR --etiv --surf-wm-vol --surf-ctx-vol --totalgray --euler --ctab /opt/freesurfer-6.0.0-min/ASegStatsLUT.txt --subject sub-0025433"^^xsd:string ;
+    fs:cvs_version "$Id: mri_segstats.c,v 1.121 2016/05/31 17:27:11 greve Exp $"^^xsd:string ;
+    fs:generating_program "mri_segstats"^^xsd:string ;
+    fs:hostname "ip-172-31-13-98"^^xsd:string ;
+    fs:machine "x86_64"^^xsd:string ;
+    fs:subjectname "sub-0025433"^^xsd:string ;
+    fs:sysname "Linux"^^xsd:string ;
+    fs:user "root"^^xsd:string .
 
 niiri:faabae6e-72d9-11ea-a514-003ee1ce9545 a prov:Activity ;
-    dct:description "FSL FAST/FIRST segmentation statistics" ;
+    dct:description "FSL FAST/FIRST segmentation statistics"^^xsd:string ;
+    dct:isPartOf niiri:d153320c-f87b-11ef-823b-acde48001122 ;
     prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:ea8810dc-72d9-11ea-8bf6-003ee1ce9545 ;
-            prov:hadRole nidm:NIDM_0000164 ],
-        [ a prov:Association ;
             prov:agent niiri:f492a694-6f88-11ea-af87-003ee1ce9545 ;
-            prov:hadRole sio:Subject ] .
-
-niiri:fb02b4bc-6fd5-11ea-94b3-003ee1ce9545 a prov:Activity ;
-    dct:description "ANTS segmentation statistics" ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:faf492f0-6f88-11ea-82c1-003ee1ce9545 ;
             prov:hadRole sio:Subject ],
         [ a prov:Association ;
-            prov:agent niiri:a4849970-6fd5-11ea-ae57-003ee1ce9545 ;
+            prov:agent niiri:ea8810dc-72d9-11ea-8bf6-003ee1ce9545 ;
             prov:hadRole nidm:NIDM_0000164 ] .
 
-niiri:fcdf5cf4-72d9-11ea-8364-003ee1ce9545 a prov:Activity ;
-    dct:description "FSL FAST/FIRST segmentation statistics" ;
+niiri:fb02b4bc-6fd5-11ea-94b3-003ee1ce9545 a prov:Activity ;
+    dct:description "ANTS segmentation statistics"^^xsd:string ;
+    dct:isPartOf niiri:d153320c-f87b-11ef-823b-acde48001122 ;
     prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:ea8810dc-72d9-11ea-8bf6-003ee1ce9545 ;
+            prov:agent niiri:a4849970-6fd5-11ea-ae57-003ee1ce9545 ;
             prov:hadRole nidm:NIDM_0000164 ],
         [ a prov:Association ;
-            prov:agent niiri:be43b5cc-6f88-11ea-9fb4-003ee1ce9545 ;
+            prov:agent niiri:faf492f0-6f88-11ea-82c1-003ee1ce9545 ;
             prov:hadRole sio:Subject ] .
 
+niiri:fcdf5cf4-72d9-11ea-8364-003ee1ce9545 a prov:Activity ;
+    dct:description "FSL FAST/FIRST segmentation statistics"^^xsd:string ;
+    dct:isPartOf niiri:d153320c-f87b-11ef-823b-acde48001122 ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:be43b5cc-6f88-11ea-9fb4-003ee1ce9545 ;
+            prov:hadRole sio:Subject ],
+        [ a prov:Association ;
+            prov:agent niiri:ea8810dc-72d9-11ea-8bf6-003ee1ce9545 ;
+            prov:hadRole nidm:NIDM_0000164 ] .
+
 niiri:fd550ac4-72d9-11ea-9bfa-003ee1ce9545 a prov:Activity ;
-    dct:description "FSL FAST/FIRST segmentation statistics" ;
+    dct:description "FSL FAST/FIRST segmentation statistics"^^xsd:string ;
+    dct:isPartOf niiri:d153320c-f87b-11ef-823b-acde48001122 ;
     prov:qualifiedAssociation [ a prov:Association ;
             prov:agent niiri:ea8810dc-72d9-11ea-8bf6-003ee1ce9545 ;
             prov:hadRole nidm:NIDM_0000164 ],
@@ -16310,4 +16395,7 @@ niiri:e0a39f46-6f88-11ea-a1c0-003ee1ce9545 a prov:Agent,
 niiri:ea8810dc-72d9-11ea-8bf6-003ee1ce9545 a prov:Agent,
         prov:SoftwareAgent ;
     nidm:NIDM_0000164 fsl: .
+
+niiri:d153320c-f87b-11ef-823b-acde48001122 a nidm:Project,
+        prov:Activity .
 
