@@ -1,0 +1,1019 @@
+{
+    "DD(source='Phenotypic_V1_0b.csv', variable='SITE_ID')": {
+        "hasUnit": "",
+        "minValue": "",
+        "maxValue": "",
+        "label": "site identifier",
+        "description": "Number assigned to site",
+        "source_variable": "SITE_ID",
+        "valueType": "http://www.w3.org/2001/XMLSchema#string",
+        "associatedWith": "NIDM"
+    },
+    "DD(source='ndar', variable='SUB_ID')": {
+        "label": "SUB_ID",
+        "description": "subject/participant identifier",
+        "source_variable": "SUB_ID",
+        "valueType": "http://www.w3.org/2001/XMLSchema#string",
+        "isAbout": { 
+			"@id": "https://ndar.nih.gov/api/datadictionary/v2/dataelement/src_subject_id",
+			"label": "src_subject_id"
+		}
+    },
+    "DD(source='Phenotypic_V1_0b.csv', variable='FILE_ID')": {
+        "hasUnit": "",
+        "minValue": "",
+        "maxValue": "",
+        "label": "file identifier",
+        "description": "filename",
+        "source_variable": "FILE_ID",
+        "valueType": "http://www.w3.org/2001/XMLSchema#string",
+        "associatedWith": "NIDM"
+    },
+    "DD(source='Phenotypic_V1_0b.csv', variable='DX_GROUP')": {
+        "minValue": "NA",
+        "maxValue": "NA",
+        "hasUnit": "NA",
+        "label": "diagnostic group",
+        "description": "diagnosis",
+        "source_variable": "DX_GROUP",
+        "isAbout": { 
+			"@id": "http://ncitt.ncit.nih.gov/Diagnosis",
+			"label": "Diagnosis"
+		},
+        "valueType": "http://www.w3.org/2001/XMLSchema#complexType",
+        "associatedWith": "NIDM",
+        "levels": {
+            "Autism": "1",
+            "Control": "2"
+        }
+    },
+    "DD(source='Phenotypic_V1_0b.csv', variable='DSM_IV_TR')": {
+        "minValue": "NA",
+        "maxValue": "NA",
+        "hasUnit": "NA",
+        "label": "DSM_IV_TR",
+        "description": "DSM-IV-TR PDD Category",
+        "source_variable": "DSM_IV_TR",
+        "valueType": "http://www.w3.org/2001/XMLSchema#complexType",
+        "isAbout": { 
+			"@id": "http://ncitt.ncit.nih.gov/Diagnosis",
+			"label": "Diagnosis"
+		},
+        "associatedWith": "NIDM",
+        "levels": {
+            "Control": "0",
+            "Autism": "1",
+            "Aspergers": "2",
+            "PDD-NOS": "3",
+            "Aspergers or PDD-NOS": "4"
+        }
+    },
+    "DD(source='Phenotypic_V1_0b.csv', variable='AGE_AT_SCAN')": {
+        "hasUnit": "years",
+        "minValue": "6",
+        "maxValue": "47",
+        "label": "age at scan",
+        "description": "Age at time of scan in years",
+        "source_variable": "AGE_AT_SCAN",
+        "valueType": "http://www.w3.org/2001/XMLSchema#float",
+        "associatedWith": "NIDM",
+        "isAbout": {
+            "@id": "http://uri.interlex.org/ilx_0100400",
+			"label": "Age"
+        }
+    },
+    "DD(source='Phenotypic_V1_0b.csv', variable='SEX')": {
+        "minValue": "NA",
+        "maxValue": "NA",
+        "hasUnit": "NA",
+        "label": "SEX",
+        "description": "subject gender",
+        "source_variable": "SEX",
+        "valueType": "http://www.w3.org/2001/XMLSchema#complexType",
+        "associatedWith": "NIDM",
+        "levels": {
+            "Male": "1",
+            "Female": "2"
+        },
+        "isAbout": {
+            "@id" : "http://uri.interlex.org/base/ilx_0101292",
+			"label" : "Biological sex"
+        }
+    },
+    "DD(source='Phenotypic_V1_0b.csv', variable='HANDEDNESS_CATEGORY')": {
+        "minValue": "NA",
+        "maxValue": "NA",
+        "hasUnit": "NA",
+        "label": "handedness",
+        "description": "subject handedness category",
+        "source_variable": "HANDEDNESS_CATEGORY",
+        "valueType": "http://www.w3.org/2001/XMLSchema#complexType",
+        "associatedWith": "NIDM",
+        "levels": {
+            "Right": "R",
+            "Left": "L",
+            "Ambidexterous": "Ambi"
+        },
+        "isAbout": {
+            "@id" : "http://purl.obolibrary.org/obo/PATO_0002201",
+			"label" : "handedness"
+        }
+    },
+    "DD(source='Phenotypic_V1_0b.csv', variable='HANDEDNESS_SCORES')": {
+        "hasUnit": "",
+        "minValue": "-100",
+        "maxValue": "100",
+        "label": "HANDEDNESS_SCORES",
+        "description": "subject handedness scores",
+        "source_variable": "HANDEDNESS_SCORES",
+        "valueType": "http://www.w3.org/2001/XMLSchema#integer",
+        "associatedWith": "NIDM",
+        "isAbout": {
+            "@id" : "http://purl.obolibrary.org/obo/PATO_0002201",
+			"label" : "handedness"
+        }
+    },
+    "DD(source='Phenotypic_V1_0b.csv', variable='FIQ')": {
+        "hasUnit": "",
+        "minValue": "30",
+        "maxValue": "170",
+        "label": "FIQ",
+        "description": "Full IQ Standard Score",
+        "source_variable": "FIQ",
+        "valueType": "http://www.w3.org/2001/XMLSchema#integer",
+        "associatedWith": "NIDM",
+        "isAbout": {
+            "@id" : "http://uri.interlex.org/base/ilx_0739365",
+			"label" : "full intelligence quotient"
+        }
+    },
+    "DD(source='Phenotypic_V1_0b.csv', variable='VIQ')": {
+        "hasUnit": "",
+        "minValue": "31",
+        "maxValue": "169",
+        "label": "VIQ",
+        "description": "verbal intelligence score",
+        "source_variable": "VIQ",
+        "valueType": "http://www.w3.org/2001/XMLSchema#integer",
+        "associatedWith": "NIDM",
+        "isAbout": {
+            "@id" : "http://uri.interlex.org/base/ilx_0739359",
+			"label" : "verbal intelligence quotient"
+        }
+    },
+    "DD(source='Phenotypic_V1_0b.csv', variable='PIQ')": {
+        "hasUnit": "",
+        "minValue": "31",
+        "maxValue": "166",
+        "label": "PIQ",
+        "description": "performance intelligence score",
+        "source_variable": "PIQ",
+        "valueType": "http://www.w3.org/2001/XMLSchema#integer",
+        "associatedWith": "NIDM",
+        "isAbout": {
+            "@id" : "http://uri.interlex.org/base/ilx_0739363",
+			"label" : "performance intelligence quotient"
+        }
+    },
+    "DD(source='Phenotypic_V1_0b.csv', variable='FIQ_TEST_TYPE')": {
+        "minValue": "NA",
+        "maxValue": "NA",
+        "hasUnit": "NA",
+        "label": "FIQ_TEST_TYPE",
+        "description": "IQ test administered for full scale",
+        "source_variable": "FIQ_TEST_TYPE",
+        "valueType": "http://www.w3.org/2001/XMLSchema#complexType",
+        "associatedWith": "NIDM",
+        "levels": [
+            "DAS_II_SA",
+            "GIT",
+            "HAWIK",
+            "WAIS_III",
+            "WASI",
+            "WISC_III",
+            "WISC_III_DUTCH",
+            "WISC_IV_4_SUBTESTS",
+            "WISC_IV_FULL",
+            "WST"
+        ]
+    },
+    "DD(source='Phenotypic_V1_0b.csv', variable='VIQ_TEST_TYPE')": {
+        "minValue": "NA",
+        "maxValue": "NA",
+        "hasUnit": "NA",
+        "label": "VIQ_TEST_TYPE",
+        "description": "IQ test administered for verbal IQ",
+        "source_variable": "VIQ_TEST_TYPE",
+        "valueType": "http://www.w3.org/2001/XMLSchema#complexType",
+        "associatedWith": "NIDM",
+        "levels": [
+            "DAS_II_SA",
+            "GIT",
+            "HAWIK",
+            "PPVT",
+            "WAIS_III",
+            "WASI",
+            "WISC_III",
+            "WISC_III_DUTCH",
+            "WISC_IV_4",
+            "WISC_IV_FULL",
+            "WST"
+        ]
+    },
+    "DD(source='Phenotypic_V1_0b.csv', variable='PIQ_TEST_TYPE')": {
+        "minValue": "NA",
+        "maxValue": "NA",
+        "hasUnit": "NA",
+        "label": "PIQ_TEST_TYPE",
+        "description": "IQ test administered for performance IQ",
+        "source_variable": "PIQ_TEST_TYPE",
+        "valueType": "http://www.w3.org/2001/XMLSchema#complexType",
+        "associatedWith": "NIDM",
+        "levels": [
+            "DAS_II_SA",
+            "GIT",
+            "HAWIK",
+            "RAVENS",
+            "WAIS_III",
+            "WASI",
+            "WISC_III",
+            "WISC_III_DUTCH",
+            "WISC_IV_4_SUBTESTS",
+            "WISC_IV_FULL",
+            "WST"
+        ]
+    },
+    "DD(source='Phenotypic_V1_0b.csv', variable='ADI_R_SOCIAL_TOTAL_A')": {
+        "hasUnit": "",
+        "minValue": "0",
+        "maxValue": "30",
+        "label": "ADI_R_SOCIAL_TOTAL_A",
+        "description": "Reciprocal Social Interaction Subscore (A)Total for Autism Diagnostic Interview-Revised",
+        "source_variable": "ADI_R_SOCIAL_TOTAL_A",
+        "valueType": "http://www.w3.org/2001/XMLSchema#integer",
+        "associatedWith": "NIDM"
+    },
+    "DD(source='Phenotypic_V1_0b.csv', variable='ADI_R_VERBAL_TOTAL_BV')": {
+        "hasUnit": "",
+        "minValue": "0",
+        "maxValue": "26",
+        "label": "ADI_R_VERBAL_TOTAL_BV",
+        "description": "Abnormalities in Communication Subscore (B) Total for Autism Diagnostic Interview-Revised",
+        "source_variable": "ADI_R_VERBAL_TOTAL_BV",
+        "valueType": "http://www.w3.org/2001/XMLSchema#integer",
+        "associatedWith": "NIDM"
+    },
+    "DD(source='Phenotypic_V1_0b.csv', variable='ADI_RRB_TOTAL_C')": {
+        "hasUnit": "",
+        "minValue": "0",
+        "maxValue": "12",
+        "label": "ADI_RRB_TOTAL_C",
+        "description": "Restricted, Repetitive, and Stereotyped Patterns of Behavior Subscore (C) Total for Autism Diagnostic Interview-Revised",
+        "source_variable": "ADI_RRB_TOTAL_C",
+        "valueType": "http://www.w3.org/2001/XMLSchema#integer",
+        "associatedWith": "NIDM"
+    },
+    "DD(source='Phenotypic_V1_0b.csv', variable='ADI_R_ONSET_TOTAL_D')": {
+        "hasUnit": "",
+        "minValue": "0",
+        "maxValue": "5",
+        "label": "ADI_R_ONSET_TOTAL_D",
+        "description": "Abnormality of Development Evident at or Before 36 Months Subscore (D) Total for Autism Diagnostic Interview-Revised",
+        "source_variable": "ADI_R_ONSET_TOTAL_D",
+        "valueType": "http://www.w3.org/2001/XMLSchema#integer",
+        "associatedWith": "NIDM"
+    },
+    "DD(source='Phenotypic_V1_0b.csv', variable='ADI_R_RSRCH_RELIABLE')": {
+        "minValue": "NA",
+        "maxValue": "NA",
+        "hasUnit": "NA",
+        "label": "ADI_R_RSRCH_RELIABLE",
+        "description": "Was ADI scored and administered by research reliable personnel?",
+        "source_variable": "ADI_R_RSRCH_RELIABLE",
+        "valueType": "http://www.w3.org/2001/XMLSchema#complexType",
+        "associatedWith": "NIDM",
+        "levels": {
+            "not research reliable": "0",
+            "research reliable": "1"
+        }
+    },
+    "DD(source='Phenotypic_V1_0b.csv', variable='ADOS_MODULE')": {
+        "hasUnit": "",
+        "minValue": "1",
+        "maxValue": "4",
+        "label": "ADOS_MODULE",
+        "description": "Autism Diagnostic Observation Schedule Module",
+        "source_variable": "ADOS_MODULE",
+        "valueType": "http://www.w3.org/2001/XMLSchema#integer",
+        "associatedWith": "NIDM"
+    },
+    "DD(source='Phenotypic_V1_0b.csv', variable='ADOS_TOTAL')": {
+        "hasUnit": "",
+        "minValue": "0",
+        "maxValue": "22",
+        "label": "ADOS_TOTAL",
+        "description": "Classic Total ADOS Score (Communication subscore + Social interaction subscore)",
+        "source_variable": "ADOS_TOTAL",
+        "valueType": "http://www.w3.org/2001/XMLSchema#integer",
+        "associatedWith": "NIDM",
+        "isAbout": {
+            "@id" : "http://www.cognitiveatlas.org/ontology/cogat.owl#CAO_00962",
+			"label" : "Autism diagnostic observation schedule"
+        }
+    },
+    "DD(source='Phenotypic_V1_0b.csv', variable='ADOS_COMM')": {
+        "hasUnit": "",
+        "minValue": "0",
+        "maxValue": "8",
+        "label": "ADOS_COMM",
+        "description": "Communication total subscore of the classic ADOS",
+        "source_variable": "ADOS_COMM",
+        "valueType": "http://www.w3.org/2001/XMLSchema#integer",
+        "associatedWith": "NIDM",
+        "isAbout": {
+            "@id" : "http://www.cognitiveatlas.org/ontology/cogat.owl#CAO_00962",
+			"label" : "Autism diagnostic observation schedule"
+        }
+    },
+    "DD(source='Phenotypic_V1_0b.csv', variable='ADOS_SOCIAL')": {
+        "hasUnit": "",
+        "minValue": "0",
+        "maxValue": "14",
+        "label": "ADOS_SOCIAL",
+        "description": "Social total subscore of the classic ADOS",
+        "source_variable": "ADOS_SOCIAL",
+        "valueType": "http://www.w3.org/2001/XMLSchema#integer",
+        "associatedWith": "NIDM",
+        "isAbout": {
+            "@id" : "http://www.cognitiveatlas.org/ontology/cogat.owl#CAO_00962",
+			"label" : "Autism diagnostic observation schedule"
+        }
+    },
+    "DD(source='Phenotypic_V1_0b.csv', variable='ADOS_STEREO_BEHAV')": {
+        "hasUnit": "",
+        "minValue": "0",
+        "maxValue": "8",
+        "label": "ADOS_STEREO_BEHAV",
+        "description": "Stereotyped behaviors and restricted interests total subscore of the classic ADOSS",
+        "source_variable": "ADOS_STEREO_BEHAV",
+        "valueType": "http://www.w3.org/2001/XMLSchema#integer",
+        "associatedWith": "NIDM",
+        "isAbout": {
+            "@id" : "http://www.cognitiveatlas.org/ontology/cogat.owl#CAO_00962",
+			"label" : "Autism diagnostic observation schedule"
+        }
+    },
+    "DD(source='Phenotypic_V1_0b.csv', variable='ADOS_RSRCH_RELIABLE')": {
+        "minValue": "NA",
+        "maxValue": "NA",
+        "hasUnit": "NA",
+        "label": "ADOS_RSRCH_RELIABLE",
+        "description": "Was ADOS scored and administered by research reliable personnel?",
+        "source_variable": "ADOS_RSRCH_RELIABLE",
+        "valueType": "http://www.w3.org/2001/XMLSchema#complexType",
+        "associatedWith": "NIDM",
+        "levels": {
+            "not research reliable": "0",
+            "research reliable": "1"
+        }
+    },
+    "DD(source='Phenotypic_V1_0b.csv', variable='ADOS_GOTHAM_SOCAFFECT')": {
+        "hasUnit": "",
+        "minValue": "0",
+        "maxValue": "8",
+        "label": "ADOS_GOTHAM_SOCAFFECT",
+        "description": "Social affect total subscore for Gotham Algorithm of the ADOS",
+        "source_variable": "ADOS_GOTHAM_SOCAFFECT",
+        "valueType": "http://www.w3.org/2001/XMLSchema#integer",
+        "associatedWith": "NIDM"
+    },
+    "DD(source='Phenotypic_V1_0b.csv', variable='ADOS_GOTHAM_RRB')": {
+        "hasUnit": "",
+        "minValue": "0",
+        "maxValue": "8",
+        "label": "ADOS_GOTHAM_RRB",
+        "description": "Restricted and Repetitive Behaviors Total Subscore for Gotham Algorithm of the ADOS",
+        "source_variable": "ADOS_GOTHAM_RRB",
+        "valueType": "http://www.w3.org/2001/XMLSchema#integer",
+        "associatedWith": "NIDM",
+        "isAbout": {
+            "@id" : "http://www.cognitiveatlas.org/ontology/cogat.owl#CAO_00962",
+			"label" : "Autism diagnostic observation schedule"
+        }
+    },
+    "DD(source='Phenotypic_V1_0b.csv', variable='ADOS_GOTHAM_TOTAL')": {
+        "hasUnit": "",
+        "minValue": "0",
+        "maxValue": "28",
+        "label": "ADOS_GOTHAM_TOTAL",
+        "description": "Social Affect Total + Restricxted and Repetitive Behaviors Total",
+        "source_variable": "ADOS_GOTHAM_TOTAL",
+        "valueType": "http://www.w3.org/2001/XMLSchema#integer",
+        "associatedWith": "NIDM",
+        "isAbout": {
+            "@id" : "http://www.cognitiveatlas.org/ontology/cogat.owl#CAO_00962",
+			"label" : "Autism diagnostic observation schedule"
+        }
+    },
+    "DD(source='Phenotypic_V1_0b.csv', variable='ADOS_GOTHAM_SEVERITY')": {
+        "hasUnit": "",
+        "minValue": "1",
+        "maxValue": "10",
+        "label": "ADOS_GOTHAM_SEVERITY",
+        "description": "Individually calibrated severity score for Gotham Algorithm of the ADOS",
+        "source_variable": "ADOS_GOTHAM_SEVERITY",
+        "valueType": "http://www.w3.org/2001/XMLSchema#integer",
+        "associatedWith": "NIDM",
+        "isAbout": {
+            "@id" : "http://www.cognitiveatlas.org/ontology/cogat.owl#CAO_00962",
+			"label" : "Autism diagnostic observation schedule"
+        }
+    },
+    "DD(source='Phenotypic_V1_0b.csv', variable='SRS_VERSION')": {
+        "minValue": "NA",
+        "maxValue": "NA",
+        "hasUnit": "NA",
+        "label": "SRS_VERSION",
+        "description": "Social Responsiveness Scale Version",
+        "source_variable": "SRS_VERSION",
+        "valueType": "http://www.w3.org/2001/XMLSchema#complexType",
+        "associatedWith": "NIDM",
+        "levels": {
+            "child": "1",
+            "adult": "2"
+        }
+    },
+    "DD(source='Phenotypic_V1_0b.csv', variable='SRS_RAW_TOTAL')": {
+        "hasUnit": "",
+        "minValue": "0",
+        "maxValue": "",
+        "label": "SRS_RAW_TOTAL",
+        "description": "Total raw score for the Social Responsiveness Scale",
+        "source_variable": "SRS_RAW_TOTAL",
+        "valueType": "http://www.w3.org/2001/XMLSchema#integer",
+        "associatedWith": "NIDM"
+    },
+    "DD(source='Phenotypic_V1_0b.csv', variable='SRS_AWARENESS')": {
+        "hasUnit": "",
+        "minValue": "0",
+        "maxValue": "",
+        "label": "SRS_AWARENESS",
+        "description": "Social responsiveness scale social awareness subscore raw total",
+        "source_variable": "SRS_AWARENESS",
+        "valueType": "http://www.w3.org/2001/XMLSchema#integer",
+        "associatedWith": "NIDM"
+    },
+    "DD(source='Phenotypic_V1_0b.csv', variable='SRS_COGNITION')": {
+        "hasUnit": "",
+        "minValue": "0",
+        "maxValue": "",
+        "label": "SRS_COGNITION",
+        "description": "Social responsiveness scale social cognition subscore raw total",
+        "source_variable": "SRS_COGNITION",
+        "valueType": "http://www.w3.org/2001/XMLSchema#integer",
+        "associatedWith": "NIDM"
+    },
+    "DD(source='Phenotypic_V1_0b.csv', variable='SRS_COMMUNICATION')": {
+        "hasUnit": "",
+        "minValue": "0",
+        "maxValue": "",
+        "label": "SRS_COMMUNICATION",
+        "description": "Social responsiveness scale - social communication subscore raw total",
+        "source_variable": "SRS_COMMUNICATION",
+        "valueType": "http://www.w3.org/2001/XMLSchema#integer",
+        "associatedWith": "NIDM"
+    },
+    "DD(source='Phenotypic_V1_0b.csv', variable='SRS_MOTIVATION')": {
+        "hasUnit": "",
+        "minValue": "0",
+        "maxValue": "",
+        "label": "SRS_MOTIVATION",
+        "description": "Social responsiveness scale - social motivation subscore raw total",
+        "source_variable": "SRS_MOTIVATION",
+        "valueType": "http://www.w3.org/2001/XMLSchema#integer",
+        "associatedWith": "NIDM"
+    },
+    "DD(source='Phenotypic_V1_0b.csv', variable='SRS_MANNERISMS')": {
+        "hasUnit": "",
+        "minValue": "0",
+        "maxValue": "",
+        "label": "SRS_MANNERISMS",
+        "description": "Social responsiveness scale autistic mannerisms subscore raw total",
+        "source_variable": "SRS_MANNERISMS",
+        "valueType": "http://www.w3.org/2001/XMLSchema#integer",
+        "associatedWith": "NIDM"
+    },
+    "DD(source='Phenotypic_V1_0b.csv', variable='SCQ_TOTAL')": {
+        "hasUnit": "",
+        "minValue": "0",
+        "maxValue": "39",
+        "label": "SCQ_TOTAL",
+        "description": "Social communication questionaire total",
+        "source_variable": "SCQ_TOTAL",
+        "valueType": "http://www.w3.org/2001/XMLSchema#integer",
+        "associatedWith": "NIDM"
+    },
+    "DD(source='Phenotypic_V1_0b.csv', variable='AQ_TOTAL')": {
+        "hasUnit": "",
+        "minValue": "0",
+        "maxValue": "50",
+        "label": "AQ_TOTAL",
+        "description": "Total raw score of the autism quotient",
+        "source_variable": "AQ_TOTAL",
+        "valueType": "http://www.w3.org/2001/XMLSchema#integer",
+        "associatedWith": "NIDM"
+    },
+    "DD(source='Phenotypic_V1_0b.csv', variable='COMORBIDITY')": {
+        "hasUnit": "",
+        "minValue": "",
+        "maxValue": "",
+        "label": "COMORBIDITY",
+        "description": "Any other comorbidities?",
+        "source_variable": "COMORBIDITY",
+        "valueType": "http://www.w3.org/2001/XMLSchema#string",
+        "associatedWith": "NIDM"
+    },
+    "DD(source='Phenotypic_V1_0b.csv', variable='CURRENT_MED_STATUS')": {
+        "minValue": "NA",
+        "maxValue": "NA",
+        "hasUnit": "NA",
+        "label": "CURRENT_MED_STATUS",
+        "description": "Currently taking medications?",
+        "source_variable": "CURRENT_MED_STATUS",
+        "valueType": "http://www.w3.org/2001/XMLSchema#complexType",
+        "associatedWith": "NIDM",
+        "levels": {
+            "not taking any medications": "0",
+            "taking medication": "1"
+        }
+    },
+    "DD(source='Phenotypic_V1_0b.csv', variable='MEDICATION_NAME')": {
+        "hasUnit": "",
+        "minValue": "",
+        "maxValue": "",
+        "label": "MEDICATION_NAME",
+        "description": "Active ingredient of any current psychoactive medications",
+        "source_variable": "MEDICATION_NAME",
+        "valueType": "http://www.w3.org/2001/XMLSchema#string",
+        "associatedWith": "NIDM"
+    },
+    "DD(source='Phenotypic_V1_0b.csv', variable='OFF_STIMULANTS_AT_SCAN')": {
+        "minValue": "NA",
+        "maxValue": "NA",
+        "hasUnit": "NA",
+        "label": "OFF_STIMULANTS_AT_SCAN",
+        "description": "Off stimulants 24 hours prior to scan?",
+        "source_variable": "OFF_STIMULANTS_AT_SCAN",
+        "valueType": "http://www.w3.org/2001/XMLSchema#complexType",
+        "associatedWith": "NIDM",
+        "levels": {
+            "No": "0",
+            "Yes": "1"
+        }
+    },
+    "DD(source='Phenotypic_V1_0b.csv', variable='VINELAND_RECEPTIVE_V_SCALED')": {
+        "hasUnit": "",
+        "minValue": "1",
+        "maxValue": "24",
+        "label": "VINELAND_RECEPTIVE_V_SCALED",
+        "description": "Vineland Adaptive Behavior Scales Receptive Language V Scaled Score",
+        "source_variable": "VINELAND_RECEPTIVE_V_SCALED",
+        "valueType": "http://www.w3.org/2001/XMLSchema#integer",
+        "associatedWith": "NIDM",
+        "isAbout": {
+            "@id" : "http://purl.org/nidash/nidm#BehavioralInstrument",
+			"label" : "Behavioral Instrument"
+        }
+    },
+    "DD(source='Phenotypic_V1_0b.csv', variable='VINELAND_EXPRESSIVE_V_SCALED')": {
+        "hasUnit": "",
+        "minValue": "1",
+        "maxValue": "24",
+        "label": "VINELAND_EXPRESSIVE_V_SCALED",
+        "description": "Vineland Adaptive Behavior Scales Expressive Language V Scaled Score",
+        "source_variable": "VINELAND_EXPRESSIVE_V_SCALED",
+        "valueType": "http://www.w3.org/2001/XMLSchema#integer",
+        "associatedWith": "NIDM",
+        "isAbout": {
+            "@id" : "http://id.nlm.nih.gov/mesh/2018/M0000344",
+			"label" : "Behavior, Adaptive"
+        }
+    },
+    "DD(source='Phenotypic_V1_0b.csv', variable='VINELAND_WRITTEN_V_SCALED')": {
+        "hasUnit": "",
+        "minValue": "1",
+        "maxValue": "24",
+        "label": "VINELAND_WRITTEN_V_SCALED",
+        "description": "Vineland Adaptive Behavior Scales Written Language V Scaled Score",
+        "source_variable": "VINELAND_WRITTEN_V_SCALED",
+        "valueType": "http://www.w3.org/2001/XMLSchema#integer",
+        "associatedWith": "NIDM",
+        "isAbout": {
+            "@id" : "http://id.nlm.nih.gov/mesh/2018/M0000344",
+			"label" : "Behavior, Adaptive"
+        }
+    },
+    "DD(source='Phenotypic_V1_0b.csv', variable='VINELAND_COMMUNICATION_STANDARD')": {
+        "hasUnit": "",
+        "minValue": "20",
+        "maxValue": "160",
+        "label": "VINELAND_COMMUNICATION_STANDARD",
+        "description": "Vineland Adaptive Behavior Scales Communication Standard Score",
+        "source_variable": "VINELAND_COMMUNICATION_STANDARD",
+        "valueType": "http://www.w3.org/2001/XMLSchema#integer",
+        "associatedWith": "NIDM",
+        "isAbout": {
+            "@id" : "http://id.nlm.nih.gov/mesh/2018/M0000344",
+			"label" : "Behavior, Adaptive"
+        }
+    },
+    "DD(source='Phenotypic_V1_0b.csv', variable='VINELAND_PERSONAL_V_SCALED')": {
+        "hasUnit": "",
+        "minValue": "1",
+        "maxValue": "24",
+        "label": "VINELAND_PERSONAL_V_SCALED",
+        "description": "Vineland Adaptive Behavior Scales Personal DAily Living Skills V Scaled Score",
+        "source_variable": "VINELAND_PERSONAL_V_SCALED",
+        "valueType": "http://www.w3.org/2001/XMLSchema#integer",
+        "associatedWith": "NIDM",
+        "isAbout": {
+            "@id" : "http://id.nlm.nih.gov/mesh/2018/M0000344",
+			"label" : "Behavior, Adaptive"
+        }
+    },
+    "DD(source='Phenotypic_V1_0b.csv', variable='VINELAND_DOMESTIC_V_SCALED')": {
+        "hasUnit": "",
+        "minValue": "1",
+        "maxValue": "24",
+        "label": "VINELAND_DOMESTIC_V_SCALED",
+        "description": "Vineland Adaptive Behavior Scales Domestic Daily Living Skills V Scaled Score",
+        "source_variable": "VINELAND_DOMESTIC_V_SCALED",
+        "valueType": "http://www.w3.org/2001/XMLSchema#integer",
+        "associatedWith": "NIDM",
+        "isAbout": {
+            "@id" : "http://id.nlm.nih.gov/mesh/2018/M0000344",
+			"label" : "Behavior, Adaptive"
+        }
+    },
+    "DD(source='Phenotypic_V1_0b.csv', variable='VINELAND_COMMUNITY_V_SCALED')": {
+        "hasUnit": "",
+        "minValue": "1",
+        "maxValue": "24",
+        "label": "VINELAND_COMMUNITY_V_SCALED",
+        "description": "Vineland Adaptive Behavior Scales Community Daily Living Skills V Scaled Score",
+        "source_variable": "VINELAND_COMMUNITY_V_SCALED",
+        "valueType": "http://www.w3.org/2001/XMLSchema#integer",
+        "associatedWith": "NIDM",
+        "isAbout": {
+            "@id" : "http://id.nlm.nih.gov/mesh/2018/M0000344",
+			"label" : "Behavior, Adaptive"
+        }
+    },
+    "DD(source='Phenotypic_V1_0b.csv', variable='VINELAND_DAILYLVNG_STANDARD')": {
+        "hasUnit": "",
+        "minValue": "20",
+        "maxValue": "160",
+        "label": "VINELAND_DAILYLVNG_STANDARD",
+        "description": "Vineland Adaptive Behavior Scales Daily Living Skills Standard Score",
+        "source_variable": "VINELAND_DAILYLVNG_STANDARD",
+        "valueType": "http://www.w3.org/2001/XMLSchema#integer",
+        "associatedWith": "NIDM",
+        "isAbout": {
+            "@id" : "http://id.nlm.nih.gov/mesh/2018/M0000344",
+			"label" : "Behavior, Adaptive"
+        }
+    },
+    "DD(source='Phenotypic_V1_0b.csv', variable='VINELAND_INTERPERSONAL_V_SCALED')": {
+        "hasUnit": "",
+        "minValue": "1",
+        "maxValue": "24",
+        "label": "VINELAND_INTERPERSONAL_V_SCALED",
+        "description": "Vineland adpadtive behavior scales interpersonal relationsips V scaled score",
+        "source_variable": "VINELAND_INTERPERSONAL_V_SCALED",
+        "valueType": "http://www.w3.org/2001/XMLSchema#integer",
+        "associatedWith": "NIDM",
+        "isAbout": {
+            "@id" : "http://id.nlm.nih.gov/mesh/2018/M0000344",
+			"label" : "Behavior, Adaptive"
+        }
+    },
+    "DD(source='Phenotypic_V1_0b.csv', variable='VINELAND_PLAY_V_SCALED')": {
+        "hasUnit": "",
+        "minValue": "1",
+        "maxValue": "24",
+        "label": "VINELAND_PLAY_V_SCALED",
+        "description": "Vineland adaptive behavior scales play and leisure time V scaled score",
+        "source_variable": "VINELAND_PLAY_V_SCALED",
+        "valueType": "http://www.w3.org/2001/XMLSchema#integer",
+        "associatedWith": "NIDM",
+        "isAbout": {
+            "@id" : "http://id.nlm.nih.gov/mesh/2018/M0000344",
+			"label" : "Behavior, Adaptive"
+        }
+    },
+    "DD(source='Phenotypic_V1_0b.csv', variable='VINELAND_COPING_V_SCALED')": {
+        "hasUnit": "",
+        "minValue": "1",
+        "maxValue": "24",
+        "label": "VINELAND_COPING_V_SCALED",
+        "description": "Vineland adaptive behavior scales coping skills V scaled score",
+        "source_variable": "VINELAND_COPING_V_SCALED",
+        "valueType": "http://www.w3.org/2001/XMLSchema#integer",
+        "associatedWith": "NIDM",
+        "isAbout": {
+            "@id" : "http://id.nlm.nih.gov/mesh/2018/M0000344",
+			"label" : "Behavior, Adaptive"
+        }
+    },
+    "DD(source='Phenotypic_V1_0b.csv', variable='VINELAND_SOCIAL_STANDARD')": {
+        "hasUnit": "",
+        "minValue": "20",
+        "maxValue": "160",
+        "label": "VINELAND_SOCIAL_STANDARD",
+        "description": "Vineland adaptive behavior scales socialization standard score",
+        "source_variable": "VINELAND_SOCIAL_STANDARD",
+        "valueType": "http://www.w3.org/2001/XMLSchema#integer",
+        "associatedWith": "NIDM",
+        "isAbout": {
+            "@id" : "http://id.nlm.nih.gov/mesh/2018/M0000344",
+			"label" : "Behavior, Adaptive"
+        }
+    },
+    "DD(source='Phenotypic_V1_0b.csv', variable='VINELAND_SUM_SCORES')": {
+        "hasUnit": "",
+        "minValue": "76",
+        "maxValue": "480",
+        "label": "VINELAND_SUM_SCORES",
+        "description": "Sum of Vineland standard scores (Communication + Daily Living Skills + Socialization)",
+        "source_variable": "VINELAND_SUM_SCORES",
+        "valueType": "http://www.w3.org/2001/XMLSchema#integer",
+        "associatedWith": "NIDM",
+        "isAbout": {
+            "@id" : "http://id.nlm.nih.gov/mesh/2018/M0000344",
+			"label" : "Behavior, Adaptive"
+        }
+    },
+    "DD(source='Phenotypic_V1_0b.csv', variable='VINELAND_ABC_STANDARD')": {
+        "hasUnit": "",
+        "minValue": "20",
+        "maxValue": "160",
+        "label": "VINELAND_ABC_STANDARD",
+        "description": "Vineland adaptive behavior composite standard score",
+        "source_variable": "VINELAND_ABC_STANDARD",
+        "valueType": "http://www.w3.org/2001/XMLSchema#integer",
+        "associatedWith": "NIDM",
+        "isAbout": {
+            "@id" : "http://id.nlm.nih.gov/mesh/2018/M0000344",
+			"label" :  "Behavior, Adaptive"
+        }
+    },
+    "DD(source='Phenotypic_V1_0b.csv', variable='VINELAND_INFORMANT')": {
+        "minValue": "NA",
+        "maxValue": "NA",
+        "hasUnit": "NA",
+        "label": "VINELAND_INFORMANT",
+        "description": "Vineland adaptive behavior scales informant",
+        "source_variable": "VINELAND_INFORMANT",
+        "valueType": "http://www.w3.org/2001/XMLSchema#complexType",
+        "associatedWith": "NIDM",
+        "levels": {
+            "Parent": "1",
+            "Self": "2"
+        }
+    },
+    "DD(source='Phenotypic_V1_0b.csv', variable='WISC_IV_VCI')": {
+        "hasUnit": "",
+        "minValue": "3",
+        "maxValue": "57",
+        "label": "WISC_IV_VCI",
+        "description": "WISC-IV verbal comprehension index",
+        "source_variable": "WISC_IV_VCI",
+        "valueType": "http://www.w3.org/2001/XMLSchema#integer",
+        "associatedWith": "NIDM",
+        "isAbout": {
+            "@id" : "http://www.cognitiveatlas.org/ontology/cogat.owl#CAO_00910",
+			"label" :  "Wechsler intelligence scale for children - revised"
+        }
+    },
+    "DD(source='Phenotypic_V1_0b.csv', variable='WISC_IV_PRI')": {
+        "hasUnit": "",
+        "minValue": "3",
+        "maxValue": "57",
+        "label": "WISC_IV_PRI",
+        "description": "WISC-IV perceptual reasoning index",
+        "source_variable": "WISC_IV_PRI",
+        "valueType": "http://www.w3.org/2001/XMLSchema#integer",
+        "associatedWith": "NIDM",
+        "isAbout": {
+            "@id" : "http://www.cognitiveatlas.org/ontology/cogat.owl#CAO_00910",
+			"label" : "Wechsler intelligence scale for children - revised"
+        }
+    },
+    "DD(source='Phenotypic_V1_0b.csv', variable='WISC_IV_WMI')": {
+        "hasUnit": "",
+        "minValue": "2",
+        "maxValue": "38",
+        "label": "WISC_IV_WMI",
+        "description": "WISC-IV working memory index",
+        "source_variable": "WISC_IV_WMI",
+        "valueType": "http://www.w3.org/2001/XMLSchema#integer",
+        "associatedWith": "NIDM",
+        "isAbout": {
+            "@id" : "http://www.cognitiveatlas.org/ontology/cogat.owl#CAO_00910",
+			"label" : "Wechsler intelligence scale for children - revised"
+        }
+    },
+    "DD(source='Phenotypic_V1_0b.csv', variable='WISC_IV_PSI')": {
+        "hasUnit": "",
+        "minValue": "2",
+        "maxValue": "38",
+        "label": "WISC_IV_PSI",
+        "description": "WISC-IV processing speed index",
+        "source_variable": "WISC_IV_PSI",
+        "valueType": "http://www.w3.org/2001/XMLSchema#integer",
+        "associatedWith": "NIDM",
+        "isAbout": {
+            "@id" : "http://www.cognitiveatlas.org/ontology/cogat.owl#CAO_00910",
+			"label" : "Wechsler intelligence scale for children - revised"
+        }
+    },
+    "DD(source='Phenotypic_V1_0b.csv', variable='WISC_IV_SIM_SCALED')": {
+        "hasUnit": "",
+        "minValue": "1",
+        "maxValue": "19",
+        "label": "WISC_IV_SIM_SCALED",
+        "description": "WISC-IV Sim scaled",
+        "source_variable": "WISC_IV_SIM_SCALED",
+        "valueType": "http://www.w3.org/2001/XMLSchema#integer",
+        "associatedWith": "NIDM",
+        "isAbout": {
+            "@id" : "http://www.cognitiveatlas.org/ontology/cogat.owl#CAO_00910",
+			"label" : "Wechsler intelligence scale for children - revised"
+        }
+    },
+    "DD(source='Phenotypic_V1_0b.csv', variable='WISC_IV_VOCAB_SCALED')": {
+        "hasUnit": "",
+        "minValue": "1",
+        "maxValue": "19",
+        "label": "WISC_IV_VOCAB_SCALED",
+        "description": "WISC-IV vocabulary scaled",
+        "source_variable": "WISC_IV_VOCAB_SCALED",
+        "valueType": "http://www.w3.org/2001/XMLSchema#integer",
+        "associatedWith": "NIDM",
+        "isAbout": {
+            "@id" : "http://www.cognitiveatlas.org/ontology/cogat.owl#CAO_00910",
+			"label" : "Wechsler intelligence scale for children - revised"
+        }
+    },
+    "DD(source='Phenotypic_V1_0b.csv', variable='WISC_IV_INFO_SCALED')": {
+        "hasUnit": "",
+        "minValue": "1",
+        "maxValue": "19",
+        "label": "WISC_IV_INFO_SCALED",
+        "description": "WISC-IV Information scaled",
+        "source_variable": "WISC_IV_INFO_SCALED",
+        "valueType": "http://www.w3.org/2001/XMLSchema#integer",
+        "associatedWith": "NIDM",
+        "isAbout": {
+            "@id" : "http://www.cognitiveatlas.org/ontology/cogat.owl#CAO_00910",
+			"label" : "Wechsler intelligence scale for children - revised"
+        }
+    },
+    "DD(source='Phenotypic_V1_0b.csv', variable='WISC_IV_BLK_DSN_SCALED')": {
+        "hasUnit": "",
+        "minValue": "1",
+        "maxValue": "19",
+        "label": "WISC_IV_BLK_DSN_SCALED",
+        "description": "WISC-IV Block design scaled",
+        "source_variable": "WISC_IV_BLK_DSN_SCALED",
+        "valueType": "http://www.w3.org/2001/XMLSchema#integer",
+        "associatedWith": "NIDM",
+        "isAbout": {
+            "@id" : "http://www.cognitiveatlas.org/ontology/cogat.owl#CAO_00910",
+			"label" : "Wechsler intelligence scale for children - revised"
+        }
+    },
+    "DD(source='Phenotypic_V1_0b.csv', variable='WISC_IV_PIC_CON_SCALED')": {
+        "hasUnit": "",
+        "minValue": "1",
+        "maxValue": "19",
+        "label": "WISC_IV_PIC_CON_SCALED",
+        "description": "WISC-IV Picture concepts scaled",
+        "source_variable": "WISC_IV_PIC_CON_SCALED",
+        "valueType": "http://www.w3.org/2001/XMLSchema#integer",
+        "associatedWith": "NIDM",
+        "isAbout": {
+            "@id" : "http://www.cognitiveatlas.org/ontology/cogat.owl#CAO_00910",
+			"label" : "Wechsler intelligence scale for children - revised"
+        }
+    },
+    "DD(source='Phenotypic_V1_0b.csv', variable='WISC_IV_MATRIX_SCALED')": {
+        "hasUnit": "",
+        "minValue": "1",
+        "maxValue": "19",
+        "label": "WISC_IV_MATRIX_SCALED",
+        "description": "WISC-IV Matrix reasoning scaled",
+        "source_variable": "WISC_IV_MATRIX_SCALED",
+        "valueType": "http://www.w3.org/2001/XMLSchema#integer",
+        "associatedWith": "NIDM",
+        "isAbout": {
+            "@id" : "http://www.cognitiveatlas.org/ontology/cogat.owl#CAO_00910",
+			"label" : "Wechsler intelligence scale for children - revised"
+        }
+    },
+    "DD(source='Phenotypic_V1_0b.csv', variable='WISC_IV_DIGIT_SPAN_SCALED')": {
+        "hasUnit": "",
+        "minValue": "1",
+        "maxValue": "19",
+        "label": "WISC_IV_DIGIT_SPAN_SCALED",
+        "description": "WISC-IV Digit span scaled",
+        "source_variable": "WISC_IV_DIGIT_SPAN_SCALED",
+        "valueType": "http://www.w3.org/2001/XMLSchema#integer",
+        "associatedWith": "NIDM",
+        "isAbout": {
+            "@id" : "http://www.cognitiveatlas.org/ontology/cogat.owl#CAO_00910",
+			"label" : "Wechsler intelligence scale for children - revised"
+        }
+    },
+    "DD(source='Phenotypic_V1_0b.csv', variable='WISC_IV_LET_NUM_SCALED')": {
+        "hasUnit": "",
+        "minValue": "1",
+        "maxValue": "19",
+        "label": "WISC_IV_LET_NUM_SCALED",
+        "description": "WISC-IV Letter-Number sequencing scaled",
+        "source_variable": "WISC_IV_LET_NUM_SCALED",
+        "valueType": "http://www.w3.org/2001/XMLSchema#integer",
+        "associatedWith": "NIDM",
+        "isAbout": {
+            "@id" : "http://www.cognitiveatlas.org/ontology/cogat.owl#CAO_00910",
+			"label" : "Wechsler intelligence scale for children - revised"
+        }
+    },
+    "DD(source='Phenotypic_V1_0b.csv', variable='WISC_IV_CODING_SCALED')": {
+        "hasUnit": "",
+        "minValue": "1",
+        "maxValue": "19",
+        "label": "WISC_IV_CODING_SCALED",
+        "description": "WISC-IV coding scaled",
+        "source_variable": "WISC_IV_CODING_SCALED",
+        "valueType": "http://www.w3.org/2001/XMLSchema#integer",
+        "associatedWith": "NIDM",
+        "isAbout": {
+            "@id" : "http://www.cognitiveatlas.org/ontology/cogat.owl#CAO_00910",
+			"label" : "Wechsler intelligence scale for children - revised"
+        }
+    },
+    "DD(source='Phenotypic_V1_0b.csv', variable='WISC_IV_SYM_SCALED')": {
+        "hasUnit": "",
+        "minValue": "1",
+        "maxValue": "19",
+        "label": "WISC_IV_SYM_SCALED",
+        "description": "WISC-IV symbol search scaled",
+        "source_variable": "WISC_IV_SYM_SCALED",
+        "valueType": "http://www.w3.org/2001/XMLSchema#integer",
+        "associatedWith": "NIDM",
+        "isAbout": {
+            "@id" : "http://www.cognitiveatlas.org/ontology/cogat.owl#CAO_00910",
+			"label" : "Wechsler intelligence scale for children - revised"
+        }
+    },
+    "DD(source='Phenotypic_V1_0b.csv', variable='EYE_STATUS_AT_SCAN')": {
+        "minValue": "NA",
+        "maxValue": "NA",
+        "hasUnit": "NA",
+        "label": "EYE_STATUS_AT_SCAN",
+        "description": "Eye status during rest scan",
+        "source_variable": "EYE_STATUS_AT_SCAN",
+        "valueType": "http://www.w3.org/2001/XMLSchema#complexType",
+        "associatedWith": "NIDM",
+        "levels": {
+            "Open": "1",
+            "Closed": "2"
+        }
+    },
+    "DD(source='Phenotypic_V1_0b.csv', variable='AGE_AT_MPRAGE')": {
+        "hasUnit": "years",
+        "minValue": "6.47",
+        "maxValue": "64",
+        "label": "AGE_AT_MPRAGE",
+        "description": "Age at anatomical scan in years",
+        "source_variable": "AGE_AT_MPRAGE",
+        "valueType": "http://www.w3.org/2001/XMLSchema#float",
+        "associatedWith": "NIDM"
+        
+    },
+    "DD(source='Phenotypic_V1_0b.csv', variable='BMI')": {
+        "hasUnit": "",
+        "minValue": "15",
+        "maxValue": "40",
+        "label": "BMI",
+        "description": "Body mass index",
+        "source_variable": "BMI",
+        "valueType": "http://www.w3.org/2001/XMLSchema#integer",
+        "associatedWith": "NIDM",
+        "isAbout": {
+            "@id" : "http://uri.interlex.org/dicom/uris/terms/0010_1022",
+			"label" : "Patient's Body Mass Index"
+        }
+    }
+}
