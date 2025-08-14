@@ -1,254 +1,39 @@
+@prefix afni: <http://purl.org/nidash/afni#> .
+@prefix ants: <http://stnava.github.io/ANTs/> .
 @prefix bids: <http://bids.neuroimaging.io/> .
+@prefix birnlex: <http://bioontology.org/projects/ontologies/birnlex/> .
 @prefix crypto: <http://id.loc.gov/vocabulary/preservation/cryptographicHashFunctions#> .
+@prefix datalad: <http://datasets.datalad.org/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix dctypes: <http://purl.org/dc/dcmitype/> .
+@prefix dicom: <http://neurolex.org/wiki/Category:DICOM_term/> .
+@prefix edam: <https://bioportal.bioontology.org/ontologies/EDAM> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix freesurfer: <https://surfer.nmr.mgh.harvard.edu/> .
+@prefix fsl: <http://purl.org/nidash/fsl#> .
 @prefix ilx: <http://uri.interlex.org/> .
+@prefix ncicb: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#> .
+@prefix ncit: <http://ncitt.ncit.nih.gov/> .
 @prefix ndar: <https://ndar.nih.gov/api/datadictionary/v2/dataelement/> .
 @prefix nfo: <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#> .
 @prefix nidm: <http://purl.org/nidash/nidm#> .
 @prefix niiri: <http://iri.nidash.org/> .
+@prefix nlx: <http://uri.neuinfo.org/nif/nifstd/> .
 @prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix onli: <http://neurolog.unice.fr/ontoneurolog/v3.0/instrument.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pato: <http://purl.obolibrary.org/obo/pato#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix scr: <http://scicrunch.org/resolver/> .
 @prefix sio: <http://semanticscience.org/ontology/sio.owl#> .
+@prefix spm: <http://purl.org/nidash/spm#> .
+@prefix vc: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-
-niiri:age_3mirhvl a nidm:PersonalDataElement,
-        prov:Entity ;
-    rdfs:label "age" ;
-    dct:description "" ;
-    nidm:isAbout ilx:ilx_0100400 ;
-    nidm:sourceVariable "age" ;
-    nidm:valueType <xsd:string> ;
-    ilx:ilx_0739289 "NIDM" .
-
-niiri:f5050780-f603-11ef-a017-acde48001122 a bids:Dataset,
-        prov:Collection,
-        prov:Entity ;
-    obo:IAO_0000623 "National Institutes of Health (RO1 MH067924, RO1 MH080243 to B.L.)." ;
-    dct:license "PDDL" ;
-    sio:Identifier "1.0.0rc3" ;
-    dcat:author "C.F. GeierR. TerwilligerT. TeslovichK. VelanovaB. Luna" ;
-    dcat:creator <http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2882823/https://github.com/LabNeuroCogDevel/openfmri_ring_rew> ;
-    prov:Location <file://Volumes/Research/datasets.datalad.org/openneuro/ds000121> ;
-    prov:hadMember niiri:a031daa4-0ad4-11ec-a802-1094bbf2086c,
-        niiri:a059c204-0ad4-11ec-a802-1094bbf2086c,
-        niiri:a18c4dd0-0ad4-11ec-a802-1094bbf2086c,
-        niiri:a21799c6-0ad4-11ec-a802-1094bbf2086c,
-        niiri:a2275a6a-0ad4-11ec-a802-1094bbf2086c,
-        niiri:a2f7d838-0ad4-11ec-a802-1094bbf2086c,
-        niiri:a3e2332e-0ad4-11ec-a802-1094bbf2086c,
-        niiri:a4c593b2-0ad4-11ec-a802-1094bbf2086c,
-        niiri:a4d1b740-0ad4-11ec-a802-1094bbf2086c,
-        niiri:a5832046-0ad4-11ec-a802-1094bbf2086c,
-        niiri:a595c41a-0ad4-11ec-a802-1094bbf2086c,
-        niiri:a5bdef48-0ad4-11ec-a802-1094bbf2086c,
-        niiri:a6172668-0ad4-11ec-a802-1094bbf2086c,
-        niiri:a6aa1120-0ad4-11ec-a802-1094bbf2086c,
-        niiri:a6adb6c8-0ad4-11ec-a802-1094bbf2086c,
-        niiri:a792d58a-0ad4-11ec-a802-1094bbf2086c,
-        niiri:a7a20b06-0ad4-11ec-a802-1094bbf2086c,
-        niiri:a7fa9d56-0ad4-11ec-a802-1094bbf2086c,
-        niiri:a889f420-0ad4-11ec-a802-1094bbf2086c,
-        niiri:a8dcd9f8-0ad4-11ec-a802-1094bbf2086c,
-        niiri:a971749e-0ad4-11ec-a802-1094bbf2086c,
-        niiri:aa029492-0ad4-11ec-a802-1094bbf2086c,
-        niiri:aaf631ec-0ad4-11ec-a802-1094bbf2086c,
-        niiri:ab3349d2-0ad4-11ec-a802-1094bbf2086c,
-        niiri:ab8b7f18-0ad4-11ec-a802-1094bbf2086c,
-        niiri:ac222710-0ad4-11ec-a802-1094bbf2086c,
-        niiri:ad059eaa-0ad4-11ec-a802-1094bbf2086c,
-        niiri:ad167216-0ad4-11ec-a802-1094bbf2086c,
-        niiri:ae077968-0ad4-11ec-a802-1094bbf2086c,
-        niiri:aea025d0-0ad4-11ec-a802-1094bbf2086c,
-        niiri:aef3ee56-0ad4-11ec-a802-1094bbf2086c,
-        niiri:af487166-0ad4-11ec-a802-1094bbf2086c,
-        niiri:aff060ec-0ad4-11ec-a802-1094bbf2086c,
-        niiri:aff9e982-0ad4-11ec-a802-1094bbf2086c,
-        niiri:affdc75a-0ad4-11ec-a802-1094bbf2086c,
-        niiri:b02fa5ea-0ad4-11ec-a802-1094bbf2086c,
-        niiri:b047ff22-0ad4-11ec-a802-1094bbf2086c,
-        niiri:b0df55d4-0ad4-11ec-a802-1094bbf2086c,
-        niiri:b1c62e0a-0ad4-11ec-a802-1094bbf2086c,
-        niiri:b2a58f14-0ad4-11ec-a802-1094bbf2086c,
-        niiri:b388581c-0ad4-11ec-a802-1094bbf2086c,
-        niiri:b4d8b5cc-0ad4-11ec-a802-1094bbf2086c,
-        niiri:b54e6ae6-0ad4-11ec-a802-1094bbf2086c,
-        niiri:b57238dc-0ad4-11ec-a802-1094bbf2086c,
-        niiri:b6644262-0ad4-11ec-a802-1094bbf2086c,
-        niiri:b7559964-0ad4-11ec-a802-1094bbf2086c,
-        niiri:b757b79a-0ad4-11ec-a802-1094bbf2086c,
-        niiri:b8245a78-0ad4-11ec-a802-1094bbf2086c,
-        niiri:b84001c0-0ad4-11ec-a802-1094bbf2086c,
-        niiri:b88a811e-0ad4-11ec-a802-1094bbf2086c,
-        niiri:b9869bca-0ad4-11ec-a802-1094bbf2086c,
-        niiri:ba0fd336-0ad4-11ec-a802-1094bbf2086c,
-        niiri:ba329e32-0ad4-11ec-a802-1094bbf2086c,
-        niiri:bace34be-0ad4-11ec-a802-1094bbf2086c,
-        niiri:bae0fb40-0ad4-11ec-a802-1094bbf2086c,
-        niiri:bafff5be-0ad4-11ec-a802-1094bbf2086c,
-        niiri:bbe972ca-0ad4-11ec-a802-1094bbf2086c,
-        niiri:bd0f2956-0ad4-11ec-a802-1094bbf2086c,
-        niiri:bd2bf25c-0ad4-11ec-a802-1094bbf2086c,
-        niiri:bdb5b694-0ad4-11ec-a802-1094bbf2086c,
-        niiri:bdbb0bea-0ad4-11ec-a802-1094bbf2086c,
-        niiri:be60ecc4-0ad4-11ec-a802-1094bbf2086c,
-        niiri:bea3afe4-0ad4-11ec-a802-1094bbf2086c,
-        niiri:bf8b741e-0ad4-11ec-a802-1094bbf2086c,
-        niiri:c02aeb7c-0ad4-11ec-a802-1094bbf2086c,
-        niiri:c06f9a90-0ad4-11ec-a802-1094bbf2086c,
-        niiri:c0cf00d8-0ad4-11ec-a802-1094bbf2086c,
-        niiri:c19396a6-0ad4-11ec-a802-1094bbf2086c,
-        niiri:c1b8ba44-0ad4-11ec-a802-1094bbf2086c,
-        niiri:c1f2d130-0ad4-11ec-a802-1094bbf2086c,
-        niiri:c252e0e2-0ad4-11ec-a802-1094bbf2086c,
-        niiri:c341d350-0ad4-11ec-a802-1094bbf2086c,
-        niiri:c4332b88-0ad4-11ec-a802-1094bbf2086c,
-        niiri:c4b0147e-0ad4-11ec-a802-1094bbf2086c,
-        niiri:c5249f18-0ad4-11ec-a802-1094bbf2086c,
-        niiri:c672fbc8-0ad4-11ec-a802-1094bbf2086c,
-        niiri:c6794152-0ad4-11ec-a802-1094bbf2086c,
-        niiri:c70638b4-0ad4-11ec-a802-1094bbf2086c,
-        niiri:c7ec991c-0ad4-11ec-a802-1094bbf2086c,
-        niiri:c8ce0096-0ad4-11ec-a802-1094bbf2086c,
-        niiri:c96d90da-0ad4-11ec-a802-1094bbf2086c,
-        niiri:c9b06404-0ad4-11ec-a802-1094bbf2086c,
-        niiri:c9ff157c-0ad4-11ec-a802-1094bbf2086c,
-        niiri:cafa8466-0ad4-11ec-a802-1094bbf2086c,
-        niiri:cb85d2a0-0ad4-11ec-a802-1094bbf2086c,
-        niiri:cc7fd43a-0ad4-11ec-a802-1094bbf2086c,
-        niiri:cc830700-0ad4-11ec-a802-1094bbf2086c,
-        niiri:cc9b0114-0ad4-11ec-a802-1094bbf2086c,
-        niiri:ccc64c58-0ad4-11ec-a802-1094bbf2086c,
-        niiri:cd6f1bee-0ad4-11ec-a802-1094bbf2086c,
-        niiri:ce024a96-0ad4-11ec-a802-1094bbf2086c,
-        niiri:ce538bb2-0ad4-11ec-a802-1094bbf2086c,
-        niiri:cf6ce662-0ad4-11ec-a802-1094bbf2086c,
-        niiri:cf977722-0ad4-11ec-a802-1094bbf2086c,
-        niiri:cfe3c5f8-0ad4-11ec-a802-1094bbf2086c,
-        niiri:d005f812-0ad4-11ec-a802-1094bbf2086c,
-        niiri:d00b0a14-0ad4-11ec-a802-1094bbf2086c,
-        niiri:d012a6a2-0ad4-11ec-a802-1094bbf2086c,
-        niiri:d023ddb6-0ad4-11ec-a802-1094bbf2086c,
-        niiri:d0376e6a-0ad4-11ec-a802-1094bbf2086c,
-        niiri:d11288c6-0ad4-11ec-a802-1094bbf2086c,
-        niiri:d2569fd8-0ad4-11ec-a802-1094bbf2086c,
-        niiri:d2e902ca-0ad4-11ec-a802-1094bbf2086c,
-        niiri:d33d299e-0ad4-11ec-a802-1094bbf2086c,
-        niiri:d40bf9da-0ad4-11ec-a802-1094bbf2086c,
-        niiri:d4676f92-0ad4-11ec-a802-1094bbf2086c,
-        niiri:d5f5622c-0ad4-11ec-a802-1094bbf2086c,
-        niiri:d6e035c2-0ad4-11ec-a802-1094bbf2086c,
-        niiri:d7f135ac-0ad4-11ec-a802-1094bbf2086c,
-        niiri:d8470a4e-0ad4-11ec-a802-1094bbf2086c,
-        niiri:d8cf274e-0ad4-11ec-a802-1094bbf2086c,
-        niiri:d91869c6-0ad4-11ec-a802-1094bbf2086c,
-        niiri:d9198cb4-0ad4-11ec-a802-1094bbf2086c,
-        niiri:d9b9292a-0ad4-11ec-a802-1094bbf2086c,
-        niiri:dce39856-0ad4-11ec-a802-1094bbf2086c,
-        niiri:de88e804-0ad4-11ec-a802-1094bbf2086c,
-        niiri:dfd95378-0ad4-11ec-a802-1094bbf2086c,
-        niiri:dfe83606-0ad4-11ec-a802-1094bbf2086c,
-        niiri:dff4e07c-0ad4-11ec-a802-1094bbf2086c,
-        niiri:e001592e-0ad4-11ec-a802-1094bbf2086c,
-        niiri:e022274e-0ad4-11ec-a802-1094bbf2086c,
-        niiri:e0298cdc-0ad4-11ec-a802-1094bbf2086c,
-        niiri:e13f9cd4-0ad4-11ec-a802-1094bbf2086c,
-        niiri:e343fa96-0ad4-11ec-a802-1094bbf2086c,
-        niiri:e4fcb5d2-0ad4-11ec-a802-1094bbf2086c,
-        niiri:e61abcc6-0ad4-11ec-a802-1094bbf2086c,
-        niiri:e6307b98-0ad4-11ec-a802-1094bbf2086c,
-        niiri:e885ec36-0ad4-11ec-a802-1094bbf2086c,
-        niiri:ea5673fe-0ad4-11ec-a802-1094bbf2086c,
-        niiri:eb89fe96-0ad4-11ec-a802-1094bbf2086c,
-        niiri:ebc0c800-0ad4-11ec-a802-1094bbf2086c,
-        niiri:ebd9286c-0ad4-11ec-a802-1094bbf2086c,
-        niiri:ed89512a-0ad4-11ec-a802-1094bbf2086c,
-        niiri:eee0b23e-0ad4-11ec-a802-1094bbf2086c,
-        niiri:ef6f39f0-0ad4-11ec-a802-1094bbf2086c,
-        niiri:ef7eced4-0ad4-11ec-a802-1094bbf2086c,
-        niiri:efe1e742-0ad4-11ec-a802-1094bbf2086c,
-        niiri:efe2e1e2-0ad4-11ec-a802-1094bbf2086c,
-        niiri:efe5693a-0ad4-11ec-a802-1094bbf2086c,
-        niiri:eff8e168-0ad4-11ec-a802-1094bbf2086c,
-        niiri:f009c0e6-0ad4-11ec-a802-1094bbf2086c,
-        niiri:f0115a86-0ad4-11ec-a802-1094bbf2086c,
-        niiri:f01980b2-0ad4-11ec-a802-1094bbf2086c,
-        niiri:f01a8b24-0ad4-11ec-a802-1094bbf2086c,
-        niiri:f01f6e78-0ad4-11ec-a802-1094bbf2086c,
-        niiri:f025d1fa-0ad4-11ec-a802-1094bbf2086c,
-        niiri:f033e786-0ad4-11ec-a802-1094bbf2086c,
-        niiri:f03ab91c-0ad4-11ec-a802-1094bbf2086c,
-        niiri:f108d26e-0ad4-11ec-a802-1094bbf2086c,
-        niiri:f165d7ba-0ad4-11ec-a802-1094bbf2086c,
-        niiri:f371edc4-0ad4-11ec-a802-1094bbf2086c,
-        niiri:f3730216-0ad4-11ec-a802-1094bbf2086c,
-        niiri:f3dba490-0ad4-11ec-a802-1094bbf2086c,
-        niiri:f42a68e2-0ad4-11ec-a802-1094bbf2086c,
-        niiri:f43248a2-0ad4-11ec-a802-1094bbf2086c,
-        niiri:f70597be-0ad4-11ec-a802-1094bbf2086c,
-        niiri:faa80216-0ad4-11ec-a802-1094bbf2086c,
-        niiri:fc313942-0ad4-11ec-a802-1094bbf2086c,
-        niiri:fd741da4-0ad4-11ec-a802-1094bbf2086c,
-        niiri:fd9c55b6-0ad4-11ec-a802-1094bbf2086c,
-        niiri:fef492a6-0ad4-11ec-a802-1094bbf2086c,
-        niiri:ffec5574-0ad4-11ec-a802-1094bbf2086c .
-
-niiri:sex_3lac29e a nidm:PersonalDataElement,
-        prov:Entity ;
-    rdfs:label "sex" ;
-    dct:description "" ;
-    nidm:isAbout ilx:ilx_0738439 ;
-    nidm:sourceVariable "sex" ;
-    nidm:valueType <xsd:float> ;
-    ilx:ilx_0739289 "NIDM" .
-
-niiri:a005d68e-0ad4-11ec-a802-1094bbf2086c a nidm:Session,
-        prov:Activity ;
-    dct:isPartOf niiri:e3fd9a08-0ad3-11ec-a802-1094bbf2086c .
-
-niiri:a00664e6-0ad4-11ec-a802-1094bbf2086c a bids:sidecar_file,
-        prov:Entity ;
-    nfo:filename "participants.json"^^xsd:string ;
-    prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/participants.json"^^xsd:string ;
-    prov:wasGeneratedBy niiri:c005edd6-0ad4-11ec-a802-1094bbf2086c .
-
-niiri:a00a419c-0ad4-11ec-a802-1094bbf2086c a bids:sidecar_file,
-        prov:Entity ;
-    nfo:filename "participants.json"^^xsd:string ;
-    prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/participants.json"^^xsd:string ;
-    prov:wasGeneratedBy niiri:b009a908-0ad4-11ec-a802-1094bbf2086c .
-
-niiri:a00d7b32-0ad4-11ec-a802-1094bbf2086c a bids:sidecar_file,
-        prov:Entity ;
-    nfo:filename "participants.json"^^xsd:string ;
-    prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/participants.json"^^xsd:string ;
-    prov:wasGeneratedBy niiri:a00afb8c-0ad4-11ec-a802-1094bbf2086c .
-
-niiri:a015519a-0ad4-11ec-a802-1094bbf2086c a bids:sidecar_file,
-        prov:Entity ;
-    nfo:filename "participants.json"^^xsd:string ;
-    prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/participants.json"^^xsd:string ;
-    prov:wasGeneratedBy niiri:f0129b80-0ad4-11ec-a802-1094bbf2086c .
-
-niiri:a01a6a04-0ad4-11ec-a802-1094bbf2086c a nidm:Session,
-        prov:Activity ;
-    dct:isPartOf niiri:e3fd9a08-0ad3-11ec-a802-1094bbf2086c .
-
-niiri:a01eb0b4-0ad4-11ec-a802-1094bbf2086c a bids:sidecar_file,
-        prov:Entity ;
-    nfo:filename "participants.json"^^xsd:string ;
-    prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/participants.json"^^xsd:string ;
-    prov:wasGeneratedBy niiri:d01a7ff8-0ad4-11ec-a802-1094bbf2086c .
-
-niiri:a029c148-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:ecb13794-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:e012b4b2-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
 
 niiri:a031daa4-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
         prov:Entity ;
@@ -261,10 +46,6 @@ niiri:a031daa4-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-17/func/sub-17_task-incentiveantisaccade_run-04_bold.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:a029c148-0ad4-11ec-a802-1094bbf2086c .
 
-niiri:a03a7a10-0ad4-11ec-a802-1094bbf2086c a nidm:Session,
-        prov:Activity ;
-    dct:isPartOf niiri:e3fd9a08-0ad3-11ec-a802-1094bbf2086c .
-
 niiri:a059c204-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
         prov:Entity ;
     crypto:sha512 "4db45ef4006aed4696f041c059323bd54636ff29a186a032bfa6b91129de1de7072c96c6ee02925891db95dc0e2e05fe15724cace8d3dd38a4a10f3a3a4dd174"^^xsd:string ;
@@ -276,34 +57,6 @@ niiri:a059c204-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-14/func/sub-14_task-incentiveantisaccade_run-02_bold.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:b0599626-0ad4-11ec-a802-1094bbf2086c .
 
-niiri:a0ced9a0-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:c0a5eba8-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:effdd3a8-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
-
-niiri:a13f6840-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:aeb6f1ec-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:a009d220-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
-
-niiri:a165af92-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:c0a5eba8-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:effdd3a8-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
-
-niiri:a18c1cc0-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:a16394c6-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:a0198c06-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
-
 niiri:a18c4dd0-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
         prov:Entity ;
     crypto:sha512 "f8a3fb2b4dfe583f848e98214e1b07fca31fef65c4c1d3ff7f4dd7b1b02e1094a3a992fa56e6aac1d3b8b995e10457d34139cf512d578efc9ee09ef766272356"^^xsd:string ;
@@ -313,13 +66,6 @@ niiri:a18c4dd0-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
     nfo:filename "/sub-18/anat/sub-18_T1w.nii.gz"^^xsd:string ;
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-18/anat/sub-18_T1w.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:a18c1cc0-0ad4-11ec-a802-1094bbf2086c .
-
-niiri:a217606e-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:a16394c6-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:a0198c06-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
 
 niiri:a21799c6-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
         prov:Entity ;
@@ -343,13 +89,6 @@ niiri:a2275a6a-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-14/func/sub-14_task-incentiveantisaccade_run-04_bold.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:f22730b2-0ad4-11ec-a802-1094bbf2086c .
 
-niiri:a2f7ade0-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:a16394c6-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:a0198c06-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
-
 niiri:a2f7d838-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
         prov:Entity ;
     crypto:sha512 "a84c2538031e7e42f6e2b47b0bd3c89df196c2cf96e4315692b0fdcc86bf5fb13072a35b0d267abc3a43459c84b7faaeb48d9aa9cf0dd817a430aa41623f771b"^^xsd:string ;
@@ -361,20 +100,6 @@ niiri:a2f7d838-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-18/func/sub-18_task-incentiveantisaccade_run-02_bold.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:a2f7ade0-0ad4-11ec-a802-1094bbf2086c .
 
-niiri:a3db74f2-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:e31d77c2-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:ffe576dc-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
-
-niiri:a3e1f5da-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:a16394c6-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:a0198c06-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
-
 niiri:a3e2332e-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
         prov:Entity ;
     crypto:sha512 "59f7523e2711abd93ddb7293e81c49d38a3f418cc9331c6106572cc6ff5f664d714f08ca44d84eed9d88fa9dc80e96c8f6f5ee77176a8958a228853908f34b91"^^xsd:string ;
@@ -385,13 +110,6 @@ niiri:a3e2332e-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
     nfo:filename "/sub-18/func/sub-18_task-incentiveantisaccade_run-03_bold.nii.gz"^^xsd:string ;
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-18/func/sub-18_task-incentiveantisaccade_run-03_bold.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:a3e1f5da-0ad4-11ec-a802-1094bbf2086c .
-
-niiri:a4c53eb2-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:a16394c6-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:a0198c06-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
 
 niiri:a4c593b2-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
         prov:Entity ;
@@ -447,13 +165,6 @@ niiri:a5bdef48-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-04/func/sub-04_task-incentiveantisaccade_run-03_bold.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:f5bdc89c-0ad4-11ec-a802-1094bbf2086c .
 
-niiri:a613b762-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:a5e47312-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:f01a975e-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
-
 niiri:a6172668-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
         prov:Entity ;
     crypto:sha512 "dded45ac5ca815f75b000b3c087dad400b6fdb08a8162fde62022cef52d1a8fb01fea93487b85a61aa45b08920ca1b3cd5ec9b5bfde07eabe2c0082b899411ec"^^xsd:string ;
@@ -463,34 +174,6 @@ niiri:a6172668-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
     nfo:filename "/sub-19/anat/sub-19_T1w.nii.gz"^^xsd:string ;
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-19/anat/sub-19_T1w.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:a613b762-0ad4-11ec-a802-1094bbf2086c .
-
-niiri:a61a87ba-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:f55964c2-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:c0016978-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
-
-niiri:a62e9904-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:f2b3ebd0-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:aff4ef2c-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
-
-niiri:a672cf54-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:b3ff23da-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:bfe1f412-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
-
-niiri:a6a93b8e-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:a5e47312-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:f01a975e-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
 
 niiri:a6aa1120-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
         prov:Entity ;
@@ -524,13 +207,6 @@ niiri:a792d58a-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-09/anat/sub-09_T1w.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:c792a34e-0ad4-11ec-a802-1094bbf2086c .
 
-niiri:a79d17cc-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:a5e47312-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:f01a975e-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
-
 niiri:a7a20b06-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
         prov:Entity ;
     crypto:sha512 "56b56f7d7f8a6a210435d599d4829ec3fd0c0d05f98605bcd326c6d84adb9c23e023b0e81c0e4247f47d9f29f28cc8dd66355a5b8aabe5b2303711e48d188e67"^^xsd:string ;
@@ -551,27 +227,6 @@ niiri:a7fa9d56-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
     nfo:filename "/sub-05/anat/sub-05_T1w.nii.gz"^^xsd:string ;
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-05/anat/sub-05_T1w.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:d7fa7952-0ad4-11ec-a802-1094bbf2086c .
-
-niiri:a8857ab2-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:a5e47312-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:f01a975e-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
-
-niiri:a885ca80-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:d85d6ba8-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:dfe2ede0-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
-
-niiri:a88813a2-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:d7d0ee84-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:efe84240-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
 
 niiri:a889f420-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
         prov:Entity ;
@@ -595,20 +250,6 @@ niiri:a8dcd9f8-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-12/func/sub-12_task-incentiveantisaccade_run-04_bold.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:d8dcab2c-0ad4-11ec-a802-1094bbf2086c .
 
-niiri:a9685c74-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:a5e47312-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:f01a975e-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
-
-niiri:a96d5200-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:d7d0ee84-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:efe84240-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
-
 niiri:a971749e-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
         prov:Entity ;
     crypto:sha512 "f4b2cd7963f983ed79a2c4fefd3ddc3b5d473c4658ff0331618482f7dd22f5df08b8e265c339d6371efaed8a4e22f5c5ee84aaf1898b58234e32c7bda9f28c28"^^xsd:string ;
@@ -620,13 +261,6 @@ niiri:a971749e-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-19/func/sub-19_task-incentiveantisaccade_run-04_bold.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:a9685c74-0ad4-11ec-a802-1094bbf2086c .
 
-niiri:a9feed22-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:e769fb92-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:fff8ed20-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
-
 niiri:aa029492-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
         prov:Entity ;
     crypto:sha512 "ef04dc380c2f7b53f2fdac892335c7c1903a4b34a8e9bde4870bc14d7b379be8e6221426c9d32df46041269355e128bbbb00282def667de5e9bab327afb0827a"^^xsd:string ;
@@ -637,13 +271,6 @@ niiri:aa029492-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
     nfo:filename "/sub-02/func/sub-02_task-incentiveantisaccade_run-02_bold.nii.gz"^^xsd:string ;
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-02/func/sub-02_task-incentiveantisaccade_run-02_bold.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:da025dd8-0ad4-11ec-a802-1094bbf2086c .
-
-niiri:aa5649e2-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:d7d0ee84-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:efe84240-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
 
 niiri:aaf631ec-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
         prov:Entity ;
@@ -667,20 +294,6 @@ niiri:ab3349d2-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-05/func/sub-05_task-incentiveantisaccade_run-04_bold.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:bb332042-0ad4-11ec-a802-1094bbf2086c .
 
-niiri:ab89d74a-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:b81af634-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:a011730e-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
-
-niiri:ab8ac7ee-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:aa9e16d8-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:d01f7a30-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
-
 niiri:ab8b7f18-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
         prov:Entity ;
     crypto:sha512 "9e21ce4c292ad65b4ec40c343efe3bbebd7efdca37fdb75e8da092fc09f6d3ff9fa478f2853bb405ec3c6cde2e40b6cbd429fc60da59ee993a822a29420f5ee4"^^xsd:string ;
@@ -690,13 +303,6 @@ niiri:ab8b7f18-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
     nfo:filename "/sub-20/anat/sub-20_T1w.nii.gz"^^xsd:string ;
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-20/anat/sub-20_T1w.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:ab8ac7ee-0ad4-11ec-a802-1094bbf2086c .
-
-niiri:ac1c87d8-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:aa9e16d8-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:d01f7a30-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
 
 niiri:ac222710-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
         prov:Entity ;
@@ -709,13 +315,6 @@ niiri:ac222710-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-20/func/sub-20_task-incentiveantisaccade_run-01_bold.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:ac1c87d8-0ad4-11ec-a802-1094bbf2086c .
 
-niiri:ac311480-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:fc0841b8-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:fffa3c5c-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
-
 niiri:ad059eaa-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
         prov:Entity ;
     crypto:sha512 "09a9b746a5fd0f320abd76b329a4c80eebf1a20295054b6a12966322d6d3e10452fc985c5bf59b28ac4ce98f772bf386ad1d6e478dd2dc520d7fa9247dcf87e5"^^xsd:string ;
@@ -725,20 +324,6 @@ niiri:ad059eaa-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
     nfo:filename "/sub-03/anat/sub-03_T1w.nii.gz"^^xsd:string ;
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-03/anat/sub-03_T1w.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:fd02eade-0ad4-11ec-a802-1094bbf2086c .
-
-niiri:ad0f04f8-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:ec5caf88-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:efec64ba-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
-
-niiri:ad0f786c-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:aa9e16d8-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:d01f7a30-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
 
 niiri:ad167216-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
         prov:Entity ;
@@ -750,27 +335,6 @@ niiri:ad167216-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
     nfo:filename "/sub-20/func/sub-20_task-incentiveantisaccade_run-02_bold.nii.gz"^^xsd:string ;
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-20/func/sub-20_task-incentiveantisaccade_run-02_bold.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:ad0f786c-0ad4-11ec-a802-1094bbf2086c .
-
-niiri:ad6c4156-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:ecb13794-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:e012b4b2-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
-
-niiri:adb58a20-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:fc0841b8-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:fffa3c5c-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
-
-niiri:ae037ade-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:aa9e16d8-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:d01f7a30-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
 
 niiri:ae077968-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
         prov:Entity ;
@@ -794,13 +358,6 @@ niiri:aea025d0-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-10/func/sub-10_task-incentiveantisaccade_run-03_bold.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:ce9d98c4-0ad4-11ec-a802-1094bbf2086c .
 
-niiri:aeebfb2e-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:aa9e16d8-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:d01f7a30-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
-
 niiri:aef3ee56-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
         prov:Entity ;
     crypto:sha512 "36e96fa4ff09226328c2fad0e9da2e9198fbf75d4fadcef593302a1c0a34d029ac7d1a49c201f730798ca83eaeefb1d83c7b60d20849cdfda0264b7483fbdc41"^^xsd:string ;
@@ -823,21 +380,6 @@ niiri:af487166-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-17/func/sub-17_task-incentiveantisaccade_run-03_bold.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:df44b026-0ad4-11ec-a802-1094bbf2086c .
 
-niiri:af6f14ca-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:aeb6f1ec-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:a009d220-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
-
-niiri:afe1c1ae-0ad4-11ec-a802-1094bbf2086c a nidm:Session,
-        prov:Activity ;
-    dct:isPartOf niiri:e3fd9a08-0ad3-11ec-a802-1094bbf2086c .
-
-niiri:afe2c914-0ad4-11ec-a802-1094bbf2086c a nidm:Session,
-        prov:Activity ;
-    dct:isPartOf niiri:e3fd9a08-0ad3-11ec-a802-1094bbf2086c .
-
 niiri:aff060ec-0ad4-11ec-a802-1094bbf2086c a onli:assessment-instrument,
         nidm:AcquisitionObject,
         prov:Entity ;
@@ -847,12 +389,6 @@ niiri:aff060ec-0ad4-11ec-a802-1094bbf2086c a onli:assessment-instrument,
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/participants.tsv"^^xsd:string ;
     prov:wasGeneratedBy niiri:aff055ac-0ad4-11ec-a802-1094bbf2086c ;
     prov:wasInfluencedBy niiri:aff0ca8c-0ad4-11ec-a802-1094bbf2086c .
-
-niiri:aff0ca8c-0ad4-11ec-a802-1094bbf2086c a bids:sidecar_file,
-        prov:Entity ;
-    nfo:filename "participants.json"^^xsd:string ;
-    prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/participants.json"^^xsd:string ;
-    prov:wasGeneratedBy niiri:aff055ac-0ad4-11ec-a802-1094bbf2086c .
 
 niiri:aff9e982-0ad4-11ec-a802-1094bbf2086c a onli:assessment-instrument,
         nidm:AcquisitionObject,
@@ -864,10 +400,6 @@ niiri:aff9e982-0ad4-11ec-a802-1094bbf2086c a onli:assessment-instrument,
     prov:wasGeneratedBy niiri:fff9deb0-0ad4-11ec-a802-1094bbf2086c ;
     prov:wasInfluencedBy niiri:dffd21f6-0ad4-11ec-a802-1094bbf2086c .
 
-niiri:affda73e-0ad4-11ec-a802-1094bbf2086c a nidm:Session,
-        prov:Activity ;
-    dct:isPartOf niiri:e3fd9a08-0ad3-11ec-a802-1094bbf2086c .
-
 niiri:affdc75a-0ad4-11ec-a802-1094bbf2086c a onli:assessment-instrument,
         nidm:AcquisitionObject,
         prov:Entity ;
@@ -878,21 +410,14 @@ niiri:affdc75a-0ad4-11ec-a802-1094bbf2086c a onli:assessment-instrument,
     prov:wasGeneratedBy niiri:affdbc60-0ad4-11ec-a802-1094bbf2086c ;
     prov:wasInfluencedBy niiri:affe38c0-0ad4-11ec-a802-1094bbf2086c .
 
-niiri:affe38c0-0ad4-11ec-a802-1094bbf2086c a bids:sidecar_file,
+niiri:age_3mirhvl a nidm:PersonalDataElement,
         prov:Entity ;
-    nfo:filename "participants.json"^^xsd:string ;
-    prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/participants.json"^^xsd:string ;
-    prov:wasGeneratedBy niiri:affdbc60-0ad4-11ec-a802-1094bbf2086c .
-
-niiri:b00e3dce-0ad4-11ec-a802-1094bbf2086c a nidm:Session,
-        prov:Activity ;
-    dct:isPartOf niiri:e3fd9a08-0ad3-11ec-a802-1094bbf2086c .
-
-niiri:b02655c6-0ad4-11ec-a802-1094bbf2086c a bids:sidecar_file,
-        prov:Entity ;
-    nfo:filename "participants.json"^^xsd:string ;
-    prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/participants.json"^^xsd:string ;
-    prov:wasGeneratedBy niiri:d025c2fa-0ad4-11ec-a802-1094bbf2086c .
+    rdfs:label "age" ;
+    dct:description "" ;
+    nidm:isAbout ilx:ilx_0100400 ;
+    nidm:sourceVariable "age" ;
+    nidm:valueType <xsd:string> ;
+    ilx:ilx_0739289 "NIDM" .
 
 niiri:b02fa5ea-0ad4-11ec-a802-1094bbf2086c a onli:assessment-instrument,
         nidm:AcquisitionObject,
@@ -904,17 +429,6 @@ niiri:b02fa5ea-0ad4-11ec-a802-1094bbf2086c a onli:assessment-instrument,
     prov:wasGeneratedBy niiri:c02f9be0-0ad4-11ec-a802-1094bbf2086c ;
     prov:wasInfluencedBy niiri:c0333494-0ad4-11ec-a802-1094bbf2086c .
 
-niiri:b0374a70-0ad4-11ec-a802-1094bbf2086c a nidm:Session,
-        prov:Activity ;
-    dct:isPartOf niiri:e3fd9a08-0ad3-11ec-a802-1094bbf2086c .
-
-niiri:b047c76e-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:b01f05c2-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:e0223338-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
-
 niiri:b047ff22-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
         prov:Entity ;
     crypto:sha512 "cb4c8053e320eba1438eea489d3bddd56275482986fb258eab1903852e45aed83bed4adc284f73561da70e52f835c69759e1852a7a0927274ae4e59f86026816"^^xsd:string ;
@@ -924,20 +438,6 @@ niiri:b047ff22-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
     nfo:filename "/sub-21/anat/sub-21_T1w.nii.gz"^^xsd:string ;
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-21/anat/sub-21_T1w.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:b047c76e-0ad4-11ec-a802-1094bbf2086c .
-
-niiri:b0599626-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:aeb6f1ec-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:a009d220-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
-
-niiri:b0df208c-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:b01f05c2-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:e0223338-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
 
 niiri:b0df55d4-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
         prov:Entity ;
@@ -950,20 +450,6 @@ niiri:b0df55d4-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-21/func/sub-21_task-incentiveantisaccade_run-01_bold.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:b0df208c-0ad4-11ec-a802-1094bbf2086c .
 
-niiri:b1935876-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:d0ddf102-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:bff06c68-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
-
-niiri:b1c5f46c-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:b01f05c2-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:e0223338-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
-
 niiri:b1c62e0a-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
         prov:Entity ;
     crypto:sha512 "f4f7d4022c794020008670d041f6b8efb1d5e5feb91a640357539b172ae8f74e66dd876b57df786b96de2b9013fc44683ddae9f7acb4657425de8eea0c3c10a2"^^xsd:string ;
@@ -974,20 +460,6 @@ niiri:b1c62e0a-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
     nfo:filename "/sub-21/func/sub-21_task-incentiveantisaccade_run-02_bold.nii.gz"^^xsd:string ;
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-21/func/sub-21_task-incentiveantisaccade_run-02_bold.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:b1c5f46c-0ad4-11ec-a802-1094bbf2086c .
-
-niiri:b2565faa-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:c0a5eba8-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:effdd3a8-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
-
-niiri:b2a56214-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:b01f05c2-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:e0223338-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
 
 niiri:b2a58f14-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
         prov:Entity ;
@@ -1000,20 +472,6 @@ niiri:b2a58f14-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-21/func/sub-21_task-incentiveantisaccade_run-03_bold.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:b2a56214-0ad4-11ec-a802-1094bbf2086c .
 
-niiri:b370bb48-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:f2b3ebd0-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:aff4ef2c-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
-
-niiri:b38827de-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:b01f05c2-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:e0223338-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
-
 niiri:b388581c-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
         prov:Entity ;
     crypto:sha512 "bbb39f9cb9dc84d54cb865d7706ebd5fb72f624960c32292894e4f805b1c5f34fc0c84bf06c6fac1b9df730dae2048619ae3851b66fffc493020f19c2488dd35"^^xsd:string ;
@@ -1025,27 +483,6 @@ niiri:b388581c-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-21/func/sub-21_task-incentiveantisaccade_run-04_bold.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:b38827de-0ad4-11ec-a802-1094bbf2086c .
 
-niiri:b42a32d2-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:b3ff23da-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:bfe1f412-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
-
-niiri:b4d17730-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:e31d77c2-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:ffe576dc-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
-
-niiri:b4d890e2-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:b4b140f0-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:c025df4c-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
-
 niiri:b4d8b5cc-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
         prov:Entity ;
     crypto:sha512 "a7468752675185244f2631bb2aa350f54cdec457c7ce654a8eeb067dc3f9ed02749ff0b459dfdd5c593402c7ffd9ee1bf0a7cf7f418bbd7e2b429ad5aec26cbf"^^xsd:string ;
@@ -1055,13 +492,6 @@ niiri:b4d8b5cc-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
     nfo:filename "/sub-22/anat/sub-22_T1w.nii.gz"^^xsd:string ;
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-22/anat/sub-22_T1w.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:b4d890e2-0ad4-11ec-a802-1094bbf2086c .
-
-niiri:b4fc8e2c-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:e348be7a-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:f00ce140-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
 
 niiri:b54e6ae6-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
         prov:Entity ;
@@ -1074,13 +504,6 @@ niiri:b54e6ae6-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-08/func/sub-08_task-incentiveantisaccade_run-03_bold.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:f54a352a-0ad4-11ec-a802-1094bbf2086c .
 
-niiri:b5720f1a-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:b4b140f0-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:c025df4c-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
-
 niiri:b57238dc-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
         prov:Entity ;
     crypto:sha512 "b3973faa5e462e2cdb723b9e5658254c9499a536e91bacd6f4c313e0a72ce4a459650ff0c2635fa392477bdbf919d79bddcfa1c0946d1cc69f7ffb14caf447d5"^^xsd:string ;
@@ -1091,13 +514,6 @@ niiri:b57238dc-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
     nfo:filename "/sub-22/func/sub-22_task-incentiveantisaccade_run-01_bold.nii.gz"^^xsd:string ;
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-22/func/sub-22_task-incentiveantisaccade_run-01_bold.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:b5720f1a-0ad4-11ec-a802-1094bbf2086c .
-
-niiri:b6641166-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:b4b140f0-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:c025df4c-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
 
 niiri:b6644262-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
         prov:Entity ;
@@ -1110,13 +526,6 @@ niiri:b6644262-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-22/func/sub-22_task-incentiveantisaccade_run-02_bold.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:b6641166-0ad4-11ec-a802-1094bbf2086c .
 
-niiri:b75560c0-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:b4b140f0-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:c025df4c-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
-
 niiri:b7559964-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
         prov:Entity ;
     crypto:sha512 "1c43aedcd6b1694f0f98e766cfd474b206fba605f8e367c625e2a403b7b878c40eb1f594779e2b9d6aa2c1441610fe1a31897538e8941ddf8f13cbc1e7e89a77"^^xsd:string ;
@@ -1127,13 +536,6 @@ niiri:b7559964-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
     nfo:filename "/sub-22/func/sub-22_task-incentiveantisaccade_run-03_bold.nii.gz"^^xsd:string ;
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-22/func/sub-22_task-incentiveantisaccade_run-03_bold.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:b75560c0-0ad4-11ec-a802-1094bbf2086c .
-
-niiri:b7578c16-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:b3ff23da-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:bfe1f412-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
 
 niiri:b757b79a-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
         prov:Entity ;
@@ -1157,13 +559,6 @@ niiri:b8245a78-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-09/func/sub-09_task-incentiveantisaccade_run-01_bold.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:d82428d2-0ad4-11ec-a802-1094bbf2086c .
 
-niiri:b83fd93e-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:b4b140f0-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:c025df4c-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
-
 niiri:b84001c0-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
         prov:Entity ;
     crypto:sha512 "dab63a538e7f771eba5839efd114be6ce44d46bbd097fae0c1b4649a887a9f6d9c8e5794635cf60faf9b185e8e3465404466366e01cf27b013738db22e6db92c"^^xsd:string ;
@@ -1186,20 +581,6 @@ niiri:b88a811e-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-05/func/sub-05_task-incentiveantisaccade_run-01_bold.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:a88813a2-0ad4-11ec-a802-1094bbf2086c .
 
-niiri:b916637c-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:e769fb92-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:fff8ed20-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
-
-niiri:b98676c2-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:b95c8bbe-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:a0299f60-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
-
 niiri:b9869bca-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
         prov:Entity ;
     crypto:sha512 "73c8c457e3a75026d31afbb450977adc86925414ebbf0fff326afc828e82982804f52a8d321738388131ed98bd9419d1729f5246d53fd115b4d8faabfae7aefe"^^xsd:string ;
@@ -1209,13 +590,6 @@ niiri:b9869bca-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
     nfo:filename "/sub-23/anat/sub-23_T1w.nii.gz"^^xsd:string ;
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-23/anat/sub-23_T1w.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:b98676c2-0ad4-11ec-a802-1094bbf2086c .
-
-niiri:ba0f9a74-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:b95c8bbe-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:a0299f60-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
 
 niiri:ba0fd336-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
         prov:Entity ;
@@ -1260,13 +634,6 @@ niiri:bae0fb40-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-09/func/sub-09_task-incentiveantisaccade_run-04_bold.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:dae0c9f4-0ad4-11ec-a802-1094bbf2086c .
 
-niiri:baffc53a-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:b95c8bbe-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:a0299f60-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
-
 niiri:bafff5be-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
         prov:Entity ;
     crypto:sha512 "51c5dedf7f0e2f8fd86b76700b05b1d296f36e07487c55be687b5a8a6ac54e0ae25dff180051648dd773a96ce4244cea313b370f011dc0b619c6926f33d6f8af"^^xsd:string ;
@@ -1277,20 +644,6 @@ niiri:bafff5be-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
     nfo:filename "/sub-23/func/sub-23_task-incentiveantisaccade_run-02_bold.nii.gz"^^xsd:string ;
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-23/func/sub-23_task-incentiveantisaccade_run-02_bold.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:baffc53a-0ad4-11ec-a802-1094bbf2086c .
-
-niiri:bb332042-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:d7d0ee84-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:efe84240-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
-
-niiri:bbe93968-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:b95c8bbe-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:a0299f60-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
 
 niiri:bbe972ca-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
         prov:Entity ;
@@ -1314,13 +667,6 @@ niiri:bd0f2956-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-06/func/sub-06_task-incentiveantisaccade_run-01_bold.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:ad0f04f8-0ad4-11ec-a802-1094bbf2086c .
 
-niiri:bd2bbe2c-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:bd04b8b8-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:a02e64dc-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
-
 niiri:bd2bf25c-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
         prov:Entity ;
     crypto:sha512 "68f40d9b02fdde87a8e21d5474c8b96842e325eb9404f4bb49a8b8e2a6928fab951cac62decf6cfe6c17826b14cf4d8bef4d6e08e4e5cd19c7425443049b5e90"^^xsd:string ;
@@ -1330,13 +676,6 @@ niiri:bd2bf25c-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
     nfo:filename "/sub-24/anat/sub-24_T1w.nii.gz"^^xsd:string ;
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-24/anat/sub-24_T1w.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:bd2bbe2c-0ad4-11ec-a802-1094bbf2086c .
-
-niiri:bd86acf4-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:aa0980d8-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:b0060438-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
 
 niiri:bdb5b694-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
         prov:Entity ;
@@ -1349,13 +688,6 @@ niiri:bdb5b694-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-10/func/sub-10_task-incentiveantisaccade_run-02_bold.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:adb58a20-0ad4-11ec-a802-1094bbf2086c .
 
-niiri:bdbae656-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:bd04b8b8-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:a02e64dc-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
-
 niiri:bdbb0bea-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
         prov:Entity ;
     crypto:sha512 "802246ec9daf0e8582657bb31cd0f5edf295b9f6f598da72ec1ce293e08a55ad5a2b35170f983144c45d64f867214f5d1c1ca640dac8a7c023079dc89552b37a"^^xsd:string ;
@@ -1366,13 +698,6 @@ niiri:bdbb0bea-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
     nfo:filename "/sub-24/func/sub-24_task-incentiveantisaccade_run-01_bold.nii.gz"^^xsd:string ;
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-24/func/sub-24_task-incentiveantisaccade_run-01_bold.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:bdbae656-0ad4-11ec-a802-1094bbf2086c .
-
-niiri:be5c6b9a-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:ecb13794-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:e012b4b2-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
 
 niiri:be60ecc4-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
         prov:Entity ;
@@ -1385,13 +710,6 @@ niiri:be60ecc4-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-17/func/sub-17_task-incentiveantisaccade_run-02_bold.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:be5c6b9a-0ad4-11ec-a802-1094bbf2086c .
 
-niiri:bea36cdc-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:bd04b8b8-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:a02e64dc-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
-
 niiri:bea3afe4-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
         prov:Entity ;
     crypto:sha512 "51c5f056d1da6d18034b59597e113dd438226474b5269580adba12832811d804c0f3f6116513f3fe9d5508a619d988dbf201659b8a58eeb5ff7b247c28af177b"^^xsd:string ;
@@ -1402,13 +720,6 @@ niiri:bea3afe4-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
     nfo:filename "/sub-24/func/sub-24_task-incentiveantisaccade_run-02_bold.nii.gz"^^xsd:string ;
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-24/func/sub-24_task-incentiveantisaccade_run-02_bold.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:bea36cdc-0ad4-11ec-a802-1094bbf2086c .
-
-niiri:bf893a1e-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:bd04b8b8-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:a02e64dc-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
 
 niiri:bf8b741e-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
         prov:Entity ;
@@ -1421,45 +732,6 @@ niiri:bf8b741e-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-24/func/sub-24_task-incentiveantisaccade_run-03_bold.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:bf893a1e-0ad4-11ec-a802-1094bbf2086c .
 
-niiri:bfd910ca-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:ec5caf88-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:efec64ba-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
-
-niiri:bff4bcc8-0ad4-11ec-a802-1094bbf2086c a nidm:Session,
-        prov:Activity ;
-    dct:isPartOf niiri:e3fd9a08-0ad3-11ec-a802-1094bbf2086c .
-
-niiri:c001ee70-0ad4-11ec-a802-1094bbf2086c a bids:sidecar_file,
-        prov:Entity ;
-    nfo:filename "participants.json"^^xsd:string ;
-    prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/participants.json"^^xsd:string ;
-    prov:wasGeneratedBy niiri:b001495c-0ad4-11ec-a802-1094bbf2086c .
-
-niiri:c006dfa2-0ad4-11ec-a802-1094bbf2086c a nidm:Session,
-        prov:Activity ;
-    dct:isPartOf niiri:e3fd9a08-0ad3-11ec-a802-1094bbf2086c .
-
-niiri:c01624d0-0ad4-11ec-a802-1094bbf2086c a nidm:Session,
-        prov:Activity ;
-    dct:isPartOf niiri:e3fd9a08-0ad3-11ec-a802-1094bbf2086c .
-
-niiri:c01f4e48-0ad4-11ec-a802-1094bbf2086c a nidm:Session,
-        prov:Activity ;
-    dct:isPartOf niiri:e3fd9a08-0ad3-11ec-a802-1094bbf2086c .
-
-niiri:c02a2034-0ad4-11ec-a802-1094bbf2086c a bids:sidecar_file,
-        prov:Entity ;
-    nfo:filename "participants.json"^^xsd:string ;
-    prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/participants.json"^^xsd:string ;
-    prov:wasGeneratedBy niiri:b0296b80-0ad4-11ec-a802-1094bbf2086c .
-
-niiri:c02aca0c-0ad4-11ec-a802-1094bbf2086c a nidm:Session,
-        prov:Activity ;
-    dct:isPartOf niiri:e3fd9a08-0ad3-11ec-a802-1094bbf2086c .
-
 niiri:c02aeb7c-0ad4-11ec-a802-1094bbf2086c a onli:assessment-instrument,
         nidm:AcquisitionObject,
         prov:Entity ;
@@ -1469,19 +741,6 @@ niiri:c02aeb7c-0ad4-11ec-a802-1094bbf2086c a onli:assessment-instrument,
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/participants.tsv"^^xsd:string ;
     prov:wasGeneratedBy niiri:f02ae1b8-0ad4-11ec-a802-1094bbf2086c ;
     prov:wasInfluencedBy niiri:d02ee5c4-0ad4-11ec-a802-1094bbf2086c .
-
-niiri:c0333494-0ad4-11ec-a802-1094bbf2086c a bids:sidecar_file,
-        prov:Entity ;
-    nfo:filename "participants.json"^^xsd:string ;
-    prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/participants.json"^^xsd:string ;
-    prov:wasGeneratedBy niiri:c02f9be0-0ad4-11ec-a802-1094bbf2086c .
-
-niiri:c06f6c50-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:bd04b8b8-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:a02e64dc-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
 
 niiri:c06f9a90-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
         prov:Entity ;
@@ -1504,13 +763,6 @@ niiri:c0cf00d8-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-11/anat/sub-11_T1w.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:a0ced9a0-0ad4-11ec-a802-1094bbf2086c .
 
-niiri:c108948e-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:d0ddf102-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:bff06c68-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
-
 niiri:c19396a6-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
         prov:Entity ;
     crypto:sha512 "63150219d0668e3a6148802be3542db38f229c31622e6cb110381b5f077a0db19d8dbdbce832715b72a1fd81a76d4e6ed715a71b3607166976e72adcc71f69d8"^^xsd:string ;
@@ -1521,13 +773,6 @@ niiri:c19396a6-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
     nfo:filename "/sub-07/func/sub-07_task-incentiveantisaccade_run-01_bold.nii.gz"^^xsd:string ;
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-07/func/sub-07_task-incentiveantisaccade_run-01_bold.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:b1935876-0ad4-11ec-a802-1094bbf2086c .
-
-niiri:c1b87ed0-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:c191cb96-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:a02fb13e-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
 
 niiri:c1b8ba44-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
         prov:Entity ;
@@ -1550,13 +795,6 @@ niiri:c1f2d130-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-03/func/sub-03_task-incentiveantisaccade_run-04_bold.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:f1eec1d0-0ad4-11ec-a802-1094bbf2086c .
 
-niiri:c252b59a-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:c191cb96-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:a02fb13e-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
-
 niiri:c252e0e2-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
         prov:Entity ;
     crypto:sha512 "f226984cde629557f960c5ed742d20b68df41a3c09b59fde9e7382044dc2dd2e10aeb5ff923e6b031b1786da08b933ea9f0451215e37229b930c188ff0e7800c"^^xsd:string ;
@@ -1567,13 +805,6 @@ niiri:c252e0e2-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
     nfo:filename "/sub-25/func/sub-25_task-incentiveantisaccade_run-01_bold.nii.gz"^^xsd:string ;
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-25/func/sub-25_task-incentiveantisaccade_run-01_bold.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:c252b59a-0ad4-11ec-a802-1094bbf2086c .
-
-niiri:c341abfa-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:c191cb96-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:a02fb13e-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
 
 niiri:c341d350-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
         prov:Entity ;
@@ -1586,20 +817,6 @@ niiri:c341d350-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-25/func/sub-25_task-incentiveantisaccade_run-02_bold.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:c341abfa-0ad4-11ec-a802-1094bbf2086c .
 
-niiri:c343d30e-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:e31d77c2-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:ffe576dc-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
-
-niiri:c43304fa-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:c191cb96-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:a02fb13e-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
-
 niiri:c4332b88-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
         prov:Entity ;
     crypto:sha512 "bec1857c84f52a1a62f9e88e08f82d790735681197f36bc2e0afcad1c16d130a80010f5346f165a6e2c7844d712503e3241694a1fbb222b76efb2ae2cba13be1"^^xsd:string ;
@@ -1610,13 +827,6 @@ niiri:c4332b88-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
     nfo:filename "/sub-25/func/sub-25_task-incentiveantisaccade_run-03_bold.nii.gz"^^xsd:string ;
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-25/func/sub-25_task-incentiveantisaccade_run-03_bold.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:c43304fa-0ad4-11ec-a802-1094bbf2086c .
-
-niiri:c46341a6-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:f2b3ebd0-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:aff4ef2c-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
 
 niiri:c4b0147e-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
         prov:Entity ;
@@ -1629,13 +839,6 @@ niiri:c4b0147e-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-01/func/sub-01_task-incentiveantisaccade_run-01_bold.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:e4afe594-0ad4-11ec-a802-1094bbf2086c .
 
-niiri:c5247524-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:c191cb96-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:a02fb13e-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
-
 niiri:c5249f18-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
         prov:Entity ;
     crypto:sha512 "a821f412516964130fd4b5fecc3efac5f883efdfc9a1bb76d71d397ce874b5818329f6deb4ddd183d79ce0b4d6af9a8b92ff67b9fe3061761b8fc05014b3f3e8"^^xsd:string ;
@@ -1646,13 +849,6 @@ niiri:c5249f18-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
     nfo:filename "/sub-25/func/sub-25_task-incentiveantisaccade_run-04_bold.nii.gz"^^xsd:string ;
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-25/func/sub-25_task-incentiveantisaccade_run-04_bold.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:c5247524-0ad4-11ec-a802-1094bbf2086c .
-
-niiri:c5f52b90-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:e348be7a-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:f00ce140-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
 
 niiri:c672fbc8-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
         prov:Entity ;
@@ -1665,13 +861,6 @@ niiri:c672fbc8-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-01/func/sub-01_task-incentiveantisaccade_run-03_bold.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:a672cf54-0ad4-11ec-a802-1094bbf2086c .
 
-niiri:c678fd5a-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:c64ea50a-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:d033f38e-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
-
 niiri:c6794152-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
         prov:Entity ;
     crypto:sha512 "61819607643814847e3730ba7ea27b6dcae6c155b23b1527deb8bef203de3c111c43f679a243d1450ddd3f6dea71bfc73aa30b7f315b13ed22829083d2940999"^^xsd:string ;
@@ -1681,20 +870,6 @@ niiri:c6794152-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
     nfo:filename "/sub-26/anat/sub-26_T1w.nii.gz"^^xsd:string ;
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-26/anat/sub-26_T1w.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:c678fd5a-0ad4-11ec-a802-1094bbf2086c .
-
-niiri:c6a7d5fe-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:e31d77c2-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:ffe576dc-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
-
-niiri:c7060718-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:c64ea50a-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:d033f38e-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
 
 niiri:c70638b4-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
         prov:Entity ;
@@ -1707,20 +882,6 @@ niiri:c70638b4-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-26/func/sub-26_task-incentiveantisaccade_run-01_bold.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:c7060718-0ad4-11ec-a802-1094bbf2086c .
 
-niiri:c792a34e-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:e769fb92-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:fff8ed20-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
-
-niiri:c7e9f2e8-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:c64ea50a-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:d033f38e-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
-
 niiri:c7ec991c-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
         prov:Entity ;
     crypto:sha512 "3c83e3846f19ac2f5affdc335aed7680002e3e657e19ebffdad3bc4827a308dfde699f9b8a539c2ab0ce5ef5b5ec0a4ea4dd34efbcb42ee3096c8df2101d244f"^^xsd:string ;
@@ -1731,13 +892,6 @@ niiri:c7ec991c-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
     nfo:filename "/sub-26/func/sub-26_task-incentiveantisaccade_run-02_bold.nii.gz"^^xsd:string ;
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-26/func/sub-26_task-incentiveantisaccade_run-02_bold.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:c7e9f2e8-0ad4-11ec-a802-1094bbf2086c .
-
-niiri:c8cdc220-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:c64ea50a-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:d033f38e-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
 
 niiri:c8ce0096-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
         prov:Entity ;
@@ -1761,13 +915,6 @@ niiri:c96d90da-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-05/func/sub-05_task-incentiveantisaccade_run-02_bold.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:a96d5200-0ad4-11ec-a802-1094bbf2086c .
 
-niiri:c9ae4188-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:c64ea50a-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:d033f38e-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
-
 niiri:c9b06404-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
         prov:Entity ;
     crypto:sha512 "fd6ff68d61de6f403627ae0f166c20db4e6fd82ca4b34a9b552e192904736b88bf4aad2819a81def32071db71bf8d04e9be4d8add7f9f7312d9279afd748f649"^^xsd:string ;
@@ -1778,13 +925,6 @@ niiri:c9b06404-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
     nfo:filename "/sub-26/func/sub-26_task-incentiveantisaccade_run-04_bold.nii.gz"^^xsd:string ;
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-26/func/sub-26_task-incentiveantisaccade_run-04_bold.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:c9ae4188-0ad4-11ec-a802-1094bbf2086c .
-
-niiri:c9b8f96e-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:b81af634-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:a011730e-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
 
 niiri:c9ff157c-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
         prov:Entity ;
@@ -1797,20 +937,6 @@ niiri:c9ff157c-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-09/func/sub-09_task-incentiveantisaccade_run-03_bold.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:a9feed22-0ad4-11ec-a802-1094bbf2086c .
 
-niiri:caf2e604-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:d85d6ba8-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:dfe2ede0-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
-
-niiri:cafa5a72-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:cad18e44-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:e0377ad6-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
-
 niiri:cafa8466-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
         prov:Entity ;
     crypto:sha512 "702c94a2d1e055803c8b3f99e95a5086d226429074695ead58d2ec64e68fbe0cee9134feef399d4d5a78ce2bd8d9035e78b99ba989ee412b14ffa9d583457c13"^^xsd:string ;
@@ -1820,13 +946,6 @@ niiri:cafa8466-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
     nfo:filename "/sub-27/anat/sub-27_T1w.nii.gz"^^xsd:string ;
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-27/anat/sub-27_T1w.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:cafa5a72-0ad4-11ec-a802-1094bbf2086c .
-
-niiri:cb85b1e4-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:cad18e44-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:e0377ad6-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
 
 niiri:cb85d2a0-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
         prov:Entity ;
@@ -1838,13 +957,6 @@ niiri:cb85d2a0-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
     nfo:filename "/sub-27/func/sub-27_task-incentiveantisaccade_run-01_bold.nii.gz"^^xsd:string ;
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-27/func/sub-27_task-incentiveantisaccade_run-01_bold.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:cb85b1e4-0ad4-11ec-a802-1094bbf2086c .
-
-niiri:cc7fa654-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:cad18e44-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:e0377ad6-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
 
 niiri:cc7fd43a-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
         prov:Entity ;
@@ -1866,13 +978,6 @@ niiri:cc830700-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
     nfo:filename "/sub-06/anat/sub-06_T1w.nii.gz"^^xsd:string ;
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-06/anat/sub-06_T1w.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:ec82da6e-0ad4-11ec-a802-1094bbf2086c .
-
-niiri:cc9ac74e-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:aa0980d8-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:b0060438-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
 
 niiri:cc9b0114-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
         prov:Entity ;
@@ -1896,20 +1001,6 @@ niiri:ccc64c58-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-10/func/sub-10_task-incentiveantisaccade_run-01_bold.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:ecc6203e-0ad4-11ec-a802-1094bbf2086c .
 
-niiri:cce03346-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:ecb13794-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:e012b4b2-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
-
-niiri:cd6ee1ba-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:cad18e44-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:e0377ad6-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
-
 niiri:cd6f1bee-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
         prov:Entity ;
     crypto:sha512 "7b262975962bf40221ba22b5cc51e271f76f537003e9f8f670902372f2aaae151a40ddb24227be245045401efa2fc3716193e0219441ff40025727b92557d01c"^^xsd:string ;
@@ -1932,13 +1023,6 @@ niiri:ce024a96-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-06/func/sub-06_task-incentiveantisaccade_run-02_bold.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:de02291c-0ad4-11ec-a802-1094bbf2086c .
 
-niiri:ce53525a-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:cad18e44-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:e0377ad6-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
-
 niiri:ce538bb2-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
         prov:Entity ;
     crypto:sha512 "0e51adbbef3a63ccbf574ee24812af79094de2a5f805aa07c57ad09f05ca2b9f34c81474cf599e86dc5f7c5718547944971300e6aad30f7734eb6fdc66dcb0e3"^^xsd:string ;
@@ -1949,20 +1033,6 @@ niiri:ce538bb2-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
     nfo:filename "/sub-27/func/sub-27_task-incentiveantisaccade_run-04_bold.nii.gz"^^xsd:string ;
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-27/func/sub-27_task-incentiveantisaccade_run-04_bold.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:ce53525a-0ad4-11ec-a802-1094bbf2086c .
-
-niiri:ce9d98c4-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:fc0841b8-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:fffa3c5c-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
-
-niiri:cf6cbebc-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:bcdcf4c8-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:cfe4315a-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
 
 niiri:cf6ce662-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
         prov:Entity ;
@@ -1975,13 +1045,6 @@ niiri:cf6ce662-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-03/func/sub-03_task-incentiveantisaccade_run-03_bold.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:cf6cbebc-0ad4-11ec-a802-1094bbf2086c .
 
-niiri:cf973d02-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:cf6ce1c4-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:e03ac7c2-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
-
 niiri:cf977722-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
         prov:Entity ;
     crypto:sha512 "ae17d0ebcaeb51e7eac70c32b3e5ad4f4e63925789975ba912283e3a0fb9195b09f33c202bd116180ae0af76dfcced76e9f91c91e76d8b34b93e2bdc01de4c79"^^xsd:string ;
@@ -1992,10 +1055,6 @@ niiri:cf977722-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-28/anat/sub-28_T1w.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:cf973d02-0ad4-11ec-a802-1094bbf2086c .
 
-niiri:cfe3a870-0ad4-11ec-a802-1094bbf2086c a nidm:Session,
-        prov:Activity ;
-    dct:isPartOf niiri:e3fd9a08-0ad3-11ec-a802-1094bbf2086c .
-
 niiri:cfe3c5f8-0ad4-11ec-a802-1094bbf2086c a onli:assessment-instrument,
         nidm:AcquisitionObject,
         prov:Entity ;
@@ -2005,20 +1064,6 @@ niiri:cfe3c5f8-0ad4-11ec-a802-1094bbf2086c a onli:assessment-instrument,
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/participants.tsv"^^xsd:string ;
     prov:wasGeneratedBy niiri:bfe3b9c8-0ad4-11ec-a802-1094bbf2086c ;
     prov:wasInfluencedBy niiri:efe49eba-0ad4-11ec-a802-1094bbf2086c .
-
-niiri:cfe773f6-0ad4-11ec-a802-1094bbf2086c a bids:sidecar_file,
-        prov:Entity ;
-    nfo:filename "participants.json"^^xsd:string ;
-    prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/participants.json"^^xsd:string ;
-    prov:wasGeneratedBy niiri:afe55d6e-0ad4-11ec-a802-1094bbf2086c .
-
-niiri:cfec2acc-0ad4-11ec-a802-1094bbf2086c a nidm:Session,
-        prov:Activity ;
-    dct:isPartOf niiri:e3fd9a08-0ad3-11ec-a802-1094bbf2086c .
-
-niiri:cff04062-0ad4-11ec-a802-1094bbf2086c a nidm:Session,
-        prov:Activity ;
-    dct:isPartOf niiri:e3fd9a08-0ad3-11ec-a802-1094bbf2086c .
 
 niiri:d005f812-0ad4-11ec-a802-1094bbf2086c a onli:assessment-instrument,
         nidm:AcquisitionObject,
@@ -2050,29 +1095,6 @@ niiri:d012a6a2-0ad4-11ec-a802-1094bbf2086c a onli:assessment-instrument,
     prov:wasGeneratedBy niiri:f0129b80-0ad4-11ec-a802-1094bbf2086c ;
     prov:wasInfluencedBy niiri:a015519a-0ad4-11ec-a802-1094bbf2086c .
 
-niiri:d019e264-0ad4-11ec-a802-1094bbf2086c a bids:sidecar_file,
-        prov:Entity ;
-    nfo:filename "participants.json"^^xsd:string ;
-    prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/participants.json"^^xsd:string ;
-    prov:wasGeneratedBy niiri:b0196e9c-0ad4-11ec-a802-1094bbf2086c .
-
-niiri:d022049e-0ad4-11ec-a802-1094bbf2086c a nidm:Session,
-        prov:Activity ;
-    dct:isPartOf niiri:e3fd9a08-0ad3-11ec-a802-1094bbf2086c .
-
-niiri:d0229184-0ad4-11ec-a802-1094bbf2086c a bids:sidecar_file,
-        prov:Entity ;
-    nfo:filename "participants.json"^^xsd:string ;
-    prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/participants.json"^^xsd:string ;
-    prov:wasGeneratedBy niiri:a0221c68-0ad4-11ec-a802-1094bbf2086c .
-
-niiri:d023b822-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:cf6ce1c4-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:e03ac7c2-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
-
 niiri:d023ddb6-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
         prov:Entity ;
     crypto:sha512 "fb0d6f285d50b298e3b258867cfa7f2797dfa444db1e21da0bcbfde6ce510c8bdfac43a06184ebf117e43ebdbe725834622b9e31387112c52b43f23be3a55d0e"^^xsd:string ;
@@ -2084,20 +1106,6 @@ niiri:d023ddb6-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-28/func/sub-28_task-incentiveantisaccade_run-01_bold.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:d023b822-0ad4-11ec-a802-1094bbf2086c .
 
-niiri:d027000c-0ad4-11ec-a802-1094bbf2086c a nidm:Session,
-        prov:Activity ;
-    dct:isPartOf niiri:e3fd9a08-0ad3-11ec-a802-1094bbf2086c .
-
-niiri:d02ee5c4-0ad4-11ec-a802-1094bbf2086c a bids:sidecar_file,
-        prov:Entity ;
-    nfo:filename "participants.json"^^xsd:string ;
-    prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/participants.json"^^xsd:string ;
-    prov:wasGeneratedBy niiri:f02ae1b8-0ad4-11ec-a802-1094bbf2086c .
-
-niiri:d033b3d8-0ad4-11ec-a802-1094bbf2086c a nidm:Session,
-        prov:Activity ;
-    dct:isPartOf niiri:e3fd9a08-0ad3-11ec-a802-1094bbf2086c .
-
 niiri:d0376e6a-0ad4-11ec-a802-1094bbf2086c a onli:assessment-instrument,
         nidm:AcquisitionObject,
         prov:Entity ;
@@ -2107,13 +1115,6 @@ niiri:d0376e6a-0ad4-11ec-a802-1094bbf2086c a onli:assessment-instrument,
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/participants.tsv"^^xsd:string ;
     prov:wasGeneratedBy niiri:d0376302-0ad4-11ec-a802-1094bbf2086c ;
     prov:wasInfluencedBy niiri:f037e494-0ad4-11ec-a802-1094bbf2086c .
-
-niiri:d1124bfe-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:cf6ce1c4-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:e03ac7c2-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
 
 niiri:d11288c6-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
         prov:Entity ;
@@ -2147,13 +1148,6 @@ niiri:d2e902ca-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-08/anat/sub-08_T1w.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:e2e510fc-0ad4-11ec-a802-1094bbf2086c .
 
-niiri:d33cedc6-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:c0a5eba8-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:effdd3a8-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
-
 niiri:d33d299e-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
         prov:Entity ;
     crypto:sha512 "ea188f8f529daa3b469e50c37d50ea60c990406718ea62a3fe60691191b6bf0704ec781c404e83bd6a8048a55a91633e24b2645cf25cfe9c09a2f76aca292ff9"^^xsd:string ;
@@ -2164,13 +1158,6 @@ niiri:d33d299e-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
     nfo:filename "/sub-11/func/sub-11_task-incentiveantisaccade_run-03_bold.nii.gz"^^xsd:string ;
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-11/func/sub-11_task-incentiveantisaccade_run-03_bold.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:d33cedc6-0ad4-11ec-a802-1094bbf2086c .
-
-niiri:d372d87c-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:e348be7a-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:f00ce140-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
 
 niiri:d40bf9da-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
         prov:Entity ;
@@ -2193,13 +1180,6 @@ niiri:d4676f92-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
     nfo:filename "/sub-08/func/sub-08_task-incentiveantisaccade_run-02_bold.nii.gz"^^xsd:string ;
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-08/func/sub-08_task-incentiveantisaccade_run-02_bold.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:c46341a6-0ad4-11ec-a802-1094bbf2086c .
-
-niiri:d582fbde-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:f55964c2-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:c0016978-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
 
 niiri:d5f5622c-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
         prov:Entity ;
@@ -2234,20 +1214,6 @@ niiri:d7f135ac-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-12/func/sub-12_task-incentiveantisaccade_run-03_bold.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:e7f0ff56-0ad4-11ec-a802-1094bbf2086c .
 
-niiri:d7fa7952-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:d7d0ee84-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:efe84240-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
-
-niiri:d82428d2-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:e769fb92-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:fff8ed20-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
-
 niiri:d8470a4e-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
         prov:Entity ;
     crypto:sha512 "8d65ed8c4cc36090c56300f0551489d727f73a51034d84a439f0d0484a277b8e2d644693b1e766fdcfeacc803bba9ddbc6c3927eec6de700669aa3dc9269381f"^^xsd:string ;
@@ -2257,13 +1223,6 @@ niiri:d8470a4e-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
     nfo:filename "/sub-16/anat/sub-16_T1w.nii.gz"^^xsd:string ;
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-16/anat/sub-16_T1w.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:e8447072-0ad4-11ec-a802-1094bbf2086c .
-
-niiri:d8cefb02-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:b81af634-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:a011730e-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
 
 niiri:d8cf274e-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
         prov:Entity ;
@@ -2275,13 +1234,6 @@ niiri:d8cf274e-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
     nfo:filename "/sub-16/func/sub-16_task-incentiveantisaccade_run-01_bold.nii.gz"^^xsd:string ;
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-16/func/sub-16_task-incentiveantisaccade_run-01_bold.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:d8cefb02-0ad4-11ec-a802-1094bbf2086c .
-
-niiri:d8dcab2c-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:f55964c2-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:c0016978-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
 
 niiri:d91869c6-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
         prov:Entity ;
@@ -2316,27 +1268,6 @@ niiri:d9b9292a-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-16/func/sub-16_task-incentiveantisaccade_run-02_bold.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:c9b8f96e-0ad4-11ec-a802-1094bbf2086c .
 
-niiri:da025dd8-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:d85d6ba8-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:dfe2ede0-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
-
-niiri:dae0c9f4-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:e769fb92-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:fff8ed20-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
-
-niiri:dbd69854-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:d85d6ba8-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:dfe2ede0-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
-
 niiri:dce39856-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
         prov:Entity ;
     crypto:sha512 "d4dbdf28639114c5f0b4ff5afd7669d03dce68ac74bafd345446b12c6f480fc02da0ea584f4110f512007a2165f5e26f982cc467d46cdcafe5a31a706b2e750e"^^xsd:string ;
@@ -2346,13 +1277,6 @@ niiri:dce39856-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
     nfo:filename "/sub-17/anat/sub-17_T1w.nii.gz"^^xsd:string ;
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-17/anat/sub-17_T1w.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:cce03346-0ad4-11ec-a802-1094bbf2086c .
-
-niiri:de02291c-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:ec5caf88-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:efec64ba-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
 
 niiri:de88e804-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
         prov:Entity ;
@@ -2365,20 +1289,6 @@ niiri:de88e804-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-03/func/sub-03_task-incentiveantisaccade_run-02_bold.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:ee88b0f0-0ad4-11ec-a802-1094bbf2086c .
 
-niiri:dee07b98-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:aeb6f1ec-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:a009d220-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
-
-niiri:df44b026-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:ecb13794-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:e012b4b2-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
-
 niiri:dfd95378-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
         prov:Entity ;
     crypto:sha512 "742ddf0d2a85731ddada7abf8d08d5c54862242e9517e249bc2dbc5ea7fd46ed8ebcc0b2010693b27320e9cb05ec875d6a5c8a421fdb90e939025e16d70694fa"^^xsd:string ;
@@ -2390,14 +1300,6 @@ niiri:dfd95378-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-06/func/sub-06_task-incentiveantisaccade_run-04_bold.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:bfd910ca-0ad4-11ec-a802-1094bbf2086c .
 
-niiri:dfe54892-0ad4-11ec-a802-1094bbf2086c a nidm:Session,
-        prov:Activity ;
-    dct:isPartOf niiri:e3fd9a08-0ad3-11ec-a802-1094bbf2086c .
-
-niiri:dfe81766-0ad4-11ec-a802-1094bbf2086c a nidm:Session,
-        prov:Activity ;
-    dct:isPartOf niiri:e3fd9a08-0ad3-11ec-a802-1094bbf2086c .
-
 niiri:dfe83606-0ad4-11ec-a802-1094bbf2086c a onli:assessment-instrument,
         nidm:AcquisitionObject,
         prov:Entity ;
@@ -2407,12 +1309,6 @@ niiri:dfe83606-0ad4-11ec-a802-1094bbf2086c a onli:assessment-instrument,
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/participants.tsv"^^xsd:string ;
     prov:wasGeneratedBy niiri:efe82b20-0ad4-11ec-a802-1094bbf2086c ;
     prov:wasInfluencedBy niiri:dfeb56ba-0ad4-11ec-a802-1094bbf2086c .
-
-niiri:dfeb56ba-0ad4-11ec-a802-1094bbf2086c a bids:sidecar_file,
-        prov:Entity ;
-    nfo:filename "participants.json"^^xsd:string ;
-    prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/participants.json"^^xsd:string ;
-    prov:wasGeneratedBy niiri:efe82b20-0ad4-11ec-a802-1094bbf2086c .
 
 niiri:dff4e07c-0ad4-11ec-a802-1094bbf2086c a onli:assessment-instrument,
         nidm:AcquisitionObject,
@@ -2424,12 +1320,6 @@ niiri:dff4e07c-0ad4-11ec-a802-1094bbf2086c a onli:assessment-instrument,
     prov:wasGeneratedBy niiri:cff4d35c-0ad4-11ec-a802-1094bbf2086c ;
     prov:wasInfluencedBy niiri:eff55354-0ad4-11ec-a802-1094bbf2086c .
 
-niiri:dffd21f6-0ad4-11ec-a802-1094bbf2086c a bids:sidecar_file,
-        prov:Entity ;
-    nfo:filename "participants.json"^^xsd:string ;
-    prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/participants.json"^^xsd:string ;
-    prov:wasGeneratedBy niiri:fff9deb0-0ad4-11ec-a802-1094bbf2086c .
-
 niiri:e001592e-0ad4-11ec-a802-1094bbf2086c a onli:assessment-instrument,
         nidm:AcquisitionObject,
         prov:Entity ;
@@ -2439,16 +1329,6 @@ niiri:e001592e-0ad4-11ec-a802-1094bbf2086c a onli:assessment-instrument,
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/participants.tsv"^^xsd:string ;
     prov:wasGeneratedBy niiri:b001495c-0ad4-11ec-a802-1094bbf2086c ;
     prov:wasInfluencedBy niiri:c001ee70-0ad4-11ec-a802-1094bbf2086c .
-
-niiri:e011e708-0ad4-11ec-a802-1094bbf2086c a bids:sidecar_file,
-        prov:Entity ;
-    nfo:filename "participants.json"^^xsd:string ;
-    prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/participants.json"^^xsd:string ;
-    prov:wasGeneratedBy niiri:d00e5bd8-0ad4-11ec-a802-1094bbf2086c .
-
-niiri:e01282c6-0ad4-11ec-a802-1094bbf2086c a nidm:Session,
-        prov:Activity ;
-    dct:isPartOf niiri:e3fd9a08-0ad3-11ec-a802-1094bbf2086c .
 
 niiri:e022274e-0ad4-11ec-a802-1094bbf2086c a onli:assessment-instrument,
         nidm:AcquisitionObject,
@@ -2460,10 +1340,6 @@ niiri:e022274e-0ad4-11ec-a802-1094bbf2086c a onli:assessment-instrument,
     prov:wasGeneratedBy niiri:a0221c68-0ad4-11ec-a802-1094bbf2086c ;
     prov:wasInfluencedBy niiri:d0229184-0ad4-11ec-a802-1094bbf2086c .
 
-niiri:e0259956-0ad4-11ec-a802-1094bbf2086c a nidm:Session,
-        prov:Activity ;
-    dct:isPartOf niiri:e3fd9a08-0ad3-11ec-a802-1094bbf2086c .
-
 niiri:e0298cdc-0ad4-11ec-a802-1094bbf2086c a onli:assessment-instrument,
         nidm:AcquisitionObject,
         prov:Entity ;
@@ -2473,16 +1349,6 @@ niiri:e0298cdc-0ad4-11ec-a802-1094bbf2086c a onli:assessment-instrument,
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/participants.tsv"^^xsd:string ;
     prov:wasGeneratedBy niiri:b0296b80-0ad4-11ec-a802-1094bbf2086c ;
     prov:wasInfluencedBy niiri:c02a2034-0ad4-11ec-a802-1094bbf2086c .
-
-niiri:e02f8420-0ad4-11ec-a802-1094bbf2086c a nidm:Session,
-        prov:Activity ;
-    dct:isPartOf niiri:e3fd9a08-0ad3-11ec-a802-1094bbf2086c .
-
-niiri:e0344d5c-0ad4-11ec-a802-1094bbf2086c a bids:sidecar_file,
-        prov:Entity ;
-    nfo:filename "participants.json"^^xsd:string ;
-    prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/participants.json"^^xsd:string ;
-    prov:wasGeneratedBy niiri:a033daa2-0ad4-11ec-a802-1094bbf2086c .
 
 niiri:e13f9cd4-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
         prov:Entity ;
@@ -2495,13 +1361,6 @@ niiri:e13f9cd4-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-14/func/sub-14_task-incentiveantisaccade_run-03_bold.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:a13f6840-0ad4-11ec-a802-1094bbf2086c .
 
-niiri:e2e510fc-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:f2b3ebd0-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:aff4ef2c-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
-
 niiri:e343fa96-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
         prov:Entity ;
     crypto:sha512 "6d686ddc60403c4bab67841e28ca3098ef41c6c2f82762cc70f696f83bcc14930a130ff89a8ea9ecad28f67d063e8e907ca81c840f3b59ec8ba52ee4e764b8e4"^^xsd:string ;
@@ -2511,20 +1370,6 @@ niiri:e343fa96-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
     nfo:filename "/sub-04/anat/sub-04_T1w.nii.gz"^^xsd:string ;
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-04/anat/sub-04_T1w.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:c343d30e-0ad4-11ec-a802-1094bbf2086c .
-
-niiri:e40bcf78-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:e348be7a-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:f00ce140-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
-
-niiri:e4afe594-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:b3ff23da-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:bfe1f412-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
 
 niiri:e4fcb5d2-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
         prov:Entity ;
@@ -2559,27 +1404,6 @@ niiri:e6307b98-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-08/func/sub-08_task-incentiveantisaccade_run-04_bold.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:a62e9904-0ad4-11ec-a802-1094bbf2086c .
 
-niiri:e6dc9e80-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:e348be7a-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:f00ce140-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
-
-niiri:e7f0ff56-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:f55964c2-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:c0016978-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
-
-niiri:e8447072-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:b81af634-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:a011730e-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
-
 niiri:e885ec36-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
         prov:Entity ;
     crypto:sha512 "46c7a6d9917f3d89244ff3b7507d95f62f11a7cca5c4f2093388c5d083181062b6f81e26fd841447ba2c470bf4b8f01160dd304eed6bb88b351a07199088ad17"^^xsd:string ;
@@ -2589,13 +1413,6 @@ niiri:e885ec36-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
     nfo:filename "/sub-02/anat/sub-02_T1w.nii.gz"^^xsd:string ;
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-02/anat/sub-02_T1w.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:a885ca80-0ad4-11ec-a802-1094bbf2086c .
-
-niiri:e9183500-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:d85d6ba8-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:dfe2ede0-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
 
 niiri:ea5673fe-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
         prov:Entity ;
@@ -2608,13 +1425,6 @@ niiri:ea5673fe-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-05/func/sub-05_task-incentiveantisaccade_run-03_bold.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:aa5649e2-0ad4-11ec-a802-1094bbf2086c .
 
-niiri:eace0a7a-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:aa0980d8-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:b0060438-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
-
 niiri:eb89fe96-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
         prov:Entity ;
     crypto:sha512 "5a017c667a17d27e4bebb817eda5ad0225f21a7e559e2d720c2c7a426507957bb9be8c899192ac2a94b7832008584ea4deae35e46d080eab9cc24152c2cbfb56"^^xsd:string ;
@@ -2625,13 +1435,6 @@ niiri:eb89fe96-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
     nfo:filename "/sub-16/func/sub-16_task-incentiveantisaccade_run-04_bold.nii.gz"^^xsd:string ;
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-16/func/sub-16_task-incentiveantisaccade_run-04_bold.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:ab89d74a-0ad4-11ec-a802-1094bbf2086c .
-
-niiri:ebc09f6a-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:aa0980d8-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:b0060438-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
 
 niiri:ebc0c800-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
         prov:Entity ;
@@ -2655,20 +1458,6 @@ niiri:ebd9286c-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-02/func/sub-02_task-incentiveantisaccade_run-04_bold.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:dbd69854-0ad4-11ec-a802-1094bbf2086c .
 
-niiri:ec82da6e-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:ec5caf88-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:efec64ba-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
-
-niiri:ecc6203e-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:fc0841b8-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:fffa3c5c-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
-
 niiri:ed89512a-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
         prov:Entity ;
     crypto:sha512 "c24dba27f1ba737aaf67d8d7814ff57598f7f01eda3c95d858440243c0b2ec43979b7705ca21d2bc53a107409559776b81f7ff4ecb2d4c5b8ca7a4f7e760b31e"^^xsd:string ;
@@ -2680,13 +1469,6 @@ niiri:ed89512a-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-13/func/sub-13_task-incentiveantisaccade_run-04_bold.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:bd86acf4-0ad4-11ec-a802-1094bbf2086c .
 
-niiri:ee88b0f0-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:bcdcf4c8-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:cfe4315a-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
-
 niiri:eee0b23e-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
         prov:Entity ;
     crypto:sha512 "1c7ebd0cd0254876af047667075203cc3e83b516e59ca4db2c748070200b2a92afa521adc80eba1a14b973ac7b5ad3a0b65eccc787301183a2fbaf9b5b73e7d2"^^xsd:string ;
@@ -2696,13 +1478,6 @@ niiri:eee0b23e-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
     nfo:filename "/sub-14/anat/sub-14_T1w.nii.gz"^^xsd:string ;
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-14/anat/sub-14_T1w.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:dee07b98-0ad4-11ec-a802-1094bbf2086c .
-
-niiri:eef45ec6-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:ec5caf88-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:efec64ba-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
 
 niiri:ef6f39f0-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
         prov:Entity ;
@@ -2736,12 +1511,6 @@ niiri:efe1e742-0ad4-11ec-a802-1094bbf2086c a onli:assessment-instrument,
     prov:wasGeneratedBy niiri:dfe1db58-0ad4-11ec-a802-1094bbf2086c ;
     prov:wasInfluencedBy niiri:efe25010-0ad4-11ec-a802-1094bbf2086c .
 
-niiri:efe25010-0ad4-11ec-a802-1094bbf2086c a bids:sidecar_file,
-        prov:Entity ;
-    nfo:filename "participants.json"^^xsd:string ;
-    prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/participants.json"^^xsd:string ;
-    prov:wasGeneratedBy niiri:dfe1db58-0ad4-11ec-a802-1094bbf2086c .
-
 niiri:efe2e1e2-0ad4-11ec-a802-1094bbf2086c a onli:assessment-instrument,
         nidm:AcquisitionObject,
         prov:Entity ;
@@ -2751,18 +1520,6 @@ niiri:efe2e1e2-0ad4-11ec-a802-1094bbf2086c a onli:assessment-instrument,
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/participants.tsv"^^xsd:string ;
     prov:wasGeneratedBy niiri:dfe2d8c8-0ad4-11ec-a802-1094bbf2086c ;
     prov:wasInfluencedBy niiri:efe33af2-0ad4-11ec-a802-1094bbf2086c .
-
-niiri:efe33af2-0ad4-11ec-a802-1094bbf2086c a bids:sidecar_file,
-        prov:Entity ;
-    nfo:filename "participants.json"^^xsd:string ;
-    prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/participants.json"^^xsd:string ;
-    prov:wasGeneratedBy niiri:dfe2d8c8-0ad4-11ec-a802-1094bbf2086c .
-
-niiri:efe49eba-0ad4-11ec-a802-1094bbf2086c a bids:sidecar_file,
-        prov:Entity ;
-    nfo:filename "participants.json"^^xsd:string ;
-    prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/participants.json"^^xsd:string ;
-    prov:wasGeneratedBy niiri:bfe3b9c8-0ad4-11ec-a802-1094bbf2086c .
 
 niiri:efe5693a-0ad4-11ec-a802-1094bbf2086c a onli:assessment-instrument,
         nidm:AcquisitionObject,
@@ -2774,18 +1531,6 @@ niiri:efe5693a-0ad4-11ec-a802-1094bbf2086c a onli:assessment-instrument,
     prov:wasGeneratedBy niiri:afe55d6e-0ad4-11ec-a802-1094bbf2086c ;
     prov:wasInfluencedBy niiri:cfe773f6-0ad4-11ec-a802-1094bbf2086c .
 
-niiri:efefa940-0ad4-11ec-a802-1094bbf2086c a bids:sidecar_file,
-        prov:Entity ;
-    nfo:filename "participants.json"^^xsd:string ;
-    prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/participants.json"^^xsd:string ;
-    prov:wasGeneratedBy niiri:efec4700-0ad4-11ec-a802-1094bbf2086c .
-
-niiri:eff55354-0ad4-11ec-a802-1094bbf2086c a bids:sidecar_file,
-        prov:Entity ;
-    nfo:filename "participants.json"^^xsd:string ;
-    prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/participants.json"^^xsd:string ;
-    prov:wasGeneratedBy niiri:cff4d35c-0ad4-11ec-a802-1094bbf2086c .
-
 niiri:eff8e168-0ad4-11ec-a802-1094bbf2086c a onli:assessment-instrument,
         nidm:AcquisitionObject,
         prov:Entity ;
@@ -2796,20 +1541,6 @@ niiri:eff8e168-0ad4-11ec-a802-1094bbf2086c a onli:assessment-instrument,
     prov:wasGeneratedBy niiri:aff8d646-0ad4-11ec-a802-1094bbf2086c ;
     prov:wasInfluencedBy niiri:eff948c4-0ad4-11ec-a802-1094bbf2086c .
 
-niiri:eff948c4-0ad4-11ec-a802-1094bbf2086c a bids:sidecar_file,
-        prov:Entity ;
-    nfo:filename "participants.json"^^xsd:string ;
-    prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/participants.json"^^xsd:string ;
-    prov:wasGeneratedBy niiri:aff8d646-0ad4-11ec-a802-1094bbf2086c .
-
-niiri:eff9c9c0-0ad4-11ec-a802-1094bbf2086c a nidm:Session,
-        prov:Activity ;
-    dct:isPartOf niiri:e3fd9a08-0ad3-11ec-a802-1094bbf2086c .
-
-niiri:f0012ecc-0ad4-11ec-a802-1094bbf2086c a nidm:Session,
-        prov:Activity ;
-    dct:isPartOf niiri:e3fd9a08-0ad3-11ec-a802-1094bbf2086c .
-
 niiri:f009c0e6-0ad4-11ec-a802-1094bbf2086c a onli:assessment-instrument,
         nidm:AcquisitionObject,
         prov:Entity ;
@@ -2819,10 +1550,6 @@ niiri:f009c0e6-0ad4-11ec-a802-1094bbf2086c a onli:assessment-instrument,
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/participants.tsv"^^xsd:string ;
     prov:wasGeneratedBy niiri:b009a908-0ad4-11ec-a802-1094bbf2086c ;
     prov:wasInfluencedBy niiri:a00a419c-0ad4-11ec-a802-1094bbf2086c .
-
-niiri:f00ae228-0ad4-11ec-a802-1094bbf2086c a nidm:Session,
-        prov:Activity ;
-    dct:isPartOf niiri:e3fd9a08-0ad3-11ec-a802-1094bbf2086c .
 
 niiri:f0115a86-0ad4-11ec-a802-1094bbf2086c a onli:assessment-instrument,
         nidm:AcquisitionObject,
@@ -2864,12 +1591,6 @@ niiri:f01f6e78-0ad4-11ec-a802-1094bbf2086c a onli:assessment-instrument,
     prov:wasGeneratedBy niiri:f01f6446-0ad4-11ec-a802-1094bbf2086c ;
     prov:wasInfluencedBy niiri:f01fd93a-0ad4-11ec-a802-1094bbf2086c .
 
-niiri:f01fd93a-0ad4-11ec-a802-1094bbf2086c a bids:sidecar_file,
-        prov:Entity ;
-    nfo:filename "participants.json"^^xsd:string ;
-    prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/participants.json"^^xsd:string ;
-    prov:wasGeneratedBy niiri:f01f6446-0ad4-11ec-a802-1094bbf2086c .
-
 niiri:f025d1fa-0ad4-11ec-a802-1094bbf2086c a onli:assessment-instrument,
         nidm:AcquisitionObject,
         prov:Entity ;
@@ -2890,12 +1611,6 @@ niiri:f033e786-0ad4-11ec-a802-1094bbf2086c a onli:assessment-instrument,
     prov:wasGeneratedBy niiri:a033daa2-0ad4-11ec-a802-1094bbf2086c ;
     prov:wasInfluencedBy niiri:e0344d5c-0ad4-11ec-a802-1094bbf2086c .
 
-niiri:f037e494-0ad4-11ec-a802-1094bbf2086c a bids:sidecar_file,
-        prov:Entity ;
-    nfo:filename "participants.json"^^xsd:string ;
-    prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/participants.json"^^xsd:string ;
-    prov:wasGeneratedBy niiri:d0376302-0ad4-11ec-a802-1094bbf2086c .
-
 niiri:f03ab91c-0ad4-11ec-a802-1094bbf2086c a onli:assessment-instrument,
         nidm:AcquisitionObject,
         prov:Entity ;
@@ -2905,12 +1620,6 @@ niiri:f03ab91c-0ad4-11ec-a802-1094bbf2086c a onli:assessment-instrument,
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/participants.tsv"^^xsd:string ;
     prov:wasGeneratedBy niiri:d03aa364-0ad4-11ec-a802-1094bbf2086c ;
     prov:wasInfluencedBy niiri:f03b3630-0ad4-11ec-a802-1094bbf2086c .
-
-niiri:f03b3630-0ad4-11ec-a802-1094bbf2086c a bids:sidecar_file,
-        prov:Entity ;
-    nfo:filename "participants.json"^^xsd:string ;
-    prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/participants.json"^^xsd:string ;
-    prov:wasGeneratedBy niiri:d03aa364-0ad4-11ec-a802-1094bbf2086c .
 
 niiri:f108d26e-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
         prov:Entity ;
@@ -2932,20 +1641,6 @@ niiri:f165d7ba-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
     nfo:filename "/sub-11/func/sub-11_task-incentiveantisaccade_run-01_bold.nii.gz"^^xsd:string ;
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-11/func/sub-11_task-incentiveantisaccade_run-01_bold.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:a165af92-0ad4-11ec-a802-1094bbf2086c .
-
-niiri:f1eec1d0-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:bcdcf4c8-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:cfe4315a-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
-
-niiri:f22730b2-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:aeb6f1ec-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:a009d220-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
 
 niiri:f371edc4-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
         prov:Entity ;
@@ -2989,13 +1684,6 @@ niiri:f42a68e2-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-01/anat/sub-01_T1w.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:b42a32d2-0ad4-11ec-a802-1094bbf2086c .
 
-niiri:f4322070-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
-        prov:Activity ;
-    dct:isPartOf niiri:c0a5eba8-0ad4-11ec-a802-1094bbf2086c ;
-    prov:qualifiedAssociation [ a prov:Association ;
-            prov:agent niiri:effdd3a8-0ad4-11ec-a802-1094bbf2086c ;
-            prov:hadRole sio:Subject ] .
-
 niiri:f43248a2-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
         prov:Entity ;
     crypto:sha512 "59a59f0c95727c4fd577411f4f663e04d49cdff9fbb9e38208966c81b04ffe185ae8a768c97a9767035839cdf738eec14f070afe14f8b8010e69c6fd16c4bc24"^^xsd:string ;
@@ -3006,6 +1694,1241 @@ niiri:f43248a2-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
     nfo:filename "/sub-11/func/sub-11_task-incentiveantisaccade_run-04_bold.nii.gz"^^xsd:string ;
     prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-11/func/sub-11_task-incentiveantisaccade_run-04_bold.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:f4322070-0ad4-11ec-a802-1094bbf2086c .
+
+niiri:f70597be-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "f09fcdffb101f3722293c4570f6871b71d81e8b69cf6ac18f01b5967fcbe34479adbe81e02b0860f46c82b60bf78d137780d69c32a27ec3303236d920201676b"^^xsd:string ;
+    nidm:AcquisitionObject "2"^^xsd:int ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-12/func/sub-12_task-incentiveantisaccade_run-02_bold.nii.gz"^^xsd:string ;
+    prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-12/func/sub-12_task-incentiveantisaccade_run-02_bold.nii.gz"^^xsd:string ;
+    prov:wasGeneratedBy niiri:f7053b52-0ad4-11ec-a802-1094bbf2086c .
+
+niiri:faa80216-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "011b06169c2bf1161bad4407fa2ab14765211dbd56f34e234108d575df849cf50ad003026d94593bf8e97170e2d42cc8b6008a151273a48be235c0389d931d29"^^xsd:string ;
+    nidm:AcquisitionObject "3"^^xsd:int ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-16/func/sub-16_task-incentiveantisaccade_run-03_bold.nii.gz"^^xsd:string ;
+    prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-16/func/sub-16_task-incentiveantisaccade_run-03_bold.nii.gz"^^xsd:string ;
+    prov:wasGeneratedBy niiri:faa7c4a4-0ad4-11ec-a802-1094bbf2086c .
+
+niiri:fc313942-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "b06cf2d6f6d0aac9c2d81f1ae1a6650e8540ec631c22a44374827a58c0107f055136dc9382bf15f475988feefffdfe94cf30ccd45150f7a40cd8cf596e5aaae7"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:T1Weighted ;
+    nidm:hadImageUsageType nidm:Anatomical ;
+    nfo:filename "/sub-10/anat/sub-10_T1w.nii.gz"^^xsd:string ;
+    prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-10/anat/sub-10_T1w.nii.gz"^^xsd:string ;
+    prov:wasGeneratedBy niiri:ac311480-0ad4-11ec-a802-1094bbf2086c .
+
+niiri:fd741da4-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "2790169503a3f3755059e658dcfea1a2e73af5a0c736768823d49cf5c083c811fa15ce5f5bd2e92db8c3bb100c839217a718d6e9259bf8120426972a181e414c"^^xsd:string ;
+    nidm:AcquisitionObject "1"^^xsd:int ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-17/func/sub-17_task-incentiveantisaccade_run-01_bold.nii.gz"^^xsd:string ;
+    prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-17/func/sub-17_task-incentiveantisaccade_run-01_bold.nii.gz"^^xsd:string ;
+    prov:wasGeneratedBy niiri:ad6c4156-0ad4-11ec-a802-1094bbf2086c .
+
+niiri:fd9c55b6-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "c3fa59c0839fc4dacbdaf25935ca67734620a6d83972d78285c72ac078c8018d6ebd617bde8653c4a4193a600c472e26f40cbadc58295be1331bd8d738925a99"^^xsd:string ;
+    nidm:AcquisitionObject "1"^^xsd:int ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-03/func/sub-03_task-incentiveantisaccade_run-01_bold.nii.gz"^^xsd:string ;
+    prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-03/func/sub-03_task-incentiveantisaccade_run-01_bold.nii.gz"^^xsd:string ;
+    prov:wasGeneratedBy niiri:fd99b482-0ad4-11ec-a802-1094bbf2086c .
+
+niiri:fef492a6-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "0c1694499c29dbca6c8d3e3662cf434697e971f993097784ae7184a282472712fc37cd02f4a7e55b908a662e1ddeb6a03028b562b6c8f03a6a587d1f614fb216"^^xsd:string ;
+    nidm:AcquisitionObject "3"^^xsd:int ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:FlowWeighted ;
+    nidm:hadImageUsageType nidm:Functional ;
+    nfo:filename "/sub-06/func/sub-06_task-incentiveantisaccade_run-03_bold.nii.gz"^^xsd:string ;
+    prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-06/func/sub-06_task-incentiveantisaccade_run-03_bold.nii.gz"^^xsd:string ;
+    prov:wasGeneratedBy niiri:eef45ec6-0ad4-11ec-a802-1094bbf2086c .
+
+niiri:ffec5574-0ad4-11ec-a802-1094bbf2086c a onli:assessment-instrument,
+        nidm:AcquisitionObject,
+        prov:Entity ;
+    niiri:age_3mirhvl "F"^^xsd:string ;
+    niiri:sex_3lac29e "15.9535"^^xsd:string ;
+    nfo:filename "participants.tsv"^^xsd:string ;
+    prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/participants.tsv"^^xsd:string ;
+    prov:wasGeneratedBy niiri:efec4700-0ad4-11ec-a802-1094bbf2086c ;
+    prov:wasInfluencedBy niiri:efefa940-0ad4-11ec-a802-1094bbf2086c .
+
+niiri:sex_3lac29e a nidm:PersonalDataElement,
+        prov:Entity ;
+    rdfs:label "sex" ;
+    dct:description "" ;
+    nidm:isAbout ilx:ilx_0738439 ;
+    nidm:sourceVariable "sex" ;
+    nidm:valueType <xsd:float> ;
+    ilx:ilx_0739289 "NIDM" .
+
+niiri:a005d68e-0ad4-11ec-a802-1094bbf2086c a nidm:Session,
+        prov:Activity ;
+    dct:isPartOf niiri:e3fd9a08-0ad3-11ec-a802-1094bbf2086c .
+
+niiri:a00664e6-0ad4-11ec-a802-1094bbf2086c a bids:sidecar_file,
+        prov:Entity ;
+    nfo:filename "participants.json"^^xsd:string ;
+    prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/participants.json"^^xsd:string ;
+    prov:wasGeneratedBy niiri:c005edd6-0ad4-11ec-a802-1094bbf2086c .
+
+niiri:a00a419c-0ad4-11ec-a802-1094bbf2086c a bids:sidecar_file,
+        prov:Entity ;
+    nfo:filename "participants.json"^^xsd:string ;
+    prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/participants.json"^^xsd:string ;
+    prov:wasGeneratedBy niiri:b009a908-0ad4-11ec-a802-1094bbf2086c .
+
+niiri:a00d7b32-0ad4-11ec-a802-1094bbf2086c a bids:sidecar_file,
+        prov:Entity ;
+    nfo:filename "participants.json"^^xsd:string ;
+    prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/participants.json"^^xsd:string ;
+    prov:wasGeneratedBy niiri:a00afb8c-0ad4-11ec-a802-1094bbf2086c .
+
+niiri:a015519a-0ad4-11ec-a802-1094bbf2086c a bids:sidecar_file,
+        prov:Entity ;
+    nfo:filename "participants.json"^^xsd:string ;
+    prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/participants.json"^^xsd:string ;
+    prov:wasGeneratedBy niiri:f0129b80-0ad4-11ec-a802-1094bbf2086c .
+
+niiri:a01a6a04-0ad4-11ec-a802-1094bbf2086c a nidm:Session,
+        prov:Activity ;
+    dct:isPartOf niiri:e3fd9a08-0ad3-11ec-a802-1094bbf2086c .
+
+niiri:a01eb0b4-0ad4-11ec-a802-1094bbf2086c a bids:sidecar_file,
+        prov:Entity ;
+    nfo:filename "participants.json"^^xsd:string ;
+    prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/participants.json"^^xsd:string ;
+    prov:wasGeneratedBy niiri:d01a7ff8-0ad4-11ec-a802-1094bbf2086c .
+
+niiri:a029c148-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:ecb13794-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:e012b4b2-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:a03a7a10-0ad4-11ec-a802-1094bbf2086c a nidm:Session,
+        prov:Activity ;
+    dct:isPartOf niiri:e3fd9a08-0ad3-11ec-a802-1094bbf2086c .
+
+niiri:a0ced9a0-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:c0a5eba8-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:effdd3a8-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:a13f6840-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:aeb6f1ec-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:a009d220-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:a165af92-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:c0a5eba8-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:effdd3a8-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:a18c1cc0-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:a16394c6-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:a0198c06-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:a217606e-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:a16394c6-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:a0198c06-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:a2f7ade0-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:a16394c6-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:a0198c06-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:a3db74f2-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:e31d77c2-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:ffe576dc-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:a3e1f5da-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:a16394c6-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:a0198c06-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:a4c53eb2-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:a16394c6-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:a0198c06-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:a613b762-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:a5e47312-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:f01a975e-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:a61a87ba-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:f55964c2-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:c0016978-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:a62e9904-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:f2b3ebd0-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:aff4ef2c-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:a672cf54-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:b3ff23da-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:bfe1f412-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:a6a93b8e-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:a5e47312-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:f01a975e-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:a79d17cc-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:a5e47312-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:f01a975e-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:a8857ab2-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:a5e47312-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:f01a975e-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:a885ca80-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:d85d6ba8-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:dfe2ede0-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:a88813a2-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:d7d0ee84-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:efe84240-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:a9685c74-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:a5e47312-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:f01a975e-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:a96d5200-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:d7d0ee84-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:efe84240-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:a9feed22-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:e769fb92-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:fff8ed20-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:aa5649e2-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:d7d0ee84-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:efe84240-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:ab89d74a-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:b81af634-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:a011730e-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:ab8ac7ee-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:aa9e16d8-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:d01f7a30-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:ac1c87d8-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:aa9e16d8-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:d01f7a30-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:ac311480-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:fc0841b8-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:fffa3c5c-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:ad0f04f8-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:ec5caf88-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:efec64ba-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:ad0f786c-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:aa9e16d8-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:d01f7a30-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:ad6c4156-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:ecb13794-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:e012b4b2-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:adb58a20-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:fc0841b8-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:fffa3c5c-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:ae037ade-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:aa9e16d8-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:d01f7a30-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:aeebfb2e-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:aa9e16d8-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:d01f7a30-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:af6f14ca-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:aeb6f1ec-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:a009d220-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:afe1c1ae-0ad4-11ec-a802-1094bbf2086c a nidm:Session,
+        prov:Activity ;
+    dct:isPartOf niiri:e3fd9a08-0ad3-11ec-a802-1094bbf2086c .
+
+niiri:afe2c914-0ad4-11ec-a802-1094bbf2086c a nidm:Session,
+        prov:Activity ;
+    dct:isPartOf niiri:e3fd9a08-0ad3-11ec-a802-1094bbf2086c .
+
+niiri:aff0ca8c-0ad4-11ec-a802-1094bbf2086c a bids:sidecar_file,
+        prov:Entity ;
+    nfo:filename "participants.json"^^xsd:string ;
+    prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/participants.json"^^xsd:string ;
+    prov:wasGeneratedBy niiri:aff055ac-0ad4-11ec-a802-1094bbf2086c .
+
+niiri:affda73e-0ad4-11ec-a802-1094bbf2086c a nidm:Session,
+        prov:Activity ;
+    dct:isPartOf niiri:e3fd9a08-0ad3-11ec-a802-1094bbf2086c .
+
+niiri:affe38c0-0ad4-11ec-a802-1094bbf2086c a bids:sidecar_file,
+        prov:Entity ;
+    nfo:filename "participants.json"^^xsd:string ;
+    prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/participants.json"^^xsd:string ;
+    prov:wasGeneratedBy niiri:affdbc60-0ad4-11ec-a802-1094bbf2086c .
+
+niiri:b00e3dce-0ad4-11ec-a802-1094bbf2086c a nidm:Session,
+        prov:Activity ;
+    dct:isPartOf niiri:e3fd9a08-0ad3-11ec-a802-1094bbf2086c .
+
+niiri:b02655c6-0ad4-11ec-a802-1094bbf2086c a bids:sidecar_file,
+        prov:Entity ;
+    nfo:filename "participants.json"^^xsd:string ;
+    prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/participants.json"^^xsd:string ;
+    prov:wasGeneratedBy niiri:d025c2fa-0ad4-11ec-a802-1094bbf2086c .
+
+niiri:b0374a70-0ad4-11ec-a802-1094bbf2086c a nidm:Session,
+        prov:Activity ;
+    dct:isPartOf niiri:e3fd9a08-0ad3-11ec-a802-1094bbf2086c .
+
+niiri:b047c76e-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:b01f05c2-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:e0223338-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:b0599626-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:aeb6f1ec-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:a009d220-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:b0df208c-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:b01f05c2-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:e0223338-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:b1935876-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:d0ddf102-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:bff06c68-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:b1c5f46c-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:b01f05c2-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:e0223338-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:b2565faa-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:c0a5eba8-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:effdd3a8-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:b2a56214-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:b01f05c2-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:e0223338-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:b370bb48-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:f2b3ebd0-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:aff4ef2c-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:b38827de-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:b01f05c2-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:e0223338-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:b42a32d2-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:b3ff23da-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:bfe1f412-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:b4d17730-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:e31d77c2-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:ffe576dc-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:b4d890e2-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:b4b140f0-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:c025df4c-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:b4fc8e2c-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:e348be7a-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:f00ce140-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:b5720f1a-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:b4b140f0-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:c025df4c-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:b6641166-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:b4b140f0-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:c025df4c-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:b75560c0-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:b4b140f0-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:c025df4c-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:b7578c16-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:b3ff23da-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:bfe1f412-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:b83fd93e-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:b4b140f0-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:c025df4c-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:b916637c-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:e769fb92-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:fff8ed20-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:b98676c2-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:b95c8bbe-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:a0299f60-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:ba0f9a74-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:b95c8bbe-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:a0299f60-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:baffc53a-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:b95c8bbe-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:a0299f60-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:bb332042-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:d7d0ee84-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:efe84240-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:bbe93968-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:b95c8bbe-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:a0299f60-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:bd2bbe2c-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:bd04b8b8-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:a02e64dc-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:bd86acf4-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:aa0980d8-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:b0060438-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:bdbae656-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:bd04b8b8-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:a02e64dc-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:be5c6b9a-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:ecb13794-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:e012b4b2-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:bea36cdc-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:bd04b8b8-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:a02e64dc-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:bf893a1e-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:bd04b8b8-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:a02e64dc-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:bfd910ca-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:ec5caf88-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:efec64ba-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:bff4bcc8-0ad4-11ec-a802-1094bbf2086c a nidm:Session,
+        prov:Activity ;
+    dct:isPartOf niiri:e3fd9a08-0ad3-11ec-a802-1094bbf2086c .
+
+niiri:c001ee70-0ad4-11ec-a802-1094bbf2086c a bids:sidecar_file,
+        prov:Entity ;
+    nfo:filename "participants.json"^^xsd:string ;
+    prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/participants.json"^^xsd:string ;
+    prov:wasGeneratedBy niiri:b001495c-0ad4-11ec-a802-1094bbf2086c .
+
+niiri:c006dfa2-0ad4-11ec-a802-1094bbf2086c a nidm:Session,
+        prov:Activity ;
+    dct:isPartOf niiri:e3fd9a08-0ad3-11ec-a802-1094bbf2086c .
+
+niiri:c01624d0-0ad4-11ec-a802-1094bbf2086c a nidm:Session,
+        prov:Activity ;
+    dct:isPartOf niiri:e3fd9a08-0ad3-11ec-a802-1094bbf2086c .
+
+niiri:c01f4e48-0ad4-11ec-a802-1094bbf2086c a nidm:Session,
+        prov:Activity ;
+    dct:isPartOf niiri:e3fd9a08-0ad3-11ec-a802-1094bbf2086c .
+
+niiri:c02a2034-0ad4-11ec-a802-1094bbf2086c a bids:sidecar_file,
+        prov:Entity ;
+    nfo:filename "participants.json"^^xsd:string ;
+    prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/participants.json"^^xsd:string ;
+    prov:wasGeneratedBy niiri:b0296b80-0ad4-11ec-a802-1094bbf2086c .
+
+niiri:c02aca0c-0ad4-11ec-a802-1094bbf2086c a nidm:Session,
+        prov:Activity ;
+    dct:isPartOf niiri:e3fd9a08-0ad3-11ec-a802-1094bbf2086c .
+
+niiri:c0333494-0ad4-11ec-a802-1094bbf2086c a bids:sidecar_file,
+        prov:Entity ;
+    nfo:filename "participants.json"^^xsd:string ;
+    prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/participants.json"^^xsd:string ;
+    prov:wasGeneratedBy niiri:c02f9be0-0ad4-11ec-a802-1094bbf2086c .
+
+niiri:c06f6c50-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:bd04b8b8-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:a02e64dc-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:c108948e-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:d0ddf102-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:bff06c68-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:c1b87ed0-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:c191cb96-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:a02fb13e-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:c252b59a-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:c191cb96-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:a02fb13e-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:c341abfa-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:c191cb96-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:a02fb13e-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:c343d30e-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:e31d77c2-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:ffe576dc-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:c43304fa-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:c191cb96-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:a02fb13e-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:c46341a6-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:f2b3ebd0-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:aff4ef2c-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:c5247524-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:c191cb96-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:a02fb13e-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:c5f52b90-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:e348be7a-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:f00ce140-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:c678fd5a-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:c64ea50a-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:d033f38e-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:c6a7d5fe-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:e31d77c2-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:ffe576dc-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:c7060718-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:c64ea50a-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:d033f38e-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:c792a34e-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:e769fb92-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:fff8ed20-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:c7e9f2e8-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:c64ea50a-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:d033f38e-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:c8cdc220-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:c64ea50a-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:d033f38e-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:c9ae4188-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:c64ea50a-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:d033f38e-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:c9b8f96e-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:b81af634-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:a011730e-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:caf2e604-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:d85d6ba8-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:dfe2ede0-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:cafa5a72-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:cad18e44-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:e0377ad6-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:cb85b1e4-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:cad18e44-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:e0377ad6-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:cc7fa654-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:cad18e44-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:e0377ad6-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:cc9ac74e-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:aa0980d8-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:b0060438-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:cce03346-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:ecb13794-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:e012b4b2-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:cd6ee1ba-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:cad18e44-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:e0377ad6-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:ce53525a-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:cad18e44-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:e0377ad6-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:ce9d98c4-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:fc0841b8-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:fffa3c5c-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:cf6cbebc-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:bcdcf4c8-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:cfe4315a-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:cf973d02-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:cf6ce1c4-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:e03ac7c2-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:cfe3a870-0ad4-11ec-a802-1094bbf2086c a nidm:Session,
+        prov:Activity ;
+    dct:isPartOf niiri:e3fd9a08-0ad3-11ec-a802-1094bbf2086c .
+
+niiri:cfe773f6-0ad4-11ec-a802-1094bbf2086c a bids:sidecar_file,
+        prov:Entity ;
+    nfo:filename "participants.json"^^xsd:string ;
+    prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/participants.json"^^xsd:string ;
+    prov:wasGeneratedBy niiri:afe55d6e-0ad4-11ec-a802-1094bbf2086c .
+
+niiri:cfec2acc-0ad4-11ec-a802-1094bbf2086c a nidm:Session,
+        prov:Activity ;
+    dct:isPartOf niiri:e3fd9a08-0ad3-11ec-a802-1094bbf2086c .
+
+niiri:cff04062-0ad4-11ec-a802-1094bbf2086c a nidm:Session,
+        prov:Activity ;
+    dct:isPartOf niiri:e3fd9a08-0ad3-11ec-a802-1094bbf2086c .
+
+niiri:d019e264-0ad4-11ec-a802-1094bbf2086c a bids:sidecar_file,
+        prov:Entity ;
+    nfo:filename "participants.json"^^xsd:string ;
+    prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/participants.json"^^xsd:string ;
+    prov:wasGeneratedBy niiri:b0196e9c-0ad4-11ec-a802-1094bbf2086c .
+
+niiri:d022049e-0ad4-11ec-a802-1094bbf2086c a nidm:Session,
+        prov:Activity ;
+    dct:isPartOf niiri:e3fd9a08-0ad3-11ec-a802-1094bbf2086c .
+
+niiri:d0229184-0ad4-11ec-a802-1094bbf2086c a bids:sidecar_file,
+        prov:Entity ;
+    nfo:filename "participants.json"^^xsd:string ;
+    prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/participants.json"^^xsd:string ;
+    prov:wasGeneratedBy niiri:a0221c68-0ad4-11ec-a802-1094bbf2086c .
+
+niiri:d023b822-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:cf6ce1c4-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:e03ac7c2-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:d027000c-0ad4-11ec-a802-1094bbf2086c a nidm:Session,
+        prov:Activity ;
+    dct:isPartOf niiri:e3fd9a08-0ad3-11ec-a802-1094bbf2086c .
+
+niiri:d02ee5c4-0ad4-11ec-a802-1094bbf2086c a bids:sidecar_file,
+        prov:Entity ;
+    nfo:filename "participants.json"^^xsd:string ;
+    prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/participants.json"^^xsd:string ;
+    prov:wasGeneratedBy niiri:f02ae1b8-0ad4-11ec-a802-1094bbf2086c .
+
+niiri:d033b3d8-0ad4-11ec-a802-1094bbf2086c a nidm:Session,
+        prov:Activity ;
+    dct:isPartOf niiri:e3fd9a08-0ad3-11ec-a802-1094bbf2086c .
+
+niiri:d1124bfe-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:cf6ce1c4-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:e03ac7c2-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:d33cedc6-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:c0a5eba8-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:effdd3a8-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:d372d87c-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:e348be7a-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:f00ce140-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:d582fbde-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:f55964c2-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:c0016978-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:d7fa7952-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:d7d0ee84-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:efe84240-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:d82428d2-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:e769fb92-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:fff8ed20-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:d8cefb02-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:b81af634-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:a011730e-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:d8dcab2c-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:f55964c2-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:c0016978-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:da025dd8-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:d85d6ba8-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:dfe2ede0-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:dae0c9f4-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:e769fb92-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:fff8ed20-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:dbd69854-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:d85d6ba8-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:dfe2ede0-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:de02291c-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:ec5caf88-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:efec64ba-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:dee07b98-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:aeb6f1ec-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:a009d220-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:df44b026-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:ecb13794-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:e012b4b2-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:dfe54892-0ad4-11ec-a802-1094bbf2086c a nidm:Session,
+        prov:Activity ;
+    dct:isPartOf niiri:e3fd9a08-0ad3-11ec-a802-1094bbf2086c .
+
+niiri:dfe81766-0ad4-11ec-a802-1094bbf2086c a nidm:Session,
+        prov:Activity ;
+    dct:isPartOf niiri:e3fd9a08-0ad3-11ec-a802-1094bbf2086c .
+
+niiri:dfeb56ba-0ad4-11ec-a802-1094bbf2086c a bids:sidecar_file,
+        prov:Entity ;
+    nfo:filename "participants.json"^^xsd:string ;
+    prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/participants.json"^^xsd:string ;
+    prov:wasGeneratedBy niiri:efe82b20-0ad4-11ec-a802-1094bbf2086c .
+
+niiri:dffd21f6-0ad4-11ec-a802-1094bbf2086c a bids:sidecar_file,
+        prov:Entity ;
+    nfo:filename "participants.json"^^xsd:string ;
+    prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/participants.json"^^xsd:string ;
+    prov:wasGeneratedBy niiri:fff9deb0-0ad4-11ec-a802-1094bbf2086c .
+
+niiri:e011e708-0ad4-11ec-a802-1094bbf2086c a bids:sidecar_file,
+        prov:Entity ;
+    nfo:filename "participants.json"^^xsd:string ;
+    prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/participants.json"^^xsd:string ;
+    prov:wasGeneratedBy niiri:d00e5bd8-0ad4-11ec-a802-1094bbf2086c .
+
+niiri:e01282c6-0ad4-11ec-a802-1094bbf2086c a nidm:Session,
+        prov:Activity ;
+    dct:isPartOf niiri:e3fd9a08-0ad3-11ec-a802-1094bbf2086c .
+
+niiri:e0259956-0ad4-11ec-a802-1094bbf2086c a nidm:Session,
+        prov:Activity ;
+    dct:isPartOf niiri:e3fd9a08-0ad3-11ec-a802-1094bbf2086c .
+
+niiri:e02f8420-0ad4-11ec-a802-1094bbf2086c a nidm:Session,
+        prov:Activity ;
+    dct:isPartOf niiri:e3fd9a08-0ad3-11ec-a802-1094bbf2086c .
+
+niiri:e0344d5c-0ad4-11ec-a802-1094bbf2086c a bids:sidecar_file,
+        prov:Entity ;
+    nfo:filename "participants.json"^^xsd:string ;
+    prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/participants.json"^^xsd:string ;
+    prov:wasGeneratedBy niiri:a033daa2-0ad4-11ec-a802-1094bbf2086c .
+
+niiri:e2e510fc-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:f2b3ebd0-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:aff4ef2c-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:e40bcf78-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:e348be7a-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:f00ce140-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:e4afe594-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:b3ff23da-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:bfe1f412-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:e6dc9e80-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:e348be7a-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:f00ce140-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:e7f0ff56-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:f55964c2-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:c0016978-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:e8447072-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:b81af634-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:a011730e-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:e9183500-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:d85d6ba8-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:dfe2ede0-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:eace0a7a-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:aa0980d8-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:b0060438-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:ebc09f6a-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:aa0980d8-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:b0060438-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:ec82da6e-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:ec5caf88-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:efec64ba-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:ecc6203e-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:fc0841b8-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:fffa3c5c-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:ee88b0f0-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:bcdcf4c8-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:cfe4315a-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:eef45ec6-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:ec5caf88-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:efec64ba-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:efe25010-0ad4-11ec-a802-1094bbf2086c a bids:sidecar_file,
+        prov:Entity ;
+    nfo:filename "participants.json"^^xsd:string ;
+    prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/participants.json"^^xsd:string ;
+    prov:wasGeneratedBy niiri:dfe1db58-0ad4-11ec-a802-1094bbf2086c .
+
+niiri:efe33af2-0ad4-11ec-a802-1094bbf2086c a bids:sidecar_file,
+        prov:Entity ;
+    nfo:filename "participants.json"^^xsd:string ;
+    prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/participants.json"^^xsd:string ;
+    prov:wasGeneratedBy niiri:dfe2d8c8-0ad4-11ec-a802-1094bbf2086c .
+
+niiri:efe49eba-0ad4-11ec-a802-1094bbf2086c a bids:sidecar_file,
+        prov:Entity ;
+    nfo:filename "participants.json"^^xsd:string ;
+    prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/participants.json"^^xsd:string ;
+    prov:wasGeneratedBy niiri:bfe3b9c8-0ad4-11ec-a802-1094bbf2086c .
+
+niiri:efefa940-0ad4-11ec-a802-1094bbf2086c a bids:sidecar_file,
+        prov:Entity ;
+    nfo:filename "participants.json"^^xsd:string ;
+    prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/participants.json"^^xsd:string ;
+    prov:wasGeneratedBy niiri:efec4700-0ad4-11ec-a802-1094bbf2086c .
+
+niiri:eff55354-0ad4-11ec-a802-1094bbf2086c a bids:sidecar_file,
+        prov:Entity ;
+    nfo:filename "participants.json"^^xsd:string ;
+    prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/participants.json"^^xsd:string ;
+    prov:wasGeneratedBy niiri:cff4d35c-0ad4-11ec-a802-1094bbf2086c .
+
+niiri:eff948c4-0ad4-11ec-a802-1094bbf2086c a bids:sidecar_file,
+        prov:Entity ;
+    nfo:filename "participants.json"^^xsd:string ;
+    prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/participants.json"^^xsd:string ;
+    prov:wasGeneratedBy niiri:aff8d646-0ad4-11ec-a802-1094bbf2086c .
+
+niiri:eff9c9c0-0ad4-11ec-a802-1094bbf2086c a nidm:Session,
+        prov:Activity ;
+    dct:isPartOf niiri:e3fd9a08-0ad3-11ec-a802-1094bbf2086c .
+
+niiri:f0012ecc-0ad4-11ec-a802-1094bbf2086c a nidm:Session,
+        prov:Activity ;
+    dct:isPartOf niiri:e3fd9a08-0ad3-11ec-a802-1094bbf2086c .
+
+niiri:f00ae228-0ad4-11ec-a802-1094bbf2086c a nidm:Session,
+        prov:Activity ;
+    dct:isPartOf niiri:e3fd9a08-0ad3-11ec-a802-1094bbf2086c .
+
+niiri:f01fd93a-0ad4-11ec-a802-1094bbf2086c a bids:sidecar_file,
+        prov:Entity ;
+    nfo:filename "participants.json"^^xsd:string ;
+    prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/participants.json"^^xsd:string ;
+    prov:wasGeneratedBy niiri:f01f6446-0ad4-11ec-a802-1094bbf2086c .
+
+niiri:f037e494-0ad4-11ec-a802-1094bbf2086c a bids:sidecar_file,
+        prov:Entity ;
+    nfo:filename "participants.json"^^xsd:string ;
+    prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/participants.json"^^xsd:string ;
+    prov:wasGeneratedBy niiri:d0376302-0ad4-11ec-a802-1094bbf2086c .
+
+niiri:f03b3630-0ad4-11ec-a802-1094bbf2086c a bids:sidecar_file,
+        prov:Entity ;
+    nfo:filename "participants.json"^^xsd:string ;
+    prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/participants.json"^^xsd:string ;
+    prov:wasGeneratedBy niiri:d03aa364-0ad4-11ec-a802-1094bbf2086c .
+
+niiri:f1eec1d0-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:bcdcf4c8-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:cfe4315a-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:f22730b2-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:aeb6f1ec-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:a009d220-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
+
+niiri:f4322070-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:c0a5eba8-0ad4-11ec-a802-1094bbf2086c ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:effdd3a8-0ad4-11ec-a802-1094bbf2086c ;
+            prov:hadRole sio:Subject ] .
 
 niiri:f54a352a-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
         prov:Activity ;
@@ -3035,17 +2958,6 @@ niiri:f7053b52-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
             prov:agent niiri:c0016978-0ad4-11ec-a802-1094bbf2086c ;
             prov:hadRole sio:Subject ] .
 
-niiri:f70597be-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
-        prov:Entity ;
-    crypto:sha512 "f09fcdffb101f3722293c4570f6871b71d81e8b69cf6ac18f01b5967fcbe34479adbe81e02b0860f46c82b60bf78d137780d69c32a27ec3303236d920201676b"^^xsd:string ;
-    nidm:AcquisitionObject "2"^^xsd:int ;
-    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
-    nidm:hadImageContrastType nidm:FlowWeighted ;
-    nidm:hadImageUsageType nidm:Functional ;
-    nfo:filename "/sub-12/func/sub-12_task-incentiveantisaccade_run-02_bold.nii.gz"^^xsd:string ;
-    prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-12/func/sub-12_task-incentiveantisaccade_run-02_bold.nii.gz"^^xsd:string ;
-    prov:wasGeneratedBy niiri:f7053b52-0ad4-11ec-a802-1094bbf2086c .
-
 niiri:fa327b5a-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
         prov:Activity ;
     dct:isPartOf niiri:aa0980d8-0ad4-11ec-a802-1094bbf2086c ;
@@ -3060,44 +2972,12 @@ niiri:faa7c4a4-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
             prov:agent niiri:a011730e-0ad4-11ec-a802-1094bbf2086c ;
             prov:hadRole sio:Subject ] .
 
-niiri:faa80216-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
-        prov:Entity ;
-    crypto:sha512 "011b06169c2bf1161bad4407fa2ab14765211dbd56f34e234108d575df849cf50ad003026d94593bf8e97170e2d42cc8b6008a151273a48be235c0389d931d29"^^xsd:string ;
-    nidm:AcquisitionObject "3"^^xsd:int ;
-    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
-    nidm:hadImageContrastType nidm:FlowWeighted ;
-    nidm:hadImageUsageType nidm:Functional ;
-    nfo:filename "/sub-16/func/sub-16_task-incentiveantisaccade_run-03_bold.nii.gz"^^xsd:string ;
-    prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-16/func/sub-16_task-incentiveantisaccade_run-03_bold.nii.gz"^^xsd:string ;
-    prov:wasGeneratedBy niiri:faa7c4a4-0ad4-11ec-a802-1094bbf2086c .
-
-niiri:fc313942-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
-        prov:Entity ;
-    crypto:sha512 "b06cf2d6f6d0aac9c2d81f1ae1a6650e8540ec631c22a44374827a58c0107f055136dc9382bf15f475988feefffdfe94cf30ccd45150f7a40cd8cf596e5aaae7"^^xsd:string ;
-    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
-    nidm:hadImageContrastType nidm:T1Weighted ;
-    nidm:hadImageUsageType nidm:Anatomical ;
-    nfo:filename "/sub-10/anat/sub-10_T1w.nii.gz"^^xsd:string ;
-    prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-10/anat/sub-10_T1w.nii.gz"^^xsd:string ;
-    prov:wasGeneratedBy niiri:ac311480-0ad4-11ec-a802-1094bbf2086c .
-
 niiri:fd02eade-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
         prov:Activity ;
     dct:isPartOf niiri:bcdcf4c8-0ad4-11ec-a802-1094bbf2086c ;
     prov:qualifiedAssociation [ a prov:Association ;
             prov:agent niiri:cfe4315a-0ad4-11ec-a802-1094bbf2086c ;
             prov:hadRole sio:Subject ] .
-
-niiri:fd741da4-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
-        prov:Entity ;
-    crypto:sha512 "2790169503a3f3755059e658dcfea1a2e73af5a0c736768823d49cf5c083c811fa15ce5f5bd2e92db8c3bb100c839217a718d6e9259bf8120426972a181e414c"^^xsd:string ;
-    nidm:AcquisitionObject "1"^^xsd:int ;
-    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
-    nidm:hadImageContrastType nidm:FlowWeighted ;
-    nidm:hadImageUsageType nidm:Functional ;
-    nfo:filename "/sub-17/func/sub-17_task-incentiveantisaccade_run-01_bold.nii.gz"^^xsd:string ;
-    prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-17/func/sub-17_task-incentiveantisaccade_run-01_bold.nii.gz"^^xsd:string ;
-    prov:wasGeneratedBy niiri:ad6c4156-0ad4-11ec-a802-1094bbf2086c .
 
 niiri:fd99b482-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
         prov:Activity ;
@@ -3106,44 +2986,12 @@ niiri:fd99b482-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
             prov:agent niiri:cfe4315a-0ad4-11ec-a802-1094bbf2086c ;
             prov:hadRole sio:Subject ] .
 
-niiri:fd9c55b6-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
-        prov:Entity ;
-    crypto:sha512 "c3fa59c0839fc4dacbdaf25935ca67734620a6d83972d78285c72ac078c8018d6ebd617bde8653c4a4193a600c472e26f40cbadc58295be1331bd8d738925a99"^^xsd:string ;
-    nidm:AcquisitionObject "1"^^xsd:int ;
-    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
-    nidm:hadImageContrastType nidm:FlowWeighted ;
-    nidm:hadImageUsageType nidm:Functional ;
-    nfo:filename "/sub-03/func/sub-03_task-incentiveantisaccade_run-01_bold.nii.gz"^^xsd:string ;
-    prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-03/func/sub-03_task-incentiveantisaccade_run-01_bold.nii.gz"^^xsd:string ;
-    prov:wasGeneratedBy niiri:fd99b482-0ad4-11ec-a802-1094bbf2086c .
-
-niiri:fef492a6-0ad4-11ec-a802-1094bbf2086c a nidm:AcquisitionObject,
-        prov:Entity ;
-    crypto:sha512 "0c1694499c29dbca6c8d3e3662cf434697e971f993097784ae7184a282472712fc37cd02f4a7e55b908a662e1ddeb6a03028b562b6c8f03a6a587d1f614fb216"^^xsd:string ;
-    nidm:AcquisitionObject "3"^^xsd:int ;
-    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
-    nidm:hadImageContrastType nidm:FlowWeighted ;
-    nidm:hadImageUsageType nidm:Functional ;
-    nfo:filename "/sub-06/func/sub-06_task-incentiveantisaccade_run-03_bold.nii.gz"^^xsd:string ;
-    prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/sub-06/func/sub-06_task-incentiveantisaccade_run-03_bold.nii.gz"^^xsd:string ;
-    prov:wasGeneratedBy niiri:eef45ec6-0ad4-11ec-a802-1094bbf2086c .
-
 niiri:ff7e879e-0ad4-11ec-a802-1094bbf2086c a nidm:Acquisition,
         prov:Activity ;
     dct:isPartOf niiri:fc0841b8-0ad4-11ec-a802-1094bbf2086c ;
     prov:qualifiedAssociation [ a prov:Association ;
             prov:agent niiri:fffa3c5c-0ad4-11ec-a802-1094bbf2086c ;
             prov:hadRole sio:Subject ] .
-
-niiri:ffec5574-0ad4-11ec-a802-1094bbf2086c a onli:assessment-instrument,
-        nidm:AcquisitionObject,
-        prov:Entity ;
-    niiri:age_3mirhvl "F"^^xsd:string ;
-    niiri:sex_3lac29e "15.9535"^^xsd:string ;
-    nfo:filename "participants.tsv"^^xsd:string ;
-    prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121/participants.tsv"^^xsd:string ;
-    prov:wasGeneratedBy niiri:efec4700-0ad4-11ec-a802-1094bbf2086c ;
-    prov:wasInfluencedBy niiri:efefa940-0ad4-11ec-a802-1094bbf2086c .
 
 niiri:fff8b9ae-0ad4-11ec-a802-1094bbf2086c a nidm:Session,
         prov:Activity ;
@@ -3607,5 +3455,11 @@ niiri:fffa3c5c-0ad4-11ec-a802-1094bbf2086c a prov:Agent,
 
 niiri:e3fd9a08-0ad3-11ec-a802-1094bbf2086c a nidm:Project,
         prov:Activity ;
-    dctypes:title "Immaturities in Reward Processing and Its Influence on Inhibitory Control in Adolescence (Ring Reward)"^^xsd:string .
+    obo:IAO_0000623 "National Institutes of Health (RO1 MH067924, RO1 MH080243 to B.L.)."^^xsd:string ;
+    dctypes:title "Immaturities in Reward Processing and Its Influence on Inhibitory Control in Adolescence (Ring Reward)"^^xsd:string ;
+    dct:license "PDDL"^^xsd:string ;
+    sio:Identifier "1.0.0rc3"^^xsd:string ;
+    dcat:author "C.F. GeierR. TerwilligerT. TeslovichK. VelanovaB. Luna"^^xsd:string ;
+    dcat:creator "http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2882823/https://github.com/LabNeuroCogDevel/openfmri_ring_rew"^^xsd:string ;
+    prov:Location "file://Volumes/Research/datasets.datalad.org/openneuro/ds000121"^^xsd:string .
 
